@@ -1,20 +1,10 @@
-<chapter id="chap_10">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chap_10">
 <title>More on variables</title>
-<abstract>
 
-<para>In this chapter, we will discuss the advanced use of variables and arguments.  Upon completion, you will be able to:</para>
-<para>
-<itemizedlist>
-<listitem><para>Declare and use an array of variables</para></listitem>
-<listitem><para>Specify the sort of variable you want to use</para></listitem>
-<listitem><para>Make variables read-only</para></listitem>
-<listitem><para>Use <command>set</command> to assign a value to a variable</para></listitem>
-</itemizedlist>
-</para>
-</abstract>
 
-<sect1 id="sect_10_01"><title>Types of variables</title>
-<sect2 id="sect_10_01_01"><title>General assignment of values</title>
+<section xml:id="sect_10_01"><title>Types of variables</title>
+<section xml:id="sect_10_01_01"><title>General assignment of values</title>
 <para>As we already saw, Bash understands many different kinds of variables or parameters.  Thus far, we haven't bothered much with what kind of variables we assigned, so our variables could hold any value that we assigned to them.  A simple command line example demonstrates this:</para>
 <screen>
 <prompt>[bob in ~]</prompt> <command><varname>VARIABLE</varname>=<parameter>12</parameter></command>
@@ -28,14 +18,14 @@
 string
 </screen>
 <para>There are cases when you want to avoid this kind of behavior, for instance when handling telephone and other numbers.  Apart from integers and variables, you may also want to specify a variable that is a constant.  This is often done at the beginning of a script, when the value of the constant is declared.  After that, there are only references to the constant variable name, so that when the constant needs to be changed, it only has to be done once.  A variable may also be a series of variables of any type, a so-called <emphasis>array</emphasis> of variables<indexterm><primary>arrays</primary><secondary>variables</secondary></indexterm> (<varname>VAR0</varname><varname>VAR1</varname>, <varname>VAR2</varname>, ... <varname>VARN</varname>).</para>
-</sect2>
-<sect2 id="sect_10_01_02"><title>Using the declare built-in</title>
+</section>
+<section xml:id="sect_10_01_02"><title>Using the declare built-in</title>
 <para>Using a <command>declare</command> statement, we can limit the value assignment to variables.</para>
 <para>The syntax for <command>declare</command> is the following:</para>
 <cmdsynopsis><command>declare <option>OPTION(s)</option> <varname>VARIABLE</varname>=value</command></cmdsynopsis>
 <para>The following options are used to determine the type of data the variable can hold and to assign it attributes:</para>
 
-<table id="tab_10_01" frame="all"><title>Options to the declare built-in</title>
+<table xml:id="tab_10_01" frame="all"><title>Options to the declare built-in</title>
 <tgroup cols="2" align="left" colsep="1" rowsep="1">
 <thead>
 <row><entry>Option</entry><entry>Meaning</entry></row>
@@ -43,7 +33,7 @@ string
 <tbody>
 <row><entry><option>-a</option></entry><entry>Variable is an array<indexterm><primary>arrays</primary><secondary>declaration</secondary></indexterm>.</entry></row>
 <row><entry><option>-f</option></entry><entry>Use function names only.</entry></row>
-<row><entry><option>-i</option></entry><entry>The variable is to be treated as an integer; arithmetic<indexterm><primary>arithmetic evaluation</primary><secondary>declare built-in</secondary></indexterm> evaluation is performed when the variable is assigned a value (see <xref linkend="sect_03_04_05" />).</entry></row>
+<row><entry><option>-i</option></entry><entry>The variable is to be treated as an integer; arithmetic<indexterm><primary>arithmetic evaluation</primary><secondary>declare built-in</secondary></indexterm> evaluation is performed when the variable is assigned a value (see <xref linkend="sect_03_04_05"/>).</entry></row>
 <row><entry><option>-p</option></entry><entry>Display the attributes and values of each variable.  When <option>-p</option> is used, additional options are ignored.</entry></row>
 <row><entry><option>-r</option></entry><entry>Make variables read-only.  These variables cannot then be assigned values by subsequent assignment statements, nor can they be unset.</entry></row>
 <row><entry><option>-t</option></entry><entry>Give each variable the <emphasis>trace</emphasis> attribute.</entry></row>
@@ -73,11 +63,11 @@ declare -- OTHERVAR="blah"
 </screen>
 <para>As soon as you restrict assignment of values to a variable, it can only hold that type of data.  Possible restrictions are either integer, constant or array.</para>
 <para>See the Bash info pages for information on return status.</para>
-</sect2>
-<sect2 id="sect_10_01_03"><title>Constants</title>
+</section>
+<section xml:id="sect_10_01_03"><title>Constants</title>
 <para>In Bash, constants are created by making a variable read-only.  The <command>readonly</command> built-in marks each specified variable as unchangeable.  The syntax is:</para>
 <cmdsynopsis><command>readonly <option>OPTION</option> <varname>VARIABLE(s)</varname></command></cmdsynopsis>
-<para>The values of these variables can then no longer be changed by subsequent assignment.  If the <option>-f</option> option is given, each variable refers to a shell function; see <xref linkend="chap_11" />.  If <option>-a</option> is specified, each variable refers to an array of variables.  If no arguments are given, or if <option>-p</option> is supplied, a list of all read-only variables is displayed.  Using the <option>-p</option> option, the output can be reused as input.</para>
+<para>The values of these variables can then no longer be changed by subsequent assignment.  If the <option>-f</option> option is given, each variable refers to a shell function; see <xref linkend="chap_11"/>.  If <option>-a</option> is specified, each variable refers to an array of variables.  If no arguments are given, or if <option>-p</option> is supplied, a list of all read-only variables is displayed.  Using the <option>-p</option> option, the output can be reused as input.</para>
 <para>The return status is zero, unless an invalid option was specified, one of the variables or functions does not exist, or <option>-f</option> was supplied for a variable name instead of for a function name.</para>
 <screen>
 <prompt>[bob in ~]</prompt> <command>readonly <varname>TUX</varname>=<parameter>penguinpower</parameter></command>
@@ -85,11 +75,11 @@ declare -- OTHERVAR="blah"
 <prompt>[bob in ~]</prompt> <command><varname>TUX</varname>=<parameter>Mickeysoft</parameter></command>
 bash: TUX: readonly variable
 </screen>
-</sect2>
+</section>
 
-</sect1>
-<sect1 id="sect_10_02"><title>Array variables</title>
-<sect2 id="sect_10_02_01"><title>Creating arrays</title>
+</section>
+<section xml:id="sect_10_02"><title>Array variables</title>
+<section xml:id="sect_10_02_01"><title>Creating arrays</title>
 <para>An array is a variable containing multiple values.  Any variable may be used as an array<indexterm><primary>arrays</primary><secondary>declaration</secondary></indexterm>.  There is no maximum limit to the size of an array, nor any requirement that member variables be indexed or assigned contiguously.  Arrays are zero-based: the first element is indexed with the number 0.</para>
 <para>Indirect declaration is done using the following syntax to declare a variable:</para>
 <cmdsynopsis><command><varname>ARRAY[INDEXNR]</varname>=value</command></cmdsynopsis>
@@ -103,8 +93,8 @@ bash: TUX: readonly variable
 <para>Adding missing or extra members in an array<indexterm><primary>arrays</primary><secondary>adding members</secondary></indexterm> is done using the syntax:</para>
 <cmdsynopsis><command><varname>ARRAYNAME[indexnumber]</varname>=value</command></cmdsynopsis>
 <para>Remember that the <command>read</command> built-in provides the <option>-a</option> option, which allows for reading and assigning values for member variables of an array.</para>
-</sect2>
-<sect2 id="sect_10_02_02"><title>Dereferencing the variables in an array</title>
+</section>
+<section xml:id="sect_10_02_02"><title>Dereferencing the variables in an array</title>
 <para>In order to refer to the content of an item in an array<indexterm><primary>arrays</primary><secondary>dereferencing</secondary></indexterm>, use curly braces.  This is necessary, as you can see from the following example, to bypass the shell interpretation of expansion operators.  If the index number is <emphasis>@</emphasis> or <emphasis>*</emphasis>, all members of an array are referenced.</para>
 <screen>
 <prompt>[bob in ~]</prompt> <command><varname>ARRAY</varname>=<parameter>(one two three)</parameter></command>
@@ -124,8 +114,8 @@ three
 one two three four
 </screen>
 <para>Referring to the content of a member variable of an array without providing an index number is the same as referring to the content of the first element, the one referenced with index number zero.</para>
-</sect2>
-<sect2 id="sect_10_02_03"><title>Deleting array variables</title>
+</section>
+<section xml:id="sect_10_02_03"><title>Deleting array variables</title>
 <para>The <command>unset</command> built-in is used to destroy arrays<indexterm><primary>arrays</primary><secondary>unset</secondary></indexterm> or member variables of an array:</para>
 <screen>
 <prompt>[bob in ~]</prompt> <command>unset <varname>ARRAY[1]</varname></command>
@@ -138,8 +128,8 @@ one three four
 <prompt>[bob in ~]</prompt> <command>echo <varname>${ARRAY[*]}</varname></command>
 &lt;--no output--&gt;
 </screen>
-</sect2>
-<sect2 id="sect_10_02_04"><title>Examples of arrays</title>
+</section>
+<section xml:id="sect_10_02_04"><title>Examples of arrays</title>
 <para>Practical examples of the usage of arrays<indexterm><primary>arrays</primary><secondary>examples</secondary></indexterm> are hard to find.  You will find plenty of scripts that don't really do anything on your system but that do use arrays to calculate mathematical series, for instance.  And that would be one of the more interesting examples...most scripts just show what you can do with an array in an oversimplified and theoretical way.</para>
 <para>The reason for this dullness is that arrays are rather complex structures.  You will find that most practical examples for which arrays could be used are already implemented on your system using arrays, however on a lower level, in the C programming language in which most UNIX commands are written.  A good example is the Bash <command>history</command> built-in command.  Those readers who are interested might check the <filename>built-ins</filename> directory in the Bash source tree and take a look at <filename>fc.def</filename>, which is processed when compiling the built-ins.</para>
 <para>Another reason good examples are hard to find is that not all shells support arrays, so they break compatibility.</para>
@@ -234,14 +224,14 @@ Reminder: the list of demos is here:
 (This e-mail was generated by $0 on ${hostname}.)
 EOF
 </screen>
-</sect2>
+</section>
 
-</sect1>
-<sect1 id="sect_10_03"><title>Operations on variables</title>
-<sect2 id="sect_10_03_01"><title>Arithmetic on variables</title>
-<para>We discussed this already in <xref linkend="sect_03_04_05" />.</para>
-</sect2>
-<sect2 id="sect_10_03_02"><title>Length of a variable</title>
+</section>
+<section xml:id="sect_10_03"><title>Operations on variables</title>
+<section xml:id="sect_10_03_01"><title>Arithmetic on variables</title>
+<para>We discussed this already in <xref linkend="sect_03_04_05"/>.</para>
+</section>
+<section xml:id="sect_10_03_02"><title>Length of a variable</title>
 <para>Using the <command>${#<varname>VAR</varname>}</command> syntax will calculate the number of characters in a variable.  If <varname>VAR</varname> is <quote>*</quote> or <quote>@</quote>, this value is substituted with the number of positional parameters or number of elements in an array<indexterm><primary>arrays</primary><secondary>number of elements</secondary></indexterm> in general.  This is demonstrated in the example below:</para>
 <screen>
 <prompt>[bob in ~]</prompt> <command>echo <varname>$SHELL</varname></command>
@@ -255,9 +245,9 @@ EOF
 <prompt>[bob in ~]</prompt> <command>echo <varname>${#ARRAY}</varname></command>
 3
 </screen>
-</sect2>
-<sect2 id="sect_10_03_03"><title>Transformations of variables</title>
-<sect3 id="sect_10_03_03_01"><title>Substitution</title>
+</section>
+<section xml:id="sect_10_03_03"><title>Transformations of variables</title>
+<section xml:id="sect_10_03_03_01"><title>Substitution</title>
 <cmdsynopsis><command>${<varname>VAR</varname>:-<parameter>WORD</parameter>}</command></cmdsynopsis>
 <para>If <varname>VAR</varname> is not defined or null, the expansion of <parameter>WORD</parameter> is substituted; otherwise the value of <varname>VAR</varname> is substituted:</para>
 <screen>
@@ -285,7 +275,7 @@ a_string
 	<varname>COLUMNS</varname>=<parameter>80</parameter>
 fi</command>
 </screen>
-<para>See <xref linkend="sect_07_01_02_03" /> for more information about this type of condition testing.</para>
+<para>See <xref linkend="sect_07_01_02_03"/> for more information about this type of condition testing.</para>
 <para>If the hyphen (-) is replaced with the equal sign (=), the value is assigned to the parameter if it does not exist:</para>
 <screen>
 <prompt>[bob in ~]</prompt> <command>echo <varname>$TEST2</varname></command>
@@ -318,8 +308,8 @@ present
 TESTVAR is set, we can proceed.
 </screen>
 <para>Using <quote>+</quote> instead of the exclamation mark sets the variable to the expansion of <parameter>WORD</parameter>; if it does not exist, nothing happens.</para>
-</sect3>
-<sect3 id="sect_10_03_03_02"><title>Removing substrings</title>
+</section>
+<section xml:id="sect_10_03_03_02"><title>Removing substrings</title>
 <para>To strip a number of characters, equal to <parameter>OFFSET</parameter>, from a variable, use this syntax:</para>
 <cmdsynopsis><command>${<varname>VAR</varname>:<parameter>OFFSET</parameter>:<parameter>LENGTH</parameter>}</command></cmdsynopsis>
 <para>The <parameter>LENGTH</parameter> parameter defines how many characters to keep, starting from the first character after the offset point.  If <parameter>LENGTH</parameter> is omitted, the remainder of the variable content is taken:</para>
@@ -363,8 +353,8 @@ thisisaverylongname
 thisisaverylong
 </screen>
 
-</sect3>
-<sect3 id="sect_10_03_03_03"><title>Replacing parts of variable names</title>
+</section>
+<section xml:id="sect_10_03_03_03"><title>Replacing parts of variable names</title>
 <para>This is done using the</para> 
 <cmdsynopsis><command>${<varname>VAR</varname>/<parameter>PATTERN</parameter>/<parameter>STRING</parameter>}</command></cmdsynopsis>
 <para>or</para>
@@ -375,17 +365,17 @@ thisisaverylong
 thisisaverylongstring
 </screen>
 <para>More information can be found in the Bash info pages.</para>
-</sect3>
-</sect2>
+</section>
+</section>
 
-</sect1>
-<sect1 id="sect_10_04"><title>Summary</title>
+</section>
+<section xml:id="sect_10_04"><title>Summary</title>
 <para>Normally, a variable can hold any type of data, unless variables are declared explicitly.  Constant variables are set using the <command>readonly</command> built-in command.</para>
 <para>An array holds a set of variables.  If a type of data is declared, then all elements in the array will be set to hold only this type of data.</para>
 <para>Bash features allow for substitution and transformation of variables <quote>on the fly</quote>.  Standard operations include calculating the length of a variable, arithmetic on variables, substituting variable content and substituting part of the content.</para>
 
-</sect1>
-<sect1 id="sect_10_05"><title>Exercises</title>
+</section>
+<section xml:id="sect_10_05"><title>Exercises</title>
 <para>Here are some brain crackers:</para>
 
 
@@ -405,5 +395,5 @@ thisisaverylongstring
 <listitem><para>Write a script that implements a simple web browser (in text mode), using <command>wget</command> and <command>links <option>-dump</option></command> to display HTML pages to the user.  The user has 3 choices: enter a URL, enter <keycap>b</keycap> for back and <keycap>q</keycap> to quit.  The last 10 URLs entered by the user are stored in an array, from which the user can restore the URL by using the <emphasis>back</emphasis> functionality.</para></listitem>
 </orderedlist>
 
-</sect1>
+</section>
 </chapter>

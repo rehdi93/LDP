@@ -1,32 +1,19 @@
-<chapter id="chap_05">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chap_05">
 <title>The GNU sed stream editor</title>
-<abstract>
-<para>At the end of this chapter you will know about the following topics:</para>
-<para><itemizedlist>
-<listitem><para>What is <command>sed</command>?</para></listitem>
-<listitem><para>Interactive use of <command>sed</command></para></listitem>
-<listitem><para>Regular expressions and stream editing</para></listitem>
-<listitem><para>Using <command>sed</command> commands in scripts</para></listitem>
-</itemizedlist></para>
-<para>
-<note><title>This is an introduction</title>
-<para>These explanations are far from complete and certainly not meant to be used as the definite user manual for <command>sed</command>.  This chapter is only included in order to show some more interesting topics in the next chapters, and because every power user should have a basic knowledge of things that can be done with this editor.</para>
-<para>For detailed information, refer to the <command>sed</command> info and man pages.</para>
-</note>
-</para>
-</abstract>
 
-<sect1 id="sect_05_01"><title>Introduction</title>
-<sect2 id="sect_05_01_01"><title>What is sed?</title>
+
+<section xml:id="sect_05_01"><title>Introduction</title>
+<section xml:id="sect_05_01_01"><title>What is sed?</title>
 <para>A <application>Stream EDitor<indexterm><primary>sed</primary><secondary>definition</secondary></indexterm></application> is used to perform basic transformations on text read from a file or a pipe.  The result is sent to standard output.  The syntax for the <command>sed</command> command has no output file specification, but results can be saved to a file using output redirection.  The editor does not modify the original input.</para>
 <para>What distinguishes <command>sed</command> from other editors, such as <command>vi</command> and <command>ed</command>, is its ability to filter text that it gets from a pipeline feed.  You do not need to interact with the editor while it is running; that is why <command>sed</command> is sometimes called a <emphasis>batch editor</emphasis>.  This feature allows use of editing commands in scripts, greatly easing repetitive editing tasks.  When facing replacement of text in a large number of files, <command>sed</command> is a great help.</para>
-</sect2>
-<sect2 id="sect_05_01_02"><title>sed commands</title>
-<para>The <command>sed<indexterm><primary>commands</primary><secondary>sed</secondary></indexterm></command> program can perform text pattern substitutions and deletions using regular expressions<indexterm><primary>sed</primary><secondary>commands</secondary></indexterm>, like the ones used with the <command>grep</command> command; see <xref linkend="sect_04_02" />.</para>
+</section>
+<section xml:id="sect_05_01_02"><title>sed commands</title>
+<para>The <command>sed<indexterm><primary>commands</primary><secondary>sed</secondary></indexterm></command> program can perform text pattern substitutions and deletions using regular expressions<indexterm><primary>sed</primary><secondary>commands</secondary></indexterm>, like the ones used with the <command>grep</command> command; see <xref linkend="sect_04_02"/>.</para>
 <para>The editing commands are similar to the ones used in the <command>vi</command> editor:</para>
 
 
-<table id="tab_05_01" frame="all"><title>Sed editing commands</title>
+<table xml:id="tab_05_01" frame="all"><title>Sed editing commands</title>
 <tgroup cols="2" align="left" colsep="1" rowsep="1">
 <thead>
 <row><entry>Command</entry><entry>Result</entry></row>
@@ -46,7 +33,7 @@
 
 <para>Apart from editing commands, you can give options to <command>sed</command>.  An overview<indexterm><primary>sed</primary><secondary>options</secondary></indexterm> is in the table below:</para>
 
-<table id="tab_05_02" frame="all"><title>Sed options</title>
+<table xml:id="tab_05_02" frame="all"><title>Sed options</title>
 <tgroup cols="2" align="left" colsep="1" rowsep="1">
 <thead>
 <row><entry>Option</entry><entry>Effect</entry></row>
@@ -60,12 +47,12 @@
 </tgroup>
 </table>
 <para>The <command>sed</command> info pages contain more information; we only list the most frequently used commands and options here.</para>
-</sect2>
+</section>
 
 
-</sect1>
-<sect1 id="sect_05_02"><title>Interactive editing</title>
-<sect2 id="sect_05_02_01"><title>Printing lines containing a pattern</title>
+</section>
+<section xml:id="sect_05_02"><title>Interactive editing</title>
+<section xml:id="sect_05_02_01"><title>Printing lines containing a pattern</title>
 <para>This is something you can do with <command>grep</command>, of course, but you can't do a <quote>find and replace</quote> using that command.  This is just to get<indexterm><primary>sed</primary><secondary>printing lines</secondary></indexterm> you started.</para>
 <para>This is our example text file:</para>
 <screen>
@@ -103,8 +90,8 @@ So much erors, all these erors are making me sick.
 
 <prompt>sandy ~&gt;</prompt>
 </screen>
-</sect2>
-<sect2 id="sect_05_02_02"><title>Deleting lines of input containing a pattern</title>
+</section>
+<section xml:id="sect_05_02_02"><title>Deleting lines of input containing a pattern</title>
 <para>We use the same example text file.  Now we only want to see the lines <emphasis>not</emphasis> containing<indexterm><primary>sed</primary><secondary>deleting lines</secondary></indexterm> the search string:</para>
 <screen>
 <prompt>sandy ~&gt;</prompt> <command>sed <parameter>'/erors/d'</parameter> <filename>example</filename></command>
@@ -123,8 +110,8 @@ This is a line not containing any errors.
 <prompt>sandy ~&gt;</prompt>
 </screen>
 <para>Note that the last dot needs to be escaped in order to actually match.  In our example the expression just matches any character, including the last dot.</para>
-</sect2>
-<sect2 id="sect_05_02_03"><title>Ranges of lines</title>
+</section>
+<section xml:id="sect_05_02_03"><title>Ranges of lines</title>
 <para>This time we want to take out the lines containing the errors.  In the example these are lines 2 to 4.  Specify this range<indexterm><primary>sed</primary><secondary>ranges of lines</secondary></indexterm> to address, together with the <command>d</command> command:</para>
 <screen>
 <prompt>sandy ~&gt;</prompt> <command>sed <parameter>'2,4d'</parameter> <filename>example</filename></command>
@@ -153,8 +140,8 @@ This is a line not containing any errors.
 
 <prompt>sandy ~&gt;</prompt>
 </screen>
-</sect2>
-<sect2 id="sect_05_02_04"><title>Find and replace with sed</title>
+</section>
+<section xml:id="sect_05_02_04"><title>Find and replace with sed</title>
 <para>In the example file, we will now search and replace<indexterm><primary>sed</primary><secondary>find and replace</secondary></indexterm> the errors instead of only (de)selecting the lines containing the search string.</para>
 <screen>
 <prompt>sandy ~&gt;</prompt> <command>sed <parameter>'s/erors/errors/'</parameter> <filename>example</filename></command>
@@ -221,25 +208,25 @@ This is the final line.
 <para>Plenty of <command>sed</command> examples can be found in the startup scripts for your machine, which are usually in <filename>/etc/init.d</filename> or <filename>/etc/rc.d/init.d</filename>.  Change into the directory containing the initscripts on your system and issue the following command:</para>
 <cmdsynopsis><command>grep <parameter>sed</parameter> <filename>*</filename></command></cmdsynopsis>
 </tip>
-</sect2>
+</section>
 
-</sect1>
-<sect1 id="sect_05_03"><title>Non-interactive editing</title>
-<sect2 id="sect_05_03_01"><title>Reading sed commands from a file</title>
+</section>
+<section xml:id="sect_05_03"><title>Non-interactive editing</title>
+<section xml:id="sect_05_03_01"><title>Reading sed commands from a file</title>
 <para>Multiple <command>sed</command> commands can be put in a file and executed using<indexterm><primary>sed</primary><secondary>non-interactive editing</secondary></indexterm> the <option>-f</option> option.  When creating such a file, make sure that:</para>
 <itemizedlist>
 <listitem><para>No trailing white spaces exist at the end of lines.</para></listitem>
 <listitem><para>No quotes are used.</para></listitem>
 <listitem><para>When entering text to add or replace, all except the last line end in a backslash.</para></listitem>
 </itemizedlist>
-</sect2>
-<sect2 id="sect_05_03_02"><title>Writing output files</title>
+</section>
+<section xml:id="sect_05_03_02"><title>Writing output files</title>
 <para>Writing output is done using the output redirection<indexterm><primary>sed</primary><secondary>output files</secondary></indexterm> operator <command>&gt;</command>.  This is an example script<indexterm><primary>sed</primary><secondary>example script</secondary></indexterm> used to create very simple HTML files from plain text files.</para> 
 <screen>
 <prompt>sandy ~&gt;</prompt> <command>cat <filename>script.sed</filename></command>
 1i\
 &lt;html&gt;\
-&lt;head&gt;&lt;title>sed generated html&lt;/title&gt;&lt;/head&gt;\
+&lt;head&gt;&lt;title&gt;sed generated html&lt;/title&gt;&lt;/head&gt;\
 &lt;body bgcolor="#ffffff"&gt;\
 &lt;pre&gt;
 $a\
@@ -273,7 +260,7 @@ line1
 line2
 line3
 </screen>
-<para>More on positional parameters in <xref linkend="chap_07" />.</para>
+<para>More on positional parameters in <xref linkend="chap_07"/>.</para>
 <screen>
 <prompt>sandy ~&gt;</prompt> <command>txt2html.sh <filename>test</filename></command>
 converting test...
@@ -293,18 +280,18 @@ line3
 
 <prompt>sandy ~&gt;</prompt>
 </screen>
-<para>This is not really how it is done; this example just demonstrates <command>sed</command> capabilities.  See <xref linkend="sect_06_03" /> for a more decent solution to this problem, using <command>awk</command> <emphasis>BEGIN</emphasis> and <emphasis>END</emphasis> constructs.</para>
+<para>This is not really how it is done; this example just demonstrates <command>sed</command> capabilities.  See <xref linkend="sect_06_03"/> for a more decent solution to this problem, using <command>awk</command> <emphasis>BEGIN</emphasis> and <emphasis>END</emphasis> constructs.</para>
 <note><title>Easy sed</title>
 <para>Advanced editors, supporting syntax highlighting, can recognize <command>sed</command> syntax.  This can be a great help if you tend to forget backslashes and such.</para></note>  
-</sect2>
+</section>
 
-</sect1>
-<sect1 id="sect_05_04"><title>Summary</title>
+</section>
+<section xml:id="sect_05_04"><title>Summary</title>
 <para>The <command>sed</command> stream editor is a powerful command line tool, which can handle streams of data: it can take input lines from a pipe.  This makes it fit for non-interactive use.  The <command>sed</command> editor uses <command>vi</command>-like commands and accepts regular expressions.</para>
 <para>The <command>sed</command> tool can read commands from the command line or from a script.  It is often used to perform find-and-replace actions on lines containing a pattern.</para>
 
-</sect1>
-<sect1 id="sect_05_05"><title>Exercises</title>
+</section>
+<section xml:id="sect_05_05"><title>Exercises</title>
 <para>These exercises are meant to further demonstrate what <command>sed</command> can do.</para>
 
 <orderedlist>
@@ -317,5 +304,5 @@ line3
 <listitem><para>Create a script that shows lines containing trailing white spaces from a file.  This script should use a <command>sed</command> script and show sensible information to the user.</para></listitem>
 </orderedlist>
 
-</sect1>
+</section>
 </chapter>

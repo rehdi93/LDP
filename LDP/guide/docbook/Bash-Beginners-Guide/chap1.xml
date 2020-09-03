@@ -1,23 +1,14 @@
-<chapter id="chap_01"><title>Bash and Bash scripts</title>
-<abstract>
-<para>In this introduction module we</para>
-<para><itemizedlist>
-<listitem><para>Describe some common shells</para></listitem>
-<listitem><para>Point out GNU Bash advantages and features</para></listitem>
-<listitem><para>Describe the shell's building blocks</para></listitem>
-<listitem><para>Discuss Bash initialization files</para></listitem>
-<listitem><para>See how the shell executes commands</para></listitem>
-<listitem><para>Look into some simple script examples</para></listitem>
-</itemizedlist></para>
-</abstract>
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chap_01"><title>Bash and Bash scripts</title>
 
-<sect1 id="sect_01_01"><title>Common shell programs</title>
-<sect2 id="sect_01_01_01"><title>General shell functions</title>
-<para>The UNIX shell<indexterm><primary>shell</primary><secondary>general functions</secondary></indexterm> program interprets user commands, which are either directly entered by the user, or which can be read from a file called the shell script or shell program.  Shell scripts are interpreted, not compiled.  The shell reads commands from the script line per line and searches for those commands on the system (see <xref linkend="sect_01_02" />), while a compiler converts a program into machine readable form, an executable file - which may then be used in a shell script.</para>
+
+<section xml:id="sect_01_01"><title>Common shell programs</title>
+<section xml:id="sect_01_01_01"><title>General shell functions</title>
+<para>The UNIX shell<indexterm><primary>shell</primary><secondary>general functions</secondary></indexterm> program interprets user commands, which are either directly entered by the user, or which can be read from a file called the shell script or shell program.  Shell scripts are interpreted, not compiled.  The shell reads commands from the script line per line and searches for those commands on the system (see <xref linkend="sect_01_02"/>), while a compiler converts a program into machine readable form, an executable file - which may then be used in a shell script.</para>
 <para>Apart from passing commands to the kernel, the main task of a shell is providing a user environment, which can be configured individually using shell resource configuration files.</para>
-</sect2>
+</section>
 
-<sect2 id="sect_01_01_02"><title>Shell types</title>
+<section xml:id="sect_01_01_02"><title>Shell types</title>
 <para>Just like people know different languages and dialects, your UNIX system will usually offer a variety of shell<indexterm><primary>shell</primary><secondary>types</secondary></indexterm> types:</para>
 <itemizedlist>
 <listitem><para><command>sh</command> or Bourne Shell: the original shell still
@@ -50,25 +41,25 @@ in the active terminal.  The system finds the directory where the name occurs us
 <prompt>mia:~&gt;</prompt> <command>tcsh</command>
 [mia@post21 ~]$
 </screen>
-</sect2>
+</section>
 
-</sect1>
+</section>
 
-<sect1 id="sect_01_02"><title>Advantages of the Bourne Again SHell</title>
-<sect2 id="sect_01_02_01"><title>Bash is the GNU shell</title>
+<section xml:id="sect_01_02"><title>Advantages of the Bourne Again SHell</title>
+<section xml:id="sect_01_02_01"><title>Bash is the GNU shell</title>
 <para>The GNU project (GNU's Not UNIX) provides tools for UNIX-like system administration which are free software and comply to UNIX standards.</para>
 <para>Bash<indexterm><primary>Bash</primary><secondary>advantages</secondary></indexterm> is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh). It is intended to conform to the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard. It offers functional improvements over sh for both programming and interactive use; these include command line editing, unlimited size command history, job control, shell functions and aliases, indexed arrays of unlimited size, and integer arithmetic in any base from two to sixty-four. Bash can run most sh scripts without modification.</para>
 <para>Like the other GNU projects, the bash initiative was started to preserve, protect and promote the freedom to use, study, copy, modify and redistribute software.  It is generally known that such conditions stimulate creativity.  This was also the case with the bash program, which has a lot of extra features that other shells can't offer.</para>
-</sect2>
+</section>
 
-<sect2 id="sect_01_02_02"><title>Features only found in bash</title>
-<sect3 id="sect_01_02_02_01"><title>Invocation</title>
+<section xml:id="sect_01_02_02"><title>Features only found in bash</title>
+<section xml:id="sect_01_02_02_01"><title>Invocation</title>
 <para>In addition<indexterm><primary>Bash</primary><secondary>features</secondary></indexterm> to the single-character shell command line options which can generally be configured using the <command>set</command> shell built-in command, there are several multi-character options that you can use.  We will come across a couple of the more popular options<indexterm><primary>features</primary><secondary>invocation</secondary></indexterm> in this and the following chapters; the complete list can be found in the Bash info pages, <menuchoice><guimenu>Bash features</guimenu><guimenuitem>Invoking Bash</guimenuitem></menuchoice>.</para>
-</sect3>
+</section>
 
-<sect3 id="sect_01_02_02_02"><title>Bash startup files</title>
+<section xml:id="sect_01_02_02_02"><title>Bash startup files</title>
 <para>Startup<indexterm><primary>Bash</primary><secondary>startup files</secondary></indexterm> files are scripts that are read and executed by Bash when it starts.  The following subsections<indexterm><primary>features</primary><secondary>startup files</secondary></indexterm> describe different ways to start the shell, and the startup files that are read consequently.</para> 
-<sect4 id="sect_01_02_02_02_01"><title>Invoked as an interactive login shell, or with `--login'</title>
+<section xml:id="sect_01_02_02_02_01"><title>Invoked as an interactive login shell, or with `--login'</title>
 <para>Interactive<indexterm><primary>invocation</primary><secondary>interactive login shell</secondary></indexterm> means you can enter commands.  The shell is not running because a script has been activated.  A login shell means that you got the shell after authenticating to the system, usually by giving your user name and password.</para>
 <para>Files read:</para>
 <itemizedlist>
@@ -77,9 +68,9 @@ in the active terminal.  The system finds the directory where the name occurs us
 <listitem><para><filename>~/.bash_logout</filename> upon logout.</para></listitem>
 </itemizedlist>
 <para>Error messages are printed if configuration files exist but are not readable.  If a file does not exist, bash searches for the next.</para>
-</sect4>
+</section>
 
-<sect4 id="sect_01_02_02_02_02"><title>Invoked as an interactive non-login shell</title>
+<section xml:id="sect_01_02_02_02_02"><title>Invoked as an interactive non-login shell</title>
 <para>A non-login<indexterm><primary>invocation</primary><secondary>interactive non-login shell</secondary></indexterm> shell means that you did not have to authenticate to the system.  For instance, when you open a terminal using an icon, or a menu item, that is a non-login shell.</para>
 <para>Files read:</para>
 <itemizedlist>
@@ -89,19 +80,19 @@ in the active terminal.  The system finds the directory where the name occurs us
 <para>This file is usually referred to in <filename>~/.bash_profile</filename>:</para>
 <cmdsynopsis><command>if <function>[ -f <filename>~/.bashrc</filename> ]</function>; then . <filename>~/.bashrc</filename>; fi</command></cmdsynopsis>
 
-<para>See <xref linkend="chap_07" /> for more information on the <command>if</command> construct.</para>
-</sect4>
+<para>See <xref linkend="chap_07"/> for more information on the <command>if</command> construct.</para>
+</section>
 
-<sect4 id="sect_01_02_02_02_03"><title>Invoked non-interactively</title>
+<section xml:id="sect_01_02_02_02_03"><title>Invoked non-interactively</title>
 <para>All scripts use non-interactive<indexterm><primary>invocation</primary><secondary>non-interactive</secondary></indexterm> shells.  They are programmed to do certain tasks and cannot be instructed to do other jobs than those for which they are programmed.</para>
 <para>Files read:</para>
 <itemizedlist>
 <listitem><para>defined<indexterm><primary>variables</primary><secondary>BASH_ENV</secondary></indexterm> by <varname>BASH_ENV</varname></para></listitem>
 </itemizedlist>
 <para><varname>PATH</varname> is not used to search for this file, so if you want to use it, best refer to it by giving the full path and file name.</para>
-</sect4>
+</section>
 
-<sect4 id="sect_01_02_02_02_04"><title>Invoked with the sh command</title>
+<section xml:id="sect_01_02_02_02_04"><title>Invoked with the sh command</title>
 
 <para>Bash<indexterm><primary>invocation</primary><secondary>invoked as sh</secondary></indexterm> tries to behave as the historical Bourne <command>sh</command> program while conforming to the POSIX standard as well.</para>
 <para>Files read:</para>
@@ -110,9 +101,9 @@ in the active terminal.  The system finds the directory where the name occurs us
 <listitem><para><filename>~/.profile</filename></para></listitem>
 </itemizedlist>
 <para>When invoked interactively, the <varname>ENV</varname> variable<indexterm><primary>variables</primary><secondary>ENV</secondary></indexterm> can point to extra startup information.</para>
-</sect4>
+</section>
 
-<sect4 id="sect_01_02_02_02_05"><title>POSIX mode</title>
+<section xml:id="sect_01_02_02_02_05"><title>POSIX mode</title>
 <para>This option<indexterm><primary>invocation</primary><secondary>POSIX mode</secondary></indexterm> is enabled either using the <command>set</command> built-in:</para>
 <cmdsynopsis><command>set <option>-o posix</option></command></cmdsynopsis>
 <para>or by calling the <command>bash</command> program with the <option>--posix</option> option.  Bash will then try to behave as compliant as possible to the POSIX standard for shells.  Setting the <varname>POSIXLY_CORRECT</varname> variable<indexterm><primary>variables</primary><secondary>POSIXLY_CORRECT</secondary></indexterm> does the same.</para>
@@ -120,37 +111,37 @@ in the active terminal.  The system finds the directory where the name occurs us
 <itemizedlist>
 <listitem><para>defined by <varname>ENV</varname> variable.</para></listitem>
 </itemizedlist>
-</sect4>
-<sect4 id="sect_01_02_02_02_06"><title>Invoked remotely</title>
+</section>
+<section xml:id="sect_01_02_02_02_06"><title>Invoked remotely</title>
 
 <para>Files read when invoked<indexterm><primary>invocation</primary><secondary>remote invocation</secondary></indexterm> by <command>rshd</command>:</para>
 <itemizedlist>
 <listitem><para><filename>~/.bashrc</filename></para></listitem>
 </itemizedlist>
 <warning><title>Avoid use of r-tools</title>
-<para>Be aware of the dangers when using tools such as <command>rlogin</command>, <command>telnet</command>, <command>rsh</command> and <command>rcp</command>.  They are intrinsically insecure because confidential data is sent over the network unencrypted.  If you need tools for remote execution, file transfer and so on, use an implementation of Secure SHell, generally known as SSH, freely available from <ulink url="http://www.openssh.org">http://www.openssh.org</ulink>.  Different client programs are available for non-UNIX systems as well, see your local software mirror.</para>
+<para>Be aware of the dangers when using tools such as <command>rlogin</command>, <command>telnet</command>, <command>rsh</command> and <command>rcp</command>.  They are intrinsically insecure because confidential data is sent over the network unencrypted.  If you need tools for remote execution, file transfer and so on, use an implementation of Secure SHell, generally known as SSH, freely available from <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.openssh.org">http://www.openssh.org</link>.  Different client programs are available for non-UNIX systems as well, see your local software mirror.</para>
 </warning>
-</sect4>
-<sect4 id="sect_01_02_02_02_07"><title>Invoked when UID is not equal to EUID</title>
+</section>
+<section xml:id="sect_01_02_02_02_07"><title>Invoked when UID is not equal to EUID</title>
 
 <para>No startup<indexterm><primary>invocation</primary><secondary>UID &lt;&gt; EUID</secondary></indexterm> files are read in this case.</para>
 
-</sect4>
+</section>
 
-</sect3>
-<sect3 id="sect_01_02_02_03"><title>Interactive shells</title>
-<sect4 id="sect_01_02_02_03_01"><title>What is an interactive shell?</title>
-<para>An interactive<indexterm><primary>shell</primary><secondary>interactive</secondary></indexterm> shell generally reads from, and writes to, a user's terminal: input and output are connected to a terminal.  Bash interactive behavior<indexterm><primary>features</primary><secondary>interactive shells</secondary></indexterm> is started when the <command>bash</command> command is called upon without non-option arguments, except when the option is a string to read from or when the shell is invoked to read from standard input, which allows for positional parameters to be set (see <xref linkend="chap_03" /> ).</para>
-</sect4>
-<sect4 id="sect_01_02_02_03_02"><title>Is this shell interactive?</title>
+</section>
+<section xml:id="sect_01_02_02_03"><title>Interactive shells</title>
+<section xml:id="sect_01_02_02_03_01"><title>What is an interactive shell?</title>
+<para>An interactive<indexterm><primary>shell</primary><secondary>interactive</secondary></indexterm> shell generally reads from, and writes to, a user's terminal: input and output are connected to a terminal.  Bash interactive behavior<indexterm><primary>features</primary><secondary>interactive shells</secondary></indexterm> is started when the <command>bash</command> command is called upon without non-option arguments, except when the option is a string to read from or when the shell is invoked to read from standard input, which allows for positional parameters to be set (see <xref linkend="chap_03"/> ).</para>
+</section>
+<section xml:id="sect_01_02_02_03_02"><title>Is this shell interactive?</title>
 <para>Test by looking at the content of the special parameter <varname>-</varname>, it contains an 'i' when the shell is interactive:</para>
 <screen>
 <prompt>eddy:~&gt;</prompt> <command>echo <varname>$-</varname></command>
 himBH
 </screen>
 <para>In non-interactive shells, the prompt, <varname>PS1</varname>, is unset.</para>
-</sect4>
-<sect4 id="sect_01_02_02_03_03"><title>Interactive shell behavior</title>
+</section>
+<section xml:id="sect_01_02_02_03_03"><title>Interactive shell behavior</title>
 <para>Differences in interactive<indexterm><primary>interactive shell</primary><secondary>behavior</secondary></indexterm> mode:</para>
 <itemizedlist>
 <listitem><para>Bash reads startup files.</para></listitem>
@@ -167,7 +158,7 @@ himBH
 <listitem><para>Bash checks for mail periodically.</para></listitem>
 <listitem><para>Bash can be configured to exit when it encounters unreferenced variables.  In interactive mode this behavior is disabled.</para></listitem>
 <listitem><para>When shell built-in commands encounter redirection errors, this will not cause the shell to exit.</para></listitem>
-<listitem><para>Special built-ins returning errors when used in POSIX mode don't cause the shell to exit.  The built-in commands are listed in <xref linkend="sect_01_03_02" />.</para></listitem>
+<listitem><para>Special built-ins returning errors when used in POSIX mode don't cause the shell to exit.  The built-in commands are listed in <xref linkend="sect_01_03_02"/>.</para></listitem>
 <listitem><para>Failure of <command>exec</command> will not exit the shell.</para></listitem>
 <listitem><para>Parser syntax errors don't cause the shell to exit.</para></listitem>
 <listitem><para>Simple spell check for the arguments to the <command>cd</command> built-in is enabled by default.</para></listitem>
@@ -176,47 +167,47 @@ himBH
 <para>More information:</para>
 
 <itemizedlist>
-<listitem><para><xref linkend="sect_03_02" /></para></listitem>
-<listitem><para><xref linkend="sect_03_06" /></para></listitem>
-<listitem><para>See <xref linkend="chap_12" /> for more about signals.</para></listitem>
-<listitem><para><xref linkend="sect_03_04" /> discusses the various expansions performed upon entering a command.</para></listitem>
+<listitem><para><xref linkend="sect_03_02"/></para></listitem>
+<listitem><para><xref linkend="sect_03_06"/></para></listitem>
+<listitem><para>See <xref linkend="chap_12"/> for more about signals.</para></listitem>
+<listitem><para><xref linkend="sect_03_04"/> discusses the various expansions performed upon entering a command.</para></listitem>
 </itemizedlist>
 
 
-</sect4>
+</section>
 
-</sect3>
-<sect3 id="sect_01_02_02_04"><title>Conditionals</title>
+</section>
+<section xml:id="sect_01_02_02_04"><title>Conditionals</title>
 <para>Conditional<indexterm><primary>features</primary><secondary>conditionals</secondary></indexterm> expressions are used by the <command>[[</command> compound command and by the <command>test</command> and <command>[</command> built-in commands.</para>
 <para>Expressions may be unary or binary.  Unary expressions are often used to examine the status of a file.  You only need one object, for instance a file, to do the operation on.</para>
 <para>There are string operators and numeric comparison operators as well; these are binary operators, requiring two objects to do the operation on.  If the <option>FILE</option> argument to one of the primaries is in the form <filename>/dev/fd/N</filename>, then file descriptor N is checked.  If the <option>FILE</option> argument to one of the primaries is one of <filename>/dev/stdin</filename>, <filename>/dev/stdout</filename> or <filename>/dev/stderr</filename>, then file descriptor 0, 1 or 2 respectively is checked.</para>
-<para>Conditionals are discussed in detail in <xref linkend="chap_07" />.</para>
-<para>More information about the file descriptors in <xref linkend="sect_08_02_03" />.</para>
-</sect3>
-<sect3 id="sect_01_02_02_05"><title>Shell arithmetic</title>
+<para>Conditionals are discussed in detail in <xref linkend="chap_07"/>.</para>
+<para>More information about the file descriptors in <xref linkend="sect_08_02_03"/>.</para>
+</section>
+<section xml:id="sect_01_02_02_05"><title>Shell arithmetic</title>
 <para>The shell allows arithmetic<indexterm><primary>features</primary><secondary>shell arithmetic</secondary></indexterm> expressions to be evaluated, as one of
 the shell expansions or by the <command>let</command> built-in.</para>
-<para>Evaluation is done in fixed-width integers with no check for overflow, though division by 0 is trapped and flagged as an error.  The operators and their precedence and associativity are the same as in the C language, see <xref linkend="chap_03" />.</para>
-</sect3>
-<sect3 id="sect_01_02_02_06"><title>Aliases</title>
+<para>Evaluation is done in fixed-width integers with no check for overflow, though division by 0 is trapped and flagged as an error.  The operators and their precedence and associativity are the same as in the C language, see <xref linkend="chap_03"/>.</para>
+</section>
+<section xml:id="sect_01_02_02_06"><title>Aliases</title>
 <para>Aliases<indexterm><primary>features</primary><secondary>aliases</secondary></indexterm> allow a string to be substituted for a word when it is used as the first word of a simple command.  The shell maintains a list of aliases that may be set and unset with the <command>alias</command> and <command>unalias</command> commands.</para>
 
 <para>Bash always reads at least one complete line of input before executing any of the commands on that line.  Aliases are expanded when a command is read, not when it is executed.  Therefore, an alias definition appearing on the same line as another command does not take effect until the next line of input is read.  The commands following the alias definition on that line are not affected by the new alias.</para>
 <para>Aliases are expanded when a function definition is read, not when the function is executed, because a function definition is itself a compound command.  As a consequence, aliases defined in a function are not available until after that function is executed.</para>
-<para>We will discuss aliases in detail in <xref linkend="sect_03_05" />.</para>
-</sect3>
-<sect3 id="sect_01_02_02_07"><title>Arrays</title>
-<para>Bash provides one-dimensional array<indexterm><primary>features</primary><secondary>arrays</secondary></indexterm> variables.  Any variable may be used as an array; the <command>declare</command> built-in will explicitly declare an array.  There is no maximum limit on the size of an array, nor any requirement that members be indexed or assigned contiguously.  Arrays are zero-based.  See <xref linkend="chap_10" />.</para>
-</sect3>
-<sect3 id="sect_01_02_02_08"><title>Directory stack</title>
+<para>We will discuss aliases in detail in <xref linkend="sect_03_05"/>.</para>
+</section>
+<section xml:id="sect_01_02_02_07"><title>Arrays</title>
+<para>Bash provides one-dimensional array<indexterm><primary>features</primary><secondary>arrays</secondary></indexterm> variables.  Any variable may be used as an array; the <command>declare</command> built-in will explicitly declare an array.  There is no maximum limit on the size of an array, nor any requirement that members be indexed or assigned contiguously.  Arrays are zero-based.  See <xref linkend="chap_10"/>.</para>
+</section>
+<section xml:id="sect_01_02_02_08"><title>Directory stack</title>
 <para>The directory stack<indexterm><primary>features</primary><secondary>directory stack</secondary></indexterm> is a list of recently-visited directories.  The <command>pushd</command> built-in<indexterm><primary>built-ins</primary><secondary>pushd</secondary></indexterm> adds directories to the stack as it changes the current directory, and the <command>popd</command> built-in<indexterm><primary>built-in</primary><secondary>popd</secondary></indexterm> removes specified directories from the stack and changes the current directory to the directory removed.</para>
 <para>Content can be displayed issuing the <command>dirs</command> command or by checking the content of the <varname>DIRSTACK<indexterm><primary>variables</primary><secondary>DIRSTACK</secondary></indexterm></varname> variable.</para>
 <para>More information about the workings of this mechanism can be found in the Bash info pages.</para>
-</sect3>
-<sect3 id="sect_01_02_02_09"><title>The prompt</title>
+</section>
+<section xml:id="sect_01_02_02_09"><title>The prompt</title>
 <para>Bash makes playing with the prompt<indexterm><primary>features</primary><secondary>prompt</secondary></indexterm> even more fun.  See the section <emphasis>Controlling the Prompt</emphasis> in the Bash info pages.</para>
-</sect3>
-<sect3 id="sect_01_02_02_10"><title>The restricted shell</title>
+</section>
+<section xml:id="sect_01_02_02_10"><title>The restricted shell</title>
 <para>When invoked as <command>rbash<indexterm><primary>features</primary><secondary>restricted shell</secondary></indexterm></command> or with the <option>--restricted<indexterm><primary>options</primary><secondary>restricted</secondary></indexterm></option> or <option>-r</option> option, the following happens<indexterm><primary>restricted shell</primary><secondary>behavior</secondary></indexterm>:</para>
 <itemizedlist>
 <listitem><para>The <command>cd</command> built-in is disabled.</para></listitem>
@@ -236,25 +227,25 @@ the shell expansions or by the <command>let</command> built-in.</para>
 <para>More information:</para>
 
 <itemizedlist>
-<listitem><para><xref linkend="sect_03_02" /></para></listitem>
-<listitem><para><xref linkend="sect_03_06" /></para></listitem>
+<listitem><para><xref linkend="sect_03_02"/></para></listitem>
+<listitem><para><xref linkend="sect_03_06"/></para></listitem>
 <listitem><para><menuchoice><guimenu>Info Bash</guimenu><guisubmenu>Basic Shell Features</guisubmenu><guimenuitem>Redirections</guimenuitem></menuchoice></para></listitem>
-<listitem><para><xref linkend="sect_08_02_03" />: advanced redirection</para></listitem>
+<listitem><para><xref linkend="sect_08_02_03"/>: advanced redirection</para></listitem>
 </itemizedlist>
 
-</sect3>
+</section>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
 
-<sect1 id="sect_01_03"><title>Executing commands</title>
-<sect2 id="sect_01_03_01"><title>General</title>
+<section xml:id="sect_01_03"><title>Executing commands</title>
+<section xml:id="sect_01_03_01"><title>General</title>
 <para>Bash determines the type of program that is to be execute<indexterm><primary>commands</primary><secondary>execution</secondary></indexterm>d.  Normal programs are system commands that exist in compiled form on your system.  When such a program is executed, a new process is created because Bash makes an exact copy of itself.  This child process has the same environment as its parent, only the process ID number is different.  This procedure is called <emphasis>forking</emphasis>.</para>
 <para>After the forking process, the address space of the child process is overwritten with the new process data.  This is done through an <emphasis>exec</emphasis> call to the system.</para>
 <para>The <emphasis>fork-and-exec</emphasis> mechanism<indexterm><primary>commands</primary><secondary>fork-and-exec</secondary></indexterm> thus switches an old command with a new, while the environment in which the new program is executed remains the same, including configuration of input and output devices, environment variables and priority.  This mechanism is used to create all UNIX processes, so it also applies to the Linux operating system.  Even the first process, <command>init</command>, with process ID 1, is forked during the boot procedure in the so-called <emphasis>bootstrapping</emphasis> procedure.</para>
-</sect2>
-<sect2 id="sect_01_03_02"><title>Shell built-in commands</title>
+</section>
+<section xml:id="sect_01_03_02"><title>Shell built-in commands</title>
 <para>Built-in commands<indexterm><primary>commands</primary><secondary>built-in commands</secondary></indexterm> are contained within the shell itself.  When the name of a built-in command is used as the first word of a simple command, the shell executes the command directly, without creating a new process.  Built-in commands are necessary to implement functionality impossible or inconvenient to obtain with separate utilities.</para>
 <para>Bash supports 3 types of built-in commands:</para>
 <itemizedlist>
@@ -275,20 +266,20 @@ the shell expansions or by the <command>let</command> built-in.</para>
 </listitem>
 </itemizedlist>
 <para>Most of these built-ins will be discussed in the next chapters.  For those commands for which this is not the case, we refer to the Info pages.</para>
-</sect2>
-<sect2 id="sect_01_03_03"><title>Executing programs from a script</title>
+</section>
+<section xml:id="sect_01_03_03"><title>Executing programs from a script</title>
 <para>When the program<indexterm><primary>commands</primary><secondary>script execution</secondary></indexterm> being executed is a shell script, bash will create a new bash process using a <emphasis>fork</emphasis>.  This subshell reads the lines from the shell script one line at a time.  Commands on each line are read, interpreted and executed as if they would have come directly from the keyboard.</para>
 <para>While the subshell processes each line of the script, the parent shell waits for its child process to finish.  When there are no more lines in the shell script to read, the subshell terminates.  The parent shell awakes and displays a new prompt.</para>
-</sect2>
+</section>
 
-</sect1>
-<sect1 id="sect_01_04"><title>Building blocks</title>
-<sect2 id="sect_01_04_01"><title>Shell building blocks</title>
-<sect3 id="sect_01_04_01_01"><title>Shell syntax</title>
+</section>
+<section xml:id="sect_01_04"><title>Building blocks</title>
+<section xml:id="sect_01_04_01"><title>Shell building blocks</title>
+<section xml:id="sect_01_04_01_01"><title>Shell syntax</title>
 <para>If input is not commented, the shell reads<indexterm><primary>shell</primary><secondary>syntax</secondary></indexterm> it and divides it into words and operators, employing quoting rules to define the meaning of each character of input.  Then these words and operators are translated into commands and other constructs, which return an exit status available for inspection or processing.  The above fork-and-exec scheme is only applied after the shell has analyzed input in the following<indexterm><primary>input</primary><secondary>analysis</secondary></indexterm> way:</para>
 <itemizedlist>
 <listitem><para>The shell reads its input from a file, from a string or from the user's terminal.</para></listitem>
-<listitem><para>Input is broken up into words and operators, obeying the quoting rules, see <xref linkend="chap_03" />.  These tokens are separated by <emphasis>metacharacters</emphasis>.  Alias expansion is performed.</para></listitem>
+<listitem><para>Input is broken up into words and operators, obeying the quoting rules, see <xref linkend="chap_03"/>.  These tokens are separated by <emphasis>metacharacters</emphasis>.  Alias expansion is performed.</para></listitem>
 <listitem><para>The shell <emphasis>parses</emphasis> (analyzes and substitutes) the tokens into simple and compound commands.</para></listitem>
 <listitem><para>Bash performs various shell expansions, breaking the expanded tokens into lists of filenames and commands and arguments.</para></listitem>
 <listitem><para>Redirection is performed if necessary, redirection operators and their operands are removed from the argument list.</para></listitem>
@@ -296,25 +287,25 @@ the shell expansions or by the <command>let</command> built-in.</para>
 <listitem><para>Optionally the shell waits for the command to complete and collects its exit status.</para></listitem>
 </itemizedlist>
 
-</sect3>
-<sect3 id="sect_01_04_01_02"><title>Shell commands</title>
+</section>
+<section xml:id="sect_01_04_01_02"><title>Shell commands</title>
 <para>A simple shell command such as <command>touch <filename>file1</filename> <filename>file2</filename> <filename>file3</filename></command> consists of the command itself followed by arguments<indexterm><primary>arguments</primary><secondary>to a command</secondary></indexterm>, separated by spaces.</para>
 <para>More complex shell commands are composed of simple commands arranged together in a variety of ways: in a pipeline in which the output of one command becomes the input of a second, in a loop or conditional construct, or in some other grouping.  A couple of examples:</para>
 <cmdsynopsis><command>ls | more</command></cmdsynopsis>
 <cmdsynopsis><command>gunzip <filename>file.tar.gz</filename> | tar <option>xvf</option> <parameter>-</parameter></command></cmdsynopsis>
 
-</sect3>
-<sect3 id="sect_01_04_01_03"><title>Shell functions</title>
+</section>
+<section xml:id="sect_01_04_01_03"><title>Shell functions</title>
 <para>Shell functions<indexterm><primary>functions</primary><secondary>execution</secondary></indexterm> are a way to group commands for later execution using a single name for the group.  They are executed just like a <quote>regular</quote> command.  When the name of a shell function is used as a simple command name, the list of commands associated with that function name is executed.</para>
 <para>Shell functions are executed in the current shell context; no new process is created to interpret them.</para>
-<para>Functions are explained in <xref linkend="chap_11" />.</para>
-</sect3>
-<sect3 id="sect_01_04_01_04"><title>Shell parameters</title>
+<para>Functions are explained in <xref linkend="chap_11"/>.</para>
+</section>
+<section xml:id="sect_01_04_01_04"><title>Shell parameters</title>
 <para>A parameter<indexterm><primary>shell</primary><secondary>parameters</secondary></indexterm> is an entity that stores values.  It can be a name, a number or a special value.  For the shell's purpose, a variable<indexterm><primary>variables</primary><secondary>definition</secondary></indexterm> is a parameter that stores a name.  A variable has a value and zero or more attributes.  Variables are created with the <command>declare<indexterm><primary>built-ins</primary><secondary>declare</secondary></indexterm></command> shell built-in command.</para>
 <para>If no value is given, a variable is assigned the null string.  Variables can only be removed with the <command>unset</command> built-in.</para>
-<para>Assigning variables is discussed in <xref linkend="sect_03_02" />, advanced use of variables in <xref linkend="chap_10" />.</para>
-</sect3>
-<sect3 id="sect_01_04_01_05"><title>Shell expansions</title>
+<para>Assigning variables is discussed in <xref linkend="sect_03_02"/>, advanced use of variables in <xref linkend="chap_10"/>.</para>
+</section>
+<section xml:id="sect_01_04_01_05"><title>Shell expansions</title>
 <para>Shell expansion<indexterm><primary>shell</primary><secondary>expansion</secondary></indexterm> is performed after each command line has been split into tokens.  These are the expansions performed:</para>
 <itemizedlist>
 <listitem><para>Brace expansion</para></listitem>
@@ -325,13 +316,13 @@ the shell expansions or by the <command>let</command> built-in.</para>
 <listitem><para>Word splitting</para></listitem>
 <listitem><para>Filename expansion</para></listitem>
 </itemizedlist>
-<para>We'll discuss these expansion types in detail in <xref linkend="sect_03_04" />.</para>
-</sect3>
-<sect3 id="sect_01_04_01_06"><title>Redirections</title>
+<para>We'll discuss these expansion types in detail in <xref linkend="sect_03_04"/>.</para>
+</section>
+<section xml:id="sect_01_04_01_06"><title>Redirections</title>
 <para>Before a command is executed, its input and output may be redirected<indexterm><primary>shell</primary><secondary>redirections</secondary></indexterm> using a special notation interpreted by the shell.  Redirection may also be used to open and close files for the current shell execution environment.</para>
 
-</sect3>
-<sect3 id="sect_01_04_01_07"><title>Executing commands</title>
+</section>
+<section xml:id="sect_01_04_01_07"><title>Executing commands</title>
 <para>When executing a command, the words that the parser has marked as variable assignments (preceding the command name) and redirections are saved for later reference.  Words that are not variable assignments or redirections are expanded; the first remaining word after expansion is taken to be the name of the command and the rest are arguments<indexterm><primary>arguments</primary><secondary>definition</secondary></indexterm> to that command.  Then redirections are performed, then strings assigned to variables are expanded.  If no command name results, variables will affect the current shell environment.</para>
 <para>An important part of the tasks of the shell is to search<indexterm><primary>commands</primary><secondary>search for commands</secondary></indexterm> for commands.  Bash does this as follows:</para>
 <itemizedlist>
@@ -344,17 +335,17 @@ the shell expansions or by the <command>let</command> built-in.</para>
 <listitem><para>If the command was not begun asynchronously, the shell waits for the command to complete and collects its exit status.</para></listitem>
 </itemizedlist>
 
-</sect3>
-<sect3 id="sect_01_04_01_08"><title>Shell scripts</title>
+</section>
+<section xml:id="sect_01_04_01_08"><title>Shell scripts</title>
 <para>When a file containing<indexterm><primary>features</primary><secondary>scripts</secondary></indexterm> shell commands is used as the first non-option argument when invoking Bash (without <option>-c</option> or <option>-s</option>, this will create a non-interactive shell.  This shell first searches for the script file in the current directory, then looks in <varname>PATH</varname> if the file cannot be found there.</para>
-</sect3>
+</section>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
 
-<sect1 id="sect_01_05"><title>Developing good scripts</title>
-<sect2 id="sect_01_05_01"><title>Properties of good scripts</title>
+<section xml:id="sect_01_05"><title>Developing good scripts</title>
+<section xml:id="sect_01_05_01"><title>Properties of good scripts</title>
 <para>This guide is mainly about the last shell building block, scripts.  Some general considerations<indexterm><primary>scripts</primary><secondary>considerations</secondary></indexterm> before we continue:</para>
 <orderedlist>
 <listitem><para>A script should run without errors.</para></listitem>
@@ -364,8 +355,8 @@ the shell expansions or by the <command>let</command> built-in.</para>
 <listitem><para>Scripts should be reusable.</para></listitem>
 
 </orderedlist>
-</sect2>
-<sect2 id="sect_01_05_02"><title>Structure</title>
+</section>
+<section xml:id="sect_01_05_02"><title>Structure</title>
 <para>The structure<indexterm><primary>scripts</primary><secondary>structure</secondary></indexterm> of a shell script is very flexible.  Even though in Bash a lot of freedom is granted, you must ensure correct logic, flow control and efficiency so that users executing the script can do so easily and correctly.</para>
 <para>When starting on a new script, ask yourself the following questions:</para>
 <itemizedlist>
@@ -375,11 +366,11 @@ the shell expansions or by the <command>let</command> built-in.</para>
 <listitem><para>What commands will I use?  When using the script on different systems, do all these systems have these commands in the required versions?</para></listitem>
 <listitem><para>Does the user need any notifications?  When and why?</para></listitem>
 </itemizedlist>
-</sect2>
-<sect2 id="sect_01_05_03"><title>Terminology</title>
+</section>
+<section xml:id="sect_01_05_03"><title>Terminology</title>
 <para>The table below gives an overview of programming terms<indexterm><primary>scripts</primary><secondary>terminology</secondary></indexterm> that you need to be familiar with:</para>
 
-<table id="table_01_01" frame="all">
+<table xml:id="table_01_01" frame="all">
 <title>Overview of programming terms</title>
 <tgroup cols="2" align="left" colsep="1" rowsep="1">
 <thead>
@@ -395,8 +386,8 @@ the shell expansions or by the <command>let</command> built-in.</para>
 </tgroup>
 </table>
 
-</sect2>
-<sect2 id="sect_01_05_04"><title>A word on order and logic</title>
+</section>
+<section xml:id="sect_01_05_04"><title>A word on order and logic</title>
 <para>In order to speed up the developing process, the logical<indexterm><primary>scripts</primary><secondary>logic</secondary></indexterm> order of a program should be thought over in advance.  This is your first step when developing a script.</para>
 <para>A number of methods can be used; one of the most common is working with lists.  Itemizing the list of tasks involved in a program allows you to describe each process.  Individual tasks can be referenced by their item number.</para>
 <para>Using your own spoken language to pin down the tasks to be executed by your program will help you to create an understandable form of your program.  Later, you can replace the everyday language statements with shell language words and constructs.</para>
@@ -423,9 +414,9 @@ the shell expansions or by the <command>let</command> built-in.</para>
 </orderedlist>
 <para>The user should provide information for the program to do something.  Input from the user must be obtained and stored.  The user should be notified that his crontab will change.</para>
 
-</sect2>
+</section>
 
-<sect2 id="sect_01_05_05"><title>An example<indexterm><primary>scripts</primary><secondary>example</secondary></indexterm> Bash script: mysystem.sh</title>
+<section xml:id="sect_01_05_05"><title>An example<indexterm><primary>scripts</primary><secondary>example</secondary></indexterm> Bash script: mysystem.sh</title>
 <para>The <filename>mysystem.sh</filename> script below executes some well-known commands (<command>date</command>, <command>w</command>, <command>uname</command>, <command>uptime</command>) to display information about you and your machine.</para>
 <screen>
 <prompt>tom:~&gt;</prompt> <command>cat <option>-n</option> <filename>mysystem.sh</filename></command>
@@ -478,16 +469,16 @@ printf "\n"
 printf "That's all folks!\n"
 </screen>
 
-<para>Creating user friendly scripts by means of inserting messages is treated in <xref linkend="chap_08" />.</para>
+<para>Creating user friendly scripts by means of inserting messages is treated in <xref linkend="chap_08"/>.</para>
 <note><title>Standard location of the Bourne Again shell</title>
 <para>This implies that the <command>bash</command> program is installed in <filename>/bin</filename>.</para></note>
 <warning><title>If stdout is not available</title>
 <para>If you execute a script from cron, supply full path names and redirect output and errors.  Since the shell runs in non-interactive mode, any errors will cause the script to exit prematurely if you don't think about this.</para></warning>
 <para>The following chapters will discuss the details of the above scripts.</para>
 
-</sect2>
+</section>
 
-<sect2 id="sect_01_05_06"><title>Example init script</title>
+<section xml:id="sect_01_05_06"><title>Example init script</title>
 <para>An init script<indexterm><primary>scripts</primary><secondary>init scripts</secondary></indexterm> starts system services on UNIX and Linux machines.  The system log daemon, the power management daemon, the name and mail daemons are common examples.  These scripts, also known as startup scripts, are stored in a specific location on your system, such as <filename>/etc/rc.d/init.d</filename> or <filename>/etc/init.d</filename>.  Init, the initial process, reads its configuration files and decides which services to start or stop in each run level.  A run level is a configuration of processes; each system has a single user run level, for instance, for performing administrative tasks, for which the system has to be in an unused state as much as possible, such as recovering a critical file system from a backup.  Reboot and shutdown run levels are usually also configured.</para>
 <para>The tasks to be executed upon starting a service or stopping it are listed in the startup scripts.  It is one of the system administrator's tasks to configure <command>init</command>, so that services are started and stopped at the correct moment.  When confronted with this task, you need a good understanding of the startup and shutdown procedures on your system.  We therefore advise that you read the man pages for <command>init</command> and <filename>inittab</filename> before starting on your own initialization scripts.</para>
 <para>Here is a very simple example, that will play a sound upon starting<indexterm><primary>scripts</primary><secondary>init script example</secondary></indexterm> and stopping your machine:</para>
@@ -507,12 +498,12 @@ case "$1" in
 esac
 exit 0
 </screen>
-<para>The <command>case</command> statement often used in this kind of script is described in <xref linkend="sect_07_02_05" />.</para>
-</sect2>
+<para>The <command>case</command> statement often used in this kind of script is described in <xref linkend="sect_07_02_05"/>.</para>
+</section>
 
-</sect1>
+</section>
 
-<sect1 id="sect_01_06"><title>Summary</title>
+<section xml:id="sect_01_06"><title>Summary</title>
 <para>Bash is the GNU shell, compatible with the Bourne shell and incorporating many useful features from other shells.  When the shell is started, it reads its configuration files.  The most important are:</para>
 <itemizedlist>
 <listitem><para><filename>/etc/profile</filename></para></listitem>
@@ -523,9 +514,9 @@ exit 0
 <para>Shell commands can be split up in three groups: the shell functions, shell built-ins and existing commands in a directory on your system.  Bash supports additional built-ins not found in the plain Bourne shell.</para>
 <para>Shell scripts consist of these commands arranged as shell syntax dictates.  Scripts are read and executed line per line and should have a logical structure.</para>
 
-</sect1>
+</section>
 
-<sect1 id="sect_01_07"><title>Exercises</title>
+<section xml:id="sect_01_07"><title>Exercises</title>
 <para>These are some exercises to warm you up for the next chapter:</para>
 <orderedlist>
 <listitem><para>Where is the <command>bash</command> program located on your system?</para></listitem>
@@ -551,8 +542,7 @@ exit 0
 <listitem><para>How to display the system hostname?  Only the name, nothing more!</para></listitem>
 </orderedlist>
 
-</sect1>
+</section>
 
 
 </chapter>
-

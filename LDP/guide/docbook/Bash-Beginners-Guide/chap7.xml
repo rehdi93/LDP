@@ -1,32 +1,18 @@
-<chapter id="chap_07">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chap_07">
 <title>Conditional statements</title>
-<abstract>
-<para>In this chapter we will discuss the use of conditionals in Bash scripts.  This includes the following topics:</para>
-<para>
-<itemizedlist>
-<listitem><para>The <command>if</command> statement</para></listitem>
-<listitem><para>Using the exit status of a command</para></listitem>
-<listitem><para>Comparing and testing input and files</para></listitem>
-<listitem><para><command>if/then/else</command> constructs</para></listitem>
-<listitem><para><command>if/then/elif/else</command> constructs</para></listitem>
-<listitem><para>Using and testing the positional parameters</para></listitem>
-<listitem><para>Nested <command>if</command> statements</para></listitem>
-<listitem><para>Boolean expressions</para></listitem>
-<listitem><para>Using <command>case</command> statements</para></listitem>
-</itemizedlist>
-</para>
-</abstract>
-<sect1 id="sect_07_01"><title>Introduction to if</title>
-<sect2 id="sect_07_01_01"><title>General</title>
+
+<section xml:id="sect_07_01"><title>Introduction to if</title>
+<section xml:id="sect_07_01_01"><title>General</title>
 <para>At times you need to specify different courses of action to be taken in a shell script, depending on the success or failure of a command.  The <command>if</command> construction allows you to specify such conditions.</para>
 <para>The most compact syntax of the <command>if</command> command is:</para>
 <cmdsynopsis><command>if TEST-COMMANDS; then CONSEQUENT-COMMANDS; fi</command></cmdsynopsis>
 <para>The <command>TEST-COMMAND</command> list is executed, and if its return status is zero, the <command>CONSEQUENT-COMMANDS</command> list is executed.  The return status is the exit status of the last command executed, or zero if no condition tested true.</para>
 <para>The <command>TEST-COMMAND</command> often involves numerical or string comparison tests, but it can also be any command that returns a status of zero when it succeeds and some other status when it fails.  Unary expressions are often used to examine the status of a file.  If the <filename>FILE</filename> argument to one of the primaries is of the form <filename>/dev/fd/N</filename>, then file descriptor <quote>N</quote> is checked.  <filename>stdin</filename>, <filename>stdout</filename> and <filename>stderr</filename> and their respective file descriptors may also be used for tests.</para>
-<sect3 id="sect_07_01_01_01"><title>Expressions used with if</title>
+<section xml:id="sect_07_01_01_01"><title>Expressions used with if</title>
 <para>The table below contains an overview of the so-called <quote>primaries</quote> that make up the <command>TEST-COMMAND</command> command or list of commands.  These primaries are put between square brackets to indicate the test of a conditional expression.</para>
 
-<table id="tab_07_01" frame="all"><title>Primary expressions</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead>
+<table xml:id="tab_07_01" frame="all"><title>Primary expressions</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead>
 <row><entry>Primary</entry><entry>Meaning</entry></row>
 </thead>
 <tbody>
@@ -68,7 +54,7 @@
 
 <para>Expressions may be combined using the following operators, listed in decreasing order of precedence:</para>
 
-<table id="tab_07_02" frame="all"><title>Combining expressions</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead>
+<table xml:id="tab_07_02" frame="all"><title>Combining expressions</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead>
 <row><entry>Operation</entry><entry>Effect</entry></row>
 </thead>
 <tbody>
@@ -80,12 +66,12 @@
 </tgroup>
 </table>
 <para>The <command>[</command> (or <command>test</command>) built-in evaluates conditional expressions using a set of rules based on the number of arguments.  More information about this subject can be found in the Bash documentation.  Just like the <command>if</command> is closed with <command>fi</command>, the opening square bracket should be closed after the conditions have been listed.</para>
-</sect3>
-<sect3 id="sect_07_01_01_02"><title>Commands following the then statement</title>
+</section>
+<section xml:id="sect_07_01_01_02"><title>Commands following the then statement</title>
 <para>The <command>CONSEQUENT-COMMANDS</command> list that follows the <command>then</command> statement can be any valid UNIX command, any executable program, any executable shell script or any shell statement, with the exception of the closing <command>fi</command>.  It is important to remember that the <command>then</command> and <command>fi</command> are considered to be separated statements in the shell.  Therefore, when issued on the command line, they are separated by a semi-colon.</para>
 <para>In a script, the different parts of the <command>if</command> statement are usually well-separated.  Below, a couple of simple examples.</para>
-</sect3>
-<sect3 id="sect_07_01_01_03"><title>Checking files</title>
+</section>
+<section xml:id="sect_07_01_01_03"><title>Checking files</title>
 <para>The first example checks for the existence of a file:</para>
 <screen>
 <prompt>anny ~&gt;</prompt> <command>cat <filename>msgcheck.sh</filename></command>
@@ -107,8 +93,8 @@ Checking...
 
 ...done.
 </screen>
-</sect3>
-<sect3 id="sect_07_01_01_04"><title>Checking shell options</title>
+</section>
+<section xml:id="sect_07_01_01_04"><title>Checking shell options</title>
 <para>To add in your Bash configuration files:</para>
 <screen>
 # These lines will print a message if the noclobber option is set:
@@ -131,10 +117,10 @@ your files are protected against overwriting.
 </screen>
 <para>However, if you use testing of conditions that depend on the environment, you might get different results when you enter the same command in a script, because the script will open a new shell, in which expected variables and options might not be set automatically.</para>
 </note>
-</sect3>
-</sect2>
-<sect2 id="sect_07_01_02"><title>Simple applications of if</title>
-<sect3 id="sect_07_01_02_01"><title>Testing exit status</title>
+</section>
+</section>
+<section xml:id="sect_07_01_02"><title>Simple applications of if</title>
+<section xml:id="sect_07_01_02_01"><title>Testing exit status</title>
 <para>The <varname>?</varname> variable holds the exit status of the previously executed command (the most recently completed foreground process).</para>
 <para>The following example shows a simple test:</para>
 <screen>
@@ -166,8 +152,8 @@ not a local account
 <prompt>anny &gt;</prompt>
 </screen>
 
-</sect3>
-<sect3 id="sect_07_01_02_02"><title>Numeric comparisons</title>
+</section>
+<section xml:id="sect_07_01_02_02"><title>Numeric comparisons</title>
 <para>The examples below use numerical comparisons:</para>
 <screen>
 <prompt>anny &gt;</prompt> <command><varname>num</varname>=<parameter>`wc -l work.txt`</parameter></command>
@@ -200,8 +186,8 @@ if [ $WEEKOFFSET -eq "0" ]; then
 fi
 </screen>
 
-</sect3>
-<sect3 id="sect_07_01_02_03"><title>String comparisons</title>
+</section>
+<section xml:id="sect_07_01_02_03"><title>String comparisons</title>
 <para>An example of comparing strings for testing the user ID:</para>
 <screen>
 if [ "$(whoami)" != 'root' ]; then
@@ -234,13 +220,13 @@ test "$(whoami)" != 'root' &amp;&amp; (echo you are using a non-privileged accou
 <para>If you invoke the <command>exit</command> in a subshell, it will not pass variables to the parent.  Use { and } instead of ( and ) if you do not want Bash to fork a subshell.</para>
 </note>
 <para>See the info pages for Bash for more information on pattern matching with the <quote>(( EXPRESSION ))</quote> and <quote>[[ EXPRESSION ]]</quote> constructs.</para>
-</sect3>
-</sect2>
+</section>
+</section>
 
-</sect1>
-<sect1 id="sect_07_02"><title>More advanced if usage</title>
-<sect2 id="sect_07_02_01"><title>if/then/else constructs</title>
-<sect3 id="sect_07_02_01_01"><title>Dummy example</title>
+</section>
+<section xml:id="sect_07_02"><title>More advanced if usage</title>
+<section xml:id="sect_07_02_01"><title>if/then/else constructs</title>
+<section xml:id="sect_07_02_01_01"><title>Dummy example</title>
 <para>This is the construct to use to take one course of action if the <command>if</command> commands test true, and another if it tests false.  An example:</para>
 <screen>
 <prompt>freddy scripts&gt;</prompt> <command><varname>gender</varname>=<parameter>"male"</parameter></command>
@@ -257,11 +243,11 @@ How come the lady hasn't got a drink yet?
 <para>Contrary to <parameter>[</parameter>, <parameter>[[</parameter> prevents word splitting of variable values.  So, if <varname>VAR="var with spaces"</varname>, you do not need to double quote <varname>$VAR</varname> in a test - eventhough using quotes remains a good habit.  Also, <parameter>[[</parameter> prevents pathname expansion, so literal strings with wildcards do not try to expand to filenames.  Using <parameter>[[</parameter>, <parameter>==</parameter> and <parameter>!=</parameter> interpret strings to the right as shell glob patterns to be matched against the value to the left, for instance: <parameter>[[ "value" == val* ]]</parameter>.</para>
 </important>
 <para>Like the <command>CONSEQUENT-COMMANDS</command> list following the <command>then</command> statement, the <command>ALTERNATE-CONSEQUENT-COMMANDS</command> list following the <command>else</command> statement can hold any UNIX-style command that returns an exit status.</para> 
-<para>Another example, extending the one from <xref linkend="sect_07_01_02_01" />:</para>
+<para>Another example, extending the one from <xref linkend="sect_07_01_02_01"/>:</para>
 <screen>
 <prompt>anny ~&gt;</prompt> <command>su <parameter>-</parameter></command>
 Password:
-<prompt>[root@elegance root]#</prompt> <command>if <parameter>! grep ^$USER</parameter> <filename>/etc/passwd</filename> 1> <filename>/dev/null</filename></command>
+<prompt>[root@elegance root]#</prompt> <command>if <parameter>! grep ^$USER</parameter> <filename>/etc/passwd</filename> 1&gt; <filename>/dev/null</filename></command>
 <prompt>&gt;</prompt> <command>then echo <parameter>"your user account is not managed locally"</parameter></command>
 <prompt>&gt;</prompt> <command>else echo <parameter>"your account is managed from the local /etc/passwd file"</parameter></command>
 <prompt>&gt;</prompt> <command>fi</command>
@@ -269,8 +255,8 @@ your account is managed from the local /etc/passwd file
 <prompt>[root@elegance root]#</prompt>
 </screen>
 <para>We switch to the <emphasis>root</emphasis> account to demonstrate the effect of the <command>else</command> statement - your <emphasis>root</emphasis> is usually a local account while your own user account might be managed by a central system, such as an LDAP server.</para>
-</sect3>
-<sect3 id="sect_07_02_01_02"><title>Checking command line arguments</title>
+</section>
+<section xml:id="sect_07_02_01_02"><title>Checking command line arguments</title>
 <para>Instead of setting a variable and then executing a script, it is frequently more elegant to put the values for the variables<indexterm><primary>arguments</primary><secondary>testing</secondary></indexterm> on the command line.</para>
 <para>We use the positional parameters<indexterm><primary>arguments</primary><secondary>positional parameters</secondary></indexterm> <varname>$1</varname>, <varname>$2</varname>, ..., <varname>$N</varname> for this purpose.  <varname>$#</varname> refers to the number of command line arguments<indexterm><primary>arguments</primary><secondary>number of arguments</secondary></indexterm>.  <varname>$0</varname> refers to the name of the script.</para>
 <para>The following is a simple example:</para>
@@ -278,8 +264,8 @@ your account is managed from the local /etc/passwd file
 <figure><title>Testing of a command line argument with if</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/penguin.sh.eps" format="EPS"></imagedata></imageobject><imageobject>
-<imagedata fileref="images/penguin.sh.png" format="PNG"></imagedata>
+<imagedata fileref="images/penguin.sh.eps" format="EPS"/></imageobject><imageobject>
+<imagedata fileref="images/penguin.sh.png" format="PNG"/>
 </imageobject>
 <textobject>
 <phrase>Simple if/then/else/fi construct: if [ "$1" == fish ]; then echo "Tux likes this"; else echo "Tux wants fish!"; fi</phrase>
@@ -312,8 +298,8 @@ fi
 + echo 'You should eat a bit more fat.'
 You should eat a bit more fat.
 </screen>
-</sect3>
-<sect3 id="sect_07_02_01_03"><title>Testing the number of arguments</title>
+</section>
+<section xml:id="sect_07_02_01_03"><title>Testing the number of arguments</title>
 <para>The following example<indexterm><primary>arguments</primary><secondary>example test number</secondary></indexterm> shows how to change the previous script so that it prints a message if more or less than 2 arguments are given:</para>
 <screen>
 <prompt>anny ~&gt;</prompt> <command>cat <filename>weight.sh</filename></command>
@@ -344,9 +330,9 @@ You should eat a bit more fruit.
 Usage: ./weight.sh weight_in_kilos length_in_centimeters
 </screen>
 <para>The first argument is referred to as <varname>$1</varname>, the second as <varname>$2</varname> and so on.  The total number of arguments is stored in <varname>$#</varname>.</para>
-<para>Check out <xref linkend="sect_07_02_05" /> for a more elegant way to print usage messages.</para>
-</sect3>
-<sect3 id="sect_07_02_01_04"><title>Testing that a file exists</title>
+<para>Check out <xref linkend="sect_07_02_05"/> for a more elegant way to print usage messages.</para>
+</section>
+<section xml:id="sect_07_02_01_04"><title>Testing that a file exists</title>
 <para>This test is done in a lot of scripts<indexterm><primary>arguments</primary><secondary>example existence</secondary></indexterm>, because there's no use in starting a lot of programs if you know they're not going to work:</para>
 <screen>
 #!/bin/bash
@@ -371,10 +357,10 @@ fi
 <tip><title>Filenames with spaces</title>
 <para>The above example will fail if the value of <varname>$1</varname> can be parsed as multiple words.  In that case, the <command>if</command> command can be fixed either using double quotes around the filename, or by using <parameter>[[</parameter> instead of <parameter>[</parameter>.</para>
 </tip>
-</sect3>
-</sect2>
-<sect2 id="sect_07_02_02"><title>if/then/elif/else constructs</title>
-<sect3 id="sect_07_02_02_01"><title>General</title>
+</section>
+</section>
+<section xml:id="sect_07_02_02"><title>if/then/elif/else constructs</title>
+<section xml:id="sect_07_02_02_01"><title>General</title>
 <para>This is the full form of the <command>if</command> statement:</para>
 <cmdsynopsis><command>if TEST-COMMANDS; then</command></cmdsynopsis>
 <cmdsynopsis><command>CONSEQUENT-COMMANDS;</command></cmdsynopsis>
@@ -384,8 +370,8 @@ fi
 <cmdsynopsis><command>fi</command></cmdsynopsis>
 <para>The <command>TEST-COMMANDS</command> list is executed, and if its return status is zero, the <command>CONSEQUENT-COMMANDS</command> list is executed.  If
 <command>TEST-COMMANDS</command> returns a non-zero status, each <command>elif</command> list is executed in turn, and if its exit status is zero, the corresponding <command>MORE-CONSEQUENT-COMMANDS</command> is executed and the command completes.  If <command>else</command> is followed by an <command>ALTERNATE-CONSEQUENT-COMMANDS</command> list, and the final command in the final <command>if</command> or <command>elif</command> clause has a non-zero exit status, then <command>ALTERNATE-CONSEQUENT-COMMANDS</command> is executed.  The return status is the exit status of the last command executed, or zero if no condition tested true.</para>
-</sect3>
-<sect3 id="sect_07_02_02_02"><title>Example</title>
+</section>
+<section xml:id="sect_07_02_02_02"><title>Example</title>
 <para>This is an example that you can put in your crontab for daily execution:</para>
 <screen>
 <prompt>anny /etc/cron.daily&gt;</prompt> <command>cat <filename>disktest.sh</filename></command>
@@ -402,10 +388,10 @@ else
   echo "Disk space normal" | mail -s "daily diskcheck" root
 fi
 </screen>
-</sect3>
-</sect2>
+</section>
+</section>
 
-<sect2 id="sect_07_02_03"><title>Nested if statements</title>
+<section xml:id="sect_07_02_03"><title>Nested if statements</title>
 <para>Inside the <command>if</command> statement, you can use another <command>if</command> statement.  You may use as many levels of nested <command>if</command>s as you can logically manage.</para>
 <para>This is an example testing leap years:</para>
 <screen>
@@ -434,28 +420,28 @@ Tue Jan 14 20:37:55 CET 2003
 This is not a leap year.
 </screen>
 
-</sect2>
-<sect2 id="sect_07_02_04"><title>Boolean operations</title>
+</section>
+<section xml:id="sect_07_02_04"><title>Boolean operations</title>
 <para>The above script can be shortened using the Boolean operators <quote>AND</quote> (&amp;&amp;) and <quote>OR</quote> (||).</para>
 <figure><title>Example using Boolean operators</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/leaptest.sh.eps" format="EPS"></imagedata></imageobject><imageobject>
-<imagedata fileref="images/leaptest.sh.png" format="PNG"></imagedata>
+<imagedata fileref="images/leaptest.sh.eps" format="EPS"/></imageobject><imageobject>
+<imagedata fileref="images/leaptest.sh.png" format="PNG"/>
 </imageobject>
 <textobject>
 <phrase>year=`date +%Y`; if (( ("$year" % 400) == "0" )) || (( ("$year" % 4 == "0") &amp;&amp; ("$year" % 100 != "0") )); then echo "this is a leap year."; else echo "not a leap year"; fi</phrase>
 </textobject>
 </mediaobject>
 </figure>
-<para>We use the double brackets for testing<indexterm><primary>arithmetic expression</primary><secondary>testing</secondary></indexterm> an arithmetic expression, see <xref linkend="sect_03_04_05" />.  This is equivalent to the <command>let</command> statement.  You will get stuck using square brackets here, if you try something like <command>$[$year % 400]</command>, because here, the square brackets don't represent an actual command by themselves.</para>
+<para>We use the double brackets for testing<indexterm><primary>arithmetic expression</primary><secondary>testing</secondary></indexterm> an arithmetic expression, see <xref linkend="sect_03_04_05"/>.  This is equivalent to the <command>let</command> statement.  You will get stuck using square brackets here, if you try something like <command>$[$year % 400]</command>, because here, the square brackets don't represent an actual command by themselves.</para>
 <para>Among other editors, <command>gvim</command> is one of those supporting colour schemes according to the file format; such editors are useful for detecting errors in your code.</para>
 
-</sect2>
+</section>
 
 
-<sect2 id="sect_07_02_05"><title>Using the exit statement and if</title>
-<para>We already briefly met the <command>exit</command> statement in <xref linkend="sect_07_02_01_03" />.  It terminates execution of the entire script.  It is most often used if the input requested from the user is incorrect, if a statement did not run successfully or if some other error occurred.</para>
+<section xml:id="sect_07_02_05"><title>Using the exit statement and if</title>
+<para>We already briefly met the <command>exit</command> statement in <xref linkend="sect_07_02_01_03"/>.  It terminates execution of the entire script.  It is most often used if the input requested from the user is incorrect, if a statement did not run successfully or if some other error occurred.</para>
 <para>The <command>exit</command> statement takes an optional argument<indexterm><primary>arguments</primary><secondary>exit status</secondary></indexterm>.  This argument is the integer exit status code, which is passed back to the parent and stored in the <varname>$?</varname> variable.</para>
 <para>A zero argument<indexterm><primary>exit status</primary><secondary>arguments</secondary></indexterm> means that the script ran successfully.  Any other value may be used by programmers to pass back different messages to the parent, so that different actions can be taken according to failure or success of the child process.  If no argument is given to the <command>exit</command> command, the parent shell uses the current value of the <varname>$?</varname> variable.</para>
 <para>Below is an example with a slightly adapted <filename>penguin.sh</filename> script, which sends its exit status back to the parent, <filename>feed.sh</filename>:</para>
@@ -521,12 +507,12 @@ esac
 Tux don't like that.  Tux wants fish!
 Guard: You'd better give'm a fish, less they get violent...
 </screen>
-<para>As you can see, exit status codes can be chosen freely.  Existing commands usually have a series of defined codes; see the programmer's manual for each command for more information.</para></sect2>
+<para>As you can see, exit status codes can be chosen freely.  Existing commands usually have a series of defined codes; see the programmer's manual for each command for more information.</para></section>
 
 
-</sect1>
-<sect1 id="sect_07_03"><title>Using case statements</title>
-<sect2 id="sect_07_03_01"><title>Simplified conditions</title>
+</section>
+<section xml:id="sect_07_03"><title>Using case statements</title>
+<section xml:id="sect_07_03_01"><title>Simplified conditions</title>
 <para>Nested <command>if</command> statements might be nice, but as soon as you are confronted with a couple of different possible actions to take, they tend to confuse.  For the more complex conditionals, use the <command>case</command> syntax:</para>
 <cmdsynopsis><command>case <function>EXPRESSION</function> in <function>CASE1</function>) COMMAND-LIST;; <function>CASE2</function>) COMMAND-LIST;; ... <function>CASEN</function>) COMMAND-LIST;; esac</command></cmdsynopsis>
 <para>Each case is an expression matching a pattern.  The commands in the <command>COMMAND-LIST</command> for the first match are executed.  The <quote>|</quote> symbol is used for separating multiple patterns, and the <quote>)</quote> operator terminates a pattern list.  Each case plus its according commands are called a <emphasis>clause</emphasis>.  Each clause must be terminated with <quote>;;</quote>.  Each <command>case</command> statement is ended with the <command>esac</command> statement.</para>
@@ -583,9 +569,9 @@ Start thinking about cleaning out some stuff.  There's a partition that is 87 % 
 </screen>
 <para>Of course you could have opened your mail program to check the results; this is just to demonstrate that the script sends a decent mail with <quote>To:</quote>, <quote>Subject:</quote> and <quote>From:</quote> header lines.</para>
 <para>Many more examples using <command>case</command> statements can be found in your system's init script directory.  The startup scripts use <command>start</command> and <command>stop</command> cases to run or stop system processes.  A theoretical example can be found in the next section.</para>
-</sect2>
+</section>
 
-<sect2 id="sect_07_03_02"><title>Initscript example</title>
+<section xml:id="sect_07_03_02"><title>Initscript example</title>
 <para>Initscripts often make use of <command>case</command> statements for starting, stopping and querying system services.  This is an excerpt of the script that starts <application>Anacron</application>, a daemon that runs commands periodically with a frequency specified in days.</para>
 <screen>
 case "$1" in
@@ -617,31 +603,31 @@ case "$1" in
  
 esac
 </screen>
-<para>The tasks to execute in each case, such as stopping and starting the daemon, are defined in functions, which are partially sourced from the <filename>/etc/rc.d/init.d/functions</filename> file.  See <xref linkend="chap_11" /> for more explanation.</para>
-</sect2>
+<para>The tasks to execute in each case, such as stopping and starting the daemon, are defined in functions, which are partially sourced from the <filename>/etc/rc.d/init.d/functions</filename> file.  See <xref linkend="chap_11"/> for more explanation.</para>
+</section>
 
-</sect1>
-<sect1 id="sect_07_04"><title>Summary</title>
+</section>
+<section xml:id="sect_07_04"><title>Summary</title>
 <para>In this chapter we learned how to build conditions into our scripts so that different actions can be undertaken upon success or failure of a command.  The actions can be determined using the <command>if</command> statement.  This allows you to perform arithmetic and string comparisons, and testing of exit code, input and files needed by the script.</para>
 <para>A simple <command>if/then/fi</command> test often preceeds commands in a shell script in order to prevent output generation, so that the script can easily be run in the background or through the <application>cron</application> facility.  More complex definitions of conditions are usually put in a <command>case</command> statement.</para>
 <para>Upon successful condition testing, the script can explicitly inform the parent using the <command>exit 0</command> status.  Upon failure, any other number may be returned.  Based on the return code, the parent program can take appropriate action.</para>
 
-</sect1>
-<sect1 id="sect_07_05"><title>Exercises</title>
+</section>
+<section xml:id="sect_07_05"><title>Exercises</title>
 <para>Here are some ideas to get you started using <command>if</command> in scripts:</para>
 <orderedlist>
 <listitem><para>Use an <command>if/then/elif/else</command> construct that prints information about the current month.  The script should print the number of days in this month, and give information about leap years if the current month is February.</para></listitem>
 <listitem><para>Do the same, using a <command>case</command> statement and an alternative use of the <command>date</command> command.</para></listitem>
 <listitem><para>Modify <filename>/etc/profile</filename> so that you get a special greeting message when you connect to your system as <emphasis>root</emphasis>.</para></listitem>
-<listitem><para>Edit the <filename>leaptest.sh</filename> script from <xref linkend="sect_07_02_04" /> so that it requires one argument, the year.  Test that exactly one argument is supplied.</para></listitem>
+<listitem><para>Edit the <filename>leaptest.sh</filename> script from <xref linkend="sect_07_02_04"/> so that it requires one argument, the year.  Test that exactly one argument is supplied.</para></listitem>
 <listitem><para>Write a script called <filename>whichdaemon.sh</filename> that checks if the <command>httpd</command> and <command>init</command> daemons are running on your system.  If an <command>httpd</command> is running, the script should print a message like, <quote>This machine is running a web server.</quote>  Use <command>ps</command> to check on processes.</para></listitem>
 <listitem><para>Write a script that makes a backup of your home directory on a remote machine using <command>scp</command>.  The script should report in a log file, for instance <filename>~/log/homebackup.log</filename>.  If you don't have a second machine to copy the backup to, use <command>scp</command> to test copying it to the localhost.  This requires SSH keys between the two hosts, or else you have to supply a password.  The creation of SSH keys is explained in <command>man <parameter>ssh-keygen</parameter></command>.</para></listitem>
-<listitem><para>Adapt the script from the first example in <xref linkend="sect_07_03_01" /> to include the case of exactly 90% disk space usage, and lower than 10% disk space usage.</para>
+<listitem><para>Adapt the script from the first example in <xref linkend="sect_07_03_01"/> to include the case of exactly 90% disk space usage, and lower than 10% disk space usage.</para>
 <para>The script should use <command>tar <option>cf</option></command> for the creation of the backup and <command>gzip</command> or <command>bzip2</command> for compressing the <filename>.tar</filename> file.  Put all filenames in variables.  Put the name of the remote server and the remote directory in a variable.  This will make it easier to re-use the script or to make changes to it in the future.</para>
 <para>The script should check for the existence of a compressed archive.  If this exists, remove it first in order to prevent output generation.</para>
 <para>The script should also check for available diskspace.  Keep in mind that at any given moment you could have the data in your home directory, the data in the <filename>.tar</filename> file and the data in the compressed archive all together on your disk.  If there is not enough diskspace, exit with an error message in the log file.</para>
 <para>The script should clean up the compressed archive before it exits.</para></listitem>
 </orderedlist>
 
-</sect1>
+</section>
 </chapter>

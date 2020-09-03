@@ -1,8 +1,9 @@
-<appendix id="app3">
+<!-- Converted by db4-upgrade version 1.1 -->
+<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="app3">
 <title>Shell Features</title>
 
-<abstract><para>This document gives an overview of common shell features (the same in every shell flavour) and differing shell features (shell specific features).</para></abstract>
-<sect1>
+
+<section>
 <title>Common features</title>
 <para>
 The following features are standard in every shell.  Note that the stop, suspend, jobs, bg and fg commands are only available on systems that support job control.
@@ -173,8 +174,8 @@ The following features are standard in every shell.  Note that the stop, suspend
 </tbody>
 </tgroup>
 </table>
-</sect1>
-<sect1><title>Differing features</title>
+</section>
+<section><title>Differing features</title>
 
 <para>The table below shows major differences between the standard shell (<command>sh</command>), Bourne Again SHell (<command>bash</command>), Korn shell (<command>ksh</command>) and the C shell (<command>csh</command>).</para>  
 <note><title>Shell compatibility</title>
@@ -236,5 +237,5 @@ The following features are standard in every shell.  Note that the stop, suspend
 
 <para>More information:</para> 
 <para>You should at least read one manual, being the manual of your shell.  The preferred choice would be <command>info bash</command>, <command>bash</command> being the GNU shell and easiest for beginners.  Print it out and take it home, study it whenever you have 5 minutes.</para>
-</sect1>
+</section>
 </appendix>

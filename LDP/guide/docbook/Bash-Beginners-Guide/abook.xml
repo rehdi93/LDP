@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
-[
+<!DOCTYPE book [
 <!ENTITY chap1 SYSTEM "chap1.xml">
 <!ENTITY chap2 SYSTEM "chap2.xml">
 <!ENTITY chap3 SYSTEM "chap3.xml">
@@ -18,23 +15,20 @@
 <!ENTITY gloss SYSTEM "gloss.xml">
 <!ENTITY index-gloss SYSTEM "index-gloss.xml">
 ]>
-<book id="Bash-Beginners-Guide">
+<!-- Converted by db4-upgrade version 1.1 -->
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="Bash-Beginners-Guide">
 
-<bookinfo>
+<info>
 <title>Bash Guide for Beginners</title>
 
 <authorgroup>
-<author>
-<firstname>Machtelt</firstname>
-<surname>Garrels</surname>
-<affiliation>
+<author><personname><firstname>Machtelt</firstname><surname>Garrels</surname></personname><affiliation>
 <orgname>Garrels BVBA
 </orgname>
 <address>
 <email>tille wants no spam _at_ garrels dot be</email>
 </address>
-</affiliation>
-</author>
+</affiliation></author>
 </authorgroup>
 
 <edition>Version 1.11 Last updated 20081227</edition>
@@ -57,22 +51,22 @@
 <keyword>loops</keyword>
 <keyword>conditionals</keyword>
 </keywordset>
-</bookinfo>
+</info>
 
-<toc></toc>
+<toc/>
 
 <preface>
 <title>Introduction</title>
-<section id="intro_01">
+<section xml:id="intro_01">
 <title>Why this guide?</title>
 
-<para>The primary reason for writing this document is that a lot of readers feel the existing <ulink url="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html">HOWTO</ulink> to be too short and incomplete, while the <ulink url="http://tldp.org/LDP/abs/html/">Bash Scripting</ulink> guide is too much of a reference work.  There is nothing in between these two extremes.  I also wrote this guide on the general principle that not enough free basic courses are available, though they should be.</para>
+<para>The primary reason for writing this document is that a lot of readers feel the existing <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html">HOWTO</link> to be too short and incomplete, while the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tldp.org/LDP/abs/html/">Bash Scripting</link> guide is too much of a reference work.  There is nothing in between these two extremes.  I also wrote this guide on the general principle that not enough free basic courses are available, though they should be.</para>
 <para>This is a practical guide which, while not always being too serious, tries to give real-life instead of theoretical examples.  I partly wrote it because I don't get excited with stripped down and over-simplified examples written by people who know what they are talking about, showing some really cool Bash feature so much out of its context that you cannot ever use it in practical circumstances.  You can read that sort of stuff after finishing this book, which contains exercises and examples that will help you survive in the real world.</para>
 <para>From my experience as UNIX/Linux user, system administrator and trainer, I know that people can have years of daily interaction with their systems, without having the slightest knowledge of task automation.  Thus they often think that UNIX is not user-friendly, and even worse, they get the impression that it is slow and old-fashioned.  This problem is another one that can be remedied by this guide.</para>
 
 </section>
 
-<section id="intro_02">
+<section xml:id="intro_02">
 <title>Who should read this book?</title>
 
 <para>Everybody working on a UNIX or UNIX-like system who wants to make life easier on themselves, power users and sysadmins alike, can benefit from reading this book.  Readers who already have a grasp of working the system using the command line will learn the ins and outs of shell scripting that ease execution of daily tasks.  System administration relies a great deal on shell scripting; common tasks are often automated using simple scripts.  This document is full of examples that will encourage you to write your own and that will inspire you to improve on existing scripts.</para>
@@ -88,23 +82,23 @@
 <listitem><para>Understand naming conventions for devices, partitioning, mounting/unmounting file systems</para></listitem>
 <listitem><para>Adding/removing software on your system</para></listitem>
 </itemizedlist>
-<para>See <ulink url="http://tldp.org/LDP/intro-linux/html/">Introduction to Linux</ulink> (or your local <ulink url="http://www.tldp.org/mirrors.html">TLDP mirror</ulink>) if you haven't mastered one or more of these topics.  Additional information can be found in your system documentation (man and info pages), or at <ulink url="http://tldp.org">the Linux Documentation Project</ulink>.</para>
+<para>See <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tldp.org/LDP/intro-linux/html/">Introduction to Linux</link> (or your local <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/mirrors.html">TLDP mirror</link>) if you haven't mastered one or more of these topics.  Additional information can be found in your system documentation (man and info pages), or at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tldp.org">the Linux Documentation Project</link>.</para>
 
 </section>
-<section id="intro_03">
+<section xml:id="intro_03">
 <title>New versions, translations and availability</title>
 
-<para>The most recent edition can be found at <ulink url="http://tille.garrels.be/training/bash/" />.  You should find the same version at <ulink url="http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html" />.</para>
+<para>The most recent edition can be found at <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tille.garrels.be/training/bash/">http://tille.garrels.be/training/bash/</uri>.  You should find the same version at <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html">http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html</uri>.</para>
 
-<para>This guide is available in print from <ulink url="http://store.fultus.com/product_info.php?products_id=66">Fultus.com</ulink>.</para>
+<para>This guide is available in print from <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://store.fultus.com/product_info.php?products_id=66">Fultus.com</link>.</para>
 
 <figure><title>Bash Guide for Beginners front cover</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/bgb.jpg" format="JPG"></imagedata>
+<imagedata fileref="images/bgb.jpg" format="JPG"/>
 </imageobject>
 <imageobject>
-<imagedata fileref="images/bgb.eps" format="EPS"></imagedata>
+<imagedata fileref="images/bgb.eps" format="EPS"/>
 </imageobject>
 <textobject>
 <phrase>Front cover of the Bash guide, red highlighted code on blue background.</phrase>
@@ -113,15 +107,15 @@
 </figure>
 <para>This guide has been translated:</para>
 <itemizedlist>
-<listitem><para>Chinese translation at <ulink url="http://xiaowang.net/bgb-cn/" />, by Wang Wei.</para></listitem>
-<listitem><para>Ukrainian translation at <ulink url="http://docs.linux.org.ua/index.php/LDP:Bash_beginners_guide" />, by Yaroslav Fedevych and his team.</para></listitem>
+<listitem><para>Chinese translation at <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://xiaowang.net/bgb-cn/">http://xiaowang.net/bgb-cn/</uri>, by Wang Wei.</para></listitem>
+<listitem><para>Ukrainian translation at <uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://docs.linux.org.ua/index.php/LDP:Bash_beginners_guide">http://docs.linux.org.ua/index.php/LDP:Bash_beginners_guide</uri>, by Yaroslav Fedevych and his team.</para></listitem>
 </itemizedlist>
 <para>A french translation is in the making and will be linked to as soon as it is finished.</para>
 </section>
-<section id="intro_04">
+<section xml:id="intro_04">
 <title>Revision History</title>
 <para>
-<revhistory id="revhistory">
+<revhistory xml:id="revhistory">
 <revision>
 <revnumber>1.11</revnumber>
 <date>2008-12-27</date>
@@ -176,7 +170,7 @@
 </para>
 </section>
 
-<section id="intro_05">
+<section xml:id="intro_05">
 <title>Contributions</title>
 
 <para>
@@ -193,7 +187,7 @@ Thanks to all the friends who helped (or tried to) and to my husband; your encou
 <para>Special thanks to Tabatha Marshall, who volunteered to do a complete review and spell and grammar check.  We make a great team: she works when I sleep.  And vice versa ;-)</para>
 
 </section>
-<section id="intro_06">
+<section xml:id="intro_06">
 <title>Feedback</title>
 
 <para>
@@ -203,7 +197,7 @@ the maintainer of this document.
 </para>
 
 </section>
-<section id="intro_07">
+<section xml:id="intro_07">
 <title>Copyright information</title>
 <screen>
 * Copyright (c) 2002-2007, Machtelt Garrels
@@ -240,17 +234,17 @@ the maintainer of this document.
 their respective owners.</para>
 
 </section>
-<section id="intro_08">
+<section xml:id="intro_08">
 <title>What do you need?</title>
-<para><command>bash</command>, available from <ulink url="http://www.gnu.org/directory/GNU/">http://www.gnu.org/directory/GNU/</ulink>.  The Bash shell is available on nearly every Linux system, and can these days be found on a wide variety of UNIX systems.</para>
+<para><command>bash</command>, available from <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/directory/GNU/">http://www.gnu.org/directory/GNU/</link>.  The Bash shell is available on nearly every Linux system, and can these days be found on a wide variety of UNIX systems.</para>
 <para>Compiles easily if you need to make your own, tested on a wide variety of UNIX, Linux, MS Windows and other systems.</para>
 </section>
-<section id="intro_09">
+<section xml:id="intro_09">
 <title>Conventions used in this document</title>
 <para>The following typographic and usage conventions occur in this text:
 </para>
                                                                                 
-<table id="conventions" frame="all"><title>Typographic and usage conventions</title>
+<table xml:id="conventions" frame="all"><title>Typographic and usage conventions</title>
 <tgroup cols="2" align="left" colsep="1" rowsep="1">
                                                                                 
 <thead>
@@ -287,7 +281,7 @@ usually rendered with a light grey background.</entry>
 <command>man <parameter>ls</parameter></command></quote>.</entry>
 </row>
 <row>
-<entry><cmdsynopsis><command>command <option>options</option>
+<entry><cmdsynopsis sepchar=" "><command>command <option>options</option>
 <parameter>arguments</parameter></command></cmdsynopsis></entry>
 <entry>Command synopsis or general usage, on a separated line.</entry>
 </row>
@@ -323,11 +317,11 @@ is the heart of the system.</quote></entry>
 <entry>The backslash in a terminal view or command synopsis indicates an unfinished line.  In other words, if you see a long command that is cut into multiple lines, \ means <quote>Don't press <keycap>Enter</keycap> yet!</quote></entry>
 </row>
 <row>
-<entry>See <xref linkend="chap_01" /></entry><entry>link to related subject
+<entry>See <xref linkend="chap_01"/></entry><entry>link to related subject
 within this guide.</entry>
 </row>
 <row>
-<entry><ulink url="http://tille.garrels.be">The author</ulink></entry>
+<entry><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tille.garrels.be">The author</link></entry>
 <entry>Clickable link to an external web resource.</entry>
 </row>
 </tbody>
@@ -335,7 +329,7 @@ within this guide.</entry>
 </tgroup>
 </table>
  </section>                                                                               
-<section id="intro_10">
+<section xml:id="intro_10">
 <title>Organization of this document</title>
 <para>This guide discusses concepts useful in the daily life of the serious Bash user.  While a basic knowledge of the usage of the shell is required, we start with a discussion of the basic shell components and practices in the first three chapters.</para>
 <para>Chapters four to six are discussions of basic tools that are commonly used in shell scripts.</para>
@@ -345,40 +339,40 @@ next chapter.</para>
 
 <itemizedlist>
 <listitem>
-<para><xref linkend="chap_01" />: Bash basics: why Bash is so good, building blocks, first guidelines on developing good scripts.</para>
+<para><xref linkend="chap_01"/>: Bash basics: why Bash is so good, building blocks, first guidelines on developing good scripts.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_02" />: Script basics: writing and debugging.</para>
+<para><xref linkend="chap_02"/>: Script basics: writing and debugging.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_03" />: The Bash Environment: initialization files, variables, quoting characters, shell expansion order, aliases, options.</para>
+<para><xref linkend="chap_03"/>: The Bash Environment: initialization files, variables, quoting characters, shell expansion order, aliases, options.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_04" />: Regular expressions: an introduction.</para>
+<para><xref linkend="chap_04"/>: Regular expressions: an introduction.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_05" />: Sed: an introduction to the sed line editor.</para>
+<para><xref linkend="chap_05"/>: Sed: an introduction to the sed line editor.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_06" />:Awk: introduction to the awk programming language.</para>
+<para><xref linkend="chap_06"/>:Awk: introduction to the awk programming language.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_07" />: Conditional statements: constructs used in Bash to test conditions.</para>
+<para><xref linkend="chap_07"/>: Conditional statements: constructs used in Bash to test conditions.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_08" />: Interactive scripts: making scripts user-friendly, catching user input.</para>
+<para><xref linkend="chap_08"/>: Interactive scripts: making scripts user-friendly, catching user input.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_09" />: Executing commands repetitively: constructs used in Bash to automate command execution.</para>
+<para><xref linkend="chap_09"/>: Executing commands repetitively: constructs used in Bash to automate command execution.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_10" />: Advanced variables: specifying variable types, introduction to arrays of variables, operations on variables.</para>
+<para><xref linkend="chap_10"/>: Advanced variables: specifying variable types, introduction to arrays of variables, operations on variables.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_11" />: Functions: an introduction.</para>
+<para><xref linkend="chap_11"/>: Functions: an introduction.</para>
 </listitem>
 <listitem>
-<para><xref linkend="chap_12" />: Catching signals: introduction to process signalling, trapping user-sent signals.</para>
+<para><xref linkend="chap_12"/>: Catching signals: introduction to process signalling, trapping user-sent signals.</para>
 </listitem>
 </itemizedlist>
 </section>                                                                                
@@ -386,7 +380,8 @@ next chapter.</para>
 
 
 </preface>
-<toc></toc>
+<toc/>
+
 &chap1;
 &chap2;
 &chap3;
@@ -399,8 +394,11 @@ next chapter.</para>
 &chap10;
 &chap11;
 &chap12;
+<!-- chap1 to 12 -->
+
 &app1;
 &gloss;
 &index-gloss;
+<!-- app1, gloss, index-gloss -->
 
 </book>

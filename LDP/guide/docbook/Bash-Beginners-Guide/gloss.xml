@@ -1,44 +1,45 @@
-<glossary id="glossary"><?dbhtml filename="gloss.html"?>
+<!-- Converted by db4-upgrade version 1.1 -->
+<glossary xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="glossary"><?dbhtml filename="gloss.html"?>
   <title>Glossary</title>
-<abstract><para>This section contains an alphabetical overview of common UNIX commands.  More information about the usage can be found in the man or info pages.</para></abstract>
-<glossdiv id="A"><title>A</title>
 
-  <glossentry id="a2ps">
+<glossdiv xml:id="A"><title>A</title>
+
+  <glossentry xml:id="a2ps">
     <glossterm>a2ps</glossterm>
     <glossdef>
       <para>Format files for printing on a PostScript printer.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="acroread">
+  <glossentry xml:id="acroread">
     <glossterm>acroread</glossterm>
     <glossdef>
       <para>PDF viewer.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="adduser">
+  <glossentry xml:id="adduser">
     <glossterm>adduser</glossterm>
     <glossdef>
       <para>Create a new user or update default new user information.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="alias">
+  <glossentry xml:id="alias">
     <glossterm>alias</glossterm>
     <glossdef>
       <para>Create a shell alias for a command.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="anacron">
+  <glossentry xml:id="anacron">
     <glossterm>anacron</glossterm>
     <glossdef>
       <para>Execute commands periodically, does not assume continuously running machine.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="apropos">
+  <glossentry xml:id="apropos">
     <glossterm>apropos</glossterm>
     <glossdef>
       <para>Search the whatis database for strings.</para>
@@ -46,7 +47,7 @@
     </glossentry>
 
 
-  <glossentry id="apt-get">
+  <glossentry xml:id="apt-get">
     <glossterm>apt-get</glossterm>
     <glossdef>
       <para>APT package handling utility.</para>
@@ -54,28 +55,28 @@
     </glossentry>
 
 
-  <glossentry id="aspell">
+  <glossentry xml:id="aspell">
     <glossterm>aspell</glossterm>
     <glossdef>
       <para>Spell checker.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="at">
+  <glossentry xml:id="at">
     <glossterm>at, atq, atrm</glossterm>
     <glossdef>
       <para>Queue, examine or delete jobs for later execution.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="aumix">
+  <glossentry xml:id="aumix">
     <glossterm>aumix</glossterm>
     <glossdef>
       <para>Adjust audio mixer.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="awk">
+  <glossentry xml:id="awk">
     <glossterm>(g)awk</glossterm>
     <glossdef>
       <para>Pattern scanning and processing language.</para>
@@ -84,55 +85,55 @@
 
 </glossdiv>
 
-<glossdiv id="B"><title>B</title>
-  <glossentry id="bash">
+<glossdiv xml:id="B"><title>B</title>
+  <glossentry xml:id="bash">
     <glossterm>bash</glossterm>
     <glossdef>
       <para>Bourne Again SHell.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="batch">
+  <glossentry xml:id="batch">
     <glossterm>batch</glossterm>
     <glossdef>
       <para>Queue, examine or delete jobs for later execution.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="bg">
+  <glossentry xml:id="bg">
     <glossterm>bg</glossterm>
     <glossdef>
       <para>Run a job in the background.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="bitmap">
+  <glossentry xml:id="bitmap">
     <glossterm>bitmap</glossterm>
     <glossdef>
       <para>Bitmap editor and converter utilities for the X window System.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="bzip2">
+  <glossentry xml:id="bzip2">
     <glossterm>bzip2</glossterm>
     <glossdef>
       <para>A block-sorting file compressor.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="C"><title>C</title>
-  <glossentry id="cat">
+<glossdiv xml:id="C"><title>C</title>
+  <glossentry xml:id="cat">
     <glossterm>cat</glossterm>
     <glossdef>
       <para>Concatenate files and print to standard output.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="cd">
+  <glossentry xml:id="cd">
     <glossterm>cd</glossterm>
     <glossdef>
       <para>Change directory.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="cdp">
+  <glossentry xml:id="cdp">
     <glossterm>cdp/cdplay</glossterm>
     <glossdef>
       <para>An interactive text-mode program for controlling and playing
@@ -140,7 +141,7 @@
     </glossdef>
     </glossentry>
 
-  <glossentry id="cdparanoia">
+  <glossentry xml:id="cdparanoia">
     <glossterm>cdparanoia</glossterm>
     <glossdef>
       <para>An audio CD reading utility which
@@ -148,27 +149,27 @@
     </glossdef>
     </glossentry>
 
-<glossentry id="cdrecord">
+<glossentry xml:id="cdrecord">
     <glossterm>cdrecord</glossterm>
     <glossdef>
       <para>Record a CD-R.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="chattr">
+  <glossentry xml:id="chattr">
     <glossterm>chattr</glossterm>
     <glossdef>
       <para>Change file attributes.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="chgrp">
+  <glossentry xml:id="chgrp">
     <glossterm>chgrp</glossterm>
     <glossdef>
       <para>Change group ownership.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="chkconfig">
+  <glossentry xml:id="chkconfig">
     <glossterm>chkconfig</glossterm>
     <glossdef>
       <para>Update or query run level information for system services.</para>
@@ -176,43 +177,43 @@
     </glossentry>
 
 
-  <glossentry id="chmod">
+  <glossentry xml:id="chmod">
     <glossterm>chmod</glossterm>
     <glossdef>
       <para>Change file access permissions.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="chown">
+  <glossentry xml:id="chown">
     <glossterm>chown</glossterm>
     <glossdef>
       <para>Change file owner and group.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="compress">
+<glossentry xml:id="compress">
 <glossterm>compress</glossterm>
 <glossdef><para>Compress files.</para>
 </glossdef>
 </glossentry>
-  <glossentry id="cp">
+  <glossentry xml:id="cp">
     <glossterm>cp</glossterm>
     <glossdef>
       <para>Copy files and directories.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="crontab">
+  <glossentry xml:id="crontab">
     <glossterm>crontab</glossterm>
     <glossdef>
       <para>Maintain crontab files.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="csh">
+  <glossentry xml:id="csh">
     <glossterm>csh</glossterm>
     <glossdef>
       <para>Open a C shell.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="cut">
+  <glossentry xml:id="cut">
     <glossterm>cut</glossterm>
     <glossdef>
       <para>Remove sections from each line of file(s).</para>
@@ -220,112 +221,112 @@
     </glossentry>
 
 </glossdiv>
-<glossdiv id="D"><title>D</title>
-  <glossentry id="date">
+<glossdiv xml:id="D"><title>D</title>
+  <glossentry xml:id="date">
     <glossterm>date</glossterm>
     <glossdef>
       <para>Print or set system date and time.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="dd">
+  <glossentry xml:id="dd">
     <glossterm>dd</glossterm>
     <glossdef>
       <para>Convert and copy a file (disk dump).</para>
     </glossdef>
     </glossentry>
-  <glossentry id="df">
+  <glossentry xml:id="df">
     <glossterm>df</glossterm>
     <glossdef>
       <para>Report file system disk usage.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="dhcpcd">
+  <glossentry xml:id="dhcpcd">
     <glossterm>dhcpcd</glossterm>
     <glossdef>
       <para>DHCP client daemon.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="diff">
+  <glossentry xml:id="diff">
     <glossterm>diff</glossterm>
     <glossdef>
       <para>Find differences between two files.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="dig">
+  <glossentry xml:id="dig">
     <glossterm>dig</glossterm>
     <glossdef>
       <para>Send domain name query packets to name servers.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="dmesg">
+  <glossentry xml:id="dmesg">
     <glossterm>dmesg</glossterm>
     <glossdef>
       <para>Print or control the kernel ring buffer.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="du">
+  <glossentry xml:id="du">
     <glossterm>du</glossterm>
     <glossdef>
       <para>Estimate file space usage.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="E"><title>E</title>
+<glossdiv xml:id="E"><title>E</title>
 
-  <glossentry id="echo">
+  <glossentry xml:id="echo">
     <glossterm>echo</glossterm>
     <glossdef>
       <para>Display a line of text.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="ediff">
+  <glossentry xml:id="ediff">
     <glossterm>ediff</glossterm>
     <glossdef>
       <para>Diff to English translator.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="egrep">
+  <glossentry xml:id="egrep">
     <glossterm>egrep</glossterm>
     <glossdef>
       <para>Extended grep.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="eject">
+  <glossentry xml:id="eject">
     <glossterm>eject</glossterm>
     <glossdef>
       <para>Unmount and eject removable media.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="emacs">
+  <glossentry xml:id="emacs">
     <glossterm>emacs</glossterm>
     <glossdef>
       <para>Start the Emacs editor.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="exec">
+  <glossentry xml:id="exec">
     <glossterm>exec</glossterm>
     <glossdef>
       <para>Invoke subprocess(es).</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="exit">
+  <glossentry xml:id="exit">
     <glossterm>exit</glossterm>
     <glossdef>
       <para>Exit current shell.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="export">
+  <glossentry xml:id="export">
     <glossterm>export</glossterm>
     <glossdef>
       <para>Add function(s) to the shell environment.</para>
@@ -333,56 +334,56 @@
     </glossentry>
 
 </glossdiv>
-<glossdiv id="F"><title>F</title>
+<glossdiv xml:id="F"><title>F</title>
 
-  <glossentry id="fax2ps">
+  <glossentry xml:id="fax2ps">
     <glossterm>fax2ps</glossterm>
     <glossdef>
       <para>Convert a TIFF facsimile to PostScript.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="fdformat">
+  <glossentry xml:id="fdformat">
     <glossterm>fdformat</glossterm>
     <glossdef>
       <para>Format floppy disk.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="fdisk">
+  <glossentry xml:id="fdisk">
     <glossterm>fdisk</glossterm>
     <glossdef>
       <para>Partition table manipulator for Linux.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="fetchmail">
+  <glossentry xml:id="fetchmail">
     <glossterm>fetchmail</glossterm>
     <glossdef>
       <para>Fetch mail from a POP, IMAP, ETRN or ODMR-capable server.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="fg">
+  <glossentry xml:id="fg">
     <glossterm>fg</glossterm>
     <glossdef>
       <para>Bring a job in the foreground.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="file">
+  <glossentry xml:id="file">
     <glossterm>file</glossterm>
     <glossdef>
       <para>Determine file type.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="find">
+  <glossentry xml:id="find">
     <glossterm>find</glossterm>
     <glossdef>
       <para>Find files.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="formail">
+  <glossentry xml:id="formail">
     <glossterm>formail</glossterm>
     <glossdef>
       <para>Mail (re)formatter.</para>
@@ -390,85 +391,85 @@
     </glossentry>
 
 
-  <glossentry id="fortune">
+  <glossentry xml:id="fortune">
     <glossterm>fortune</glossterm>
     <glossdef>
       <para>Print a random, hopefully interesting adage.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="ftp">
+  <glossentry xml:id="ftp">
     <glossterm>ftp</glossterm>
     <glossdef>
       <para>Transfer files (unsafe unless anonymous account is used!)services.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="G"><title>G</title>
+<glossdiv xml:id="G"><title>G</title>
 
-  <glossentry id="galeon">
+  <glossentry xml:id="galeon">
     <glossterm>galeon</glossterm>
     <glossdef>
       <para>Graphical web browser.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="gdm">
+  <glossentry xml:id="gdm">
     <glossterm>gdm</glossterm>
     <glossdef>
       <para>Gnome Display Manager.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="getty">
+  <glossentry xml:id="getty">
     <glossterm>(min/a)getty</glossterm>
     <glossdef>
       <para>Control console devices.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="gimp">
+  <glossentry xml:id="gimp">
     <glossterm>gimp</glossterm>
     <glossdef>
       <para>Image manipulation program.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="grep">
+  <glossentry xml:id="grep">
     <glossterm>grep</glossterm>
     <glossdef>
       <para>Print lines matching a pattern.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="grub">
+  <glossentry xml:id="grub">
     <glossterm>grub</glossterm>
     <glossdef>
       <para>The grub shell.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="gv">
+  <glossentry xml:id="gv">
     <glossterm>gv</glossterm>
     <glossdef>
       <para>A PostScript and PDF viewer.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="gzip">
+  <glossentry xml:id="gzip">
     <glossterm>gzip</glossterm>
     <glossdef>
       <para>Compress or expand files.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="H"><title>H</title>
+<glossdiv xml:id="H"><title>H</title>
 
-<glossentry id="halt">
+<glossentry xml:id="halt">
     <glossterm>halt</glossterm>
     <glossdef>
       <para>Stop the system.</para>
     </glossdef>
     </glossentry>
-<glossentry id="head">
+<glossentry xml:id="head">
     <glossterm>head</glossterm>
     <glossdef>
       <para>Output the first part of files.</para>
@@ -476,20 +477,20 @@
     </glossentry>
 
 
-  <glossentry id="help">
+  <glossentry xml:id="help">
     <glossterm>help</glossterm>
     <glossdef>
       <para>Display help on a shell built-in command.</para>
     </glossdef>
     </glossentry>
-<glossentry id="host">
+<glossentry xml:id="host">
     <glossterm>host</glossterm>
     <glossdef>
       <para>DNS lookup utility.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="httpd">
+<glossentry xml:id="httpd">
     <glossterm>httpd</glossterm>
     <glossdef>
       <para>Apache hypertext transfer protocol server.</para>
@@ -497,37 +498,37 @@
     </glossentry>
 
 </glossdiv>
-<glossdiv id="I"><title>I</title>
+<glossdiv xml:id="I"><title>I</title>
 
-<glossentry id="id">
+<glossentry xml:id="id">
 <glossterm>id</glossterm>
     <glossdef>
       <para>Print real and effective UIDs and GIDs.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="ifconfig">
+  <glossentry xml:id="ifconfig">
     <glossterm>ifconfig</glossterm>
     <glossdef>
       <para>Configure network interface or show configuration.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="info">
+<glossentry xml:id="info">
 <glossterm>info</glossterm>
 <glossdef>
 <para>Read Info documents.</para>
 </glossdef>
 </glossentry>
 
-<glossentry id="init">
+<glossentry xml:id="init">
     <glossterm>init</glossterm>
     <glossdef>
       <para>Process control initialization.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="iostat">
+  <glossentry xml:id="iostat">
     <glossterm>iostat</glossterm>
     <glossdef>
       <para>Display I/O statistics.</para>
@@ -535,7 +536,7 @@
     </glossentry>
 
 
-<glossentry id="ip">
+<glossentry xml:id="ip">
     <glossterm>ip</glossterm>
     <glossdef>
       <para>Display/change network interface status.</para>
@@ -543,14 +544,14 @@
     </glossentry>
 
 
-<glossentry id="ipchains">
+<glossentry xml:id="ipchains">
     <glossterm>ipchains</glossterm>
     <glossdef>
       <para>IP firewall administration.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="iptables">
+<glossentry xml:id="iptables">
     <glossterm>iptables</glossterm>
     <glossdef>
       <para>IP packet filter administration.</para>
@@ -558,54 +559,54 @@
     </glossentry>
 
 </glossdiv>
-<glossdiv id="J"><title>J</title>
+<glossdiv xml:id="J"><title>J</title>
 
-  <glossentry id="jar">
+  <glossentry xml:id="jar">
     <glossterm>jar</glossterm>
     <glossdef>
       <para>Java archive tool.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="jobs">
+  <glossentry xml:id="jobs">
     <glossterm>jobs</glossterm>
     <glossdef>
       <para>List backgrounded tasks.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="K"><title>K</title>
+<glossdiv xml:id="K"><title>K</title>
 
-<glossentry id="kdm">
+<glossentry xml:id="kdm">
     <glossterm>kdm</glossterm>
     <glossdef>
       <para>Desktop manager for KDE.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="kill">
+  <glossentry xml:id="kill">
     <glossterm>kill(all)</glossterm>
     <glossdef>
       <para>Terminate process(es).</para>
     </glossdef>
     </glossentry>
-  <glossentry id="ksh">
+  <glossentry xml:id="ksh">
     <glossterm>ksh</glossterm>
     <glossdef>
       <para>Open a Korn shell.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="L"><title>L</title>
+<glossdiv xml:id="L"><title>L</title>
 
-  <glossentry id="ldapmodify">
+  <glossentry xml:id="ldapmodify">
     <glossterm>ldapmodify</glossterm>
     <glossdef>
       <para>Modify an LDAP entry.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="ldapsearch">
+  <glossentry xml:id="ldapsearch">
     <glossterm>ldapsearch</glossterm>
     <glossdef>
       <para>LDAP search tool.</para>
@@ -613,93 +614,93 @@
     </glossentry>
 
 
-<glossentry id="less">
+<glossentry xml:id="less">
 <glossterm>less</glossterm>
 <glossdef>
 <para><command>more</command> with features.</para>
 </glossdef>
 </glossentry>
 
-<glossentry id="lilo">
+<glossentry xml:id="lilo">
     <glossterm>lilo</glossterm>
     <glossdef>
       <para>Linux boot loader.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="links">
+<glossentry xml:id="links">
     <glossterm>links</glossterm>
     <glossdef>
       <para>Text mode WWW browser.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="ln">
+  <glossentry xml:id="ln">
     <glossterm>ln</glossterm>
     <glossdef>
       <para>Make links between files.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="loadkeys">
+<glossentry xml:id="loadkeys">
     <glossterm>loadkeys</glossterm>
     <glossdef>
       <para>Load keyboard translation tables.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="locate">
+  <glossentry xml:id="locate">
     <glossterm>locate</glossterm>
     <glossdef>
       <para>Find files.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="logout">
+  <glossentry xml:id="logout">
     <glossterm>logout</glossterm>
     <glossdef>
       <para>Close current shell.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="lp">
+  <glossentry xml:id="lp">
     <glossterm>lp</glossterm>
     <glossdef>
       <para>Send requests to the LP print service.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="lpc">
+<glossentry xml:id="lpc">
     <glossterm>lpc</glossterm>
     <glossdef>
       <para>Line printer control program.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="lpq">
+  <glossentry xml:id="lpq">
     <glossterm>lpq</glossterm>
     <glossdef>
       <para>Print spool queue examination program.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="lpr">
+  <glossentry xml:id="lpr">
     <glossterm>lpr</glossterm>
     <glossdef>
       <para>Offline print.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="lprm">
+  <glossentry xml:id="lprm">
     <glossterm>lprm</glossterm>
     <glossdef>
       <para>Remove print requests.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="ls">
+  <glossentry xml:id="ls">
     <glossterm>ls</glossterm>
     <glossdef>
       <para>List directory content.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="lynx">
+<glossentry xml:id="lynx">
     <glossterm>lynx</glossterm>
     <glossdef>
       <para>Text mode WWW browser.</para>
@@ -707,82 +708,82 @@
     </glossentry>
 
 </glossdiv>
-<glossdiv id="M"><title>M</title>
-  <glossentry id="mail">
+<glossdiv xml:id="M"><title>M</title>
+  <glossentry xml:id="mail">
     <glossterm>mail</glossterm>
     <glossdef>
       <para>Send and receive mail.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="man">
+  <glossentry xml:id="man">
     <glossterm>man</glossterm>
     <glossdef>
       <para>Read man pages.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="mcopy">
+<glossentry xml:id="mcopy">
     <glossterm>mcopy</glossterm>
     <glossdef>
       <para>Copy MSDOS files to/from Unix.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="mdir">
+<glossentry xml:id="mdir">
     <glossterm>mdir</glossterm>
     <glossdef>
       <para>Display an MSDOS directory.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="memusage">
+<glossentry xml:id="memusage">
     <glossterm>memusage</glossterm>
     <glossdef>
       <para>Display memory usage.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="memusagestat">
+<glossentry xml:id="memusagestat">
     <glossterm>memusagestat</glossterm>
     <glossdef>
       <para>Display memory usage statistics.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="mesg">
+  <glossentry xml:id="mesg">
     <glossterm>mesg</glossterm>
     <glossdef>
       <para>Control write access to your terminal.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="mformat">
+<glossentry xml:id="mformat">
     <glossterm>mformat</glossterm>
     <glossdef>
       <para>Add an MSDOS file system to a low-level formatted floppy disk.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="mkbootdisk">
+<glossentry xml:id="mkbootdisk">
     <glossterm>mkbootdisk</glossterm>
     <glossdef>
       <para>Creates a stand-alone boot floppy for the running system.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="mkdir">
+  <glossentry xml:id="mkdir">
     <glossterm>mkdir</glossterm>
     <glossdef>
       <para>Create directory.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="mkisofs">
+  <glossentry xml:id="mkisofs">
     <glossterm>mkisofs</glossterm>
     <glossdef>
       <para>Create a hybrid ISO9660 filesystem.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="more">
+  <glossentry xml:id="more">
     <glossterm>more</glossterm>
     <glossdef>
       <para>Filter for displaying text one screen at the time.</para>
@@ -790,7 +791,7 @@
     </glossentry>
 
 
-<glossentry id="mount">
+<glossentry xml:id="mount">
     <glossterm>mount</glossterm>
     <glossdef>
       <para>Mount a file system or display information about mounted file systems.</para>
@@ -798,76 +799,76 @@
     </glossentry>
 
 
-<glossentry id="mozilla">
+<glossentry xml:id="mozilla">
     <glossterm>mozilla</glossterm>
     <glossdef>
       <para>Web browser.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="mt">
+<glossentry xml:id="mt">
     <glossterm>mt</glossterm>
     <glossdef>
       <para>Control magnetic tape drive operation.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="mtr">
+<glossentry xml:id="mtr">
     <glossterm>mtr</glossterm>
     <glossdef>
       <para>Network diagnostic tool.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="mv">
+  <glossentry xml:id="mv">
     <glossterm>mv</glossterm>
     <glossdef>
       <para>Rename files.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="N"><title>N</title>
+<glossdiv xml:id="N"><title>N</title>
 
-<glossentry id="named">
+<glossentry xml:id="named">
     <glossterm>named</glossterm>
     <glossdef>
       <para>Internet domain name server.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="ncftp">
+  <glossentry xml:id="ncftp">
     <glossterm>ncftp</glossterm>
     <glossdef>
       <para>Browser program for ftp services (insecure!).</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="netstat">
+  <glossentry xml:id="netstat">
     <glossterm>netstat</glossterm>
     <glossdef>
       <para>Print network connections, routing tables, interface statistics, masquerade connections, and multi-cast memberships.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="nfsstat">
+  <glossentry xml:id="nfsstat">
     <glossterm>nfsstat</glossterm>
     <glossdef>
       <para>Print statistics about networked file systems.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="nice">
+  <glossentry xml:id="nice">
     <glossterm>nice</glossterm>
     <glossdef>
       <para>Run a program with modified scheduling priority.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="nmap">
+  <glossentry xml:id="nmap">
     <glossterm>nmap</glossterm>
     <glossdef>
       <para>Network exploration tool and security scanner.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="ntsysv">
+<glossentry xml:id="ntsysv">
     <glossterm>ntsysv</glossterm>
     <glossdef>
       <para>Simple interface for configuring run levels.</para>
@@ -875,48 +876,48 @@
     </glossentry>
 
 </glossdiv>
-<glossdiv id="P"><title>P</title>
-  <glossentry id="passwd">
+<glossdiv xml:id="P"><title>P</title>
+  <glossentry xml:id="passwd">
     <glossterm>passwd</glossterm>
     <glossdef>
       <para>Change password.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="pdf2ps">
+<glossentry xml:id="pdf2ps">
     <glossterm>pdf2ps</glossterm>
     <glossdef>
       <para>Ghostscript PDF to PostScript translator.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="perl">
+<glossentry xml:id="perl">
     <glossterm>perl</glossterm>
     <glossdef>
       <para>Practical Extraction and Report Language.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="pg">
+<glossentry xml:id="pg">
     <glossterm>pg</glossterm>
     <glossdef>
       <para>Page through text output.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="ping">
+  <glossentry xml:id="ping">
     <glossterm>ping</glossterm>
     <glossdef>
       <para>Send echo request to a host.</para>
     </glossdef>
     </glossentry>
-<glossentry id="pr">
+<glossentry xml:id="pr">
     <glossterm>pr</glossterm>
     <glossdef>
       <para>Convert text files for printing.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="printenv">
+<glossentry xml:id="printenv">
     <glossterm>printenv</glossterm>
     <glossdef>
       <para>Print all or part of environment.</para>
@@ -924,81 +925,81 @@
     </glossentry>
 
 
-  <glossentry id="procmail">
+  <glossentry xml:id="procmail">
     <glossterm>procmail</glossterm>
     <glossdef>
       <para>Autonomous mail processor.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="ps">
+  <glossentry xml:id="ps">
     <glossterm>ps</glossterm>
     <glossdef>
       <para>Report process status.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="pstree">
+  <glossentry xml:id="pstree">
     <glossterm>pstree</glossterm>
     <glossdef>
       <para>Display a tree of processes.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="pwd">
+  <glossentry xml:id="pwd">
     <glossterm>pwd</glossterm>
     <glossdef>
       <para>Print present working directory.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="Q"><title>Q</title>
-  <glossentry id="quota">
+<glossdiv xml:id="Q"><title>Q</title>
+  <glossentry xml:id="quota">
     <glossterm>quota</glossterm>
     <glossdef>
       <para>Display disk usage and limits.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="R"><title>R</title>
+<glossdiv xml:id="R"><title>R</title>
 
-  <glossentry id="rcp">
+  <glossentry xml:id="rcp">
     <glossterm>rcp</glossterm>
     <glossdef>
       <para>Remote copy (unsafe!)</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="rdesktop">
+  <glossentry xml:id="rdesktop">
         <glossterm>rdesktop</glossterm>
         <glossdef>
         <para>Remote Desktop Protocol client.</para>
         </glossdef>
   </glossentry>
 
-<glossentry id="reboot">
+<glossentry xml:id="reboot">
     <glossterm>reboot</glossterm>
     <glossdef>
       <para>Stop and restart the system.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="renice">
+  <glossentry xml:id="renice">
     <glossterm>renice</glossterm>
     <glossdef>
       <para>Alter priority of a running process.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="rlogin">
+  <glossentry xml:id="rlogin">
     <glossterm>rlogin</glossterm>
     <glossdef>
       <para>Remote login (telnet, insecure!).</para>
     </glossdef>
     </glossentry>
-  <glossentry id="rm">
+  <glossentry xml:id="rm">
     <glossterm>rm</glossterm>
     <glossdef>
       <para>Remove a file.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="rmdir">
+  <glossentry xml:id="rmdir">
     <glossterm>rmdir</glossterm>
     <glossdef>
       <para>Remove a directory.</para>
@@ -1006,117 +1007,117 @@
     </glossentry>
 
 
-<glossentry id="rpm">
+<glossentry xml:id="rpm">
     <glossterm>rpm</glossterm>
     <glossdef>
       <para>RPM Package Manager.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="rsh">
+  <glossentry xml:id="rsh">
     <glossterm>rsh</glossterm>
     <glossdef>
       <para>Remote shell (insecure!).</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="S"><title>S</title>
-  <glossentry id="scp">
+<glossdiv xml:id="S"><title>S</title>
+  <glossentry xml:id="scp">
     <glossterm>scp</glossterm>
     <glossdef>
       <para>Secure remote copy.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="screen">
+  <glossentry xml:id="screen">
     <glossterm>screen</glossterm>
     <glossdef>
       <para>Screen manager with VT100 emulation.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="set">
+  <glossentry xml:id="set">
     <glossterm>set</glossterm>
     <glossdef>
       <para>Display, set or change variable.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="setterm">
+  <glossentry xml:id="setterm">
     <glossterm>setterm</glossterm>
     <glossdef>
       <para>Set terminal attributes.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="sftp">
+  <glossentry xml:id="sftp">
     <glossterm>sftp</glossterm>
     <glossdef>
       <para>Secure (encrypted) ftp.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="sh">
+  <glossentry xml:id="sh">
     <glossterm>sh</glossterm>
     <glossdef>
       <para>Open a standard shell.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="shutdown">
+  <glossentry xml:id="shutdown">
     <glossterm>shutdown</glossterm>
     <glossdef>
       <para>Bring the system down.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="sleep">
+  <glossentry xml:id="sleep">
     <glossterm>sleep</glossterm>
     <glossdef>
       <para>Wait for a given period.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="slocate">
+<glossentry xml:id="slocate">
     <glossterm>slocate</glossterm>
     <glossdef>
       <para>Security Enhanced version of the GNU Locate.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="slrnn">
+<glossentry xml:id="slrnn">
     <glossterm>slrnn</glossterm>
     <glossdef>
       <para>text mode Usenet client.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="snort">
+<glossentry xml:id="snort">
     <glossterm>snort</glossterm>
     <glossdef>
       <para>Network intrusion detection tool.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="sort">
+  <glossentry xml:id="sort">
     <glossterm>sort</glossterm>
     <glossdef>
       <para>Sort lines of text files.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="ssh">
+  <glossentry xml:id="ssh">
     <glossterm>ssh</glossterm>
     <glossdef>
       <para>Secure shell.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="ssh-keygen">
+  <glossentry xml:id="ssh-keygen">
     <glossterm>ssh-keygen</glossterm>
     <glossdef>
       <para>Authentication key generation.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="stty">
+  <glossentry xml:id="stty">
     <glossterm>stty</glossterm>
     <glossdef>
       <para>Change and print terminal line settings.</para>
@@ -1124,102 +1125,102 @@
     </glossentry>
 
 
-  <glossentry id="su">
+  <glossentry xml:id="su">
     <glossterm>su</glossterm>
     <glossdef>
       <para>Switch user.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="T"><title>T</title>
+<glossdiv xml:id="T"><title>T</title>
 
-<glossentry id="tac">
+<glossentry xml:id="tac">
     <glossterm>tac</glossterm>
     <glossdef>
       <para>Concatenate and print files in reverse.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="tail">
+  <glossentry xml:id="tail">
     <glossterm>tail</glossterm>
     <glossdef>
       <para>Output the last part of files.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="talk">
+  <glossentry xml:id="talk">
     <glossterm>talk</glossterm>
     <glossdef>
       <para>Talk to a user.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="tar">
+  <glossentry xml:id="tar">
     <glossterm>tar</glossterm>
     <glossdef>
       <para>Archiving utility.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="tcsh">
+  <glossentry xml:id="tcsh">
     <glossterm>tcsh</glossterm>
     <glossdef>
       <para>Open a Turbo C shell.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="telnet">
+  <glossentry xml:id="telnet">
     <glossterm>telnet</glossterm>
     <glossdef>
       <para>User interface to the TELNET protocol (insecure!).</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="tex">
+<glossentry xml:id="tex">
     <glossterm>tex</glossterm>
     <glossdef>
       <para>Text formatting and typesetting.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="time">
+  <glossentry xml:id="time">
     <glossterm>time</glossterm>
     <glossdef>
       <para>Time a simple command or give resource usage.</para>
     </glossdef>
     </glossentry>
 
- <glossentry id="tin">
+ <glossentry xml:id="tin">
     <glossterm>tin</glossterm>
     <glossdef>
       <para>News reading program.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="top">
+  <glossentry xml:id="top">
     <glossterm>top</glossterm>
     <glossdef>
       <para>Display top CPU processes.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="touch">
+  <glossentry xml:id="touch">
     <glossterm>touch</glossterm>
     <glossdef>
       <para>Change file timestamps.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="traceroute">
+<glossentry xml:id="traceroute">
     <glossterm>traceroute</glossterm>
     <glossdef>
       <para>Print the route packets take to network host.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="tripwire">
+<glossentry xml:id="tripwire">
     <glossterm>tripwire</glossterm>
     <glossdef>
       <para>A file integrity checker for UNIX systems.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="twm">
+<glossentry xml:id="twm">
     <glossterm>twm</glossterm>
     <glossdef>
       <para>Tab Window Manager for the X Window System.</para>
@@ -1228,56 +1229,56 @@
 
 
 </glossdiv>
-<glossdiv id="U"><title>U</title>
-  <glossentry id="ulimit">
+<glossdiv xml:id="U"><title>U</title>
+  <glossentry xml:id="ulimit">
     <glossterm>ulimit</glossterm>
     <glossdef>
       <para>Controll resources.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="umask">
+  <glossentry xml:id="umask">
     <glossterm>umask</glossterm>
     <glossdef>
       <para>Set user file creation mask.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="umount">
+<glossentry xml:id="umount">
     <glossterm>umount</glossterm>
     <glossdef>
       <para>Unmount a file system.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="uncompress">
+  <glossentry xml:id="uncompress">
     <glossterm>uncompress</glossterm>
     <glossdef>
       <para>Decompress compressed files.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="uniq">
+<glossentry xml:id="uniq">
     <glossterm>uniq</glossterm>
     <glossdef>
       <para>Remove duplicate lines from a sorted file.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="update">
+<glossentry xml:id="update">
     <glossterm>update</glossterm>
     <glossdef>
       <para>Kernel daemon to flush dirty buffers back to disk.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="uptime">
+  <glossentry xml:id="uptime">
     <glossterm>uptime</glossterm>
     <glossdef>
       <para>Display system uptime and average load.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="userdel">
+<glossentry xml:id="userdel">
     <glossterm>userdel</glossterm>
     <glossdef>
       <para>Delete a user account and related files.</para>
@@ -1285,15 +1286,15 @@
     </glossentry>
 
 </glossdiv>
-<glossdiv id="V"><title>V</title>
-  <glossentry id="vi">
+<glossdiv xml:id="V"><title>V</title>
+  <glossentry xml:id="vi">
     <glossterm>vi(m)</glossterm>
     <glossdef>
       <para>Start the vi (improved) editor.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="vimtutor">
+  <glossentry xml:id="vimtutor">
     <glossterm>vimtutor</glossterm>
     <glossdef>
       <para>The Vim tutor.</para>
@@ -1301,164 +1302,164 @@
     </glossentry>
 
 
-  <glossentry id="vmstat">
+  <glossentry xml:id="vmstat">
     <glossterm>vmstat</glossterm>
     <glossdef>
       <para>Report virtual memory statistics.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="W"><title>W</title>
-  <glossentry id="w">
+<glossdiv xml:id="W"><title>W</title>
+  <glossentry xml:id="w">
     <glossterm>w</glossterm>
     <glossdef>
       <para>Show who is logged on and what they are doing.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="wall">
+<glossentry xml:id="wall">
     <glossterm>wall</glossterm>
     <glossdef>
       <para>Send a message to everybody's terminal.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="wc">
+<glossentry xml:id="wc">
     <glossterm>wc</glossterm>
     <glossdef>
       <para>Print the number of bytes, words and lines in files.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="which">
+  <glossentry xml:id="which">
     <glossterm>which</glossterm>
     <glossdef>
       <para>Shows the full path of (shell) commands.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="who">
+  <glossentry xml:id="who">
     <glossterm>who</glossterm>
     <glossdef>
       <para>Show who is logged on.</para>
     </glossdef>
     </glossentry>
                                                                                 
-  <glossentry id="whoami">
+  <glossentry xml:id="whoami">
     <glossterm>who am i</glossterm>
     <glossdef>
       <para>Print effective user ID.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="whois">
+  <glossentry xml:id="whois">
     <glossterm>whois</glossterm>
     <glossdef>
       <para>Query a whois or nicname database.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="write">
+  <glossentry xml:id="write">
     <glossterm>write</glossterm>
     <glossdef>
       <para>Send a message to another user.</para>
     </glossdef>
     </glossentry>
 </glossdiv>
-<glossdiv id="X"><title>X</title>
+<glossdiv xml:id="X"><title>X</title>
 
-<glossentry id="xauth">
+<glossentry xml:id="xauth">
     <glossterm>xauth</glossterm>
     <glossdef>
       <para>X authority file utility.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="xcdroast">
+  <glossentry xml:id="xcdroast">
     <glossterm>xcdroast</glossterm>
     <glossdef>
       <para>Graphical front end to cdrecord.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xclock">
+<glossentry xml:id="xclock">
     <glossterm>xclock</glossterm>
     <glossdef>
       <para>Analog/digital clock for X.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xconsole">
+<glossentry xml:id="xconsole">
     <glossterm>xconsole</glossterm>
     <glossdef>
       <para>Monitor system console messages with X.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xdm">
+<glossentry xml:id="xdm">
     <glossterm>xdm</glossterm>
     <glossdef>
       <para>X Display Manager with support for XDMCP, host chooser.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xdvi">
+<glossentry xml:id="xdvi">
     <glossterm>xdvi</glossterm>
     <glossdef>
       <para>DVI viewer.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xfs">
+<glossentry xml:id="xfs">
     <glossterm>xfs</glossterm>
     <glossdef>
       <para>X font server.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="xhost">
+  <glossentry xml:id="xhost">
     <glossterm>xhost</glossterm>
     <glossdef>
       <para>Server access control program for X</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xinetd">
+<glossentry xml:id="xinetd">
     <glossterm>xinetd</glossterm>
     <glossdef>
       <para>The extended Internet services daemon.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="xload">
+  <glossentry xml:id="xload">
     <glossterm>xload</glossterm>
     <glossdef>
       <para>System load average display for X.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xlsfonts">
+<glossentry xml:id="xlsfonts">
     <glossterm>xlsfonts</glossterm>
     <glossdef>
       <para>Server font list displayer for X.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xmms">
+<glossentry xml:id="xmms">
     <glossterm>xmms</glossterm>
     <glossdef>
       <para>Audio player for X.</para>
     </glossdef>
     </glossentry>
 
-<glossentry id="xpdf">
+<glossentry xml:id="xpdf">
     <glossterm>xpdf</glossterm>
     <glossdef>
       <para>PDF viewer.</para>
     </glossdef>
     </glossentry>
 
-  <glossentry id="xterm">
+  <glossentry xml:id="xterm">
     <glossterm>xterm</glossterm>
     <glossdef>
       <para>Terminal emulator for X.</para>
@@ -1466,20 +1467,20 @@
     </glossentry>
 </glossdiv>
 
-<glossdiv id="Z"><title>Z</title>
-  <glossentry id="zcat">
+<glossdiv xml:id="Z"><title>Z</title>
+  <glossentry xml:id="zcat">
     <glossterm>zcat</glossterm>
     <glossdef>
       <para>Compress or expand files.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="zgrep">
+  <glossentry xml:id="zgrep">
     <glossterm>zgrep</glossterm>
     <glossdef>
       <para>Search possibly compressed files for a regular expression.</para>
     </glossdef>
     </glossentry>
-  <glossentry id="zmore">
+  <glossentry xml:id="zmore">
     <glossterm>zmore</glossterm>
     <glossdef>
       <para>Filter for viewing compressed text.</para>

@@ -1,17 +1,16 @@
-<chapter id="chap_13">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chap_13">
 <title>Options</title>
 
-<abstract>
+
 <para>This chapter describes the use of positional parameters as options to a script.  We will bring up the following topics:</para>
 <para>
-<itemizedlist>
-<listitem><para>The <command>getopts</command> Bash built-in command</para></listitem>
-<listitem><para>Handling invalid options</para></listitem>
-<listitem><para>Option arguments</para></listitem>
-<itemizedlist>
+  <itemizedlist>
+    <listitem><para>The <command>getopts</command> Bash built-in command</para></listitem>
+    <listitem><para>Handling invalid options</para></listitem>
+    <listitem><para>Option arguments</para></listitem>
+  </itemizedlist>
 </para>
-</abstract>
-
 
 
 </chapter>

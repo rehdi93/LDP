@@ -1,4 +1,5 @@
-<appendix id="app_01">
+<!-- Converted by db4-upgrade version 1.1 -->
+<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="app_01">
 <title>GNU Free Documentation License</title>
 
     <para>Version 1.1, March 2000</para>
@@ -10,7 +11,7 @@ Everyone is permitted to copy and distribute verbatim copies
 of this license document, but changing it is not allowed.</para>
     </blockquote>
 
-  <sect1 id="gfdl-0">
+  <section xml:id="gfdl-0">
     <title>Preamble</title>
 
     <para>The purpose of this License is to make a manual, textbook,
@@ -35,9 +36,9 @@ of this license document, but changing it is not allowed.</para>
     regardless of subject matter or whether it is published as a
     printed book.  We recommend this License principally for works
     whose purpose is instruction or reference.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-1">
+  <section xml:id="gfdl-1">
     <title>Applicability and definitions</title>
 
     <para>This License applies to any manual or other work that
@@ -103,9 +104,9 @@ of this license document, but changing it is not allowed.</para>
     "Title Page" means the text near the most prominent appearance of
     the work's title, preceding the beginning of the body of the
     text.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-2">
+  <section xml:id="gfdl-2">
     <title>Verbatim copying</title>
 
     <para>You may copy and distribute the Document in any medium,
@@ -121,9 +122,9 @@ of this license document, but changing it is not allowed.</para>
 
     <para>You may also lend copies, under the same conditions stated
     above, and you may publicly display copies.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-3">
+  <section xml:id="gfdl-3">
     <title>Copying in quantity</title>
 
     <para>If you publish printed copies of the Document numbering more
@@ -163,9 +164,9 @@ of this license document, but changing it is not allowed.</para>
     authors of the Document well before redistributing any large
     number of copies, to give them a chance to provide you with an
     updated version of the Document.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-4">
+  <section xml:id="gfdl-4">
     <title>Modifications</title>
 
     <para>You may copy and distribute a Modified Version of the
@@ -294,9 +295,9 @@ of this license document, but changing it is not allowed.</para>
     <para>The author(s) and publisher(s) of the Document do not by
     this License give permission to use their names for publicity for
     or to assert or imply endorsement of any Modified Version.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-5">
+  <section xml:id="gfdl-5">
     <title>Combining documents</title>
 
     <para>You may combine the Document with other documents released
@@ -321,9 +322,9 @@ of this license document, but changing it is not allowed.</para>
     entitled "History"; likewise combine any sections entitled
     "Acknowledgements", and any sections entitled "Dedications".  You
     must delete all sections entitled "Endorsements."</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-6">
+  <section xml:id="gfdl-6">
     <title>Collections of documents</title>
 
     <para>You may make a collection consisting of the Document and
@@ -338,9 +339,9 @@ of this license document, but changing it is not allowed.</para>
     insert a copy of this License into the extracted document, and
     follow this License in all other respects regarding verbatim
     copying of that document.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-7">
+  <section xml:id="gfdl-7">
     <title>Aggregation with independent works</title>
     
     <para>A compilation of the Document or its derivatives with other
@@ -359,9 +360,9 @@ of this license document, but changing it is not allowed.</para>
     may be placed on covers that surround only the Document within the
     aggregate.  Otherwise they must appear on covers around the whole
     aggregate.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-8">
+  <section xml:id="gfdl-8">
     <title>Translation</title>
 
     <para>Translation is considered a kind of modification, so you may
@@ -375,9 +376,9 @@ of this license document, but changing it is not allowed.</para>
     a disagreement between the translation and the original English
     version of this License, the original English version will
     prevail.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-9">
+  <section xml:id="gfdl-9">
     <title>Termination</title>
     
     <para>You may not copy, modify, sublicense, or distribute the
@@ -388,17 +389,16 @@ of this license document, but changing it is not allowed.</para>
     rights, from you under this License will not have their licenses
     terminated so long as such parties remain in full
     compliance.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-10">
+  <section xml:id="gfdl-10">
     <title>Future revisions of this license</title>
 
     <para>The Free Software Foundation may publish new, revised
     versions of the GNU Free Documentation License from time to time.
     Such new versions will be similar in spirit to the present
     version, but may differ in detail to address new problems or
-    concerns.  See <ulink
-    url="http://www.gnu.org/copyleft/">http://www.gnu.org/copyleft/</ulink>.</para>
+    concerns.  See <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/copyleft/">http://www.gnu.org/copyleft/</link>.</para>
 
     <para>Each version of the License is given a distinguishing
     version number.  If the Document specifies that a particular
@@ -409,9 +409,9 @@ of this license document, but changing it is not allowed.</para>
     If the Document does not specify a version number of this License,
     you may choose any version ever published (not as a draft) by the
     Free Software Foundation.</para>
-  </sect1>
+  </section>
 
-  <sect1 id="gfdl-11">
+  <section xml:id="gfdl-11">
     <title>How to use this License for your documents</title>
 
     <para>To use this License in a document you have written, include
@@ -439,6 +439,6 @@ of this license document, but changing it is not allowed.</para>
     code, we recommend releasing these examples in parallel under your
     choice of free software license, such as the GNU General Public
     License, to permit their use in free software.</para>
-  </sect1>
+  </section>
 
 </appendix>

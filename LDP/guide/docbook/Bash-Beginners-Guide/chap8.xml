@@ -1,18 +1,9 @@
-<chapter id="chap_08">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="chap_08">
 <title>Writing interactive scripts</title>
-<abstract>
-<para>In this chapter we will discuss how to interact with the users of our scripts:</para>
-<para>
-<itemizedlist>
-<listitem><para>Printing user friendly messages and explanations</para></listitem>
-<listitem><para>Catching user input</para></listitem>
-<listitem><para>Prompting for user input</para></listitem>
-<listitem><para>Using the file descriptors to read from and write to multiple files</para></listitem>
-</itemizedlist>
-</para>
-</abstract>
-<sect1 id="sect_08_01"><title>Displaying user messages</title>
-<sect2 id="sect_08_01_01"><title>Interactive or not?</title>
+
+<section xml:id="sect_08_01"><title>Displaying user messages</title>
+<section xml:id="sect_08_01_01"><title>Interactive or not?</title>
 <para>Some scripts run without any interaction from the user at all.  Advantages of non-interactive scripts include:</para>
 <itemizedlist>
 <listitem><para>The script runs in a predictable way every time.</para></listitem>
@@ -27,8 +18,8 @@
 <para>When writing interactive scripts, never hold back on comments.  A script that prints appropriate messages is much more user-friendly and can be more easily debugged.  A script might do a perfect job, but you will get a whole lot of support calls if it does not inform the user about what it is doing.  So include messages that tell the user to wait for output because a calculation is being done.  If possible, try to give an indication of how long the user will have to wait.  If the waiting should regularly take a long time when executing a certain task, you might want to consider integrating some processing indication in the output of your script.</para>
 <para>When prompting the user for input, it is also better to give too much than too little information about the kind of data to be entered.  This applies to the checking of arguments and the accompanying usage message as well.</para>
 <para>Bash has the <command>echo</command> and <command>printf</command> commands to provide comments for users, and although you should be familiar with at least the use of <command>echo</command> by now, we will discuss some more examples in the next sections.</para>
-</sect2>
-<sect2 id="sect_08_01_02"><title>Using the echo built-in command</title>
+</section>
+<section xml:id="sect_08_01_02"><title>Using the echo built-in command</title>
 <para>The <command>echo</command> built-in command outputs its arguments, separated by spaces and terminated with a newline character.  The return status is always zero.  <command>echo</command> takes a couple of options:</para>
 
 <itemizedlist>
@@ -126,9 +117,9 @@ Thanks for visiting the Zoo, hope to see you again soon!
 Usage of the feed script:       ./feed.sh food-on-menu animal-name
 
 </screen>
-<para>More about escape characters can be found in <xref linkend="sect_03_03_02" />.  The following table gives an overview of sequences recognized by the <command>echo</command> command:</para>
+<para>More about escape characters can be found in <xref linkend="sect_03_03_02"/>.  The following table gives an overview of sequences recognized by the <command>echo</command> command:</para>
 
-<table id="tab_08_01" frame="all"><title>Escape sequences used by the echo command</title>
+<table xml:id="tab_08_01" frame="all"><title>Escape sequences used by the echo command</title>
 <tgroup cols="2" align="left" colsep="1" rowsep="1">
 <thead>
 <row><entry>Sequence</entry><entry>Meaning</entry></row>
@@ -151,20 +142,20 @@ Usage of the feed script:       ./feed.sh food-on-menu animal-name
 </tgroup>
 </table>
 <para>For more information about the <command>printf</command> command and the way it allows you to format output, see the Bash info pages.  Keep in mind that there might be differences between different versions of Bash.</para>
-</sect2>
+</section>
 
-</sect1>
-<sect1 id="sect_08_02"><title>Catching user input</title>
-<sect2 id="sect_08_02_01"><title>Using the read built-in command</title>
+</section>
+<section xml:id="sect_08_02"><title>Catching user input</title>
+<section xml:id="sect_08_02_01"><title>Using the read built-in command</title>
 <para>The <command>read</command> built-in command is the counterpart of the <command>echo</command> and <command>printf</command> commands.  The syntax of the <command>read</command> command is as follows:</para>
 <cmdsynopsis><command>read <option>[options]</option> <varname>NAME1 NAME2 ... NAMEN</varname></command></cmdsynopsis>
 <para>One line is read from the standard input, or from the file descriptor supplied as an argument to the <option>-u</option> option.  The first word of the line is assigned to the first name, <varname>NAME1</varname>, the second word to the second name, and so on, with leftover words and their intervening separators assigned to the last name, <varname>NAMEN</varname>.  If there are fewer words read from the input stream than there are names, the remaining names are assigned empty values.</para>
-<para>The characters in the value of the <varname>IFS</varname> variable are used to split the input line into words or tokens; see <xref linkend="sect_03_04_07" />.  The backslash character may be used to remove any special meaning for the next character read and for line continuation.</para>
+<para>The characters in the value of the <varname>IFS</varname> variable are used to split the input line into words or tokens; see <xref linkend="sect_03_04_07"/>.  The backslash character may be used to remove any special meaning for the next character read and for line continuation.</para>
 <para>If no names are supplied, the line read is assigned to the variable <varname>REPLY</varname>.</para>
 <para>The return code of the <command>read</command> command is zero, unless an end-of-file character is encountered, if <command>read</command> times out or if an invalid file descriptor is supplied as the argument to the <option>-u</option> option.</para>
 <para>The following options are supported by the Bash <command>read</command> built-in:</para>
 
-<table id="tab_08_02" frame="all"><title>Options to the read built-in</title>
+<table xml:id="tab_08_02" frame="all"><title>Options to the read built-in</title>
 <tgroup cols="2" align="left" colsep="1" rowsep="1">
 <thead>
 <row><entry>Option</entry><entry>Meaning</entry></row>
@@ -204,8 +195,8 @@ Type the year that you want to check (4 digits), followed by [ENTER]:
 2000
 2000 is a leap year.
 </screen>
-</sect2>
-<sect2 id="sect_08_02_02"><title>Prompting for user input</title>
+</section>
+<section xml:id="sect_08_02_02"><title>Prompting for user input</title>
 <para>The following example shows how you can use prompts to explain what the user should enter.</para>
 <screen>
 <prompt>michel ~/test&gt;</prompt> <command>cat <filename>books.sh</filename></command>
@@ -276,24 +267,24 @@ To Kill a Mockingbird | Lee | 12
 
 --output omitted--
 </screen>
-<para>Of course, this situation is not ideal, since everybody can edit (but not delete) Michel's files.  You can solve this problem using special access modes on the script file, see <ulink url="http://www.tldp.org/LDP/intro-linux/html/sect_04_01.html#sect_04_01_06">SUID and SGID</ulink> in the Introduction to Linux guide.</para>
-</sect2>
-<sect2 id="sect_08_02_03"><title>Redirection and file descriptors</title>
-<sect3 id="sect_08_02_03_01"><title>General</title>
+<para>Of course, this situation is not ideal, since everybody can edit (but not delete) Michel's files.  You can solve this problem using special access modes on the script file, see <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/LDP/intro-linux/html/sect_04_01.html#sect_04_01_06">SUID and SGID</link> in the Introduction to Linux guide.</para>
+</section>
+<section xml:id="sect_08_02_03"><title>Redirection and file descriptors</title>
+<section xml:id="sect_08_02_03_01"><title>General</title>
 <para>As you know from basic shell usage, input and output of a command may be redirected before it is executed, using a special notation - the redirection operators - interpreted by the shell.  Redirection may also be used to open and close files for the current shell execution environment.</para>  
 <para>Redirection can also occur in a script, so that it can receive input from a file, for instance, or send output to a file.  Later, the user can review the output file, or it may be used by another script as input.</para>
 <para>File input and output are accomplished by integer handles that track all open files for a given process.  These numeric values are known as file descriptors.  The best known file descriptors are <emphasis>stdin</emphasis>, <emphasis>stdout</emphasis> and <emphasis>stderr</emphasis>, with file descriptor numbers 0, 1 and 2, respectively.  These numbers and respective devices are reserved.  Bash can take TCP or UDP ports on networked hosts as file descriptors as well.</para>
 <para>The output below shows how the reserved file descriptors point to actual devices:</para>
 <screen>
 <prompt>michel ~&gt;</prompt> <command>ls <option>-l</option> <filename>/dev/std*</filename></command>
-lrwxrwxrwx  1 root    root     17 Oct  2 07:46 /dev/stderr -> ../proc/self/fd/2
-lrwxrwxrwx  1 root    root     17 Oct  2 07:46 /dev/stdin -> ../proc/self/fd/0
-lrwxrwxrwx  1 root    root     17 Oct  2 07:46 /dev/stdout -> ../proc/self/fd/1
+lrwxrwxrwx  1 root    root     17 Oct  2 07:46 /dev/stderr -&gt; ../proc/self/fd/2
+lrwxrwxrwx  1 root    root     17 Oct  2 07:46 /dev/stdin -&gt; ../proc/self/fd/0
+lrwxrwxrwx  1 root    root     17 Oct  2 07:46 /dev/stdout -&gt; ../proc/self/fd/1
 
 <prompt>michel ~&gt;</prompt> <command>ls <option>-l</option> <filename>/proc/self/fd/[0-2]</filename></command>
-lrwx------  1 michel  michel   64 Jan 23 12:11 /proc/self/fd/0 -> /dev/pts/6
-lrwx------  1 michel  michel   64 Jan 23 12:11 /proc/self/fd/1 -> /dev/pts/6
-lrwx------  1 michel  michel   64 Jan 23 12:11 /proc/self/fd/2 -> /dev/pts/6
+lrwx------  1 michel  michel   64 Jan 23 12:11 /proc/self/fd/0 -&gt; /dev/pts/6
+lrwx------  1 michel  michel   64 Jan 23 12:11 /proc/self/fd/1 -&gt; /dev/pts/6
+lrwx------  1 michel  michel   64 Jan 23 12:11 /proc/self/fd/2 -&gt; /dev/pts/6
 </screen>
 <para>Note that each process has its own view of the files under <filename>/proc/self</filename>, as it is actually a symbolic link to <filename>/proc/&lt;process_ID&gt;</filename>.</para>
 <para>You might want to check <command>info MAKEDEV</command> and <command>info proc</command> for more information about <filename>/proc</filename> subdirectories and the way your system handles standard file descriptors for each running process.</para>
@@ -321,10 +312,10 @@ job 10 at 2003-01-24 11:07
 
 <prompt>michel ~&gt;</prompt> <command>cat <filename>/var/tmp/fdtest.at</filename></command>
 total 0
-lr-x------    1 michel michel  64 Jan 24 11:07 0 -> /var/spool/at/!0000c010959eb (deleted)
-l-wx------    1 michel michel  64 Jan 24 11:07 1 -> /var/tmp/fdtest.at
-l-wx------    1 michel michel  64 Jan 24 11:07 2 -> /var/spool/at/spool/a0000c010959eb
-lr-x------    1 michel michel  64 Jan 24 11:07 3 -> /proc/21949/fd
+lr-x------    1 michel michel  64 Jan 24 11:07 0 -&gt; /var/spool/at/!0000c010959eb (deleted)
+l-wx------    1 michel michel  64 Jan 24 11:07 1 -&gt; /var/tmp/fdtest.at
+l-wx------    1 michel michel  64 Jan 24 11:07 2 -&gt; /var/spool/at/spool/a0000c010959eb
+lr-x------    1 michel michel  64 Jan 24 11:07 3 -&gt; /proc/21949/fd
 </screen>
 <para>And one with <command>cron</command>:</para>
 <screen>
@@ -332,18 +323,18 @@ lr-x------    1 michel michel  64 Jan 24 11:07 3 -> /proc/21949/fd
 # DO NOT EDIT THIS FILE - edit the master and reinstall.
 # (/tmp/crontab.21968 installed on Fri Jan 24 11:30:41 2003)
 # (Cron version -- $Id$)
-32 11 * * * ls -l /proc/self/fd/ > /var/tmp/fdtest.cron
+32 11 * * * ls -l /proc/self/fd/ &gt; /var/tmp/fdtest.cron
 
 <prompt>michel ~&gt;</prompt> <command>cat <filename>/var/tmp/fdtest.cron</filename></command>
 total 0
-lr-x------    1 michel michel  64 Jan 24 11:32 0 -> pipe:[124440]
-l-wx------    1 michel michel  64 Jan 24 11:32 1 -> /var/tmp/fdtest.cron
-l-wx------    1 michel michel  64 Jan 24 11:32 2 -> pipe:[124441]
-lr-x------    1 michel michel  64 Jan 24 11:32 3 -> /proc/21974/fd
+lr-x------    1 michel michel  64 Jan 24 11:32 0 -&gt; pipe:[124440]
+l-wx------    1 michel michel  64 Jan 24 11:32 1 -&gt; /var/tmp/fdtest.cron
+l-wx------    1 michel michel  64 Jan 24 11:32 2 -&gt; pipe:[124441]
+lr-x------    1 michel michel  64 Jan 24 11:32 3 -&gt; /proc/21974/fd
 </screen>
-</sect3>
-<sect3 id="sect_08_02_03_02"><title>Redirection of errors</title>
-<para>From the previous examples, it is clear that you can provide input and output files for a script (see <xref linkend="sect_08_02_04" /> for more), but some tend to forget about redirecting errors - output which might be depended upon later on.  Also, if you are lucky, errors will be mailed to you and eventual causes of failure might get revealed.  If you are not as lucky, errors will cause your script to fail and won't be caught or sent anywhere, so that you can't start to do any worthwhile debugging.</para>
+</section>
+<section xml:id="sect_08_02_03_02"><title>Redirection of errors</title>
+<para>From the previous examples, it is clear that you can provide input and output files for a script (see <xref linkend="sect_08_02_04"/> for more), but some tend to forget about redirecting errors - output which might be depended upon later on.  Also, if you are lucky, errors will be mailed to you and eventual causes of failure might get revealed.  If you are not as lucky, errors will cause your script to fail and won't be caught or sent anywhere, so that you can't start to do any worthwhile debugging.</para>
 <para>When redirecting errors, note that the order of precedence is significant.  For example, this command, issued in <filename>/var/spool</filename></para>
 <screen>
 <command>ls <option>-l</option> <filename>*</filename> <parameter>2</parameter>&gt; <filename>/var/tmp/unaccessible-in-spool</filename></command>
@@ -361,10 +352,10 @@ lr-x------    1 michel michel  64 Jan 24 11:32 3 -> /proc/21974/fd
 <para>Bash allows for both standard output and standard error to be redirected to the file whose name is the result of the expansion of <filename>FILE</filename> with this construct:</para>
 <cmdsynopsis><command>&amp;&gt; <filename>FILE</filename></command></cmdsynopsis>
 <para>This is the equivalent of <command>&gt; <filename>FILE</filename> 2&gt;&amp;1</command>, the construct used in the previous set of examples.  It is also often combined with redirection to <filename>/dev/null</filename>, for instance when you just want a command to execute, no matter what output or errors it gives.</para>
-</sect3>
-</sect2>
-<sect2 id="sect_08_02_04"><title>File input and output</title>
-<sect3 id="sect_08_02_04_01"><title>Using /dev/fd</title>
+</section>
+</section>
+<section xml:id="sect_08_02_04"><title>File input and output</title>
+<section xml:id="sect_08_02_04_01"><title>Using /dev/fd</title>
 <para>The <filename>/dev/fd</filename> directory contains entries named <filename>0</filename>, <filename>1</filename>, <filename>2</filename>, and so on.  Opening the file <filename>/dev/fd/N</filename> is equivalent to duplicating file descriptor <emphasis>N</emphasis>.  If your system provides <filename>/dev/stdin</filename>, <filename>/dev/stdout</filename> and <filename>/dev/stderr</filename>, you will see that these are equivalent to <filename>/dev/fd/0</filename>, <filename>/dev/fd/1</filename> and <filename>/dev/fd/2</filename>, respectively.</para>
 <para>The main use of the <filename>/dev/fd</filename> files is from the shell.  This mechanism allows for programs that use pathname arguments to handle standard input and standard output in the same way as other pathnames.  If <filename>/dev/fd</filename> is not available on a system, you'll have to find a way to bypass the problem.  This can be done for instance using a hyphen (<emphasis>-</emphasis>) to indicate that a program should read from a pipe.  An example:</para>
 <screen>
@@ -381,9 +372,9 @@ This text is printed at the end of each print job.
 <prompt>michel ~&gt;</prompt> <command>filter <filename>body.txt</filename> | cat <filename>header.txt /dev/fd/0 footer.txt</filename> | lp</command>
 </screen>
 <para>In this clean example, all output is additionally piped through <command>lp</command> to send it to the default printer.</para>
-</sect3>
-<sect3 id="sect_08_02_04_02"><title>Read and exec</title>
-<sect4 id="sect_08_02_04_02_01"><title>Assigning file descriptors to files</title>
+</section>
+<section xml:id="sect_08_02_04_02"><title>Read and exec</title>
+<section xml:id="sect_08_02_04_02_01"><title>Assigning file descriptors to files</title>
 <para>Another way of looking at file descriptors is thinking of them as a way to assign a numeric value to a file.  Instead of using the file name, you can use the file descriptor number.  The <command>exec</command> built-in command can be used to replace the shell of the current process or to alter the file descriptors of the current shell.  For example, it can be used to assign a file descriptor to a file.  Use</para>
 <cmdsynopsis><command>exec fdN&gt; <filename>file</filename></command></cmdsynopsis>
 <para>for assigning file descriptor N to <filename>file</filename> for output, and</para>
@@ -403,10 +394,10 @@ Text to be filtered.
 This text is printed at the end of each print job.
 </screen>
 <note><title>File descriptor 5</title>
-<para>Using this file descriptor might cause problems, see <ulink url="http://www.tldp.org/LDP/abs/html/io-redirection.html">the Advanced Bash-Scripting Guide</ulink>, chapter 16.  You are strongly advised not to use it.</para>
+<para>Using this file descriptor might cause problems, see <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/LDP/abs/html/io-redirection.html">the Advanced Bash-Scripting Guide</link>, chapter 16.  You are strongly advised not to use it.</para>
 </note>
-</sect4>
-<sect4 id="sect_08_02_04_02_02"><title>Read in scripts</title>
+</section>
+<section xml:id="sect_08_02_04_02_02"><title>Read in scripts</title>
 <para>The following is an example that shows how you can alternate between file input and command line input:</para>
 <screen>
 <prompt>michel ~/testdir&gt;</prompt> <command>cat <filename>sysnotes.sh</filename></command>
@@ -478,9 +469,9 @@ Your local host configuration:
 192.168.42.1 tintagel.kingarthur.com tintagel
 in central DNS
 </screen>
-</sect4>
-</sect3>
-<sect3 id="sect_08_02_04_03"><title>Closing file descriptors</title>
+</section>
+</section>
+<section xml:id="sect_08_02_04_03"><title>Closing file descriptors</title>
 <para>Since child processes inherit open file descriptors, it is good practice to close a file descriptor when it is no longer needed.  This is done using the</para>
 <cmdsynopsis><command>exec fd&lt;&amp;-</command></cmdsynopsis>
 <para>syntax.  In the above example, file descriptor 7, which has been assigned to standard input, is closed each time the user needs to have access to the actual standard input device, usually the keyboard.</para>
@@ -507,8 +498,8 @@ ls "$INPUTDIR"/* 2&gt;&amp;1 &gt;&amp;6 6&gt;&amp;- \
 # fd 6 closed for current shell
 exec 6&gt;&amp;-
 </screen>
-</sect3>
-<sect3 id="sect_08_02_04_04"><title><emphasis>Here</emphasis> documents</title>
+</section>
+<section xml:id="sect_08_02_04_04"><title><emphasis>Here</emphasis> documents</title>
 <para>Frequently, your script might call on another program or script that requires input.  The <emphasis>here</emphasis> document provides a way of instructing the shell to read input from the current source until a line containing only the search string is found (no trailing blanks).  All of the lines read up to that point are then used as the standard input for a command.</para>
 <para>The result is that you don't need to call on separate files; you can use shell-special characters, and it looks nicer than a bunch of <command>echo</command>'s:</para>
 <screen>
@@ -585,16 +576,16 @@ Installed:  tuxracer 0.61-26.i386
 Transaction(s) Complete
 </screen>
 
-</sect3>
-</sect2>
+</section>
+</section>
 
-</sect1>
-<sect1 id="sect_08_03"><title>Summary</title>
+</section>
+<section xml:id="sect_08_03"><title>Summary</title>
 <para>In this chapter, we learned how to provide user comments and how to prompt for user input.  This is usually done using the <command>echo</command>/<command>read</command> combination.  We also discussed how files can be used as input and output using file descriptors and redirection, and how this can be combined with getting input from the user.</para>
 <para>We stressed the importance of providing ample message for the users of our scripts.  As always when others use your scripts, it is better to give too much information than not enough.  <emphasis>Here</emphasis> documents is a type of shell construct that allows creation of lists, holding choices for the users.  This construct can also be used to execute otherwise interactive tasks in the background, without intervention.</para>
 
-</sect1>
-<sect1 id="sect_08_04"><title>Exercises</title>
+</section>
+<section xml:id="sect_08_04"><title>Exercises</title>
 <para>These exercises are practical applications of the constructs discussed in this chapter.  When writing the scripts, you may test by using a test directory that does not contain too much data.  Write each step, then test that portion of code, rather than writing everything at once.</para>
 <orderedlist>
 <listitem><para>Write a script that asks for the user's age.  If it is equal to or higher than 16, print a message saying that this user is allowed to drink alcohol.  If the user's age is below 16, print a message telling the user how many years he or she has to wait before legally being allowed to drink.</para>
@@ -610,7 +601,7 @@ Transaction(s) Complete
 <listitem><para>Compress the backup using any compression tool.  Inform the user that the script is doing this, because it might take some time, during which the user might start worrying if no output appears on the screen.</para></listitem>
 <listitem><para>Print a message informing the user about the size of the compressed backup.</para></listitem>
 </itemizedlist>
-<para>See <command>info tar</command> or <ulink url="http://tille.garrels.be/training/tldp/c4540.html#sect_09_01_01">Introduction to Linux</ulink>, chapter 9: <quote>Preparing your data</quote> for background information.</para>
+<para>See <command>info tar</command> or <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tille.garrels.be/training/tldp/c4540.html#sect_09_01_01">Introduction to Linux</link>, chapter 9: <quote>Preparing your data</quote> for background information.</para>
 </listitem>
 <listitem><para>Write a script called <filename>simple-useradd.sh</filename> that adds a local user to the system.  This script should:</para>
 <itemizedlist>
@@ -622,8 +613,8 @@ Transaction(s) Complete
 <listitem><para>Set the password for this user to a default known string.</para></listitem>
 </itemizedlist>
 </listitem>
-<listitem><para>Rewrite the script from <xref linkend="sect_07_02_01_04" /> so that it reads input from the user instead of taking it from the first argument.</para></listitem>
+<listitem><para>Rewrite the script from <xref linkend="sect_07_02_01_04"/> so that it reads input from the user instead of taking it from the first argument.</para></listitem>
 </orderedlist>
 
-</sect1>
+</section>
 </chapter>
