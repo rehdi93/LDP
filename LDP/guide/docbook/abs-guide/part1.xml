@@ -1,0 +1,683 @@
+<part label="1" xml:id="part1" xmlns="http://docbook.org/ns/docbook">
+    <title>Introduction</title>
+
+  <partintro>  
+
+    <epigraph>
+      <para>Script: <emphasis>A writing; a written
+        document. [Obs.]</emphasis></para>
+      <para>--<emphasis>Webster's Dictionary</emphasis>, 1913 ed.</para>
+    </epigraph>
+
+	<para><anchor xml:id="whatsascript" /></para>
+
+    <para>The shell is a command interpreter. More than just the
+      insulating layer between the operating system kernel and the user,
+      it's also a fairly powerful programming language. A shell program,
+      called a <firstterm>script</firstterm>, is an easy-to-use tool for
+      building applications by <quote>gluing together</quote> system
+      calls, tools, utilities, and compiled binaries.  Virtually the
+      entire repertoire of UNIX commands, utilities, and tools is
+      available for invocation by a shell script. If that were
+      not enough, internal shell commands, such as testing and loop
+      constructs, lend additional power and flexibility to scripts.
+      Shell scripts are especially well suited for administrative
+      system tasks and other routine repetitive tasks not requiring the
+      bells and whistles of a full-blown tightly structured programming
+      language.</para>
+
+  </partintro>  
+
+  <chapter xml:id="why-shell">
+    <title>Shell Programming!</title>
+
+    <epigraph>
+      <para>No programming language is perfect. There is not even a single
+        best language; there are only languages well suited or perhaps
+        poorly suited for particular purposes.</para>
+      <para>--Herbert Mayer</para>
+    </epigraph>
+    
+    
+    <para>A working knowledge of shell scripting is essential to anyone
+      wishing to become reasonably proficient at system administration,
+      even if they do not anticipate ever having to actually write a
+      script. Consider that as a Linux machine boots up, it executes the
+      shell scripts in <filename class="directory">/etc/rc.d</filename>
+      to restore the system configuration and set up services. A detailed
+      understanding of these startup scripts is important for analyzing
+      the behavior of a system, and possibly modifying it.</para>
+
+    <para>The craft of scripting is not hard to master,
+      since scripts can be built in bite-sized sections and there
+      is only a fairly small set of shell-specific operators and options
+
+      <footnote><para>These are referred to as <link linkend="builtinref">builtins</link>, features internal to the
+        shell.</para></footnote>
+
+      to learn. The syntax is simple -- even austere -- similar to
+      that of invoking and chaining together utilities at the command
+      line, and there are only a few <quote>rules</quote> governing
+      their use. Most short scripts work right the first time, and
+      debugging even the longer ones is straightforward.</para>
+
+
+    <para>
+	    <blockquote>
+	    <literallayout>
+    In the early days of personal computing, the BASIC language enabled
+    anyone reasonably computer proficient to write programs on an early
+    generation of microcomputers. Decades later, the Bash scripting
+    language enables anyone with a rudimentary knowledge of Linux or
+    UNIX to do the same on modern machines.
+
+    We now have miniaturized single-board computers with amazing
+    capabilities, such as the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.raspberrypi.org/">Raspberry Pi</link>.
+    Bash scripting provides a way to explore the capabilities of these
+    fascinating devices.
+            </literallayout>
+            </blockquote>
+    </para>
+
+
+    <para>A shell script is a quick-and-dirty method of prototyping
+      a complex application. Getting even a limited subset of
+      the functionality to work in a script is often a useful
+      first stage in project development. In this way, the structure
+      of the application can be tested and tinkered with, and the
+      major pitfalls found before proceeding to the final coding
+      in <firstterm>C</firstterm>, <firstterm>C++</firstterm>,
+      <firstterm>Java</firstterm>, <link linkend="perlref">Perl</link>,
+      or <firstterm>Python</firstterm>.</para>
+
+    <para>Shell scripting hearkens back to the classic UNIX philosophy
+      of breaking complex projects into simpler subtasks, of chaining
+      together components and utilities. Many consider this a better,
+      or at least more aesthetically pleasing approach to problem solving
+      than using one of the new generation of high-powered all-in-one
+      languages, such as <firstterm>Perl</firstterm>, which attempt to
+      be all things to all people, but at the cost of forcing you to
+      alter your thinking processes to fit the tool.</para>
+
+    <para>According to <link linkend="mayerref">Herbert Mayer</link>,
+      <quote>a useful language needs arrays, pointers,
+	and a generic mechanism for building data structures.</quote>
+	By these criteria, shell scripting falls somewhat short of being
+	<quote>useful.</quote> Or, perhaps not. . . .</para>
+
+
+   <sidebar>
+
+    <para>When not to use shell scripts
+
+      <itemizedlist>
+
+	<listitem>
+	  <para>Resource-intensive tasks, especially where speed is
+	    a factor (sorting, hashing, recursion
+
+            <footnote><para>Although <link linkend="recursionref0">recursion
+	      <emphasis>is</emphasis> possible in a shell script</link>,
+	      it tends to be slow and its implementation is often
+	      an <link linkend="fiboref">ugly kludge</link>.
+	      </para></footnote>
+	    
+	    ...)</para>
+
+	</listitem> <listitem>
+	  <para>Procedures involving heavy-duty math operations,
+	    especially floating point arithmetic, arbitrary
+	    precision calculations, or complex numbers (use
+	    <firstterm>C++</firstterm> or <firstterm>FORTRAN</firstterm>
+	    instead)</para>
+	</listitem> <listitem>
+	  <para>Cross-platform portability required (use
+	    <firstterm>C</firstterm> or <firstterm>Java</firstterm>
+	    instead)</para>
+	</listitem> <listitem>
+	  <para>Complex applications, where structured programming is
+	    a necessity (type-checking of variables, function
+	    prototypes, etc.)</para>
+	</listitem> <listitem>
+	  <para>Mission-critical applications upon which you are betting the
+	     future of the company</para>
+	</listitem> <listitem>
+	  <para>Situations where <emphasis>security</emphasis> is
+	    important, where you need to guarantee the integrity of
+	    your system and protect against intrusion, cracking, and
+	    vandalism</para>
+	</listitem> <listitem>
+	  <para>Project consists of subcomponents with interlocking
+	    dependencies</para>
+	</listitem> <listitem>
+	  <para>Extensive file operations required
+	    (<firstterm>Bash</firstterm> is limited to serial file access,
+	    and that only in a particularly clumsy and inefficient
+	    line-by-line fashion.)</para>
+	</listitem> <listitem>
+	  <para>Need native support for multi-dimensional arrays</para>
+	</listitem> <listitem>
+	  <para>Need data structures, such as linked lists or trees</para>
+	</listitem> <listitem>
+	  <para>Need to generate / manipulate graphics or GUIs</para>
+	</listitem> <listitem>
+	  <para>Need direct access to system hardware or
+	    external peripherals</para>
+	</listitem> <listitem>
+	  <para>Need port or <link linkend="socketref">socket</link>
+	    I/O</para>
+	</listitem> <listitem>
+	  <para>Need to use libraries or interface with legacy code</para>
+	</listitem> <listitem>
+	  <para>Proprietary, closed-source applications (Shell scripts
+	    put the source code right out in the open for all the world
+	    to see.)</para>
+	    
+	</listitem>
+      </itemizedlist></para>
+
+    <para>If any of the above applies, consider a more powerful scripting
+      language -- perhaps <firstterm>Perl</firstterm>,
+      <firstterm>Tcl</firstterm>, <firstterm>Python</firstterm>,
+      <firstterm>Ruby</firstterm> -- or possibly a
+      compiled language such as <firstterm>C</firstterm>,
+      <firstterm>C++</firstterm>, or <firstterm>Java</firstterm>. Even
+      then, prototyping the application as a shell script might still
+      be a useful development step.</para>
+
+   </sidebar>
+
+
+    <para><anchor xml:id="bashdef" /></para>
+    <para>We will be using <acronym>Bash</acronym>, an acronym
+
+        <footnote><para>An <firstterm>acronym</firstterm>
+        is an <emphasis>ersatz</emphasis> word formed by pasting
+        together the initial letters of the words into a tongue-tripping
+	phrase. This morally corrupt and pernicious practice
+	deserves appropriately severe punishment. Public
+	flogging suggests itself.</para></footnote>
+
+      for <quote>Bourne-Again shell</quote> and a pun on Stephen Bourne's
+      now classic <firstterm>Bourne</firstterm> shell. Bash has become
+      a <foreignphrase>de facto</foreignphrase> standard for shell
+      scripting on most flavors of UNIX. Most of the principles this
+      book covers apply equally well to scripting with other shells,
+      such as the <firstterm>Korn Shell</firstterm>, from which Bash
+      derives some of its features,
+
+       <footnote><para>Many of the features of <firstterm>ksh88</firstterm>,
+	 and even a few from the updated <firstterm>ksh93</firstterm>
+	 have been merged into Bash.</para></footnote>
+
+      and the <firstterm>C Shell</firstterm> and its variants. (Note that
+      <firstterm>C Shell</firstterm> programming is not recommended due to
+      certain inherent problems, as pointed out in an October, 1993 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/">Usenet
+      post</link> by Tom Christiansen.)  </para>
+
+    <para>What follows is a tutorial on shell scripting. It relies
+      heavily on examples to illustrate various features of the shell.
+      The example scripts work -- they've been tested, insofar as
+      possible -- and some of them are even useful in real life. The
+      reader can play with the actual working code of the examples
+      in the source archive (<filename>scriptname.sh</filename> or
+      <filename>scriptname.bash</filename>),
+
+         <footnote><para>By convention, user-written shell scripts
+         that are Bourne shell compliant generally take a name with a
+         <filename>.sh</filename> extension.  System scripts, such as
+         those found in <filename class="directory">/etc/rc.d</filename>,
+         do not necessarily conform to this nomenclature.</para></footnote>
+
+      give them <firstterm>execute</firstterm> permission
+      (<userinput>chmod u+rx scriptname</userinput>),
+      then run them to see what happens. Should the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://bash.deta.in/abs-guide-latest.tar.bz2">source
+      archive</link> not be available, then cut-and-paste from the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/LDP/abs/abs-guide.html.tar.gz">HTML</link> or
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://bash.deta.in/abs-guide.pdf">pdf</link>
+      rendered versions. Be aware that some of the scripts presented here
+      introduce features before they are explained, and this may require
+      the reader to temporarily skip ahead for enlightenment.</para>
+
+    <para>Unless otherwise noted, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mailto:thegrendel.abs@gmail.com">the author</link> of this
+       book wrote the example scripts that follow.</para>
+
+    <epigraph>
+      <para>His countenance was bold and bashed not.</para>
+      <para>--Edmund Spenser</para>
+    </epigraph>
+
+  </chapter> <!-- Why Shell Programming? -->
+
+
+  <chapter xml:id="sha-bang">
+    <title>Starting Off With a Sha-Bang</title>
+
+    <epigraph>
+      <para>Shell programming is a 1950s juke box . . .</para> 
+      <para>--Larry Wall</para>
+    </epigraph>
+
+    <para>In the simplest case, a script is nothing more than a list
+      of system commands stored in a file. At the very least, this saves
+      the effort of retyping that particular sequence of commands each
+      time it is invoked.</para>
+
+    <example xml:id="ex1">
+      <title><firstterm>cleanup</firstterm>: A script to clean up log
+      files in /var/log </title> <programlisting># Cleanup
+# Run as root, of course.
+
+cd /var/log
+cat /dev/null &gt; messages
+cat /dev/null &gt; wtmp
+echo "Log files cleaned up."
+</programlisting>
+    </example>
+
+    <para>There is nothing unusual here, only a set of commands that
+      could just as easily have been invoked one by one from the
+      command-line on the console or in a terminal window.
+      The advantages of placing the commands in a script go far beyond
+      not having to retype them time and again. The script becomes a
+      <firstterm>program</firstterm> -- a <emphasis>tool</emphasis> --
+      and it can easily be modified or customized for a particular
+      application.</para>
+
+    <example xml:id="ex1a">
+      <title><firstterm>cleanup</firstterm>: An improved clean-up
+      script</title> <programlisting>#!/bin/bash
+# Proper header for a Bash script.
+
+# Cleanup, version 2
+
+# Run as root, of course.
+# Insert code here to print error message and exit if not root.
+
+LOG_DIR=/var/log
+# Variables are better than hard-coded values.
+cd $LOG_DIR
+
+cat /dev/null &gt; messages
+cat /dev/null &gt; wtmp
+
+
+echo "Logs cleaned up."
+
+exit #  The right and proper method of "exiting" from a script.
+     #  A bare "exit" (no parameter) returns the exit status
+     #+ of the preceding command. 
+</programlisting>
+    </example>
+
+    <para>Now <emphasis>that's</emphasis> beginning to look like a real
+      script. But we can go even farther . . .</para>
+
+    <example xml:id="ex2">
+      <title><firstterm>cleanup</firstterm>: An enhanced
+      and generalized version of above scripts.</title>
+      <programlisting>#!/bin/bash
+# Cleanup, version 3
+
+#  Warning:
+#  -------
+#  This script uses quite a number of features that will be explained
+#+ later on.
+#  By the time you've finished the first half of the book,
+#+ there should be nothing mysterious about it.
+
+
+
+LOG_DIR=/var/log
+ROOT_UID=0     # Only users with $UID 0 have root privileges.
+LINES=50       # Default number of lines saved.
+E_XCD=86       # Can't change directory?
+E_NOTROOT=87   # Non-root exit error.
+
+
+# Run as root, of course.
+if [ "$UID" -ne "$ROOT_UID" ]
+then
+  echo "Must be root to run this script."
+  exit $E_NOTROOT
+fi  
+
+if [ -n "$1" ]
+# Test whether command-line argument is present (non-empty).
+then
+  lines=$1
+else  
+  lines=$LINES # Default, if not specified on command-line.
+fi  
+
+
+#  Stephane Chazelas suggests the following,
+#+ as a better way of checking command-line arguments,
+#+ but this is still a bit advanced for this stage of the tutorial.
+#
+#    E_WRONGARGS=85  # Non-numerical argument (bad argument format).
+#
+#    case "$1" in
+#    ""      ) lines=50;;
+#    *[!0-9]*) echo "Usage: `basename $0` lines-to-cleanup";
+#     exit $E_WRONGARGS;;
+#    *       ) lines=$1;;
+#    esac
+#
+#* Skip ahead to "Loops" chapter to decipher all this.
+
+
+cd $LOG_DIR
+
+if [ `pwd` != "$LOG_DIR" ]  # or   if [ "$PWD" != "$LOG_DIR" ]
+                            # Not in /var/log?
+then
+  echo "Can't change to $LOG_DIR."
+  exit $E_XCD
+fi  # Doublecheck if in right directory before messing with log file.
+
+# Far more efficient is:
+#
+# cd /var/log || {
+#   echo "Cannot change to necessary directory." &gt;&amp;2
+#   exit $E_XCD;
+# }
+
+
+
+
+tail -n $lines messages &gt; mesg.temp # Save last section of message log file.
+mv mesg.temp messages               # Rename it as system log file.
+
+
+#  cat /dev/null &gt; messages
+#* No longer needed, as the above method is safer.
+
+cat /dev/null &gt; wtmp  #  ': &gt; wtmp' and '&gt; wtmp'  have the same effect.
+echo "Log files cleaned up."
+#  Note that there are other log files in /var/log not affected
+#+ by this script.
+
+exit 0
+#  A zero return value from the script upon exit indicates success
+#+ to the shell.
+</programlisting>
+    </example>
+
+    <para>Since you may not wish to wipe out the entire system log,
+      this version of the script keeps the last section of the message
+      log intact. You will constantly discover ways of fine-tuning
+      previously written scripts for increased effectiveness.</para>
+
+    <para><anchor xml:id="shabangref" />* * *</para>
+
+	<para><anchor xml:id="magnumref" />The
+      <firstterm><indexterm>
+	  <primary>sha-bang</primary>
+	</indexterm> sha-bang</firstterm>
+      (<token>
+	<indexterm>
+	  <primary>#!</primary>
+	</indexterm> #!</token>)
+
+	  <footnote><para>More commonly seen in the literature as
+	  <firstterm>she-bang</firstterm> or <firstterm>sh-bang</firstterm>.
+	  This derives from the concatenation of the tokens
+	  <firstterm>sharp</firstterm> (<token>#</token>) and
+	  <firstterm>bang</firstterm> (<token>!</token>).</para></footnote>
+
+      at the head of a script tells your system that this file is a set
+      of commands to be fed to the command interpreter indicated. The
+      <token>#!</token> is actually a two-byte
+
+        <footnote>
+	  <para>Some flavors of UNIX (those based on 4.2 BSD)
+          allegedly take a four-byte magic number, requiring
+          a blank after the <token>!</token> --
+	  <userinput>#! /bin/sh</userinput>. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.in-ulm.de/~mascheck/various/shebang/#details">
+	  According to Sven Mascheck</link> this is probably a myth.</para>
+	  </footnote>
+
+	<indexterm>
+	  <primary>magic number</primary>
+	</indexterm>
+	<firstterm>magic number</firstterm>, a special marker that
+	designates a file type, or in this case an executable shell
+	script (type <userinput>man magic</userinput> for more
+	details on this fascinating topic). Immediately following
+	the <firstterm>sha-bang</firstterm> is a <firstterm>path
+	name</firstterm>. This is the path to the program that interprets
+	the commands in the script, whether it be a shell, a programming
+	language, or a utility. This command interpreter then executes
+	the commands in the script, starting at the top (the line
+	following the <firstterm>sha-bang</firstterm> line), and ignoring
+	comments.
+
+	  <footnote>
+	    <para>The <token>#!</token> line in a shell script
+	      will be the first thing the command interpreter
+	      (<command>sh</command> or <command>bash</command>)
+	      sees. Since this line begins with a <token>#</token>,
+	      it will be correctly interpreted as a comment when the
+	      command interpreter finally executes the script. The
+	      line has already served its purpose - calling the command
+	      interpreter.</para>
+	    <para>If, in fact, the script includes an
+	      <emphasis>extra</emphasis> <token>#!</token> line, then
+	      <command>bash</command> will interpret it as a comment.
+	        <programlisting>#!/bin/bash
+
+echo "Part 1 of script."
+a=1
+
+#!/bin/bash
+# This does *not* launch a new script.
+
+echo "Part 2 of script."
+echo $a  # Value of $a stays at 1.</programlisting></para>
+	   </footnote>
+
+	</para>
+
+
+    <para><programlisting>#!/bin/sh
+#!/bin/bash
+#!/usr/bin/perl
+#!/usr/bin/tcl
+#!/bin/sed -f
+#!/bin/awk -f</programlisting></para>
+
+    <para>Each of the above script header lines calls a different command
+      interpreter, be it <filename>/bin/sh</filename>, the default shell
+      (<command>bash</command> in a Linux system) or otherwise.
+
+        <footnote>
+	  <para>This allows some cute tricks.</para>
+	  <para><programlisting>#!/bin/rm
+# Self-deleting script.
+
+# Nothing much seems to happen when you run this... except that the file disappears.
+
+WHATEVER=85
+
+echo "This line will never print (betcha!)."
+
+exit $WHATEVER  # Doesn't matter. The script will not exit here.
+                # Try an echo $? after script termination.
+                # You'll get a 0, not a 85.</programlisting></para>
+      <para>Also, try starting a <filename>README</filename> file with a
+        <userinput>#!/bin/more</userinput>, and making it executable.
+        The result is a self-listing documentation file. (A <link linkend="heredocref">here document</link> using
+	<link linkend="catref">cat</link> is possibly a better alternative
+	-- see <xref linkend="ex71" />).</para>
+	</footnote>
+
+      Using <userinput>#!/bin/sh</userinput>, the default Bourne shell
+      in most commercial variants of UNIX, makes the script <link linkend="portabilityissues">portable</link> to non-Linux machines,
+      though you <link linkend="binsh">sacrifice Bash-specific
+      features</link>.  The script will, however, conform to the
+      <acronym>POSIX</acronym>
+
+	 <footnote>
+	 <para><anchor xml:id="posix2ref" /><emphasis role="strong">P</emphasis>ortable
+	 <emphasis role="strong">O</emphasis>perating
+	 <emphasis role="strong">S</emphasis>ystem <emphasis role="bold">I</emphasis>nterface, an attempt to
+	 standardize UNI<emphasis role="strong">X</emphasis>-like
+	 OSes. The POSIX specifications are listed on the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.opengroup.org/onlinepubs/007904975/toc.htm">Open
+	 Group site</link>.</para>
+	 </footnote>
+
+      <command>sh</command> standard.</para>
+
+    <para>Note that the path given at the <quote>sha-bang</quote> must
+      be correct, otherwise an error message -- usually <quote>Command
+      not found.</quote> -- will be the only result of running the
+      script.
+        <footnote><para>To avoid this possibility, a script may begin
+	  with a <link linkend="envv2ref">#!/bin/env bash</link>
+	  <firstterm>sha-bang</firstterm> line. This may be
+	  useful on UNIX machines where <firstterm>bash</firstterm>
+	  is not located in <filename class="directory">/bin</filename></para></footnote>
+      
+      </para>
+
+    <para><token>#!</token> can be omitted if the script consists only
+      of a set of generic system commands, using no internal
+      shell directives.  The second example, above, requires the
+      initial <token>#!</token>, since the variable assignment line,
+      <userinput>lines=50</userinput>, uses a shell-specific construct.
+	<footnote><para>If <firstterm>Bash</firstterm> is your default
+	shell, then the <token>#!</token> isn't necessary at the
+	beginning of a script.	However, if launching a script from
+	a different shell, such as <firstterm>tcsh</firstterm>,
+	then you <emphasis>will</emphasis> need the
+	<token>#!</token>.</para></footnote>
+      Note again that <userinput>#!/bin/sh</userinput> invokes the default
+      shell interpreter, which defaults to <filename>/bin/bash</filename>
+      on a Linux machine.</para>
+
+
+      <tip>
+      <para>This tutorial encourages a modular approach
+	to constructing a script. Make note of and collect
+	<quote>boilerplate</quote> code snippets that might be useful
+	in future scripts. Eventually you will build quite an extensive
+	library of nifty routines. As an example, the following script
+	prolog tests whether the script has been invoked with the correct
+	number of parameters.</para>
+
+	<para><programlisting>E_WRONG_ARGS=85
+script_parameters="-a -h -m -z"
+#                  -a = all, -h = help, etc.
+
+if [ $# -ne $Number_of_expected_args ]
+then
+  echo "Usage: `basename $0` $script_parameters"
+  # `basename $0` is the script's filename.
+  exit $E_WRONG_ARGS
+fi</programlisting>
+      </para>
+
+      <para>Many times, you will write a script that carries out one
+        particular task. The first script in this chapter is an
+        example. Later, it might occur to you to generalize
+        the script to do other, similar tasks. Replacing the literal
+        (<quote>hard-wired</quote>) constants by variables is a step in
+        that direction, as is replacing repetitive code blocks by <link linkend="functionref">functions</link>.</para>
+
+      </tip>
+
+
+
+    <section xml:id="invoking">
+      <title>Invoking the script</title>
+
+      <para>Having written the script, you can invoke it by <userinput>sh
+	scriptname</userinput>,
+
+	  <footnote><para>Caution: invoking a <firstterm>Bash</firstterm>
+	  script by <userinput>sh scriptname</userinput> turns off
+	  Bash-specific extensions, and the script may therefore fail
+	  to execute.</para></footnote>
+
+	or alternatively <userinput>bash scriptname</userinput>. (Not
+	recommended is using <userinput>sh &lt;scriptname</userinput>,
+	since this effectively disables reading from
+	<link linkend="stdinoutdef"><filename>stdin</filename></link>
+	within the script.) Much more convenient is to make
+	the script itself directly executable with a <link linkend="chmodref">chmod</link>.
+
+	<variablelist>
+	  <varlistentry>
+	    <term>Either:</term> <listitem>
+	      <para><userinput>chmod 555 scriptname</userinput> (gives
+	      everyone read/execute permission)
+	        <footnote><para>A script needs <firstterm>read</firstterm>, as
+		well as execute permission for it to run, since the shell
+		needs to be able to read it.</para></footnote>
+	      </para>
+	    </listitem>
+	  </varlistentry> <varlistentry>
+	    <term>or</term> <listitem>
+	      <para><userinput>chmod +rx scriptname</userinput> (gives
+	      everyone read/execute permission)</para> <para><userinput>chmod
+	      u+rx scriptname</userinput> (gives only the
+		script owner read/execute permission)</para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+      </para>
+
+      <para>Having made the script executable, you may now test it by
+	<userinput>./scriptname</userinput>.
+	
+	  <footnote><para>Why not simply invoke the script with
+	  <userinput>scriptname</userinput>? If the directory you
+	  are in (<link linkend="pwdref">$PWD</link>) is where
+	  <filename>scriptname</filename> is located, why doesn't
+	  this work? This fails because, for security reasons, the
+	  current directory (<filename class="directory">./</filename>)
+	  is not by default included in a user's <link linkend="pathref">$PATH</link>. It is therefore necessary to
+	  explicitly invoke the script in the current directory with
+	  a <userinput>./scriptname</userinput>.</para></footnote>
+
+	If it begins with a <quote>sha-bang</quote> line, invoking the
+	script calls the correct command interpreter to run it.</para>
+
+      <para>As a final step, after testing and debugging,
+	you would likely want to move it to <filename class="directory">/usr/local/bin</filename> (as
+	<firstterm>root</firstterm>, of course), to make the script
+	available to yourself and all other users as a systemwide
+	executable.  The script could then be invoked by simply typing
+	<command>scriptname</command> <keycap>[ENTER]</keycap> from the
+	command-line.</para>
+
+    </section> <!-- Invoking the script -->
+
+
+    <section xml:id="prelimexer">
+      <title>Preliminary Exercises</title>
+
+      <orderedlist>
+
+        <listitem>
+	<para>System administrators often write scripts to automate common
+	  tasks. Give several instances where such scripts would be
+	  useful.</para>
+	</listitem>  
+
+	<listitem>  
+	<para>Write a script that upon invocation shows the
+	  <link linkend="dateref">time and date</link>, <link linkend="whoref">lists all logged-in users</link>, and gives
+	  the system <link linkend="uptimeref">uptime</link>. The script
+	  then <link linkend="ioredirref">saves this information</link>
+	  to a logfile.</para>
+	</listitem>
+
+      </orderedlist>
+
+    </section> <!-- Preliminary Exercises -->
+
+  </chapter> <!-- Starting Off With a Sha-Bang -->
+
+
+  </part>

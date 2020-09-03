@@ -1,0 +1,483 @@
+<section xml:id="other-res" xmlns="http://docbook.org/ns/docbook">
+  <title>Other Resources</title>
+
+    <para>
+      Fioretti, Marco,
+      <quote>Scripting for X Productivity,</quote>
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.linuxjournal.com">
+        <citetitle pubwork="journal">Linux Journal</citetitle>
+      </link>
+      , Issue 113, September, 2003, pp.  86-9.
+    </para>
+
+    <para>
+      Ben Okopnik's well-written
+      <citetitle pubwork="article">introductory Bash scripting</citetitle>
+      articles in issues 53, 54, 55, 57, and 59 of the
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.linuxgazette.net">
+        <citetitle pubwork="journal">Linux Gazette</citetitle>
+      </link>
+      , and his
+    explanation of
+      <quote>The Deep, Dark Secrets of Bash</quote>
+      in issue 56.
+    </para>
+
+    <para>
+      Chet Ramey's
+      <citetitle pubwork="article">Bash -
+        The GNU Shell</citetitle>
+      , a two-part series published in issues 3
+        and 4 of the
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.linuxjournal.com">
+        <citetitle pubwork="journal">Linux Journal</citetitle>
+      </link>
+      , July-August
+        1994.
+    </para>
+
+    <para>
+      Mike G's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html">Bash-Programming-Intro HOWTO</link>
+      .
+    </para>
+
+    <para>
+      Richard's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.injunea.demon.co.uk/index.htm">Unix
+    Scripting Universe</link>
+      .
+    </para>
+
+    <para>
+      <anchor xml:id="bashfaq" />
+      Chet Ramey's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://tiswww.case.edu/php/chet/bash/FAQ">Bash
+        FAQ</link>
+      .
+    </para>
+
+    <para>
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wooledge.org:8000/BashFAQ">
+          Greg's WIKI: Bash FAQ</link>
+      .
+    </para>
+
+    <para>
+      Example shell scripts at
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://alge.anart.no/linux/scripts/">Lucc's Shell Scripts
+    </link>
+      .
+    </para>
+
+    <para>
+      Example shell scripts at
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shelldorado.com">SHELLdorado </link>
+      .
+    </para>
+
+    <para>
+      Example shell scripts at
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.splode.com/~friedman/software/scripts/src/">Noah
+    Friedman's script site</link>
+      .
+    </para>
+
+    <para>
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://bashcookbook.com/bashinfo/">Examples</link>
+      from the
+      <citetitle pubwork="book">The Bash Scripting
+          Cookbook</citetitle>
+      , by Albing, Vossen, and Newham.
+    </para>
+
+    <para>
+      Example shell scripts at
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.zazzybob.com">zazzybob</link>
+      .
+    </para>
+
+    <para>
+      Steve Parker's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://steve-parker.org/sh/sh.shtml">Shell Programming
+  Stuff</link>
+      . In fact, all of his shell scripting
+        books are highly recommended. See also Steve's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nixshell.wordpress.com/2011/07/13/arcade-games-written-in-a-shell-script/">Arcade
+        Games written in a shell script</link>
+      .
+    </para>
+
+    <para>
+      An excellent collection of Bash scripting tips, tricks,
+        and resources at the
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.bash-hackers.org/wiki.doku.php">Bash Hackers
+  Wiki</link>
+      .
+    </para>
+
+    <para>
+      Giles Orr's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/">Bash-Prompt
+  HOWTO</link>
+      .
+    </para>
+
+    <para>
+      The
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.pixelbeat.org/cmdline.html">
+        <emphasis>Pixelbeat</emphasis>
+        command-line reference
+      </link>
+      .
+    </para>
+
+    <para>
+      Very nice
+      <command>sed</command>
+      ,
+      <command>awk</command>
+      , and regular expression tutorials at
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.grymoire.com/Unix/index.html">The UNIX
+  Grymoire</link>
+      .
+    </para>
+
+    <para>
+      The GNU
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/software/sed/manual/">sed</link>
+      and
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/software/gawk/manual/">
+          gawk</link>
+      manuals. As you recall,
+      <link linkend="gnugawk">gawk</link>
+      is the enhanced GNU version of
+      <command>awk</command>
+      .
+    </para>
+
+    <para>
+      Many interesting sed scripts at the
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://sed.sourceforge.net/grabbag/"> seder's grab bag</link>
+      .
+    </para>
+
+    <para>
+      Tips and tricks at
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://linuxreviews.org"> Linux Reviews</link>
+      .
+    </para>
+
+    <para>
+      Trent Fisher's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.cs.pdx.edu/~trent/gnu/groff/groff.html">groff
+  tutorial</link>
+      .
+    </para>
+
+    <para>
+      David Wheeler's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.dwheeler.com/essays/filenames-in-shell.html">Filenames
+  in Shell</link>
+      essay.
+    </para>
+
+    <para>
+      <quote>Shelltris</quote>
+      and
+      <quote>shellitaire</quote>
+      at
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shellscriptgames.com">Shell Script
+          Games</link>
+      .
+    </para>
+
+    <para>
+      YongYe's wonderfully complex
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://bash.deta.in/Tetris_Game.sh">Tetris game
+  script</link>
+      .
+    </para>
+
+    <para>
+      Mark Komarinski's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/Printing-Usage-HOWTO.html">Printing-Usage
+  HOWTO</link>
+      .
+    </para>
+
+    <para>
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.linux-usb.org/USB-guide/book1.html">The
+    Linux USB subsystem</link>
+      (helpful in writing scripts affecting
+    USB peripherals).
+    </para>
+
+    <para>
+      There is some nice material on
+      <link linkend="ioredirref">I/O redirection</link>
+      in
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://sunsite.ualberta.ca/Documentation/Gnu/textutils-2.0/html_chapter/textutils_10.html">
+  chapter 10 of the textutils documentation</link>
+      at the
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://sunsite.ualberta.ca/Documentation"> University of
+  Alberta site</link>
+      .
+    </para>
+
+    <para>
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mailto:humbubba@smarty.smart.net">Rick
+    Hohensee</link>
+      has written the
+      <firstterm>osimpa</firstterm>
+      i386 assembler
+          entirely as Bash scripts.
+    </para>
+
+    <para>
+      <firstterm>dgatwood</firstterm>
+      has a very nice
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.shellscriptgames.com/">
+          shell script games</link>
+      site, featuring a Tetris®
+          clone and solitaire.
+    </para>
+
+    <para>
+      Aurelio Marinho Jargas has written a
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://txt2regex.sf.net">Regular expression
+    wizard</link>
+      . He has also written an informative
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://guia-er.sf.net">book</link>
+      on Regular Expressions,
+    in Portuguese.
+    </para>
+
+    <para>
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mailto:brtompkins@comcast.net">Ben
+    Tomkins</link>
+      has created the
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://bashnavigator.sourceforge.net">
+    Bash Navigator</link>
+      directory management tool.
+    </para>
+
+    <para>
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="mailto:opengeometry@yahoo.ca">William Park</link>
+      has been working on a project
+    to incorporate certain
+      <firstterm>Awk</firstterm>
+      and
+      <firstterm>Python</firstterm>
+      features into Bash. Among these is
+    a
+      <firstterm>gdbm</firstterm>
+      interface. He has released
+      <firstterm>bashdiff</firstterm>
+      on
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://freshmeat.net">Freshmeat.net</link>
+      . He
+    has an
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://linuxgazette.net/108/park.html">article</link>
+      in the November, 2004 issue of the
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.linuxgazette.net">
+        <citetitle pubwork="journal">Linux Gazette</citetitle>
+      </link>
+      on adding string functions to Bash, with a
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://linuxgazette.net/109/park.html">followup
+    article</link>
+      in the December issue, and
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://linuxgazette.net/110/park.htm">yet another</link>
+      in the January, 2005 issue.
+    </para>
+
+    <para>
+      Peter Knowles has written an
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://booklistgensh.peterknowles.com/">elaborate
+    Bash script</link>
+      that generates a book list on the
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.dottocomu.com/b/archives/002571.html">Sony
+    Librie</link>
+      e-book reader. This useful tool facilitates
+    loading non-DRM user content on the
+      <emphasis>Librie</emphasis>
+      (and the newer
+      <emphasis>PRS-xxx-series</emphasis>
+      devices).
+    </para>
+
+    <para>
+      Tim Waugh's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://cyberelk.net/tim/xmlto/">xmlto</link>
+      is an
+          elaborate Bash script for converting Docbook XML documents to
+          other formats.
+    </para>
+
+    <para>
+      Philip Patterson's
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gossiplabs.org">logforbash</link>
+      logging/debugging script.
+    </para>
+
+    <para>
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://auctiongallery.sourceforge.net">AuctionGallery</link>
+      ,
+          an application for eBay
+      <quote>power sellers</quote>
+      coded
+          in Bash.
+    </para>
+
+    <para>
+      Of historical interest are Colin Needham's
+      <firstterm>original International Movie Database (IMDB)
+  reader polling scripts</firstterm>
+      , which nicely illustrate
+  the use of
+      <link linkend="awkref">awk</link>
+      for string
+  parsing. Unfortunately, the URL link is broken.
+    </para>
+
+    <para>
+      Fritz Mehner has written a
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://vim.sourceforge.net/scripts/script.php?script_id=365">bash-support
+    plugin</link>
+      for the
+      <firstterm>vim</firstterm>
+      text editor.
+    He has also also come up with his own
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://lug.fh-swf.de/vim/vim-bash/StyleGuideShell.en.pdf">stylesheet
+    for Bash</link>
+      . Compare it with the
+      <link linkend="unofficialst">ABS Guide
+    Unofficial Stylesheet</link>
+      .
+    </para>
+
+    <para>
+      <emphasis>Penguin Pete</emphasis>
+      has quite a number of
+    shell scripting tips and hints on
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.penguinpetes.com">his superb
+    site</link>
+      . Highly recommended.
+    </para>
+
+    <para>
+      The excellent
+      <citetitle pubwork="book"> Bash Reference
+    Manual</citetitle>
+      , by Chet Ramey and Brian Fox, distributed as
+    part of the
+      <firstterm>bash-2-doc</firstterm>
+      package (available
+    as an
+      <link linkend="rpmref">rpm</link>
+      ). See especially the
+    instructive example scripts in this package.
+    </para>
+
+    <para>
+      John Lion's classic,
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.lemis.com/grog/Documentation/Lions/index.html">
+        <emphasis>A Commentary on the Sixth Edition UNIX Operating
+  System</emphasis>
+      </link>
+      .
+    </para>
+
+    <para>
+      The
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="news:comp.unix.shell">comp.os.unix.shell</link>
+      newsgroup.
+    </para>
+
+    <para>
+      <anchor xml:id="ddlink" />
+    </para>
+    <para>
+      The
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.linuxquestions.org/questions/showthread.php?t=362506">
+        <firstterm>dd</firstterm>
+        thread
+      </link>
+      on
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.linuxquestions.org">Linux Questions</link>
+      .
+    </para>
+
+    <para>
+      The
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.newsville.com/cgi-bin/getfaq?file=comp.unix.shell/comp.unix.shell_FAQ_-_Answers_to_Frequently_Asked_Questions">comp.os.unix.shell
+    FAQ</link>
+      .
+    </para>
+
+    <para>
+      Assorted comp.os.unix
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.faqs.org/faqs/by-newsgroup/comp/comp.unix.shell.html">
+          FAQs</link>
+      .
+    </para>
+
+    <para>
+      The
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Dc_(Unix)">
+        <firstterm>Wikipedia</firstterm>
+        article
+      </link>
+      covering
+      <link linkend="dcref">dc</link>
+      .
+    </para>
+
+    <para>
+      The
+      <link linkend="manref">manpages</link>
+      for
+      <command>bash</command>
+      and
+      <command>bash2</command>
+      ,
+      <command>date</command>
+      ,
+      <command>expect</command>
+      ,
+      <command>expr</command>
+      ,
+      <command>find</command>
+      ,
+      <command>grep</command>
+      ,
+      <command>gzip</command>
+      ,
+      <command>ln</command>
+      ,
+      <command>patch</command>
+      ,
+      <command>tar</command>
+      ,
+      <command>tr</command>
+      ,
+      <command>bc</command>
+      ,
+      <command>xargs</command>
+      .
+    The
+      <firstterm>texinfo</firstterm>
+      documentation on
+      <command>bash</command>
+      ,
+      <command>dd</command>
+      ,
+      <command>m4</command>
+      ,
+      <command>gawk</command>
+      , and
+      <command>sed</command>
+      .
+    </para>
+
+</section>
