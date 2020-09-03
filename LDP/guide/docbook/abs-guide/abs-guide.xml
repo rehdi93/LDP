@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE book [
 <!ENTITY part1 SYSTEM "part1.xml">
 <!ENTITY part2 SYSTEM "part2.xml">
