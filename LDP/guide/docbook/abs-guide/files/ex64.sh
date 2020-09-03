@@ -1,7 +1,7 @@
 #!/bin/bash
 # and list
 
-if [ ! -z "$1" ] &amp;&amp; echo "Argument #1 = $1" &amp;&amp; [ ! -z "$2" ] &amp;&amp; \
+if [ ! -z "$1" ] && echo "Argument #1 = $1" && [ ! -z "$2" ] && \
 #                ^^                         ^^               ^^
 echo "Argument #2 = $2"
 then
@@ -35,3 +35,4 @@ fi
 
 
 exit $?
+

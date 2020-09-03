@@ -16,7 +16,7 @@ echo "My PID is $$"
 
 function start_thread() {
         if [ $PROCID -le $LIMIT ] ; then
-                ./child.sh $PROCID&amp;
+                ./child.sh $PROCID&
                 let "PROCID++"
         else
            echo "Limit reached."
@@ -128,7 +128,7 @@ function avvia() {
 
 function parti() {
          if [ $INDICE -gt 0 ] ; then
-              avvia $INDICE "${PARAMETRI[@]}" &amp;
+              avvia $INDICE "${PARAMETRI[@]}" &
                 let "INDICE--"
          else
                 trap : SIGRTMIN
@@ -147,7 +147,7 @@ trap - SIGRTMIN
 
 exit $?
 
-: &lt;&lt;SCRIPT_AUTHOR_COMMENTS
+: <<SCRIPT_AUTHOR_COMMENTS
 I had the need to run a program, with specified options, on a number of
 different files, using a SMP machine. So I thought [I'd] keep running
 a specified number of processes and start a new one each time . . . one
@@ -158,3 +158,4 @@ or *all* process started in background. So I wrote [this] bash script
 that can do the job, using the "trap" instruction.
   --Vernia Damiano
 SCRIPT_AUTHOR_COMMENTS
+

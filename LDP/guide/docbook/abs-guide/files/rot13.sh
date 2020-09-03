@@ -4,7 +4,7 @@
 #           for about 10 minutes.
 
 # Usage: ./rot13.sh filename
-# or     ./rot13.sh &lt;filename
+# or     ./rot13.sh <filename
 # or     ./rot13.sh and supply keyboard input (stdin)
 
 cat "$@" | tr 'a-zA-Z' 'n-za-mN-ZA-M'   # "a" goes to "n", "b" to "o" ...
@@ -12,3 +12,4 @@ cat "$@" | tr 'a-zA-Z' 'n-za-mN-ZA-M'   # "a" goes to "n", "b" to "o" ...
 #+ permits input either from stdin or from files.
 
 exit 0
+

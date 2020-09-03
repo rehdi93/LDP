@@ -28,17 +28,17 @@ echo
 #  Note that, as in C, pre- and post-decrement operators
 #+ have different side-effects.
 
-n=1; let --n &amp;&amp; echo "True" || echo "False"  # False
-n=1; let n-- &amp;&amp; echo "True" || echo "False"  # True
+n=1; let --n && echo "True" || echo "False"  # False
+n=1; let n-- && echo "True" || echo "False"  # True
 
 #  Thanks, Jeroen Domburg.
 ########################################################
 
 echo
 
-(( t = a&lt;45?7:11 ))   # C-style trinary operator.
+(( t = a<45?7:11 ))   # C-style trinary operator.
 #       ^  ^ ^
-echo "If a &lt; 45, then t = 7, else t = 11."  # a = 23
+echo "If a < 45, then t = 7, else t = 11."  # a = 23
 echo "t = $t "                              # t = 7
 
 echo
@@ -58,3 +58,4 @@ echo
 # These work only with version 2.04 or later of Bash.
 
 exit
+

@@ -61,7 +61,7 @@ local pre2=0                #  Prefix a zero, so columns will align
 
 echo "Number Stats"
 
-for (( index=1; index&lt;=MAX; index++))
+for (( index=1; index<=MAX; index++))
 do
   count=${Numbers[index]}
   let "t = $index - 1"      # Normalize, since array begins with index 0.
@@ -124,3 +124,4 @@ exit 0
 # Certainly, this script could stand some improvement.
 #See also the author's Instructable:
 #www.instructables.com/id/Binguino-An-Arduino-based-Bingo-Number-Generato/
+

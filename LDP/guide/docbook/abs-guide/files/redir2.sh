@@ -19,7 +19,7 @@ do
   read name                 # Reads from $Filename, rather than stdin.
   echo $name
   let "count += 1"
-done &lt;"$Filename"           # Redirects stdin to file $Filename. 
+done <"$Filename"           # Redirects stdin to file $Filename. 
 #    ^^^^^^^^^^^^
 
 echo; echo "$count names read"; echo
@@ -47,3 +47,4 @@ echo $abc
 #  Thanks, Bruno de Oliveira Schneider, for demonstrating this
 #+ with the above snippet of code.
 #  And, thanks, Brian Onn, for correcting an annotation error.
+

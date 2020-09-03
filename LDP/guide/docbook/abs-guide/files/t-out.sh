@@ -5,9 +5,9 @@
 
 TIMELIMIT=4         # 4 seconds
 
-read -t $TIMELIMIT variable &lt;&amp;1
+read -t $TIMELIMIT variable <&1
 #                           ^^^
-#  In this instance, "&lt;&amp;1" is needed for Bash 1.x and 2.x,
+#  In this instance, "<&1" is needed for Bash 1.x and 2.x,
 #  but unnecessary for Bash 3+.
 
 echo
@@ -20,3 +20,4 @@ else
 fi  
 
 exit 0
+

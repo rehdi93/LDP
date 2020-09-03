@@ -52,7 +52,7 @@ value=$( echo "$1" \
 # Ignore vowels, except as separators, so delete them last.
 # Ignore 'w' and 'h', even as separators, so delete them first.
 #
-# The above command substitution lays more pipe than a plumber &lt;g&gt;.
+# The above command substitution lays more pipe than a plumber <g>.
 
 }  
 
@@ -155,3 +155,4 @@ echo
 # Simplify the "Exception Patch" section of this script.
 
 exit 0
+

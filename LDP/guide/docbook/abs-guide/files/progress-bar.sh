@@ -23,11 +23,11 @@ print_progress_bar()
 
         # Prepare the bar.
         bar_line="${BAR_CHAR_START}"
-        for ((j=0; j&lt;full_limit; j++)); do
+        for ((j=0; j<full_limit; j++)); do
                 bar_line="${bar_line}${BAR_CHAR_FULL}"
         done
 
-        for ((j=0; j&lt;empty_limit; j++)); do
+        for ((j=0; j<empty_limit; j++)); do
                 bar_line="${bar_line}${BAR_CHAR_EMPTY}"
         done
 
@@ -38,7 +38,7 @@ print_progress_bar()
 
 # Here is a sample of code that uses it.
 MAX_PERCENT=100
-for ((i=0; i&lt;=MAX_PERCENT; i++)); do
+for ((i=0; i<=MAX_PERCENT; i++)); do
         #
         usleep 10000
         # ... Or run some other commands ...
@@ -50,3 +50,4 @@ done
 echo ""
 
 exit
+

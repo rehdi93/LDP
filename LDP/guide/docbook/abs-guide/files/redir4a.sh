@@ -21,7 +21,8 @@ do
   then
     break
   fi  
-done &lt; "$Filename" > "$Savefile"     # Redirects stdin to file $Filename,
+done < "$Filename" > "$Savefile"     # Redirects stdin to file $Filename,
 #    ^^^^^^^^^^^^^^^^^^^^^^^^^^^       and saves it to backup file.
 
 exit 0
+

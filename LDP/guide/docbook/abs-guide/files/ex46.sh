@@ -7,7 +7,7 @@ let a=a+5           # Equivalent to  let "a = a + 5"
                     # (Double quotes and spaces make it more readable.)
 echo "11 + 5 = $a"  # 16
 
-let "a &lt;&lt;= 3"       # Equivalent to  let "a = a &lt;&lt; 3"
+let "a <<= 3"       # Equivalent to  let "a = a << 3"
 echo "\"\$a\" (=16) left-shifted 3 places = $a"
                     # 128
 
@@ -39,11 +39,12 @@ echo
 # Trinary operator.
 
 # Note that $a is 6, see above.
-let "t = a&lt;7?7:11"   # True
+let "t = a<7?7:11"   # True
 echo $t  # 7
 
 let a++
-let "t = a&lt;7?7:11"   # False
+let "t = a<7?7:11"   # False
 echo $t  #     11
 
 exit
+

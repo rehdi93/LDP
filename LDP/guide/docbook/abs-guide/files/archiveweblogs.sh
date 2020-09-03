@@ -1,7 +1,7 @@
 #!/bin/bash
 # archiveweblogs.sh v1.0
 
-# Troy Engel &lt;tengel@fluid.com&gt;
+# Troy Engel <tengel@fluid.com>
 # Slightly modified by document author.
 # Used with permission.
 #
@@ -64,3 +64,4 @@ for logday in $LOG_DAYS; do
 done
 
 exit 0
+

@@ -4,7 +4,7 @@
 NAME="John Doe"
 RESPONDENT="the author of this fine script"  
 
-cat &lt;&lt;'Endofmessage'
+cat <<'Endofmessage'
 
 Hello, there, $NAME.
 Greetings to you, $NAME, from $RESPONDENT.
@@ -14,14 +14,14 @@ Endofmessage
 #   No parameter substitution when the "limit string" is quoted or escaped.
 #   Either of the following at the head of the here document would have
 #+  the same effect.
-#   cat &lt;&lt;"Endofmessage"
-#   cat &lt;&lt;\Endofmessage
+#   cat <<"Endofmessage"
+#   cat <<\Endofmessage
 
 
 
 #   And, likewise:
 
-cat &lt;&lt;"SpecialCharTest"
+cat <<"SpecialCharTest"
 
 Directory listing would follow
 if limit string were not quoted.
@@ -39,3 +39,4 @@ SpecialCharTest
 
 
 exit
+

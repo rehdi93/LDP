@@ -1,6 +1,6 @@
 #!/bin/bash
 # hash-example.sh: Colorizing text.
-# Author: Mariusz Gniazdowski &lt;mariusz.gn-at-gmail.com&gt;
+# Author: Mariusz Gniazdowski <mariusz.gn-at-gmail.com>
 
 . Hash.lib      # Load the library of functions.
 
@@ -57,4 +57,5 @@ exit $?
 #  On some terminals, the "light" colors print in bold,
 #  and end up looking darker than the normal ones.
 #  Why is this?
+
 

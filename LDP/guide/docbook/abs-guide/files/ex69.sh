@@ -15,7 +15,7 @@ TARGETFILE=$1
 
 # Insert 2 lines in file, then save.
 #--------Begin here document-----------#
-vi $TARGETFILE &lt;&lt;x23LimitStringx23
+vi $TARGETFILE <<x23LimitStringx23
 i
 This is line 1 of the example file.
 This is line 2 of the example file.
@@ -25,9 +25,10 @@ x23LimitStringx23
 #----------End here document-----------#
 
 #  Note that ^[ above is a literal escape
-#+ typed by Control-V &lt;Esc&gt;.
+#+ typed by Control-V <Esc>.
 
 #  Bram Moolenaar points out that this may not work with 'vim'
 #+ because of possible problems with terminal interaction.
 
 exit
+

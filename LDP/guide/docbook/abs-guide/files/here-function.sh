@@ -13,7 +13,7 @@ GetPersonalData ()
 
 
 # Supply input to the above function.
-GetPersonalData &lt;&lt;RECORD001
+GetPersonalData <<RECORD001
 Bozo
 Bozeman
 2726 Nondescript Dr.
@@ -30,3 +30,4 @@ echo "$city, $state $zipcode"
 echo
 
 exit 0
+

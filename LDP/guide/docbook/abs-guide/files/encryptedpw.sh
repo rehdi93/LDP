@@ -21,10 +21,10 @@ pword=/home/bozo/secret/password_encrypted.file
 Filename=`basename $1`  # Strips pathname out of file name.
 
 Server="XXX"
-Directory="YYY"         # Change above to actual server name &amp; directory.
+Directory="YYY"         # Change above to actual server name & directory.
 
 
-Password=`cruft &lt;$pword`          # Decrypt password.
+Password=`cruft <$pword`          # Decrypt password.
 #  Uses the author's own "cruft" file encryption package,
 #+ based on the classic "onetime pad" algorithm,
 #+ and obtainable from:
@@ -32,7 +32,7 @@ Password=`cruft &lt;$pword`          # Decrypt password.
 #+                 cruft-0.2.tar.gz [16k]
 
 
-ftp -n $Server &lt;&lt;End-Of-Session
+ftp -n $Server <<End-Of-Session
 user $Username $Password
 binary
 bell
@@ -44,3 +44,4 @@ End-Of-Session
 # Note that "bell" rings 'bell' after each file transfer.
 
 exit 0
+

@@ -1,7 +1,7 @@
 #!/bin/bash
 # UseGetOpt.sh
 
-# Author: Peggy Russell &lt;prusselltechgroup@gmail.com&gt;
+# Author: Peggy Russell <prusselltechgroup@gmail.com>
 
 UseGetOpt () {
   declare inputOptions
@@ -121,3 +121,4 @@ echo;echo "Test 4 - Long Options"
 UseGetOpt --aoption --debug --log --test --file myfile anotherfile
 
 exit
+

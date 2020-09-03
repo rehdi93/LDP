@@ -25,7 +25,7 @@
 # Obviously, the sequence of the options is important, since the equivalent
 # commands are executed by ftp in corresponding order
 #
-# Mark Moraes &lt;moraes@csri.toronto.edu&gt;, Feb 1, 1989 
+# Mark Moraes <moraes@csri.toronto.edu>, Feb 1, 1989 
 #
 
 
@@ -95,7 +95,7 @@ fi
 echo quit >> ${TMPFILE}
 # ==> All commands saved in tempfile.
 
-ftp ${ftpflags} ${remhost} &lt; ${TMPFILE}
+ftp ${ftpflags} ${remhost} < ${TMPFILE}
 # ==> Now, tempfile batch processed by ftp.
 
 rm -f ${TMPFILE}
@@ -105,7 +105,8 @@ rm -f ${TMPFILE}
 # ==> Exercises:
 # ==> ---------
 # ==> 1) Add error checking.
-# ==> 2) Add bells &amp; whistles.
+# ==> 2) Add bells & whistles.
 
 #  See the included file "Moraes-COPYRIGHT" for copyright info.
 #+ on this script.
+

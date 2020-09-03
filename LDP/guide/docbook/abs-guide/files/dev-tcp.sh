@@ -11,7 +11,7 @@ TCP_PORT=80                # Port 80 is http.
 echo "HEAD / HTTP/1.0" >/dev/tcp/${TCP_HOST}/${TCP_PORT}
 MYEXIT=$?
 
-: &lt;&lt;EXPLANATION
+: <<EXPLANATION
 If bash was compiled with --enable-net-redirections, it has the capability of
 using a special character device for both TCP and UDP redirections. These
 redirections are used identically as STDIN/STDOUT/STDERR. The device entries
@@ -34,3 +34,4 @@ else
 fi
 
 exit $MYEXIT
+

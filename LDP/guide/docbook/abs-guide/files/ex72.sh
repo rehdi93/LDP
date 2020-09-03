@@ -26,7 +26,7 @@ Directory="/incoming/Linux"
 
 Password="your.e-mail.address"   # Change above to suit.
 
-ftp -n $Server &lt;&lt;End-Of-Session
+ftp -n $Server <<End-Of-Session
 # -n option disables auto-logon
 
 user anonymous "$Password"       #  If this doesn't work, then try:
@@ -40,3 +40,4 @@ bye
 End-Of-Session
 
 exit 0
+

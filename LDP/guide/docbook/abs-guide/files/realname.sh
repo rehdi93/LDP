@@ -23,7 +23,7 @@ file_excerpt ()    #  Scan file for pattern,
     echo "$line" | grep $1 | awk -F":" '{ print $5 }'
     # Have awk use ":" delimiter.
   done
-} &lt;$file  # Redirect into function's stdin.
+} <$file  # Redirect into function's stdin.
 
 file_excerpt $pattern
 
@@ -36,3 +36,4 @@ file_excerpt $pattern
 # However, it might not be as instructive.
 
 exit 0
+

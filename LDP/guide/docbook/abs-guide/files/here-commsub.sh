@@ -2,7 +2,7 @@
 # here-commsub.sh
 # Requires Bash version -ge 4.1 ...
 
-multi_line_var=$( cat &lt;&lt;ENDxxx
+multi_line_var=$( cat <<ENDxxx
 ------------------------------
 This is line 1 of the variable
 This is line 2 of the variable
@@ -23,3 +23,4 @@ echo "$multi_line_var"
 #  Bash still emits a warning, though.
 #  warning: here-document at line 10 delimited
 #+ by end-of-file (wanted `ENDxxx')
+

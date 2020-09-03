@@ -2,8 +2,8 @@
 
 echo
 
-echo "Enter a string terminated by a \\, then press &lt;ENTER&gt;."
-echo "Then, enter a second string (no \\ this time), and again press &lt;ENTER&gt;."
+echo "Enter a string terminated by a \\, then press <ENTER>."
+echo "Then, enter a second string (no \\ this time), and again press <ENTER>."
 
 read var1     # The "\" suppresses the newline, when reading $var1.
               #     first line \
@@ -17,15 +17,16 @@ echo "var1 = $var1"
 
 echo; echo
 
-echo "Enter another string terminated by a \\ , then press &lt;ENTER&gt;."
+echo "Enter another string terminated by a \\ , then press <ENTER>."
 read -r var2  # The -r option causes the "\" to be read literally.
               #     first line \
 
 echo "var2 = $var2"
 #     var2 = first line \
 
-# Data entry terminates with the first &lt;ENTER&gt;.
+# Data entry terminates with the first <ENTER>.
 
 echo 
 
 exit 0
+

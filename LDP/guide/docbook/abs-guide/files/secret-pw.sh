@@ -8,7 +8,7 @@ echo "password is $passwd"
 echo -n "If someone had been looking over your shoulder, "
 echo "your password would have been compromised."
 
-echo &amp;&amp; echo  # Two line-feeds in an "and list."
+echo && echo  # Two line-feeds in an "and list."
 
 
 stty -echo    # Turns off screen echo.
@@ -27,3 +27,4 @@ stty echo     # Restores screen echo.
 exit 0
 
 # Do an 'info stty' for more on this useful-but-tricky command.
+

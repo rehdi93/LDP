@@ -16,11 +16,11 @@ Data=             #  Contents of stack location.
                   #+ because of limitation on function return range.
 
 
-                  # 100     Base pointer       &lt;-- Base Pointer
+                  # 100     Base pointer       <-- Base Pointer
                   #  99     First data item
                   #  98     Second data item
                   # ...     More data
-                  #         Last data item     &lt;-- Stack pointer
+                  #         Last data item     <-- Stack pointer
 
 
 declare -a stack
@@ -117,3 +117,4 @@ exit 0
 
 # 4)  Using this script as a starting point,
 #   + write a stack-based 4-function calculator.
+

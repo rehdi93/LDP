@@ -22,8 +22,9 @@ groff -Tascii -man $1 | less
 #+ then the above code will barf.
 #  The following line can handle such cases.
 #
-#   gtbl &lt; "$1" | geqn -Tlatin1 | groff -Tlatin1 -mtty-char -man
+#   gtbl < "$1" | geqn -Tlatin1 | groff -Tlatin1 -mtty-char -man
 #
 #   Thanks, S.C.
 
 exit $?   # See also the "maned.sh" script.
+

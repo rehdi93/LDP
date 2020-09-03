@@ -4,7 +4,7 @@
 # Convert a text file to HTML format.
 # Author: Mendel Cooper
 # License: GPL3
-# Usage: sh tohtml.sh &lt; textfile > htmlfile
+# Usage: sh tohtml.sh < textfile > htmlfile
 # Script can easily be modified to accept source and target filenames.
 
 #    Assumptions:
@@ -21,26 +21,26 @@
 FNTSIZE=2        # Small-medium font size
 IMGDIR="images"  # Image directory
 # Headers
-HDR01='&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;'
-HDR02='&lt;!-- Converted to HTML by ***tohtml.sh*** script --&gt;'
-HDR03='&lt;!-- script author: M. Leo Cooper &lt;thegrendel.abs@gmail.com&gt; --&gt;'
-HDR10='&lt;html&gt;'
-HDR11='&lt;head&gt;'
-HDR11a='&lt;/head&gt;'
-HDR12a='&lt;title&gt;'
-HDR12b='&lt;/title&gt;'
-HDR121='&lt;META NAME="GENERATOR" CONTENT="tohtml.sh script"&gt;'
-HDR13='&lt;body bgcolor="#dddddd"&gt;'   # Change background color to suit.
-HDR14a='&lt;font size='
-HDR14b='&gt;'
+HDR01='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">'
+HDR02='<!-- Converted to HTML by ***tohtml.sh*** script -->'
+HDR03='<!-- script author: M. Leo Cooper <thegrendel.abs@gmail.com> -->'
+HDR10='<html>'
+HDR11='<head>'
+HDR11a='</head>'
+HDR12a='<title>'
+HDR12b='</title>'
+HDR121='<META NAME="GENERATOR" CONTENT="tohtml.sh script">'
+HDR13='<body bgcolor="#dddddd">'   # Change background color to suit.
+HDR14a='<font size='
+HDR14b='>'
 # Footers
-FTR10='&lt;/body&gt;'
-FTR11='&lt;/html&gt;'
+FTR10='</body>'
+FTR11='</html>'
 # Tags
-BOLD="&lt;b&gt;"
-CENTER="&lt;center&gt;"
-END_CENTER="&lt;/center&gt;"
-LF="&lt;br&gt;"
+BOLD="<b>"
+CENTER="<center>"
+END_CENTER="</center>"
+LF="<br>"
 
 
 write_headers ()
@@ -73,7 +73,7 @@ process_text ()
     if [ ! "$line" ]  # Blank line?
     then              # Then new paragraph must follow.
       echo
-      echo "$LF"      # Insert two &lt;br&gt; tags.
+      echo "$LF"      # Insert two <br> tags.
       echo "$LF"
       echo
       continue        # Skip the underscore test.
@@ -82,7 +82,7 @@ process_text ()
       if [[ "$line" =~ \[*jpg\] ]]    # Is a graphic?
       then                            # Strip away brackets.
         temp=$( echo "$line" | sed -e 's/\[//' -e 's/\]//' )
-        line=""$CENTER" &lt;img src="\"$IMGDIR"/$temp\"&gt; "$END_CENTER" "
+        line=""$CENTER" <img src="\"$IMGDIR"/$temp\"> "$END_CENTER" "
                                       # Add image tag.
                                       # And, center it.
       fi
@@ -96,8 +96,8 @@ process_text ()
       # ===================================================
       # Convert underscored phrase to italics.
       temp=$( echo "$line" |
-              sed -e 's/ _/ &lt;i&gt;/' -e 's/_/&lt;\/i&gt; /' |
-              sed -e 's/^_/&lt;i&gt;/'  -e 's/_/&lt;\/i&gt;/' )
+              sed -e 's/ _/ <i>/' -e 's/_/<\/i> /' |
+              sed -e 's/^_/<i>/'  -e 's/_/<\/i>/' )
       #  Process only underscores prefixed by space,
       #+ or at beginning or end of line.
       #  Do not convert underscores embedded within a word!
@@ -139,3 +139,4 @@ exit $?
 #  1) Fixup: Check for closing underscore before a comma or period.
 #  2) Add a test for the presence of a closing underscore
 #+    in phrases to be italicized.
+

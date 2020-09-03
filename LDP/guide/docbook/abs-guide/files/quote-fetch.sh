@@ -23,7 +23,7 @@ wget -O ${stock_symbol}${file_suffix} "${URL}${stock_symbol}"
 
 # To look up stuff on http://search.yahoo.com:
 # -----------------------------------------------------------
-# URL="http://search.yahoo.com/search?fr=ush-news&amp;p=${query}"
+# URL="http://search.yahoo.com/search?fr=ush-news&p=${query}"
 # wget -O "$savefilename" "${URL}"
 # -----------------------------------------------------------
 # Saves a list of relevant URLs.
@@ -38,3 +38,4 @@ exit $?
 #
 # 2) Modify this script to fetch the local weather report,
 #+   taking the user's zip code as an argument.
+

@@ -15,7 +15,7 @@ then   # Bail out if no such file.
 fi
 
 read -p "Title: " title
-cat - $file &lt;&lt;&lt;$title &gt; $file.new
+cat - $file <<<$title > $file.new
 
 echo "Modified file is $file.new"
 
@@ -25,7 +25,7 @@ exit  # Ends script execution.
   Here Strings
   	A variant of here documents, the format is:
   
-  		&lt;&lt;&lt;word
+  		<<<word
   
   	The word is expanded and supplied to the command on its standard input.
 
@@ -33,3 +33,4 @@ exit  # Ends script execution.
   Of course, the following also works:
    sed -e '1i\
    Title: ' $file
+

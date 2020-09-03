@@ -3,7 +3,7 @@
 # --> Comments added by the author of this document marked by "# -->".
 
 # --> This is part of the 'rc' script package
-# --> by Miquel van Smoorenburg, &lt;miquels@drinkel.nl.mugnet.org>.
+# --> by Miquel van Smoorenburg, <miquels@drinkel.nl.mugnet.org>.
 
 # --> This particular script seems to be Red Hat / FC specific
 # --> (may not be present in other distributions).
@@ -15,7 +15,7 @@ for i in /var/lock/subsys/*; do
         # --> Standard for/in loop, but since "do" is on same line,
         # --> it is necessary to add ";".
         # Check if the script is there.
-        [ ! -f $i ] &amp;&amp; continue
+        [ ! -f $i ] && continue
         # --> This is a clever use of an "and list", equivalent to:
         # --> if [ ! -f "$i" ]; then continue
 
@@ -40,3 +40,4 @@ for i in /var/lock/subsys/*; do
         # -->+ not a shell builtin.
         fi
 done
+

@@ -4,7 +4,7 @@
 for i in 1 2 3 4 5 6 7 8 9 10            # First loop.
 do
   echo -n "$i "
-done &amp; # Run this loop in background.
+done & # Run this loop in background.
        # Will sometimes execute after second loop.
 
 echo   # This 'echo' sometimes will not display.
@@ -40,3 +40,4 @@ exit 0
 #  Nasimuddin Ansari suggests adding    sleep 1
 #+ after the   echo -n "$i"   in lines 6 and 14,
 #+ for some real fun.
+

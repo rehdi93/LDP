@@ -4,7 +4,7 @@
 ##############################################################
 # QUACKEY: a somewhat simplified version of Perquackey [TM]. #
 #                                                            #
-# Author: Mendel Cooper  &lt;thegrendel.abs@gmail.com&gt;          #
+# Author: Mendel Cooper  <thegrendel.abs@gmail.com>          #
 # version 0.1.02      03 May, 2008                           #
 # License: GPL3                                              #
 ##############################################################
@@ -60,7 +60,7 @@ instructions ()
    if [ "$ans" = "y" -o "$ans" = "Y" ]; then
      clear
      echo -e '\E[31;47m'  # Red foreground. '\E[34;47m' for blue.
-     cat &lt;&lt;INSTRUCTION1
+     cat <<INSTRUCTION1
 
 QUACKEY is a variant of Perquackey [TM].
 The rules are the same, but the scoring is simplified
@@ -84,7 +84,7 @@ INSTRUCTION1
 
   echo -n "Hit ENTER for next page of instructions. "; read az1
 
-     cat &lt;&lt;INSTRUCTION2
+     cat <<INSTRUCTION2
 
 The scoring mostly corresponds to classic Perquackey:
 The first 3-letter word scores    60, plus   10 for each additional one.
@@ -110,7 +110,7 @@ INSTRUCTION2
 
   echo -n "Hit ENTER for final page of instructions. "; read az1
 
-     cat &lt;&lt;INSTRUCTION3
+     cat <<INSTRUCTION3
 
 
 Hitting just ENTER for a word entry ends the game.
@@ -464,3 +464,4 @@ exit $?
 
 # For more info, reference:
 # http://bash.deta.in/qky.README.html
+

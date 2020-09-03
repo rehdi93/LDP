@@ -6,7 +6,7 @@
 
 #  This is an implementation of the Gronsfeld Cipher.
 #  It's essentially a stripped-down variant of the 
-#+ polyalphabetic Vigen&egrave;re Tableau, but with only 10 alphabets.
+#+ polyalphabetic Vigenère Tableau, but with only 10 alphabets.
 #  The classic Gronsfeld has a numeric sequence as the key word,
 #+ but here we substitute a letter string, for ease of use.
 #  Allegedly, this cipher was invented by the eponymous Count Gronsfeld
@@ -50,7 +50,7 @@ key=  ### Put key here!!!
   local plaintext="$1"
   local mlen=${#plaintext}
 
-for (( idx=0; idx&lt;$mlen; idx++ ))
+for (( idx=0; idx<$mlen; idx++ ))
 do
   let "keydx = $idx % $keylen"
   shft=${offsets[keydx]}
@@ -62,7 +62,7 @@ do
   else                  # Encrypt!
     let "off1 = $(expr index "${alpha1[*]}" ${plaintext:idx:1}) + $shft"
     # Shift forward to encrypt.
-    test $(( $idx % $GROUPLEN)) = 0 &amp;&amp; echo -n " "  # Groups of 5 letters.
+    test $(( $idx % $GROUPLEN)) = 0 && echo -n " "  # Groups of 5 letters.
     #  Comment out above line for output as a string without whitespace,
     #+ for example, if using the script as a password generator.
   fi
@@ -114,7 +114,7 @@ fi
 
 keylen=${#key}
 
-for (( idx=0; idx&lt;$keylen; idx++ ))
+for (( idx=0; idx<$keylen; idx++ ))
 do  # Calculate shift values for encryption/decryption.
   offsets[idx]=$(expr index "${alpha1[*]}" ${key:idx:1})   # Normalize.
   ((offsets[idx]--))  #  Necessary because "expr index" starts at 1,
@@ -145,3 +145,4 @@ exit $?    # } End-of-script
 #   Or, you could use your own name (surely that's easy to remember!).
 #   For example, Bozo Bozeman encrypts to hfnbttdppkt29379.
 #   **************************************************************   #
+

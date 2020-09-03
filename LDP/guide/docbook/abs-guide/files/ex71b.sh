@@ -19,7 +19,7 @@ fi
 RESPONDENT="the author of this fine script"  
   
 
-cat &lt;&lt;Endofmessage
+cat <<Endofmessage
 
 Hello, there, $NAME.
 Greetings to you, $NAME, from $RESPONDENT.
@@ -32,3 +32,4 @@ Endofmessage
 # So does the comment.
 
 exit
+

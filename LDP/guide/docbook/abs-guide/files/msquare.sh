@@ -46,9 +46,9 @@ calculate ()       # Here's where the actual work gets done.
 
   let "dimadj = $dimension * 3"; let "dimadj /= 2"   # x 1.5, then truncate.
 
-  for ((j=0; j &lt; dimension; j++))
+  for ((j=0; j < dimension; j++))
   do
-    for ((k=0; k &lt; dimension; k++))
+    for ((k=0; k < dimension; k++))
     do  # Calculate indices, then convert to 1-dim. array index.
         # Bash doesn't support multidimensional arrays. Pity.
       let "col = $k - $j + $dimadj"; let "col %= $dimension"
@@ -110,3 +110,4 @@ exit $?
 #    with an *even* number of rows/columns.
 #    This is non-trivial(!).
 #    See the URL for Kwon Young Shin, above, for help.
+

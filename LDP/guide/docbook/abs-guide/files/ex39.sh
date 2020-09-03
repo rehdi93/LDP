@@ -20,7 +20,7 @@ fi
 
 echo "Updating 'locate' database..."
 echo "This may take a while."
-updatedb /usr &amp;     # Must be run as root.
+updatedb /usr &     # Must be run as root.
 
 wait
 # Don't run the rest of the script until 'updatedb' finished.
@@ -33,3 +33,4 @@ locate $1
 #+ leaving it as an orphan process.
 
 exit 0
+

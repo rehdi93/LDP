@@ -57,7 +57,7 @@ arith_mean ()
   #  Caution: This little trick will not work if $ct > 255!
   #  To handle a larger number of data points,
   #+ simply comment out the "return $ct" above.
-} &lt;"$datafile"   # Feed in data file.
+} <"$datafile"   # Feed in data file.
 
 sd ()
 {
@@ -79,7 +79,7 @@ sd ()
     sdev=$(echo "scale=$SC; sqrt($avg2)" | bc) # Square root =
     echo $sdev                                 # Standard Deviation.
 
-} &lt;"$datafile"   # Rewinds data file.
+} <"$datafile"   # Rewinds data file.
 
 
 # ======================================================= #
@@ -115,3 +115,4 @@ exit
 # Arithmetic mean (average) = 18.756000000
 # Standard Deviation = .235338054
 # ++++++++++++++++++++++++++++++++++++++++ #
+

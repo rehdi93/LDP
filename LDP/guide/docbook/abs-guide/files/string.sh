@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # string.bash --- bash emulation of string(3) library routines
-# Author: Noah Friedman &lt;friedman@prep.ai.mit.edu&gt;
+# Author: Noah Friedman <friedman@prep.ai.mit.edu>
 # ==>     Used with his kind permission in this document.
 # Created: 1992-07-01
 # Last modified: 1993-09-29
@@ -85,9 +85,9 @@ function strncat ()
 ###;;;autoload
 function strcmp ()
 {
-    [ "$1" = "$2" ] &amp;&amp; return 0
+    [ "$1" = "$2" ] && return 0
 
-    [ "${1}" '&lt;' "${2}" ] > /dev/null &amp;&amp; return -1
+    [ "${1}" '<' "${2}" ] > /dev/null && return -1
 
     return 1
 }
@@ -177,7 +177,7 @@ function strcspn ()
 function strstr ()
 {
     # if s2 points to a string of zero length, strstr echoes s1
-    [ ${#2} -eq 0 ] &amp;&amp; { echo "$1" ; return 0; }
+    [ ${#2} -eq 0 ] && { echo "$1" ; return 0; }
 
     # strstr echoes nothing if s2 does not occur in s1
     case "$1" in
@@ -269,3 +269,4 @@ echo
 
 
 exit 0
+

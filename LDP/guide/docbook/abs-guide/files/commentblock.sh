@@ -1,12 +1,12 @@
 #!/bin/bash
 # commentblock.sh
 
-: &lt;&lt;COMMENTBLOCK
+: <<COMMENTBLOCK
 echo "This line will not echo."
 This is a comment line missing the "#" prefix.
 This is another comment line missing the "#" prefix.
 
-&amp;*@!!++=
+&*@!!++=
 The above line will cause no error message,
 because the Bash interpreter will ignore it.
 COMMENTBLOCK
@@ -25,7 +25,7 @@ echo
 echo "Just before commented-out code block."
 #  The lines of code between the double-dashed lines will not execute.
 #  ===================================================================
-: &lt;&lt;DEBUGXXX
+: <<DEBUGXXX
 for file in *
 do
  cat "$file"
@@ -47,9 +47,9 @@ exit 0
 
 #/!/bin/bash
 
-  : &lt;&lt;COMMENTBLOCK
+  : <<COMMENTBLOCK
   echo "This line will not echo."
-  &amp;*@!!++=
+  &*@!!++=
   ${foo_bar_bazz?}
   $(rm -rf /tmp/foobar/)
   $(touch my_build_directory/cups/Makefile)
@@ -61,6 +61,7 @@ commented-bad.sh: line 3: foo_bar_bazz: parameter null or not set
 
 # The remedy for this is to strong-quote the 'COMMENTBLOCK' in line 49, above.
 
-  : &lt;&lt;'COMMENTBLOCK'
+  : <<'COMMENTBLOCK'
 
 # Thank you, Kurt Pfeifle, for pointing this out.
+

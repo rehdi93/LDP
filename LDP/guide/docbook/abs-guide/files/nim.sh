@@ -24,7 +24,7 @@ instructions ()
    if [ "$ans" = "y" -o "$ans" = "Y" ]; then
      clear
      echo -e '\E[33;41m'  # Yellow fg., over red bg.; bold.
-     cat &lt;&lt;INSTRUCTIONS
+     cat <<INSTRUCTIONS
 
 Nim is a game with roots in the distant past.
 This particular variant starts with five rows of pegs.
@@ -273,3 +273,4 @@ done
 #
 #  In 1978, Leo Christopherson wrote an animated version of Nim,
 #+ Android Nim, for the TRS-80 Model I.
+

@@ -15,8 +15,8 @@
 #+ Advanced Bash Scripting Guide.
 
 # Output format of the 'times' command:
-# User CPU &lt;space&gt; System CPU
-# User CPU of dead children &lt;space&gt; System CPU of dead children
+# User CPU <space> System CPU
+# User CPU of dead children <space> System CPU of dead children
 
 #  Bash has two versions of assigning all elements of an array
 #+ to a new array variable.
@@ -86,3 +86,4 @@ times
 #  Try it, and see.
 
 exit 0
+

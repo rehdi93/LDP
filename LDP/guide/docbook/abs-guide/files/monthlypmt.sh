@@ -51,7 +51,7 @@ read term
 #  Rick Boivie pointed out a more efficient implementation
 #+ of the above loop, which decreases computation time by 2/3.
 
-# for ((x=1; x &lt;= $months; x++))
+# for ((x=1; x <= $months; x++))
 # do
 #   bottom=$(echo "scale=9; $bottom * $interest_rate + 1" | bc)
 # done
@@ -62,7 +62,7 @@ read term
 
 # bottom=`{
 #     echo "scale=9; bottom=$bottom; interest_rate=$interest_rate"
-#     for ((x=1; x &lt;= $months; x++))
+#     for ((x=1; x <= $months; x++))
 #     do
 #          echo 'bottom = bottom * interest_rate + 1'
 #     done
@@ -98,3 +98,4 @@ read term
  #   2) Filter input to permit interest to be entered as percent or decimal.
  #   3) If you are really ambitious,
  #+     expand this script to print complete amortization tables.
+

@@ -47,7 +47,7 @@ Parse_Date ()                 # Parse date from command-line params.
 check_date ()                 # Checks for invalid date(s) passed.
 {
   [ "$day" -gt "$DIM" ] || [ "$month" -gt "$MIY" ] ||
-  [ "$year" -lt "$REFYR" ] &amp;&amp; Param_Error
+  [ "$year" -lt "$REFYR" ] && Param_Error
   # Exit script on bad value(s).
   # Uses or-list / and-list.
   #
@@ -153,3 +153,4 @@ exit 0
 #  Compare this script with
 #+ the implementation of Gauss' Formula in a C program at
 #+    http://buschencrew.hypermart.net/software/datedif
+

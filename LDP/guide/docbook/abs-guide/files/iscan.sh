@@ -7,7 +7,7 @@
 ##+ for alarm, and only hits the few known daemon ports you specify.
 ##  Disadvantages: requires numeric-only port args, the output sleazitude,
 ##+ and won't work for r-services when coming from high source ports.
-# Script author: Hobbit &lt;hobbit@avian.org&gt;
+# Script author: Hobbit <hobbit@avian.org>
 # Used in ABS Guide with permission.
 
 # ---------------------------------------------------
@@ -39,10 +39,10 @@ TRG="$1"
 shift
 
 while test "$1" ; do
-  nc -v -w $TIMEOUT1 -p ${RP} "$TRG" ${1} &lt; /dev/null > /dev/null &amp;
+  nc -v -w $TIMEOUT1 -p ${RP} "$TRG" ${1} < /dev/null > /dev/null &
   PROC=$!
   sleep $THREE_WINKS
-  echo "${1},${RP}" | nc -w $TIMEOUT2 -r "$TRG" $IDPORT 2>&amp;1
+  echo "${1},${RP}" | nc -w $TIMEOUT2 -r "$TRG" $IDPORT 2>&1
   sleep $TWO_WINKS
 
 # Does this look like a lamer script or what . . . ?
@@ -65,3 +65,4 @@ exit $?
 #  For more of Hobbit's 'nc' example scripts,
 #+ look in the documentation:
 #+ the /usr/share/doc/nc-X.XX/scripts directory.
+

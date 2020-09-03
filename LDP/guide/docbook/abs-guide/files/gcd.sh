@@ -7,8 +7,8 @@
 
 #  Euclid's algorithm uses successive division.
 #    In each pass,
-#+      dividend &lt;---  divisor
-#+      divisor  &lt;---  remainder
+#+      dividend <---  divisor
+#+      divisor  <---  remainder
 #+   until remainder = 0.
 #    The gcd = dividend, on the final pass.
 #
@@ -61,3 +61,4 @@ echo; echo "GCD of $1 and $2 = $dividend"; echo
 # 2) Rewrite the gcd () function to use local variables.
 
 exit 0
+

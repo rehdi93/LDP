@@ -19,7 +19,7 @@ echo; echo
 ((a = 1))      # a=1
 # Double parentheses permit space when setting a variable, as in C.
 
-while (( a &lt;= LIMIT ))   #  Double parentheses,
+while (( a <= LIMIT ))   #  Double parentheses,
 do                       #+ and no "$" preceding variables.
   echo -n "$a "
   ((a += 1))             # let "a+=1"
@@ -32,3 +32,4 @@ echo
 # C and Java programmers can feel right at home in Bash.
 
 exit 0
+

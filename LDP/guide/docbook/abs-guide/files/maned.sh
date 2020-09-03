@@ -3,7 +3,7 @@
 # A rudimentary man page editor
 
 # Version: 0.1 (Alpha, probably buggy)
-# Author: Mendel Cooper &lt;thegrendel.abs@gmail.com&gt;
+# Author: Mendel Cooper <thegrendel.abs@gmail.com>
 # Reldate: 16 June 2008
 # License: GPL3
 
@@ -146,3 +146,4 @@ end    # ... exit not needed.
 #+ full-featured "manedit" package
 #+ http://freshmeat.net/projects/manedit/
 #+ but it's much easier to use.
+

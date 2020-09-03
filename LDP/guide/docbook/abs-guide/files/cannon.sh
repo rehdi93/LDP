@@ -61,7 +61,7 @@ echo $rnum
 distance=        # Declare global variable.
 hypotenuse ()    # Calculate hypotenuse of a right triangle.
 {                # From "alt-bc.sh" example.
-distance=$(bc -l &lt;&lt; EOF
+distance=$(bc -l << EOF
 scale = 0
 sqrt ( $1 * $1 + $2 * $2 )
 EOF
@@ -141,3 +141,4 @@ exit 0
 #  1) As a proof of concept: to show it can be done.
 #  2) To prototype and test the algorithms before rewriting
 #+    it in a compiled high-level language.
+

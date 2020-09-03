@@ -53,7 +53,7 @@ instructions () {
     echo -e '\E[34;47m'  # Blue type.
 
 #  "cat document"
-    cat &lt;&lt;INSTRUCTIONSZZZ
+    cat <<INSTRUCTIONSZZZ
 The name of the game is Petals Around the Rose,
 and that name is significant.
 Five dice will roll and you must guess the "answer" for each roll.
@@ -157,7 +157,7 @@ do
           echo "You have unraveled the mystery of the Rose Petals!"
           echo "Welcome to the Fellowship of the Rose!!!"
           echo "(You are herewith sworn to secrecy.)"; echo
-          echo -e "\033[0m"    # Turn off red &amp; bold.
+          echo -e "\033[0m"    # Turn off red & bold.
           break                # Exit!
         else echo "You have $hits correct so far."; echo
 
@@ -192,3 +192,4 @@ exit $?
 #    (Wikipedia entry.)
 # 2) http://www.borrett.id.au/computing/petals-bg.htm
 #    (How Bill Gates coped with the Petals Around the Rose challenge.)
+

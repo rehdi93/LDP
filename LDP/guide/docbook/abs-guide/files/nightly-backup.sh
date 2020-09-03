@@ -1,7 +1,7 @@
 #!/bin/bash
 # nightly-backup.sh
 # http://www.richardneill.org/source.php#nightly-backup-rsync
-# Copyright (c) 2005 Richard Neill &lt;backup@richardneill.org&gt;.
+# Copyright (c) 2005 Richard Neill <backup@richardneill.org>.
 # This is Free Software licensed under the GNU GPL.
 # ==> Included in ABS Guide with script author's kind permission.
 # ==> (Thanks!)
@@ -73,7 +73,7 @@ fi
 
 if [ "$#" != 0 ]  # If command-line param(s) . . .
 then              # Here document(ation).
-  cat &lt;&lt;-ENDOFTEXT
+  cat <<-ENDOFTEXT
     Automatic Nightly backup run from cron.
     Read the source for more details: $0
     The backup directory is $BACKUP_DEST_DIR .
@@ -178,7 +178,7 @@ fi
 # Create the subdirectories.
 # Note that backup.0 will be created as needed by rsync.
 
-for ((i=1;i&lt;=15;i++)); do
+for ((i=1;i<=15;i++)); do
   if [ ! -d $BACKUP_DEST_DIR/backup.$i ]; then
     if /bin/mkdir -p $BACKUP_DEST_DIR/backup.$i ; then
     #  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  No [ ] test brackets. Why?
@@ -190,7 +190,7 @@ for ((i=1;i&lt;=15;i++)); do
     if  [ "$UNMOUNT_LATER" == "TRUE" ]; then
         # Before we exit, unmount the mount point if necessary.
         cd
-	sudo umount $MOUNT_POINT &amp;&amp;
+	sudo umount $MOUNT_POINT &&
 	echo "Unmounted $MOUNT_POINT again. Giving up."
     fi
       exit $E_UNMOUNTED
@@ -207,7 +207,7 @@ if ! /bin/chmod 700 $BACKUP_DEST_DIR ; then
   if  [ "$UNMOUNT_LATER" == "TRUE" ]; then
   # Before we exit, unmount the mount point if necessary.
      cd ; sudo umount $MOUNT_POINT \
-     &amp;&amp; echo "Unmounted $MOUNT_POINT again. Giving up."
+     && echo "Unmounted $MOUNT_POINT again. Giving up."
   fi
 
   exit $E_UNMOUNTED
@@ -256,7 +256,7 @@ echo "This backup of $SOURCE_DIR on `hostname` was created on \
 `date`" > $BACKUP_DEST_DIR/backup.0/README.txt
 
 # If we are not in a dry run, rotate the backups.
-[ -z "$DRY_RUN" ] &amp;&amp;
+[ -z "$DRY_RUN" ] &&
 
   #  Check how full the backup disk is.
   #  Warn if 90%. if 98% or more, we'll probably fail, so give up.
@@ -274,7 +274,7 @@ echo "This backup of $SOURCE_DIR on `hostname` was created on \
     echo "Error: Disk is full! Giving up."
       if  [ "$UNMOUNT_LATER" == "TRUE" ]; then
         # Before we exit, unmount the mount point if necessary.
-        cd; sudo umount $MOUNT_POINT &amp;&amp;
+        cd; sudo umount $MOUNT_POINT &&
         echo "Unmounted $MOUNT_POINT again. Giving up."
       fi
     exit $E_UNMOUNTED
@@ -291,7 +291,7 @@ echo "This backup of $SOURCE_DIR on `hostname` was created on \
      $BACKUP_DEST_DIR/$BACKUP_JUSTINCASE"
      if  [ "$UNMOUNT_LATER" == "TRUE" ]; then
        # Before we exit, unmount the mount point if necessary.
-       cd ;sudo umount $MOUNT_POINT &amp;&amp;
+       cd ;sudo umount $MOUNT_POINT &&
        echo "Unmounted $MOUNT_POINT again. Giving up."
      fi
      exit $E_UNMOUNTED
@@ -302,55 +302,55 @@ echo "This backup of $SOURCE_DIR on `hostname` was created on \
  # At start of month, rotate the oldest 8.
  if [ "$MONTHSTART" == "true" ]; then
    echo -e "\nStart of month. \
-   Removing oldest backup: $BACKUP_DEST_DIR/backup.15"  &amp;&amp;
-   /bin/rm -rf  $BACKUP_DEST_DIR/backup.15  &amp;&amp;
+   Removing oldest backup: $BACKUP_DEST_DIR/backup.15"  &&
+   /bin/rm -rf  $BACKUP_DEST_DIR/backup.15  &&
    echo "Rotating monthly,weekly backups: \
-   $BACKUP_DEST_DIR/backup.[8-14] -> $BACKUP_DEST_DIR/backup.[9-15]"  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.14 $BACKUP_DEST_DIR/backup.15  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.13 $BACKUP_DEST_DIR/backup.14  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.12 $BACKUP_DEST_DIR/backup.13  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.11 $BACKUP_DEST_DIR/backup.12  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.10 $BACKUP_DEST_DIR/backup.11  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.9 $BACKUP_DEST_DIR/backup.10  &amp;&amp;
+   $BACKUP_DEST_DIR/backup.[8-14] -> $BACKUP_DEST_DIR/backup.[9-15]"  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.14 $BACKUP_DEST_DIR/backup.15  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.13 $BACKUP_DEST_DIR/backup.14  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.12 $BACKUP_DEST_DIR/backup.13  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.11 $BACKUP_DEST_DIR/backup.12  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.10 $BACKUP_DEST_DIR/backup.11  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.9 $BACKUP_DEST_DIR/backup.10  &&
      /bin/mv $BACKUP_DEST_DIR/backup.8 $BACKUP_DEST_DIR/backup.9
 
  # At start of week, rotate the second-oldest 4.
  elif [ "$WEEKSTART" == "true" ]; then
    echo -e "\nStart of week. \
-   Removing oldest weekly backup: $BACKUP_DEST_DIR/backup.12"  &amp;&amp;
-   /bin/rm -rf  $BACKUP_DEST_DIR/backup.12  &amp;&amp;
+   Removing oldest weekly backup: $BACKUP_DEST_DIR/backup.12"  &&
+   /bin/rm -rf  $BACKUP_DEST_DIR/backup.12  &&
 
    echo "Rotating weekly backups: \
-   $BACKUP_DEST_DIR/backup.[8-11] -> $BACKUP_DEST_DIR/backup.[9-12]"  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.11 $BACKUP_DEST_DIR/backup.12  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.10 $BACKUP_DEST_DIR/backup.11  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.9 $BACKUP_DEST_DIR/backup.10  &amp;&amp;
+   $BACKUP_DEST_DIR/backup.[8-11] -> $BACKUP_DEST_DIR/backup.[9-12]"  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.11 $BACKUP_DEST_DIR/backup.12  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.10 $BACKUP_DEST_DIR/backup.11  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.9 $BACKUP_DEST_DIR/backup.10  &&
      /bin/mv $BACKUP_DEST_DIR/backup.8 $BACKUP_DEST_DIR/backup.9
 
  else
-   echo -e "\nRemoving oldest daily backup: $BACKUP_DEST_DIR/backup.8"  &amp;&amp;
+   echo -e "\nRemoving oldest daily backup: $BACKUP_DEST_DIR/backup.8"  &&
      /bin/rm -rf  $BACKUP_DEST_DIR/backup.8
 
- fi  &amp;&amp;
+ fi  &&
 
  # Every day, rotate the newest 8.
  echo "Rotating daily backups: \
- $BACKUP_DEST_DIR/backup.[1-7] -> $BACKUP_DEST_DIR/backup.[2-8]"  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.7 $BACKUP_DEST_DIR/backup.8  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.6 $BACKUP_DEST_DIR/backup.7  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.5 $BACKUP_DEST_DIR/backup.6  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.4 $BACKUP_DEST_DIR/backup.5  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.3 $BACKUP_DEST_DIR/backup.4  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.2 $BACKUP_DEST_DIR/backup.3  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.1 $BACKUP_DEST_DIR/backup.2  &amp;&amp;
-     /bin/mv $BACKUP_DEST_DIR/backup.0 $BACKUP_DEST_DIR/backup.1  &amp;&amp;
+ $BACKUP_DEST_DIR/backup.[1-7] -> $BACKUP_DEST_DIR/backup.[2-8]"  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.7 $BACKUP_DEST_DIR/backup.8  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.6 $BACKUP_DEST_DIR/backup.7  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.5 $BACKUP_DEST_DIR/backup.6  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.4 $BACKUP_DEST_DIR/backup.5  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.3 $BACKUP_DEST_DIR/backup.4  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.2 $BACKUP_DEST_DIR/backup.3  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.1 $BACKUP_DEST_DIR/backup.2  &&
+     /bin/mv $BACKUP_DEST_DIR/backup.0 $BACKUP_DEST_DIR/backup.1  &&
 
  SUCCESS=true
 
 
 if  [ "$UNMOUNT_LATER" == "TRUE" ]; then
   # Unmount the mount point if it wasn't mounted to begin with.
-  cd ; sudo umount $MOUNT_POINT &amp;&amp; echo "Unmounted $MOUNT_POINT again."
+  cd ; sudo umount $MOUNT_POINT && echo "Unmounted $MOUNT_POINT again."
 fi
 
 
@@ -362,3 +362,4 @@ fi
 # Should have already exited if backup worked.
 echo 'BACKUP FAILED! Is this just a dry run? Is the disk full?) '
 exit $E_BACKUP
+

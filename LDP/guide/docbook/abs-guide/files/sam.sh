@@ -97,8 +97,8 @@ extract_letters ()
 }
 
 ######### Play the sounds ############
-dot()  { aplay "$DOT" 2&amp;>/dev/null;  }
-dash() { aplay "$DASH" 2&amp;>/dev/null; }
+dot()  { aplay "$DOT" 2&>/dev/null;  }
+dash() { aplay "$DASH" 2&>/dev/null; }
 ######################################
 
 no_args ()
@@ -155,3 +155,4 @@ exit 0
 #  1) Have the script accept either lowercase or uppercase words
 #+    as arguments. Hint: Use 'tr' . . .
 #  2) Have the script optionally accept input from a text file.
+

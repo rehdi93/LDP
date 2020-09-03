@@ -11,7 +11,7 @@ speak()
   local IFS=+
   # Invoke mplayer, then connect to Google translation server.
   /usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols \
- "http://translate.google.com/translate_tts?tl=en&amp;q="$*""
+ "http://translate.google.com/translate_tts?tl=en&q="$*""
   # Google translates, but can also speak.
   }
 
@@ -21,3 +21,4 @@ spk=$(tail -$LINES $0) # Tail end of same script!
 speak "$spk"
 exit
 # Browns. Nice talking to you.
+

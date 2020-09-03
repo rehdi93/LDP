@@ -13,9 +13,10 @@ until [ "$name" = Smith ]     # Change  !=  to =.
 do
   read name                   # Reads from $Filename, rather than stdin.
   echo $name
-done &lt;"$Filename"             # Redirects stdin to file $Filename. 
+done <"$Filename"             # Redirects stdin to file $Filename. 
 #    ^^^^^^^^^^^^
 
 # Same results as with "while" loop in previous example.
 
 exit 0
+

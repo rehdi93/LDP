@@ -29,7 +29,7 @@
 #
 #  AUTHOR and SUPPORT
 #  ------------------
-#  Konstantin Riabitsev, &lt;icon linux duke edu&gt;.
+#  Konstantin Riabitsev, <icon linux duke edu>.
 #  Send any problem reports to my email address at the moment.
 #
 # ==> Comments added by ABS Guide author.
@@ -54,7 +54,7 @@ function scsiDevFromScsiUsb {
   print "/dev/sd" substr("abcdefghijklmnopqrstuvwxyz", n+1, 1) }'
 }
 
-if [ "${ACTION}" = "add" ] &amp;&amp; [ -f "${DEVICE}" ]; then
+if [ "${ACTION}" = "add" ] && [ -f "${DEVICE}" ]; then
     ##
     # lifted from usbcam code.
     #
@@ -140,3 +140,4 @@ elif [ "${ACTION}" = "remove" ]; then
 fi
 
 exit 0
+

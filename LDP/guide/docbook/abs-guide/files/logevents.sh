@@ -28,7 +28,7 @@ FD_DEBUG3=5
 
 log()  # Writes time and date to log file.
 {
-echo "$(date)  $*" &gt;&amp;7     # This *appends* the date to the file.
+echo "$(date)  $*" >&7     # This *appends* the date to the file.
 #     ^^^^^^^  command substitution
                            # See below.
 }
@@ -36,36 +36,37 @@ echo "$(date)  $*" &gt;&amp;7     # This *appends* the date to the file.
 
 
 case $LOG_LEVEL in
- 1) exec 3&gt;&amp;2         4&gt; /dev/null 5&gt; /dev/null;;
- 2) exec 3&gt;&amp;2         4&gt;&amp;2         5&gt; /dev/null;;
- 3) exec 3&gt;&amp;2         4&gt;&amp;2         5&gt;&amp;2;;
- *) exec 3&gt; /dev/null 4&gt; /dev/null 5&gt; /dev/null;;
+ 1) exec 3>&2         4> /dev/null 5> /dev/null;;
+ 2) exec 3>&2         4>&2         5> /dev/null;;
+ 3) exec 3>&2         4>&2         5>&2;;
+ *) exec 3> /dev/null 4> /dev/null 5> /dev/null;;
 esac
 
 FD_LOGVARS=6
 if [[ $LOG_VARS ]]
-then exec 6&gt;&gt; /var/log/vars.log
-else exec 6&gt; /dev/null                     # Bury output.
+then exec 6>> /var/log/vars.log
+else exec 6> /dev/null                     # Bury output.
 fi
 
 FD_LOGEVENTS=7
 if [[ $LOG_EVENTS ]]
 then
-  # exec 7 &gt;(exec gawk '{print strftime(), $0}' &gt;&gt; /var/log/event.log)
+  # exec 7 >(exec gawk '{print strftime(), $0}' >> /var/log/event.log)
   # Above line fails in versions of Bash more recent than 2.04. Why?
-  exec 7&gt;&gt; /var/log/event.log              # Append to "event.log".
+  exec 7>> /var/log/event.log              # Append to "event.log".
   log                                      # Write time and date.
-else exec 7&gt; /dev/null                     # Bury output.
+else exec 7> /dev/null                     # Bury output.
 fi
 
-echo "DEBUG3: beginning" &gt;&amp;${FD_DEBUG3}
+echo "DEBUG3: beginning" >&${FD_DEBUG3}
 
-ls -l &gt;&amp;5 2&gt;&amp;4                             # command1 &gt;&amp;5 2&gt;&amp;4
+ls -l >&5 2>&4                             # command1 >&5 2>&4
 
 echo "Done"                                # command2 
 
-echo "sending mail" &gt;&amp;${FD_LOGEVENTS}
+echo "sending mail" >&${FD_LOGEVENTS}
 # Writes "sending mail" to file descriptor #7.
 
 
 exit 0
+

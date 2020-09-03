@@ -17,7 +17,7 @@ echo
 
 set -r
 # set --restricted    has same effect.
-echo "==> Now in restricted mode. &lt;=="
+echo "==> Now in restricted mode. <=="
 
 echo
 echo
@@ -45,3 +45,4 @@ ls -l bin.files    # Try to list attempted file creation effort.
 echo
 
 exit 0
+

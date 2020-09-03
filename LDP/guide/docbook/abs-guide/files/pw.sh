@@ -2,7 +2,7 @@
 #
 #
 #  Random password generator for Bash 2.x +
-#+ by Antek Sawicki &lt;tenox@tenox.tc&gt;,
+#+ by Antek Sawicki <tenox@tenox.tc>,
 #+ who generously gave usage permission to the ABS Guide author.
 #
 # ==> Comments added by document author ==>
@@ -46,3 +46,4 @@ done
 echo "$PASS"      # ==> Or, redirect to a file, as desired.
 
 exit 0
+

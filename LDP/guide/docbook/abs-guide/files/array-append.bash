@@ -25,7 +25,7 @@ declare -a array2=( [0]=zero2 [2]=two2 [3]=three2 )
 echo
 echo '- Confirm that the array is really subscript sparse. -'
 echo "Number of elements: 4"        # Hard-coded for illustration.
-for (( i = 0 ; i &lt; 4 ; i++ ))
+for (( i = 0 ; i < 4 ; i++ ))
 do
     echo "Element [$i]: ${array2[$i]}"
 done
@@ -49,7 +49,7 @@ echo '- - Testing Array Append - -'
 cnt=${#dest[@]}
 
 echo "Number of elements: $cnt"
-for (( i = 0 ; i &lt; cnt ; i++ ))
+for (( i = 0 ; i < cnt ; i++ ))
 do
     echo "Element [$i]: ${dest[$i]}"
 done
@@ -64,7 +64,7 @@ echo '- - Testing modified array - -'
 cnt=${#dest[@]}
 
 echo "Number of elements: $cnt"
-for (( i = 0 ; i &lt; cnt ; i++ ))
+for (( i = 0 ; i < cnt ; i++ ))
 do
     echo "Element [$i]: ${dest[$i]}"
 done
@@ -77,7 +77,7 @@ declare -a subArray=${dest[1]}
 cnt=${#subArray[@]}
 
 echo "Number of elements: $cnt"
-for (( i = 0 ; i &lt; cnt ; i++ ))
+for (( i = 0 ; i < cnt ; i++ ))
 do
     echo "Element [$i]: ${subArray[$i]}"
 done
@@ -99,7 +99,7 @@ declare -a subArray=( ${dest[1]} )
 cnt=${#subArray[@]}
 
 echo "Number of elements: $cnt"
-for (( i = 0 ; i &lt; cnt ; i++ ))
+for (( i = 0 ; i < cnt ; i++ ))
 do
     echo "Element [$i]: ${subArray[$i]}"
 done
@@ -110,3 +110,4 @@ echo '- - in versions of Bash newer than version 2.05b - -'
 # MSZ: Sorry about any earlier confusion folks.
 
 exit 0
+

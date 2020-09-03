@@ -5,7 +5,7 @@
 # URL: http://www.lugmen.org.ar/~jjo/jjotip/insertion-sort.bash.d
 #+          /insertion-sort.bash.sh
 #
-# Author: JuanJo Ciarlante &lt;jjo@irrigacion.gov.ar&gt;
+# Author: JuanJo Ciarlante <jjo@irrigacion.gov.ar>
 # Lightly reformatted by ABS Guide author.
 # License: GPLv2
 # Used in ABS Guide with author's permission (thanks!).
@@ -25,7 +25,7 @@ typeset -a list
 # Load whitespace-separated numbers from stdin.
 if [ "$1" = "-t" ]; then
 DEBUG=1
-        read -a list &lt; &lt;( od -Ad -w24 -t u2 /dev/urandom ) # Random list.
+        read -a list < <( od -Ad -w24 -t u2 /dev/urandom ) # Random list.
 #                    ^ ^  process substition
 else
         read -a list
@@ -41,20 +41,20 @@ showlist()
   }
 
 # Loop _pivot_ -- from second element to end of list.
-for(( i=1; i&lt;numelem; i++ )) do
-        ((DEBUG))&amp;&amp;showlist i "[]" " "
+for(( i=1; i<numelem; i++ )) do
+        ((DEBUG))&&showlist i "[]" " "
         # From current _pivot_, back to first element.
         for(( j=i; j; j-- )) do
                 # Search for the 1st elem. less than current "pivot" . . .
-                [[ "${list[j-1]}" -le "${list[i]}" ]] &amp;&amp; break
+                [[ "${list[j-1]}" -le "${list[i]}" ]] && break
         done
-	(( i==j )) &amp;&amp; continue ## No insertion was needed for this element.
+	(( i==j )) && continue ## No insertion was needed for this element.
 	# . . . Move list[i] (pivot) to the left of list[j]:
         list=(${list[@]:0:j} ${list[i]} ${list[j]}\
 	#         {0,j-1}        {i}       {j}
               ${list[@]:j+1:i-(j+1)} ${list[@]:i+1})
 	#         {j+1,i-1}              {i+1,last}
-	((DEBUG))&amp;&amp;showlist j "&lt;&gt;" "*"
+	((DEBUG))&&showlist j "<>" "*"
 done
 
 
@@ -63,3 +63,4 @@ echo  "------"
 echo $'Result:\n'${list[@]}
 
 exit $?
+

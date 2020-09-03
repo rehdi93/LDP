@@ -3,7 +3,7 @@
 
 #######################################################
 #               PAD (xml) file creator
-#+ Written by Mendel Cooper &lt;thegrendel.abs@gmail.com&gt;.
+#+ Written by Mendel Cooper <thegrendel.abs@gmail.com>.
 #+ Released to the Public Domain.
 #
 #  Generates a "PAD" descriptor file for shareware
@@ -23,15 +23,15 @@ fi
 
 
 # ===== PAD file headers =====
-HDR1="&lt;?xml version=\"1.0\" encoding=\"Windows-1252\" ?&gt;"
-HDR2="&lt;XML_DIZ_INFO&gt;"
-HDR3="&lt;MASTER_PAD_VERSION_INFO&gt;"
-HDR4="\t&lt;MASTER_PAD_VERSION&gt;1.15&lt;/MASTER_PAD_VERSION&gt;"
-HDR5="\t&lt;MASTER_PAD_INFO&gt;Portable Application Description, or PAD
+HDR1="<?xml version=\"1.0\" encoding=\"Windows-1252\" ?>"
+HDR2="<XML_DIZ_INFO>"
+HDR3="<MASTER_PAD_VERSION_INFO>"
+HDR4="\t<MASTER_PAD_VERSION>1.15</MASTER_PAD_VERSION>"
+HDR5="\t<MASTER_PAD_INFO>Portable Application Description, or PAD
 for short, is a data set that is used by shareware authors to
 disseminate information to anyone interested in their software products.
-To find out more go to http://www.asp-shareware.org/pad&lt;/MASTER_PAD_INFO&gt;"
-HDR6="&lt;/MASTER_PAD_VERSION_INFO&gt;"
+To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>"
+HDR6="</MASTER_PAD_VERSION_INFO>"
 # ============================
 
 
@@ -49,10 +49,10 @@ fill_in ()
 
   if [ -z "$var" ]
   then
-    echo -e "\t\t&lt;$1 />" >>$savefile    # Indent with 2 tabs.
+    echo -e "\t\t<$1 />" >>$savefile    # Indent with 2 tabs.
     return
   else
-    echo -e "\t\t&lt;$1>$var&lt;/$1>" >>$savefile
+    echo -e "\t\t<$1>$var</$1>" >>$savefile
     return ${#var}     # Return length of input string.
   fi
 }    
@@ -84,7 +84,7 @@ echo $HDR6 >>$savefile
 # Company_Info
 echo "COMPANY INFO"
 CO_HDR="Company_Info"
-echo "&lt;$CO_HDR>" >>$savefile
+echo "<$CO_HDR>" >>$savefile
 
 fill_in Company_Name
 fill_in Address_1
@@ -106,14 +106,14 @@ clear   # Clear screen between sections.
    # Contact_Info
 echo "CONTACT INFO"
 CONTACT_HDR="Contact_Info"
-echo "&lt;$CONTACT_HDR>" >>$savefile
+echo "<$CONTACT_HDR>" >>$savefile
 fill_in Author_First_Name
 fill_in Author_Last_Name
 fill_in Author_Email
 fill_in Contact_First_Name
 fill_in Contact_Last_Name
 fill_in Contact_Email
-echo -e "\t&lt;/$CONTACT_HDR>" >>$savefile
+echo -e "\t</$CONTACT_HDR>" >>$savefile
    # END Contact_Info
 
 clear
@@ -121,7 +121,7 @@ clear
    # Support_Info
 echo "SUPPORT INFO"
 SUPPORT_HDR="Support_Info"
-echo "&lt;$SUPPORT_HDR>" >>$savefile
+echo "<$SUPPORT_HDR>" >>$savefile
 fill_in Sales_Email
 fill_in Support_Email
 fill_in General_Email
@@ -129,10 +129,10 @@ fill_in Sales_Phone
 fill_in Support_Phone
 fill_in General_Phone
 fill_in Fax_Phone
-echo -e "\t&lt;/$SUPPORT_HDR>" >>$savefile
+echo -e "\t</$SUPPORT_HDR>" >>$savefile
    # END Support_Info
 
-echo "&lt;/$CO_HDR>" >>$savefile
+echo "</$CO_HDR>" >>$savefile
 # END Company_Info
 
 clear
@@ -140,7 +140,7 @@ clear
 # Program_Info 
 echo "PROGRAM INFO"
 PROGRAM_HDR="Program_Info"
-echo "&lt;$PROGRAM_HDR>" >>$savefile
+echo "<$PROGRAM_HDR>" >>$savefile
 fill_in Program_Name
 fill_in Program_Version
 fill_in Program_Release_Month
@@ -159,7 +159,7 @@ echo; echo
   # File_Info 
 echo "FILE INFO"
 FILEINFO_HDR="File_Info"
-echo "&lt;$FILEINFO_HDR>" >>$savefile
+echo "<$FILEINFO_HDR>" >>$savefile
 fill_in Filename_Versioned
 fill_in Filename_Previous
 fill_in Filename_Generic
@@ -167,7 +167,7 @@ fill_in Filename_Long
 fill_in File_Size_Bytes
 fill_in File_Size_K
 fill_in File_Size_MB
-echo -e "\t&lt;/$FILEINFO_HDR>" >>$savefile
+echo -e "\t</$FILEINFO_HDR>" >>$savefile
   # END File_Info 
 
 clear
@@ -175,7 +175,7 @@ clear
   # Expire_Info 
 echo "EXPIRE INFO"
 EXPIRE_HDR="Expire_Info"
-echo "&lt;$EXPIRE_HDR>" >>$savefile
+echo "<$EXPIRE_HDR>" >>$savefile
 fill_in Has_Expire_Info "Y/N"
 fill_in Expire_Count
 fill_in Expire_Based_On
@@ -183,7 +183,7 @@ fill_in Expire_Other_Info
 fill_in Expire_Month
 fill_in Expire_Day
 fill_in Expire_Year
-echo -e "\t&lt;/$EXPIRE_HDR>" >>$savefile
+echo -e "\t</$EXPIRE_HDR>" >>$savefile
   # END Expire_Info 
 
 clear
@@ -198,7 +198,7 @@ fill_in Includes_VB_Runtime "[Y/N]"
 fill_in Includes_DirectX "[Y/N]"
   # END More Program_Info
 
-echo "&lt;/$PROGRAM_HDR>" >>$savefile
+echo "</$PROGRAM_HDR>" >>$savefile
 # END Program_Info 
 
 clear
@@ -206,10 +206,10 @@ clear
 # Program Description
 echo "PROGRAM DESCRIPTIONS"
 PROGDESC_HDR="Program_Descriptions"
-echo "&lt;$PROGDESC_HDR>" >>$savefile
+echo "<$PROGDESC_HDR>" >>$savefile
 
 LANG="English"
-echo "&lt;$LANG>" >>$savefile
+echo "<$LANG>" >>$savefile
 
 fill_in Keywords "[comma + space separated]"
 echo
@@ -232,8 +232,8 @@ check_field_length 250 "$?"
 fill_in Char_Desc_450
 fill_in Char_Desc_2000
 
-echo "&lt;/$LANG>" >>$savefile
-echo "&lt;/$PROGDESC_HDR>" >>$savefile
+echo "</$LANG>" >>$savefile
+echo "</$PROGDESC_HDR>" >>$savefile
 # END Program Description
 
 clear
@@ -241,3 +241,4 @@ echo "Done."; echo; echo
 echo "Save file is:  \""$savefile"\""
 
 exit 0
+

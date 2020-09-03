@@ -7,7 +7,7 @@
 #  This is a simplified version of the "is_spammer.bash
 #+ script in the Contributed Scripts appendix.
 
-# is-spammer &lt;domain.name&gt;
+# is-spammer <domain.name>
 
 # Uses an external program: 'dig'
 # Tested with version: 9.2.4rc5
@@ -39,7 +39,7 @@ No_WSP=$'\x0A'$'\x0D'
 ADR_IFS=${No_WSP}'.'
 
 # Get the dns text resource record.
-# get_txt &lt;error_code&gt; &lt;list_query&gt;
+# get_txt <error_code> <list_query>
 get_txt() {
 
     # Parse $1 by assignment at the dots.
@@ -55,7 +55,7 @@ get_txt() {
 }
 
 # Get the dns address resource record.
-# chk_adr &lt;rev_dns&gt; &lt;list_server&gt;
+# chk_adr <rev_dns> <list_server>
 chk_adr() {
     local reply
     local server
@@ -144,3 +144,4 @@ exit 0
 
 # 4) Set a time-out for the script using the "+time=" option
      to the 'dig' command.
+

@@ -75,7 +75,7 @@ check_database ()
 
 
     let "n+=1"
-  done &lt;"$dbfile"       # Read from checksum database file. 
+  done <"$dbfile"       # Read from checksum database file. 
 
 }  
 
@@ -113,3 +113,4 @@ exit 0
 #  For a much more thorough file integrity check,
 #+ consider the "Tripwire" package,
 #+ http://sourceforge.net/projects/tripwire/.
+

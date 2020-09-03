@@ -3,7 +3,7 @@
 
 # set -vx
 
-:&lt;&lt;-'_Protect_Literal_String_Doc'
+:<<-'_Protect_Literal_String_Doc'
 
     Copyright (c) Michael S. Zick, 2003; All Rights Reserved
     License: Unrestricted reuse in any form, for any purpose.
@@ -61,7 +61,7 @@ _pls() {
     echo $'\x27'$@$'\x27'           # Hard quoted parameter glob
 }
 
-# :&lt;&lt;-'_Protect_Literal_String_Test'
+# :<<-'_Protect_Literal_String_Test'
 # # # Remove the above "# " to disable this code. # # #
 
 # See how that looks when printed.
@@ -89,7 +89,7 @@ arrayZ=( zero "$(_pls 'Hello ${Me}')" 'Hello ${You}' "\'Pass: ${pw}\'" )
 
 # Now list that array and see what is there.
 echo "- - Test Two - -"
-for (( i=0 ; i&lt;${#arrayZ[*]} ; i++ ))
+for (( i=0 ; i<${#arrayZ[*]} ; i++ ))
 do
     echo  Element $i: ${arrayZ[$i]} is: ${#arrayZ[$i]} long.
 done
@@ -107,7 +107,7 @@ declare -a array2=( ${arrayZ[@]} )
 
 # And print what happened.
 echo "- - Test Three - -"
-for (( i=0 ; i&lt;${#array2[*]} ; i++ ))
+for (( i=0 ; i<${#array2[*]} ; i++ ))
 do
     echo  Element $i: ${array2[$i]} is: ${#array2[$i]} long.
 done
@@ -146,3 +146,4 @@ echo
 # # # Remove the above "# " to disable this code. # # #
 
 exit 0
+

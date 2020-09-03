@@ -1,6 +1,6 @@
 #!/bin/bash
 # broken-link.sh
-# Written by Lee bigelow &lt;ligelowbee@yahoo.com&gt;
+# Written by Lee bigelow <ligelowbee@yahoo.com>
 # Used in ABS Guide with permission.
 
 #  A pure shell script to find dead symlinks and output them quoted
@@ -24,7 +24,7 @@
 #+ to the args passed.
 ######################
 
-[ $# -eq 0 ] &amp;&amp; directorys=`pwd` || directorys=$@
+[ $# -eq 0 ] && directorys=`pwd` || directorys=$@
 
 
 #  Setup the function linkchk to check the directory it is passed 
@@ -35,8 +35,8 @@
 
 linkchk () {
     for element in $1/*; do
-      [ -h "$element" -a ! -e "$element" ] &amp;&amp; echo \"$element\"
-      [ -d "$element" ] &amp;&amp; linkchk $element
+      [ -h "$element" -a ! -e "$element" ] && echo \"$element\"
+      [ -d "$element" ] && linkchk $element
     # Of course, '-h' tests for symbolic link, '-d' for directory.
     done
 }
@@ -55,3 +55,4 @@ for directory in $directorys; do
 done
 
 exit $?
+

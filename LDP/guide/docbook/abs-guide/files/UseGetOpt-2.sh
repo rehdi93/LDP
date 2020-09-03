@@ -8,7 +8,7 @@
 #  Possible options: -a -d -f -l -t -h
 #+                   --aoption, --debug --file --log --test -- help --
 
-#  Author of original script: Peggy Russell &lt;prusselltechgroup@gmail.com&gt;
+#  Author of original script: Peggy Russell <prusselltechgroup@gmail.com>
 
 
 # UseGetOpt () {
@@ -92,3 +92,4 @@ DoSomething () {
 #  }
 
 exit
+

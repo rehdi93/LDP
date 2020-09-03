@@ -11,7 +11,7 @@ then
   sed -e '/DOCUMENTATIONXX$/d'; exit $DOC_REQUEST; fi
 
 
-: &lt;&lt;DOCUMENTATIONXX
+: <<DOCUMENTATIONXX
 List the statistics of a specified directory in tabular format.
 ---------------------------------------------------------------
 The command-line parameter gives the directory to be listed.
@@ -32,3 +32,4 @@ echo "Listing of "$directory":"; echo
 ; ls -l "$directory" | sed 1d) | column -t
 
 exit 0
+

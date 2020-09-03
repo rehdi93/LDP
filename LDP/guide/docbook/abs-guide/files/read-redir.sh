@@ -1,10 +1,10 @@
 #!/bin/bash
 
-read var1 &lt;data-file
+read var1 <data-file
 echo "var1 = $var1"
 # var1 set to the entire first line of the input file "data-file"
 
-read var2 var3 &lt;data-file
+read var2 var3 <data-file
 echo "var2 = $var2   var3 = $var3"
 # Note non-intuitive behavior of "read" here.
 # 1) Rewinds back to the beginning of input file.
@@ -20,7 +20,7 @@ echo "------------------------------------------------"
 while read line
 do
   echo "$line"
-done &lt;data-file
+done <data-file
 # Thanks, Heiner Steven for pointing this out.
 
 echo "------------------------------------------------"
@@ -33,7 +33,7 @@ OIFS=$IFS; IFS=:       # /etc/passwd uses ":" for field separator.
 while read name passwd uid gid fullname ignore
 do
   echo "$name ($fullname)"
-done &lt;/etc/passwd   # I/O redirection.
+done </etc/passwd   # I/O redirection.
 IFS=$OIFS              # Restore original $IFS.
 # This code snippet also by Heiner Steven.
 
@@ -49,9 +49,10 @@ echo "List of all users:"
 while IFS=: read name passwd uid gid fullname ignore
 do
   echo "$name ($fullname)"
-done &lt;/etc/passwd   # I/O redirection.
+done </etc/passwd   # I/O redirection.
 
 echo
 echo "\$IFS still $IFS"
 
 exit 0
+

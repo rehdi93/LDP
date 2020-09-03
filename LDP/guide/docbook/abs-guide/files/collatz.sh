@@ -4,11 +4,11 @@
 #  The notorious "hailstone" or Collatz series.
 #  -------------------------------------------
 #  1) Get the integer "seed" from the command-line.
-#  2) NUMBER &lt;-- seed
+#  2) NUMBER <-- seed
 #  3) Print NUMBER.
 #  4)  If NUMBER is even, divide by 2, or
 #  5)+ if odd, multiply by 3 and add 1.
-#  6) NUMBER &lt;-- result 
+#  6) NUMBER <-- result 
 #  7) Loop back to step 3 (for specified number of iterations).
 #
 #  The theory is that every such sequence,
@@ -22,7 +22,7 @@
 
 
 MAX_ITERATIONS=200
-# For large seed numbers (&gt;32000), try increasing MAX_ITERATIONS.
+# For large seed numbers (>32000), try increasing MAX_ITERATIONS.
 
 h=${1:-$$}                      #  Seed.
                                 #  Use $PID as seed,
@@ -32,7 +32,7 @@ echo
 echo "C($h) -*- $MAX_ITERATIONS Iterations"
 echo
 
-for ((i=1; i&lt;=MAX_ITERATIONS; i++))
+for ((i=1; i<=MAX_ITERATIONS; i++))
 do
 
 # echo -n "$h	"
@@ -67,3 +67,4 @@ echo
 #+ as listed in the bibliography.
 
 exit 0
+

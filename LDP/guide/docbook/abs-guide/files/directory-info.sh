@@ -33,7 +33,7 @@ declare -a \
 
 
 # Here document used as a comment block.
-: &lt;&lt;LSfieldsDoc
+: <<LSfieldsDoc
 # # # # # List Filesystem Directory Information # # # # #
 #
 #	ListDirectory "FileGlob" "Field-Array-Name"
@@ -163,7 +163,7 @@ IsNumber()
 #	IndexList -if -of Field-Array-Filename Index-Array-Filename
 # # # # #
 
-: &lt;&lt;IndexListDoc
+: <<IndexListDoc
 Walk an array of directory fields produced by ListDirectory
 
 Having suppressed the line breaks in an otherwise line oriented
@@ -270,7 +270,7 @@ IndexList()
 # # # # #
 
 # Here document used as a comment block.
-: &lt;&lt;DigestFilesDoc
+: <<DigestFilesDoc
 
 The key (no pun intended) to a Unified Content File System (UCFS)
 is to distinguish the files in the system based on their content.
@@ -350,7 +350,7 @@ DigestFile()
 # A file location is Filesystem-id and inode-number
 
 # Here document used as a comment block.
-: &lt;&lt;StatFieldsDoc
+: <<StatFieldsDoc
 	Based on stat, version 2.2
 	stat -t and stat -lt fields
 	[0]	name
@@ -508,7 +508,7 @@ ListArray() # ListArray Name
 	echo "-*-*- List of Array -*-*-"
 	echo "Size of array $1: ${#Ta[*]}"
 	echo "Contents of array $1:"
-	for (( i=0 ; i&lt;${#Ta[*]} ; i++ ))
+	for (( i=0 ; i<${#Ta[*]} ; i++ ))
 	do
 	    echo -e "\tElement $i: ${Ta[$i]}"
 	done
@@ -537,8 +537,8 @@ declare -a IDX_DIG
 # BIG-DIR # DIR_ENT=( $(cat /tmpfs/junk2) )
 # BIG-DIR # DigestFile -if /tmpfs/junk2 IDX_DIG
 DigestFile DIR_ENT IDX_DIG
-# Small (should) be able to parallize IndexList &amp; DigestFile
-# Large (should) be able to parallize IndexList &amp; DigestFile &amp; the assignment
+# Small (should) be able to parallize IndexList & DigestFile
+# Large (should) be able to parallize IndexList & DigestFile & the assignment
 echo "The \"name\" (checksum) for the contents of ${PWD} is ${IDX_DIG[0]}"
 
 declare -a FILE_LOC
@@ -546,3 +546,4 @@ LocateFile ${PWD} FILE_LOC
 ListArray FILE_LOC
 
 exit 0
+

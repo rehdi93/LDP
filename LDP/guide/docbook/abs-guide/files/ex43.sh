@@ -18,7 +18,7 @@ echo
 echo "==========================================================="
 echo
 
-eval "`seq 3 | sed -e 's/.*/echo var&amp;=ABCDEFGHIJ/'`"
+eval "`seq 3 | sed -e 's/.*/echo var&=ABCDEFGHIJ/'`"
 # var1=ABCDEFGHIJ
 # var2=ABCDEFGHIJ
 # var3=ABCDEFGHIJ
@@ -38,3 +38,4 @@ eval major=${version/./;minor=}     #  Replaces '.' in version by ';minor='
                                     #  The substitution yields '3; minor=4'
                                     #+ so eval does minor=4, major=3
 echo Major: $major, minor: $minor   #  Major: 3, minor: 4
+
