@@ -1,4 +1,5 @@
-<chapter id="boots-and-shutdowns">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="boots-and-shutdowns">
 <title>Boots And Shutdowns</title>
 
 	<blockquote><para><literallayout>
@@ -17,7 +18,7 @@ Ah... start it up, never, never, never
 	If proper procedures are not followed, files might be corrupted
 	or lost.</para>
 	
-<sect1 id="boot-overview">
+<section xml:id="boot-overview">
 <title>An overview of boots and shutdowns</title>
 
 	<para>The act of turning on a computer system and causing its
@@ -60,9 +61,9 @@ Ah... start it up, never, never, never
 	disk is inconsistent, and therefore possibly unusable.
 	</para>
 
-</sect1>
+</section>
 
-<sect1 id="boot-process">
+<section xml:id="boot-process">
 <title>The boot process in closer look</title>
 
 	<para>When a PC is booted, the BIOS will do various tests to
@@ -124,8 +125,8 @@ Ah... start it up, never, never, never
 	<para>It is also possible to give a <glossterm>kernel
 	command line argument</glossterm>, after the name of the kernel
 	or operating system.  For a list of possible options you can read
-	<ulink url="http://www.tldp.org/HOWTO/BootPrompt-HOWTO.html"> 
-	http://www.tldp.org/HOWTO/BootPrompt-HOWTO.html</ulink>.</para>
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/BootPrompt-HOWTO.html"> 
+	http://www.tldp.org/HOWTO/BootPrompt-HOWTO.html</link>.</para>
 
 	<para>Booting from floppy and from hard disk have both their
 	advantages, but generally booting from the hard disk is nicer,
@@ -208,7 +209,7 @@ Linux version 0.99.pl9-1 (root@haven) 05/01/93 14:12:20
 	<filename>/sbin/init</filename>) in the background (this will
 	always become process number 1).  <command>init</command> does
 	various startup chores.  The exact things it does depends on how
-	it is configured; see <xref linkend="init"> for more information
+	it is configured; see <xref linkend="init"/> for more information
 	(not yet written).  It will at least start some essential
 	background daemons.  </para></listitem>
 
@@ -225,7 +226,7 @@ Linux version 0.99.pl9-1 (root@haven) 05/01/93 14:12:20
 	</itemizedlist>
     	</para>
 
-<sect2 id="bootloaders">
+<section xml:id="bootloaders">
 <title>A Word About Bootloaders</title>
 
 	<para>TO BE ADDED</para>
@@ -234,18 +235,18 @@ Linux version 0.99.pl9-1 (root@haven) 05/01/93 14:12:20
 	GRUB and LILO.</para>
 
 	<para>For more information on LILO, you can read  
-	<ulink url="http://www.tldp.org/HOWTO/LILO.html">
-	http://www.tldp.org/HOWTO/LILO.html</ulink></para>
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/LILO.html">
+	http://www.tldp.org/HOWTO/LILO.html</link></para>
 
 	<para>For more information on GRUB, you can visit  
-	<ulink url="http://www.gnu.org/software/grub/grub.html">
-	http://www.gnu.org/software/grub/grub.html</ulink></para>
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/software/grub/grub.html">
+	http://www.gnu.org/software/grub/grub.html</link></para>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
 
-<sect1 id="shutdown">
+<section xml:id="shutdown">
 <title>More about shutdowns</title>
 
 	<para>It is important to follow the correct procedures when you shut
@@ -290,7 +291,7 @@ Linux version 0.99.pl9-1 (root@haven) 05/01/93 14:12:20
 <screen>
 <prompt>#</prompt> <userinput>shutdown -h +10 'We will install a new 
 disk.  System should
-> be back on-line in three hours.'</userinput>
+&gt; be back on-line in three hours.'</userinput>
 <prompt>#</prompt>
 </screen>
 
@@ -347,9 +348,9 @@ The system is going DOWN for system halt in 10 minutes !!
 	disk I/O to be finished.)
 	</para>
 
-</sect1>
+</section>
 
-<sect1 id="rebooting">
+<section xml:id="rebooting">
 <title>Rebooting</title>
 
 	<para>Rebooting means booting the system again.  This can be
@@ -369,9 +370,9 @@ The system is going DOWN for system halt in 10 minutes !!
 	anyone might even be configured to do nothing when ctrl-alt-del
 	is pressed.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="single-user">
+<section xml:id="single-user">
 <title>Single user mode</title>
 
 	<para>The <command>shutdown</command> command can also be used
@@ -380,9 +381,9 @@ The system is going DOWN for system halt in 10 minutes !!
 	system administration tasks that can't be done while the system is
 	running normally.</para>
 
-</sect1>
+</section>
 
-<sect1 id="emerg-boot-floppy">
+<section xml:id="emerg-boot-floppy">
 <title>Emergency boot floppies</title>
 
 	<para>It is not always possible to boot a computer from the hard 
@@ -405,8 +406,8 @@ disk.
 	<para>Thus, it might be necessary to create a custom root floppy
 	as well.  The Bootdisk HOWTO by Graham Chapman  contains instructions 
 	for doing this.  You can find this HOWTO at 
-	<ulink url="http://www.tldp.org/HOWTO/Bootdisk-HOWTO/index.html">
-	http://www.tldp.org/HOWTO/Bootdisk-HOWTO/index.html</ulink>.
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/Bootdisk-HOWTO/index.html">
+	http://www.tldp.org/HOWTO/Bootdisk-HOWTO/index.html</link>.
 	You must, of course, remember to keep your emergency boot and
 	root floppies up to date.</para>
 
@@ -417,5 +418,5 @@ disk.
 	(the boot floppy's kernel needs to be specially configured for
 	this).	Once the root floppy has been loaded into the ramdisk,
 	the floppy drive is free to mount other disks.	</para>
-
+</section>
 </chapter>

@@ -1,0 +1,80 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-09-02 10:22:44 -->
+<!-- Magnification: 1 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="428pt" height="66pt"
+	viewBox="210 240 7132 1086">
+<g fill="none">
+<!-- Line -->
+<polyline points=" 4651,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 4651,1050 4651,450"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 4651,450 4201,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 4651,450 5101,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 6601,450 6001,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 6601,450 6601,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 6601,450 7201,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1875,450 375,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1875,450 975,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1875,450 1575,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1875,450 2325,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1875,450 2775,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1875,450 3375,1050"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Text -->
+<text xml:space="preserve" x="4501" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">liw</text>
+<!-- Text -->
+<text xml:space="preserve" x="5851" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">bin</text>
+<!-- Text -->
+<text xml:space="preserve" x="7051" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">lib</text>
+<!-- Text -->
+<text xml:space="preserve" x="6526" y="375" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">/</text>
+<!-- Text -->
+<text xml:space="preserve" x="4576" y="375" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">/</text>
+<!-- Text -->
+<text xml:space="preserve" x="4051" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">abc</text>
+<!-- Text -->
+<text xml:space="preserve" x="5026" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">ftp</text>
+<!-- Text -->
+<text xml:space="preserve" x="6451" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">etc</text>
+<!-- Text -->
+<text xml:space="preserve" x="225" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">bin</text>
+<!-- Text -->
+<text xml:space="preserve" x="825" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">dev</text>
+<!-- Text -->
+<text xml:space="preserve" x="1425" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">home</text>
+<!-- Text -->
+<text xml:space="preserve" x="2250" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">etc</text>
+<!-- Text -->
+<text xml:space="preserve" x="2625" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">lib</text>
+<!-- Text -->
+<text xml:space="preserve" x="3300" y="1275" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">usr</text>
+<!-- Text -->
+<text xml:space="preserve" x="1800" y="375" fill="#000000" font-family="AvantGarde" font-style="italic" font-weight="normal" font-size="120" text-anchor="start">/</text>
+</g>
+</svg>

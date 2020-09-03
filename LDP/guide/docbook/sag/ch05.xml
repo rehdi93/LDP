@@ -1,4 +1,5 @@
-<chapter id="disk-usage">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="disk-usage">
 <title>Using Disks and Other Storage Media</title>
 
 	<blockquote><para><quote>On a clear disk you can seek forever.
@@ -32,7 +33,7 @@ permissions/ownership
 -->
 
         <para>When you install or upgrade your system, you need to do a
-        fair amount of work on your disks<indexterm id="ch05-disks">
+        fair amount of work on your disks<indexterm xml:id="ch05-disks">
 	<primary>disks</primary></indexterm>.  You have to make filesystems on
 	your disks so that files can be stored on them and reserve
         space for the different parts of your system.</para>
@@ -41,9 +42,9 @@ permissions/ownership
         once you get your system set up, you won't have to go through the
 	work again, except for using floppies.  You'll need to come back to
 	this chapter if you add a new disk or want to fine-tune your disk 
-	usage.<para>
+	usage.</para>
 
-        <para>The basic tasks in administering disks are:
+        <para>The basic tasks in administering disks are:</para>
 
 	<itemizedlist>
 
@@ -75,19 +76,19 @@ permissions/ownership
 
 	</itemizedlist>
 
-	<para><xref linkend="memory-management"> contains information
+	<para><xref linkend="memory-management"/> contains information
 	about virtual memory and disk caching, of which you also need
 	to be aware when using disks.</para>
 
-<sect1 id="block-char-dev">
+<section xml:id="block-char-dev">
 <title>Two kinds of devices</title>
 
 	<para>UNIX, and therefore Linux, recognizes two different
 	kinds of device: random-access block devices (such as disks),
-	<indexterm id="ch05-block"><primary>devices</primary>
+	<indexterm xml:id="ch05-block"><primary>devices</primary>
 	<secondary>block</secondary></indexterm> and
 	character devices (such as tapes and serial lines)
-	<indexterm id="ch05-char"><primary>devices</primary>
+	<indexterm xml:id="ch05-char"><primary>devices</primary>
 	<secondary>character</secondary></indexterm>, some of which
 	may be serial, and some random-access.  Each supported device is
 	represented in the filesystem as a <glossterm>device file</glossterm>. 
@@ -108,7 +109,7 @@ permissions/ownership
 	not a good idea to have several people cat their files to the
 	printer at the same time, one usually uses a special program to send
 	the files to be printed (usually <command>lpr</command>
-	<indexterm id="ch05-lpr"><primary>commands</primary>
+	<indexterm xml:id="ch05-lpr"><primary>commands</primary>
 	<secondary>lpr</secondary></indexterm>). This
 	program makes sure that only one file is being printed at a time,
 	and will automatically send files to the printer as soon as it
@@ -117,10 +118,10 @@ permissions/ownership
 	about device files at all.</para>
 
 	<para>Since devices show up as files in the filesystem (in the
-	<filename>/dev</filename><indexterm id="ch05-dev">
+	<filename>/dev</filename><indexterm xml:id="ch05-dev">
 	<primary>filesystem</primary><secondary>/dev</secondary></indexterm> 
 	directory), it is easy to see just what
-	device files exist, using <command>ls</command><indexterm id="ch05-ls">
+	device files exist, using <command>ls</command><indexterm xml:id="ch05-ls">
         <primary>commands</primary><secondary>ls</secondary></indexterm> or another suitable
 	command.  In the output of <command>ls -l</command>, the first
 	column contains the type of the file and its permissions.  For
@@ -145,7 +146,7 @@ permissions/ownership
 
 	<para>Note that usually all device files exist even though the
 	device itself might be not be installed.  So just because you have a
-	file <filename>/dev/sda</filename><indexterm id="ch05-sda">
+	file <filename>/dev/sda</filename><indexterm xml:id="ch05-sda">
 	<primary>filesystem</primary><secondary>/dev</secondary>
 	<tertiary>/dev/sda</tertiary></indexterm>, it doesn't mean that you really
 	do have an SCSI hard disk.  Having all the device files makes the
@@ -153,19 +154,19 @@ permissions/ownership
 	hardware (there is no need to find out the correct parameters
 	for and create the device files for the new device).</para>
 
-</sect1>
+</section>
 
-<sect1 id="hard-disk">
+<section xml:id="hard-disk">
 <title>Hard disks</title>
 
 	<para>This subsection introduces terminology related to hard
 	disks.	If you already know the terms and concepts, you can skip
 	this subsection.</para>
 
-	<para>See <xref linkend="hd-schematic"> for a schematic picture
+	<para>See <xref linkend="hd-schematic"/> for a schematic picture
 	of the important parts in a hard disk.	A hard disk consists of one
 	or more circular aluminum <glossterm>platters</glossterm>\
-	<indexterm id="ch05-disk-internals">
+	<indexterm xml:id="ch05-disk-internals">
         <primary>disks</primary><secondary>components</secondary></indexterm>,
 	of which either or both <glossterm>surfaces</glossterm> are coated
 	with a magnetic substance used for recording the data.	For each
@@ -177,10 +178,10 @@ permissions/ownership
 	of the platters; this movement combined with the rotation of the
 	platters allows the head to access all parts of the surfaces.</para>
 
-	<para>The processor (CPU)<indexterm id="ch05-cpu">
+	<para>The processor (CPU)<indexterm xml:id="ch05-cpu">
 	<primary>hardware</primary><secondary>Central Processing Unit (CPU)</secondary>
 	</indexterm> and the actual disk communicate through a
-	<glossterm>disk controller</glossterm><indexterm id="ch05-disk-cont">
+	<glossterm>disk controller</glossterm><indexterm xml:id="ch05-disk-cont">
         <primary>hardware</primary><secondary>disk controller</secondary>
         </indexterm>
 	.  This relieves the rest of
@@ -204,10 +205,10 @@ permissions/ownership
 	disk.</para>
 
 	<para>The surfaces are usually divided into concentric rings,
-	called <glossterm>tracks</glossterm><indexterm id="ch05-tracks">
+	called <glossterm>tracks</glossterm><indexterm xml:id="ch05-tracks">
         <primary>disks</primary><secondary>tracks</secondary>
         </indexterm>, and these in turn are divided
-	into <glossterm>sectors</glossterm><indexterm id="ch05-sectors">
+	into <glossterm>sectors</glossterm><indexterm xml:id="ch05-sectors">
         <primary>disks</primary><secondary>sectors</secondary>
         </indexterm>.  This division is used to
 	specify locations on the hard disk and to allocate disk space to
@@ -219,16 +220,16 @@ permissions/ownership
 	512 bytes of data.  The disk itself
 	can't handle smaller amounts of data than one sector.</para>
 
-		<figure id="hd-schematic" float="1">
+		<figure xml:id="hd-schematic" floatstyle="normal">
 		<title>A schematic picture of a hard disk.</title>
-		<graphic fileref="hd-schematic.png">
+		<mediaobject><imageobject><imagedata fileref="hd-schematic.svg"/></imageobject></mediaobject>
 		</figure>
 
 	<para>Each surface is divided into tracks (and sectors) in
 	the same way.  This means that when the head for one surface is on a
 	track, the heads for the other surfaces are also on the
 	corresponding tracks.  All the corresponding tracks taken together
-	are called a <glossterm>cylinder</glossterm><indexterm id="ch05-cylinders">
+	are called a <glossterm>cylinder</glossterm><indexterm xml:id="ch05-cylinders">
         <primary>disks</primary><secondary>cylinders</secondary>
         </indexterm>.	It takes time to
 	move the heads from one track (cylinder) to another, so by placing
@@ -241,22 +242,22 @@ permissions/ownership
 
 	<para>The number of surfaces (or heads, which is the same thing),
 	cylinders, and sectors vary a lot; the specification of the number
-	of each is called the <glossterm>geometry</glossterm><indexterm id="ch05-geometry">
+	of each is called the <glossterm>geometry</glossterm><indexterm xml:id="ch05-geometry">
         <primary>disks</primary><secondary>geometry</secondary>
         </indexterm> of a hard
 	disk.  The geometry is usually stored in a special, battery-powered
 	memory location called the <glossterm>CMOS RAM</glossterm>
-	<indexterm id="ch05-tracks2"><primary>CMOS</primary>
+	<indexterm xml:id="ch05-tracks2"><primary>CMOS</primary>
         </indexterm>, from
 	where the operating system can fetch it during bootup or driver 
 	initialization.</para>
 
-	<para>Unfortunately, the BIOS<indexterm id="ch05-bios2">
+	<para>Unfortunately, the BIOS<indexterm xml:id="ch05-bios2">
 	<primary>BIOS</primary></indexterm>
 	has a design limitation, which makes it impossible to specify a
 	track number that is larger than 1024 in the CMOS RAM, which is too
 	little for a large hard disk.  To overcome this, the hard disk
-	controller lies about the geometry<indexterm id="ch05-geometry2">
+	controller lies about the geometry<indexterm xml:id="ch05-geometry2">
         <primary>disks</primary><secondary>geometry</secondary>
         </indexterm>, and <glossterm>translates the
 	addresses</glossterm> given by the computer into something that fits
@@ -290,44 +291,43 @@ permissions/ownership
 
 	<para>Each hard disk is represented by a separate device
 	file.  There can (usually) be only two or four IDE hard disks. These
-	are known as <filename>/dev/hda</filename><indexterm id="ch05-hda">
+	are known as <filename>/dev/hda</filename><indexterm xml:id="ch05-hda">
 	<primary>filesystem</primary><secondary>/dev</secondary>
 	<tertiary>/dev/hda</tertiary></indexterm>,
-	<filename>/dev/hdb</filename><indexterm id="ch05-hdb">
+	<filename>/dev/hdb</filename><indexterm xml:id="ch05-hdb">
         <primary>filesystem</primary><secondary>/dev</secondary>
         <tertiary>/dev/hdb</tertiary></indexterm>, 
-	<filename>/dev/hdc</filename><indexterm id="ch05-hdc">
+	<filename>/dev/hdc</filename><indexterm xml:id="ch05-hdc">
         <primary>filesystem</primary><secondary>/dev</secondary>
         <tertiary>/dev/hdc</tertiary></indexterm>, and
-	<filename>/dev/hdd</filename><indexterm id="ch05-hdd">
+	<filename>/dev/hdd</filename><indexterm xml:id="ch05-hdd">
         <primary>filesystem</primary><secondary>/dev</secondary>
         <tertiary>/dev/hdd</tertiary></indexterm>, 
 	respectively.  SCSI hard disks are
-	known as <filename>/dev/sda</filename><indexterm id="ch05-sda22">
+	known as <filename>/dev/sda</filename><indexterm xml:id="ch05-sda22">
         <primary>filesystem</primary><secondary>/dev</secondary>
         <tertiary>/dev/sda</tertiary></indexterm>,
-	<filename>/dev/sdb</filename><indexterm id="ch05-sdb">
+	<filename>/dev/sdb</filename><indexterm xml:id="ch05-sdb">
         <primary>filesystem</primary><secondary>/dev</secondary>
         <tertiary>/dev/sdb</tertiary></indexterm>, and so on.  Similar naming
-	conventions exist for other hard disk types; see <xref
-	linkend="device-list"> for more information.  Note that the device
+	conventions exist for other hard disk types; see <xref linkend="device-list"/> for more information.  Note that the device
 	files for the hard disks give access to the entire disk, with no
 	regard to partitions (which will be discussed below), and it's easy
 	to mess up the partitions or the data in them if you aren't careful.
 	The disks' device files are usually used only to get access to the
 	master boot record (which will also be discussed below).</para>
 
-</sect1>
+</section>
 
 
-<sect1 id="san">
-<title>Storage Area Networks<indexterm id="ch05-san-chapt">
+<section xml:id="san">
+<title>Storage Area Networks<indexterm xml:id="ch05-san-chapt">
 <primary>Storage Area Network (SAN)</primary></indexterm> - Draft</title>
 	
-	<para>A SAN<indexterm id="ch05-san1">
+	<para>A SAN<indexterm xml:id="ch05-san1">
         <primary>Storage Area Network (SAN)</primary></indexterm> 
         is a dedicated storage network that provides block level
-        access to LUNs. A LUN<indexterm id="ch05-san2">
+        access to LUNs. A LUN<indexterm xml:id="ch05-san2">
         <primary>Storage Area Network (SAN)</primary><secondary>LUN</secondary>
 	</indexterm>, 
 	or logical unit number, is a virtual disk
@@ -338,10 +338,10 @@ permissions/ownership
 
         <para>Two networking protocols commonly used in a SAN are
         <glossterm>fibre channel</glossterm>
-	<indexterm id="ch05-FC"><primary>hardware</primary><secondary>fibre channel</secondary></indexterm>
-	<indexterm id="ch05-FC2"><primary>fibre channel</primary></indexterm> and
+	<indexterm xml:id="ch05-FC"><primary>hardware</primary><secondary>fibre channel</secondary></indexterm>
+	<indexterm xml:id="ch05-FC2"><primary>fibre channel</primary></indexterm> and
         <glossterm>iSCSI</glossterm>
-	<indexterm id="ch05-iSCSI"><primary>iSCSI</primary></indexterm>. 
+	<indexterm xml:id="ch05-iSCSI"><primary>iSCSI</primary></indexterm>. 
         A fibre channel network is very fast and is not
         burdened by the other network traffic in a company's LAN. However, it's
         very expensive.  Fibre channel cards cost around $1000.00 USD each.  They
@@ -353,13 +353,13 @@ permissions/ownership
 
 	<para>More To Be Added</para>
 
-</sect1>
+</section>
 
-<sect1 id="net-attached">
-<title>Network Attached Storage<indexterm id="ch05-nas-chapt">
+<section xml:id="net-attached">
+<title>Network Attached Storage<indexterm xml:id="ch05-nas-chapt">
 <primary>Network Attached Storage (NAS)</primary></indexterm> - Draft</title>
 
-	<para>A NAS<indexterm id="ch05-nas1">
+	<para>A NAS<indexterm xml:id="ch05-nas1">
         <primary>Network Attached Storage (NAS)</primary></indexterm>
          uses your companies existing Ethernet network to allow
         access to shared disks.  This is filesystem level access.
@@ -368,18 +368,18 @@ permissions/ownership
 	This technology is commonly used to provide multiple workstations 
 	access to the same data.</para>
 
-        <para>Similar to a SAN<indexterm id="ch05-san3">
+        <para>Similar to a SAN<indexterm xml:id="ch05-san3">
         <primary>Storage Area Network (SAN)</primary></indexterm>, 
         a NAS need to make use of a protocol to allow access
         to it's disks.  With a NAS this is either CIFS/Samba
-        <indexterm id="ch05-cifs2"><primary>Common Internet File System (CIFS)</primary>
-        </indexterm><indexterm id="ch05-samba2"><primary>Samba</primary>
-        </indexterm>, or NFS<indexterm id="ch05-nfs2">
+        <indexterm xml:id="ch05-cifs2"><primary>Common Internet File System (CIFS)</primary>
+        </indexterm><indexterm xml:id="ch05-samba2"><primary>Samba</primary>
+        </indexterm>, or NFS<indexterm xml:id="ch05-nfs2">
 	<primary>Network File System (NFS)</primary>
         </indexterm>.</para>
 
         <para>Traditionally CIFS was used with Microsoft Windows networks, and
-        NFS was used with UNIX & Linux networks.  However, with Samba, Linux
+        NFS was used with UNIX &amp; Linux networks.  However, with Samba, Linux
         machines can also make use of CIFS shares.</para>
 
         <para>Does this mean that your Windows 2003 server or your Linux box
@@ -390,30 +390,30 @@ permissions/ownership
 
 	<para>More To Be Added</para>
 
-<sect2 id="net-file-sys">
-<title>NFS<indexterm id="ch05-nfs"><primary>Network File System (NFS)</primary>
+<section xml:id="net-file-sys">
+<title>NFS<indexterm xml:id="ch05-nfs"><primary>Network File System (NFS)</primary>
 </indexterm></title>
 
 	<para>TO BE ADDED</para>
 
-</sect2>
+</section>
 
-<sect2 id="cifs">
-<title>CIFS<indexterm id="ch05-cifs"><primary>Common Internet File System (CIFS)</primary>
-</indexterm><indexterm id="ch05-samba"><primary>Samba</primary>
+<section xml:id="cifs">
+<title>CIFS<indexterm xml:id="ch05-cifs"><primary>Common Internet File System (CIFS)</primary>
+</indexterm><indexterm xml:id="ch05-samba"><primary>Samba</primary>
 </indexterm></title>
 
 	<para>TO BE ADDED</para>
 
-</sect2>
+</section>
 
 
-</sect1>
+</section>
 
-<sect1 id="floppies">
+<section xml:id="floppies">
 <title>Floppies</title>
 
-	<para>A floppy disk<indexterm id="ch05-floppy"><primary>hardware</primary>
+	<para>A floppy disk<indexterm xml:id="ch05-floppy"><primary>hardware</primary>
 	<secondary>floppy disk</secondary></indexterm> 
 	consists of a flexible membrane covered on one
 	or both sides with similar magnetic substance as a hard disk. The
@@ -445,17 +445,17 @@ permissions/ownership
 	read the first sector of a newly inserted floppy using different
 	floppy types until it finds the correct one. This naturally requires
 	that the floppy is formatted first. The automatic devices are called
-	<filename>/dev/fd0</filename><indexterm id="ch05-fd0">
+	<filename>/dev/fd0</filename><indexterm xml:id="ch05-fd0">
 	<primary>filesystem</primary><secondary>/dev</secondary>
 	<tertiary>/dev/fd0</tertiary></indexterm>, 
-	<filename>/dev/fd1</filename><indexterm id="ch05-fd1">
+	<filename>/dev/fd1</filename><indexterm xml:id="ch05-fd1">
         <primary>filesystem</primary><secondary>/dev</secondary>
         <tertiary>/dev/fd1</tertiary></indexterm>, and so 
 	on.</para>
 
 	<para>The parameters the automatic device uses to access a disk can
 	also be set using the program <command>setfdprm</command>
-	<indexterm id="ch05-setfdparm"><primary>commands</primary>
+	<indexterm xml:id="ch05-setfdparm"><primary>commands</primary>
 	<secondary>setfdparm</secondary></indexterm>.  This can
 	be useful if you need to use disks that do not follow any usual
 	floppy sizes, e.g., if they have an unusual number of sectors, or if
@@ -466,10 +466,10 @@ permissions/ownership
 	in addition to all the standard ones.  Some of these require using
 	special formatting programs.  We'll skip these disk types for now,
 	but in the mean time you can examine the
-	<filename>/etc/fdprm</filename><indexterm id="ch05-fdprm">
+	<filename>/etc/fdprm</filename><indexterm xml:id="ch05-fdprm">
 	<primary>filesystem</primary><secondary>/etc</secondary>
 	<tertiary>/etc/fdprm</tertiary></indexterm> file.  It specifies the settings
-	that <command>setfdprm</command><indexterm id="ch05-setfdparm2">
+	that <command>setfdprm</command><indexterm xml:id="ch05-setfdparm2">
 	<primary>commands</primary><secondary>setfdparm</secondary>
         </indexterm> recognizes.</para>
 
@@ -481,12 +481,12 @@ permissions/ownership
 	experiencing weird problems using floppies, this might be the
 	reason.  The only way to correct it is to repair the floppy drive.</para>
 
-</sect1>
+</section>
 
-<sect1 id="cdrom">
+<section xml:id="cdrom">
 <title>CD-ROMs</title>
 
-	<para>A CD-ROM<indexterm id="ch05-cdrom"><primary>hardware</primary>
+	<para>A CD-ROM<indexterm xml:id="ch05-cdrom"><primary>hardware</primary>
 	<secondary>CD-ROM</secondary></indexterm> drive uses an 
 	optically read, plastic coated disk.
 	The information is recorded on the surface of the disk
@@ -511,7 +511,7 @@ permissions/ownership
 
 	<para>There are several ways to arrange data on a CD-ROM.  The most
 	popular one is specified by the international standard ISO 9660
-	<indexterm id="ch05-iso9660"><primary>ISO 9660</primary></indexterm>.
+	<indexterm xml:id="ch05-iso9660"><primary>ISO 9660</primary></indexterm>.
 	This standard specifies a very minimal filesystem, which is even
 	more crude than the one MS-DOS uses.  On the other hand, it is so
 	minimal that every operating system should be able to map it to its 
@@ -519,7 +519,7 @@ permissions/ownership
 
 	<para>For normal UNIX use, the ISO 9660 filesystem is not usable, so
 	an extension to the standard has been developed, called the Rock
-	Ridge extension<indexterm id="ch05-rockridge"><primary>ISO 9660</primary>
+	Ridge extension<indexterm xml:id="ch05-rockridge"><primary>ISO 9660</primary>
 	<secondary>Rock Ridge extensions</secondary></indexterm>.  Rock Ridge 
 	allows longer filenames, symbolic
 	links, and a lot of other goodies, making a CD-ROM look more or less
@@ -536,16 +536,16 @@ permissions/ownership
 	</para>
 	
 	<para>Ironically perhaps, wine actually stands for ``Wine Is Not an 
-	Emulator''<indexterm id="ch05-wine"><primary>WINE</primary></indexterm>.  
+	Emulator''<indexterm xml:id="ch05-wine"><primary>WINE</primary></indexterm>.  
 	Wine, more strictly, is an API (Application Program 
 	Interface) replacement. Please see the wine documentation at 
-	<ulink url="http://www.winehq.com">http://www.winehq.com</ulink>
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.winehq.com">http://www.winehq.com</link>
 	for more information.</para>
 	
-	<para>There is also VMWare<indexterm id="ch05-vmware"> 
+	<para>There is also VMWare<indexterm xml:id="ch05-vmware"> 
 	<primary>VMWare</primary></indexterm>, a commercial product, which emulates
 	an entire x86 machine in software.  See the VMWare website, 
-	<ulink url="http://www.vmware.com">http://www.vmware.com</ulink>
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.vmware.com">http://www.vmware.com</link>
 	for more information.</para>
 
 	<para>A CD-ROM drive is accessed via the corresponding device file.
@@ -554,12 +554,12 @@ permissions/ownership
 	needed to do this is outside the scope of this book, but the
 	type of connection decides the device file.</para>
 	
-</sect1>
+</section>
 
-<sect1 id="tapes">
+<section xml:id="tapes">
 <title>Tapes</title>
 
-	<para>A tape drive<indexterm id="ch05-tapes"><primary>hardware</primary>
+	<para>A tape drive<indexterm xml:id="ch05-tapes"><primary>hardware</primary>
 	<secondary>tape drive</secondary></indexterm> uses a tape, similar
 	to cassettes used for music.  A tape is serial in nature, which
 	means that in order to get to any given part of it, you first have
@@ -574,12 +574,12 @@ permissions/ownership
 	which do not require large speeds, but benefit from
 	low costs and large storage capacities.</para>
 
-</sect1>
+</section>
 
-<sect1 id="formatting">
+<section xml:id="formatting">
 <title>Formatting</title>
 
-	<para><glossterm>Formatting</glossterm><indexterm id="ch05-formatting">
+	<para><glossterm>Formatting</glossterm><indexterm xml:id="ch05-formatting">
 	<primary>disks</primary><secondary>formatting</secondary></indexterm>
 	 is the process of writing marks 
 	on the magnetic media that are used to mark tracks and sectors.
@@ -595,11 +595,11 @@ permissions/ownership
 	creating a filesystem (which will be discussed below).  There, the
 	two processes are often combined, especially for floppies.  When the
 	distinction needs to be made, the real formatting is called
-	<glossterm>low-level formatting</glossterm><indexterm id="ch05-formatting2">
+	<glossterm>low-level formatting</glossterm><indexterm xml:id="ch05-formatting2">
         <primary>disks</primary><secondary>formatting</secondary>
 	<tertiary>low-level</tertiary></indexterm>, while making the 
 	filesystem is called <glossterm>high-level formatting</glossterm>
-	<indexterm id="ch05-formatting333"><primary>disks</primary>
+	<indexterm xml:id="ch05-formatting333"><primary>disks</primary>
         <secondary>formatting</secondary><tertiary>high-level</tertiary>
 	</indexterm>.
 	In UNIX circles, the two are called formatting and making a
@@ -620,9 +620,9 @@ permissions/ownership
 	be used from within Linux.</para>
 
 	<para>During formatting one might encounter bad spots on the
-	disk, called <glossterm>bad blocks</glossterm><indexterm id="ch05-bblocks">
+	disk, called <glossterm>bad blocks</glossterm><indexterm xml:id="ch05-bblocks">
 	<primary>disks</primary><secondary>bad blocks</secondary></indexterm>
-	 or <glossterm>bad sectors</glossterm><indexterm id="ch05-bsect">
+	 or <glossterm>bad sectors</glossterm><indexterm xml:id="ch05-bsect">
 	<primary>disks</primary><secondary>bad sectors</secondary></indexterm>.
 	These are sometimes handled by the drive
 	itself, but even then, if more of them develop, something needs to
@@ -634,7 +634,7 @@ permissions/ownership
 	filesystems can sometimes have trouble with very large bad areas.</para>
 
 	<para>Floppies are formatted with <command>fdformat</command>
-	<indexterm id="ch05-fdformat"><primary>commands</primary>
+	<indexterm xml:id="ch05-fdformat"><primary>commands</primary>
 	<secondary>fdformat</secondary></indexterm>.  The 
 	floppy device file to use is given as the parameter.  For example,
 	the following command would format a high density, 3.5 inch floppy
@@ -650,12 +650,12 @@ permissions/ownership
 	</screen>
 
 	Note that if you want to use an autodetecting device (e.g.,
-	<filename>/dev/fd0</filename>)<indexterm id="ch05-fd02">
+	<filename>/dev/fd0</filename>)<indexterm xml:id="ch05-fd02">
 	<primary>filesystem</primary><secondary>/dev</secondary>
 	<tertiary>/dev/fd0</tertiary></indexterm>,
         you <emphasis>must</emphasis> set 
 	the parameters of the device with <command>setfdprm</command>
-	<indexterm id="ch05-setfdprm"><primary>commands</primary>
+	<indexterm xml:id="ch05-setfdprm"><primary>commands</primary>
         <secondary>setfdprm</secondary></indexterm> first.
 	To achieve the same effect as above, one would have to do the
 	following:
@@ -675,7 +675,7 @@ permissions/ownership
 	floppies to contain more information than what they are
 	designed for.</para>
 
-	<para><command>fdformat</command><indexterm id="ch05-fdformat2">
+	<para><command>fdformat</command><indexterm xml:id="ch05-fdformat2">
 	<primary>commands</primary><secondary>fdformat</secondary>
         </indexterm>also validate the floppy, 
 	i.e., check it for bad blocks.  It will try a bad block several
@@ -685,11 +685,11 @@ permissions/ownership
 	<command>fdformat</command> won't complain, but a real error will
 	abort the validation process. The kernel will print log messages for
 	each I/O error it finds; these will go to the console or, if
-	<command>syslog</command><indexterm id="ch05-syslog2">
+	<command>syslog</command><indexterm xml:id="ch05-syslog2">
         <primary>commands</primary><secondary>syslog</secondary>
         </indexterm> is being used, to the file
-	<filename>/var/log/messages</filename><indexterm id="ch05-messages">
-	<primary>logs</primary><secondary>/var/log/messages</secondary>.  
+	<filename>/var/log/messages</filename><indexterm xml:id="ch05-messages">
+	<primary>logs</primary><secondary>/var/log/messages</secondary></indexterm>.  
 	<command>fdformat</command>
 	itself won't tell where the error is (one usually doesn't care,
 	floppies are cheap enough that a bad one is automatically thrown
@@ -704,7 +704,7 @@ permissions/ownership
 	<prompt>$</prompt>
 	</screen>
 
-	The <command>badblocks</command><indexterm id="ch05-badblockcmd">
+	The <command>badblocks</command><indexterm xml:id="ch05-badblockcmd">
         <primary>commands</primary><secondary>badblocks</secondary>
         </indexterm> command can be used to search any 
 	disk or partition for bad blocks (including a floppy).  It does not
@@ -724,14 +724,14 @@ permissions/ownership
 	maintain a list of known bad blocks, which is initialized when the
 	filesystem is made, and can be modified later.	The initial search
 	for bad blocks can be done by the <command>mkfs</command>
-	<indexterm id="ch05-mkfs">
+	<indexterm xml:id="ch05-mkfs">
         <primary>commands</primary><secondary>mkfs</secondary>
         </indexterm> command
 	(which initializes the filesystem), but later checks should be done
-	with <command>badblocks</command><indexterm id="ch05-badblockscmd2">
+	with <command>badblocks</command><indexterm xml:id="ch05-badblockscmd2">
         <primary>commands</primary><secondary>badblocks</secondary>
         </indexterm> and the new blocks should be added
-	with <command>fsck</command><indexterm id="ch05-fsck">
+	with <command>fsck</command><indexterm xml:id="ch05-fsck">
         <primary>commands</primary><secondary>fsck</secondary>
         </indexterm>.	We'll describe
 	<command>mkfs</command>
@@ -745,13 +745,13 @@ permissions/ownership
 	grows too large, although chances are that by then the disk
 	will be so rotten as to be unusable.</para>
 
-</sect1>
+</section>
 
-<sect1 id="partitions">
+<section xml:id="partitions">
 <title>Partitions</title>
 
 	<para>A hard disk can be divided into several
-	<glossterm>partitions</glossterm><indexterm id="ch05-diskpart">
+	<glossterm>partitions</glossterm><indexterm xml:id="ch05-diskpart">
         <primary>disks</primary><secondary>partitions</secondary>
         </indexterm>.  Each partition functions as if
 	it were a separate hard disk.  The idea is that if you have one hard
@@ -768,12 +768,12 @@ permissions/ownership
 	it's easier to use them as one big disk, and there is seldom a need
 	to have several operating systems on one.</para>
 
-<sect2 id="mbr">
-<title>The MBR<indexterm id="ch05-mbr">
+<section xml:id="mbr">
+<title>The MBR<indexterm xml:id="ch05-mbr">
         <primary>disks</primary><secondary>MBR</secondary>
-        </indexterm>, boot sectors<indexterm id="ch05-bootsect">
+        </indexterm>, boot sectors<indexterm xml:id="ch05-bootsect">
         <primary>disks</primary><secondary>boot sectors</secondary>
-        </indexterm> and partition table<indexterm id="ch05-parttbl">
+        </indexterm> and partition table<indexterm xml:id="ch05-parttbl">
         <primary>disks</primary><secondary>partition table</secondary>
         </indexterm></title>
 
@@ -805,17 +805,17 @@ permissions/ownership
 	<para>As a safety precaution, it is a good idea to write down the
 	partition table on a piece of paper, so that if it ever corrupts you
 	don't have to lose all your files.  (A bad partition table can be
-	fixed with <command>fdisk</command><indexterm id="ch05-fdisk2">
+	fixed with <command>fdisk</command><indexterm xml:id="ch05-fdisk2">
 	<primary>commands</primary><secondary>fdisk</secondary></indexterm>).  
 	The relevant information is
-	given by the <command>fdisk -l</command> command:
+	given by the <command>fdisk -l</command> command:</para>
 
         <screen>
 	<prompt>$</prompt> <userinput>fdisk -l /dev/hda</userinput>
-	<computeroutput></computeroutput>
+	<computeroutput/>
 	<computeroutput>Disk /dev/hda: 15 heads, 57 sectors, 790 cylinders</computeroutput>
 	<computeroutput>Units = cylinders of 855 * 512 bytes</computeroutput>
-	<computeroutput></computeroutput>
+	<computeroutput/>
 	<computeroutput>   Device Boot  Begin   Start     End  Blocks   Id  System</computeroutput>
 	<computeroutput>/dev/hda1           1       1      24   10231+  82  Linux swap</computeroutput>
 	<computeroutput>/dev/hda2          25      25      48   10260   83  Linux native</computeroutput>
@@ -826,9 +826,9 @@ permissions/ownership
 	<prompt>$</prompt>
 	</screen>
 
-</sect2>
+</section>
 
-<sect2 id="extended-logical-part">
+<section xml:id="extended-logical-part">
 <title>Extended and logical partitions</title>
 
 	<para>The original partitioning scheme for PC hard disks allowed
@@ -841,11 +841,11 @@ permissions/ownership
 	in the main Linux partition for reasons of speed (see below).</para>
 
 	<para>To overcome this design problem, <glossterm>extended 
-	partitions</glossterm><indexterm id="ch05-extendedpart">
+	partitions</glossterm><indexterm xml:id="ch05-extendedpart">
         <primary>disks</primary><secondary>extended partition</secondary>
         </indexterm> were invented.  This trick allows
 	partitioning a <glossterm>primary partition</glossterm>
-	<indexterm id="ch05-extendedpart2"><primary>disks</primary>
+	<indexterm xml:id="ch05-extendedpart2"><primary>disks</primary>
         <secondary>extended partition</secondary></indexterm> into
 	sub-partitions.  The primary partition thus subdivided is the
 	<glossterm>extended partition</glossterm>; the sub-partitions are
@@ -855,24 +855,24 @@ permissions/ownership
 	have up to 15 partitions per disk.</para>
 
 	<para>The partition structure of a hard disk might look like that
-	in <xref linkend="hard-disk-layout">.  The disk is divided into
+	in <xref linkend="hard-disk-layout"/>.  The disk is divided into
 	three primary partitions, the second of which is divided into two
 	logical partitions.  Part of the disk is not partitioned at all.
 	The disk as a whole and each primary partition has a boot sector.</para>
 
-		<figure id="hard-disk-layout" float="1">
+		<figure xml:id="hard-disk-layout" floatstyle="normal">
 		<title>A sample hard disk partitioning.</title>
-		<graphic fileref="hd-layout.png">
+		<mediaobject><imageobject><imagedata fileref="hd-layout.svg"/></imageobject></mediaobject>
 		</figure>
 
-</sect2>
+</section>
 
-<sect2 id="part-types">
+<section xml:id="part-types">
 <title>Partition types</title>
 
 	<para>The partition tables (the one in the MBR, and the ones for
 	extended partitions) contain one byte per partition that identifies
-	the type of that partition<indexterm id="ch05-parttype">
+	the type of that partition<indexterm xml:id="ch05-parttype">
         <primary>disks</primary><secondary>partition type</secondary>
         </indexterm>.  This attempts to identify the operating
 	system that uses the partition, or what it uses it for.  The purpose
@@ -885,7 +885,7 @@ permissions/ownership
 
 	<para>There is no standardization agency to specify what each byte
 	value means, but as far as Linux is concerned, here is a list of partition 
-	types as per the <command>fdisk</command><indexterm id="ch05-fdisk3">
+	types as per the <command>fdisk</command><indexterm xml:id="ch05-fdisk3">
         <primary>commands</primary><secondary>fdisk</secondary>
         </indexterm> program.</para>
 
@@ -894,7 +894,7 @@ permissions/ownership
  1  FAT12           1e  Hidden Win95 FA 75  PC/IX           be  Solaris boot
  2  XENIX root      24  NEC DOS         80  Old Minix       c1  DRDOS/sec (FAT-
  3  XENIX usr       39  Plan 9          81  Minix / old Lin c4  DRDOS/sec (FAT-
- 4  FAT16 <32M      3c  PartitionMagic  82  Linux swap      c6  DRDOS/sec (FAT-
+ 4  FAT16 &lt;32M      3c  PartitionMagic  82  Linux swap      c6  DRDOS/sec (FAT-
  5  Extended        40  Venix 80286     83  Linux           c7  Syrinx
  6  FAT16           41  PPC PReP Boot   84  OS/2 hidden C:  da  Non-FS data
  7  HPFS/NTFS       42  SFS             85  Linux extended  db  CP/M / CTOS / .
@@ -908,59 +908,59 @@ permissions/ownership
 10  OPUS            54  OnTrackDM6      a5  FreeBSD         ef  EFI (FAT-12/16/
 11  Hidden FAT12    55  EZ-Drive        a6  OpenBSD         f0  Linux/PA-RISC b
 12  Compaq diagnost 56  Golden Bow      a7  NeXTSTEP        f1  SpeedStor
-14  Hidden FAT16 <3 5c  Priam Edisk     a8  Darwin UFS      f4  SpeedStor
+14  Hidden FAT16 &lt;3 5c  Priam Edisk     a8  Darwin UFS      f4  SpeedStor
 16  Hidden FAT16    61  SpeedStor       a9  NetBSD          f2  DOS secondary
 17  Hidden HPFS/NTF 63  GNU HURD or Sys ab  Darwin boot     fd  Linux raid auto
 18  AST SmartSleep  64  Novell Netware  b7  BSDI fs         fe  LANstep
-1b  Hidden Win95 FA 65  Novell Netware  b8  BSDI swap       ff  BBT
+1b  Hidden Win95 FA 65  Novell Netware  b8  BSDI swap       ff  BBT  
 </computeroutput>
 </screen>
 
-<indexterm id="pt1"><primary>partition types</primary>
+<indexterm xml:id="pt1"><primary>partition types</primary>
 <secondary>FAT32</secondary></indexterm>
-<indexterm id="pt2"><primary>partition types</primary>
+<indexterm xml:id="pt2"><primary>partition types</primary>
 <secondary>FAT16</secondary></indexterm>
-<indexterm id="pt3"><primary>partition types</primary>
+<indexterm xml:id="pt3"><primary>partition types</primary>
 <secondary>AIX</secondary></indexterm>
-<indexterm id="pt4"><primary>partition types</primary>
+<indexterm xml:id="pt4"><primary>partition types</primary>
 <secondary>NTFS</secondary></indexterm>
-<indexterm id="pt5"><primary>partition types</primary>
+<indexterm xml:id="pt5"><primary>partition types</primary>
 <secondary>HPFS</secondary></indexterm>
-<indexterm id="pt6"><primary>partition types</primary>
+<indexterm xml:id="pt6"><primary>partition types</primary>
 <secondary>Minix</secondary></indexterm>
-<indexterm id="pt7"><primary>partition types</primary>
+<indexterm xml:id="pt7"><primary>partition types</primary>
 <secondary>Linux Swap</secondary></indexterm>
-<indexterm id="pt8"><primary>partition types</primary>
+<indexterm xml:id="pt8"><primary>partition types</primary>
 <secondary>Linux</secondary></indexterm>
-<indexterm id="pt9"><primary>partition types</primary>
+<indexterm xml:id="pt9"><primary>partition types</primary>
 <secondary>Linux LVM</secondary></indexterm>
-<indexterm id="pt10"><primary>partition types</primary>
+<indexterm xml:id="pt10"><primary>partition types</primary>
 <secondary>FreeBSD</secondary></indexterm>
-<indexterm id="pt11"><primary>partition types</primary>
+<indexterm xml:id="pt11"><primary>partition types</primary>
 <secondary>NetBSD</secondary></indexterm>
 
 
-</sect2>
+</section>
 
-<sect2 id="part-hd">
+<section xml:id="part-hd">
 <title>Partitioning a hard disk</title>
 
 	<para>There are many programs for creating and removing
 	partitions.  Most operating systems have their own, and it can be a
 	good idea to use each operating system's own, just in case it does
 	something unusual that the others can't. Many of the programs are
-	called <command>fdisk</command><indexterm id="ch05-fdisk4">
+	called <command>fdisk</command><indexterm xml:id="ch05-fdisk4">
         <primary>commands</primary><secondary>fdisk</secondary>
         </indexterm>, including the Linux one, or
 	variations thereof.  Details on using the Linux
 	<command>fdisk</command> given on its man page.  The
-	<command>cfdisk</command><indexterm id="ch05-cfdisk">
+	<command>cfdisk</command><indexterm xml:id="ch05-cfdisk">
         <primary>commands</primary><secondary>cfdisk</secondary>
         </indexterm> command is similar to
 	<command>fdisk</command>, but has a nicer (full screen) user 
 	interface.</para>
 
-	<para>When using IDE disks<indexterm id="ch05-IDE">
+	<para>When using IDE disks<indexterm xml:id="ch05-IDE">
 	<primary>disks</primary><secondary>IDE</secondary></indexterm>, 
 	the boot partition (the partition
 	with the bootable kernel image files) must be completely within the
@@ -976,14 +976,14 @@ permissions/ownership
 	partition is completely within the first 1024 cylinders.</para>
 		
 	<para>However, this may no longer be true with newer versions of 
-	LILO<indexterm id="ch05-lilo"><primary>LILO</primary></indexterm>
-	 that support LBA (Logical Block Addressing)<indexterm id="ch05-lba">
+	LILO<indexterm xml:id="ch05-lilo"><primary>LILO</primary></indexterm>
+	 that support LBA (Logical Block Addressing)<indexterm xml:id="ch05-lba">
 	<primary>disks</primary><secondary>Logical Block Addressing (LBA)</secondary>
 	</indexterm>.  Consult the
 	documentation for your distribution to see if it has a version
 	of LILO where LBA is supported.</para>
 
-	<para>Some newer versions of the BIOS<indexterm id="ch05-bios">
+	<para>Some newer versions of the BIOS<indexterm xml:id="ch05-bios">
 	<primary>BIOS</primary></indexterm> and IDE disks can, in fact,
 	handle disks with more than 1024 cylinders.  If you have such a
 	system, you can forget about the problem; if you aren't quite
@@ -995,7 +995,7 @@ permissions/ownership
 	being unused.  This won't result in any problems, but it is ugly,
 	and some versions of <command>fdisk</command> will warn about it.</para>
 
-	<para>Changing a partition's size<indexterm id="ch05-partsize">
+	<para>Changing a partition's size<indexterm xml:id="ch05-partsize">
 	<primary>disks</primary><secondary>changing partition size</secondary>
 	</indexterm> usually requires first backing up
 	everything you want to save from that partition (preferably the
@@ -1013,7 +1013,7 @@ permissions/ownership
 	up, it is not so painful to modify partition sizes several times.</para>
 
 	<para>There is a program for MS-DOS, called <command>fips</command>
-	<indexterm id="ch05-fips"><primary>commands</primary>
+	<indexterm xml:id="ch05-fips"><primary>commands</primary>
 	<secondary>fips</secondary></indexterm>,
 	which resizes an MS-DOS partition without requiring the backup and
         restore, but for other filesystems it is still necessary.</para>
@@ -1024,7 +1024,7 @@ permissions/ownership
 	remember that partitioning is dangerous.  Make
 	<emphasis>sure</emphasis> you have a recent backup of any important 
 	data before you try changing partition sizes ``on the fly''.  The 
-	program <command>parted</command><indexterm id="ch05-parted">
+	program <command>parted</command><indexterm xml:id="ch05-parted">
 	<primary>commands</primary><secondary>parted</secondary>
         </indexterm> can resize other types of partitions
 	as well as MS-DOS, but sometimes in a limited manner.  Consult the 
@@ -1032,12 +1032,12 @@ permissions/ownership
 	than sorry.
 	</para>
 	
-</sect2>
+</section>
 
-<sect2 id="dev-files-parts">
+<section xml:id="dev-files-parts">
 <title>Device files and partitions</title>
 
-	<para>Each partition and extended partition<indexterm id="ch05-extendedpart3">
+	<para>Each partition and extended partition<indexterm xml:id="ch05-extendedpart3">
         <primary>disks</primary><secondary>extended partition</secondary>
         </indexterm> has its own
 	device file.  The naming convention for these files is that a
@@ -1050,17 +1050,17 @@ permissions/ownership
 	<filename>/dev/sdb7</filename> is the third extended partition on
 	the second SCSI hard disk.</para>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
 
-<sect1 id="filesystems">
+<section xml:id="filesystems">
 <title>Filesystems</title>
 
-<sect2 id="fs-intro">
+<section xml:id="fs-intro">
 <title>What are filesystems?</title>
 
-	<para>A <glossterm>filesystem</glossterm><indexterm id="ch05-fs">
+	<para>A <glossterm>filesystem</glossterm><indexterm xml:id="ch05-fs">
         <primary>disks</primary><secondary>filesystem</secondary>
         </indexterm> is the methods and
 	data structures that an operating system uses to keep track of files
@@ -1087,18 +1087,18 @@ permissions/ownership
 
 	<para>Most UNIX filesystem types have a similar general
 	structure, although the exact details vary quite a bit. The central
-	concepts are <glossterm>superblock</glossterm><indexterm id="ch05-sblock">
+	concepts are <glossterm>superblock</glossterm><indexterm xml:id="ch05-sblock">
 	<primary>disks</primary><secondary>filesystem</secondary>
-	<tertiary>superblock</tertiary>, <glossterm>inode</glossterm>
-	<indexterm id="ch05-inode"><primary>disks</primary>
+	<tertiary>superblock</tertiary></indexterm>, <glossterm>inode</glossterm>
+	<indexterm xml:id="ch05-inode"><primary>disks</primary>
 	<secondary>filesystem</secondary><tertiary>inode</tertiary>
-	</indexterm>, <glossterm>data block</glossterm><indexterm id="ch05-dblock">
+	</indexterm>, <glossterm>data block</glossterm><indexterm xml:id="ch05-dblock">
 	<primary>disks</primary><secondary>filesystem</secondary>
         <tertiary>data block</tertiary></indexterm>,
-	<glossterm>directory block</glossterm> <indexterm id="ch05-dirblock">
+	<glossterm>directory block</glossterm> <indexterm xml:id="ch05-dirblock">
 	<primary>disks</primary><secondary>filesystem</secondary>
 	<tertiary>directory block</tertiary></indexterm>, and <glossterm>indirection
-	block</glossterm><indexterm id="ch05-indirblock"><primary>disks</primary>
+	block</glossterm><indexterm xml:id="ch05-indirblock"><primary>disks</primary>
 	<secondary>filesystem</secondary><tertiary>indirection block</tertiary>  
 	</indexterm>.  The superblock contains information about the
 	filesystem as a whole, such as its size (the exact information here
@@ -1128,19 +1128,19 @@ permissions/ownership
 	allocated for that part of the file, ergo, there is a hole in the 
 	file.)</para>
 
-</sect2>
+</section>
 
-<sect2 id="fs-galore">
+<section xml:id="fs-galore">
 <title>Filesystems galore</title>
 
 	<para>Linux supports several types of filesystems.  As of this
-	writing the most important ones are:
+	writing the most important ones are:</para>
 
 	<glosslist>
 	<glossentry>
-	<glossterm>minix<indexterm id="ch05-fs01">
-	<primary>filesystem types</primary><secondary>minix</secondary>
-	</indexterm></glossterm>
+	<glossterm>minix
+	filesystem typesminix
+	</glossterm>
 		<glossdef><para>The oldest, presumed to be the most 
 		reliable, but quite limited in features (some time stamps
 		are missing, at most 30 character filenames) and restricted
@@ -1148,9 +1148,9 @@ permissions/ownership
 		</para></glossdef></glossentry>
 		
 	<glossentry>
-	<glossterm>xia<indexterm id="ch05-fs02">
-        <primary>filesystem types</primary><secondary>xia</secondary>
-        </indexterm></glossterm>
+	<glossterm>xia
+        filesystem typesxia
+        </glossterm>
 		<glossdef><para>A modified version of the minix filesystem 
 		that lifts the limits on the filenames and filesystem sizes,
 		but does not otherwise introduce new features.  It is not
@@ -1158,9 +1158,9 @@ permissions/ownership
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>ext3<indexterm id="ch05-fs03">
-        <primary>filesystem types</primary><secondary>ext3</secondary>
-        </indexterm></glossterm>
+	<glossterm>ext3
+        filesystem typesext3
+        </glossterm>
 		<glossdef><para>The ext3 filesystem has all the features of 
 		the ext2 filesystem.  The difference is, journaling has been 
 		added.  This improves performance and recovery time in case 
@@ -1168,9 +1168,9 @@ permissions/ownership
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>ext2<indexterm id="ch05-fs04">
-        <primary>filesystem types</primary><secondary>ext2</secondary>
-        </indexterm></glossterm>
+	<glossterm>ext2
+        filesystem typesext2
+        </glossterm>
 		<glossdef><para>The most featureful of the native Linux 
 		filesystems.  It is designed to be easily upwards compatible, 
 		so that new versions of the filesystem code do not require 
@@ -1178,18 +1178,18 @@ permissions/ownership
 		</glossentry>
 
 	<glossentry>
-	<glossterm>ext<indexterm id="ch05-fs05">
-        <primary>filesystem types</primary><secondary>ext</secondary>
-        </indexterm></glossterm>
+	<glossterm>ext
+        filesystem typesext
+        </glossterm>
 		<glossdef><para>An older version of ext2 that wasn't upwards
 		compatible.  It is hardly ever used in new installations any
 		more, and most people have converted to ext2.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm>reiserfs<indexterm id="ch05-fs06">
-        <primary>filesystem types</primary><secondary>reiserfs</secondary>
-        </indexterm></glossterm>
+	<glossterm>reiserfs
+        filesystem typesreiserfs
+        </glossterm>
 	        <glossdef><para>A more robust filesystem.  Journaling is
 		used which makes data loss less likely.  Journaling is a
 		mechanism whereby a record is kept of transaction which are
@@ -1199,42 +1199,42 @@ permissions/ownership
 		shutdowns.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>jfs<indexterm id="ch05-fs07">
-        <primary>filesystem types</primary><secondary>jfs</secondary>
-        </indexterm></glossterm>
+	<glossterm>jfs
+        filesystem typesjfs
+        </glossterm>
 		<glossdef><para>JFS is a journaled filesystem designed
-		by IBM to to work in high performance environments></para>
+		by IBM to to work in high performance environments&gt;</para>
 		</glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>xfs<indexterm id="ch05-fs08">
-        <primary>filesystem types</primary><secondary>xfs</secondary>
-        </indexterm></glossterm>
+	<glossterm>xfs
+        filesystem typesxfs
+        </glossterm>
 		<glossdef><para>XFS was originally designed by Silicon Graphics
 		to work as a 64-bit journaled filesystem. XFS was also designed
 		to maintain high performance with large files and filesystems.
 		</para></glossdef></glossentry>
-	</para>
+	</glosslist>
 
 	<para>In addition, support for several foreign filesystems exists,
 	to make it easier to exchange files with other operating systems.
 	These foreign filesystems work just like native ones, except that
 	they may be lacking in some usual UNIX features, or have curious
-	limitations, or other oddities.
+	limitations, or other oddities.</para>
 
 	<glosslist>
 
 	<glossentry>
-	<glossterm>msdos<indexterm id="ch05-fs09">
-        <primary>filesystem types</primary><secondary>msdos</secondary>
-        </indexterm></glossterm>
+	<glossterm>msdos
+        filesystem typesmsdos
+        </glossterm>
 		<glossdef><para>Compatibility with MS-DOS (and OS/2 and
 		Windows NT) FAT filesystems.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>umsdos<indexterm id="ch05-fs10">
-        <primary>filesystem types</primary><secondary>umsdos</secondary>
-        </indexterm></glossterm>
+	<glossterm>umsdos
+        filesystem typesumsdos
+        </glossterm>
 		<glossdef><para>Extends the msdos filesystem driver under
 		Linux to get long filenames, owners, permissions, links, and
 		device files. This allows a normal msdos filesystem to be
@@ -1242,78 +1242,77 @@ permissions/ownership
 		separate partition for Linux.</para></glossdef></glossentry>
 		
 	<glossentry>
-	<glossterm>vfat<indexterm id="ch05-fs11">
-        <primary>filesystem types</primary><secondary>vfat</secondary>
-        </indexterm></glossterm>
+	<glossterm>vfat
+        filesystem typesvfat
+        </glossterm>
 		<glossdef><para>This is an extension of the FAT filesystem
 		known as FAT32.  It supports larger disk sizes than FAT.
 		Most MS Windows disks are vfat.</para></glossdef>
 	</glossentry>
 
 	<glossentry>
-	<glossterm>iso9660<indexterm id="ch05-fs12">
-        <primary>filesystem types</primary><secondary>iso9660</secondary>
-        </indexterm></glossterm>
+	<glossterm>iso9660
+        filesystem typesiso9660
+        </glossterm>
 		<glossdef><para>The standard CD-ROM filesystem; the popular
 		Rock Ridge extension to the CD-ROM standard that allows
 		longer file names is supported automatically.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>nfs<indexterm id="ch05-fs13">
-        <primary>filesystem types</primary><secondary>nfs</secondary>
-        </indexterm></glossterm>
+	<glossterm>nfs
+        filesystem typesnfs
+        </glossterm>
 		<glossdef><para>A networked filesystem that allows sharing a
 		filesystem between many computers to allow easy access to
 		the files from all of them.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>smbfs<indexterm id="ch05-fs14">
-        <primary>filesystem types</primary><secondary>smbfs</secondary>
-        </indexterm></glossterm>
+	<glossterm>smbfs
+        filesystem typessmbfs
+        </glossterm>
 		<glossdef><para>A networks filesystem which allows sharing
 		of a filesystem with an MS Windows computer.  It is
 		compatible with the Windows file sharing protocols.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>hpfs<indexterm id="ch05-fs15">
-        <primary>filesystem types</primary><secondary>hpfs</secondary>
-        </indexterm></glossterm>
+	<glossterm>hpfs
+        filesystem typeshpfs
+        </glossterm>
 		<glossdef><para>The OS/2 filesystem.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>sysv<indexterm id="ch05-fs16">
-        <primary>filesystem types</primary><secondary>sysv</secondary>
-        </indexterm></glossterm>
+	<glossterm>sysv
+        filesystem typessysv
+        </glossterm>
 		<glossdef><para>SystemV/386, Coherent, and Xenix filesystems.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm>NTFS<indexterm id="ch05-fs17">
-        <primary>filesystem types</primary><secondary>ntfs</secondary>
-        </indexterm></glossterm>
+	<glossterm>NTFS
+        filesystem typesntfs
+        </glossterm>
 		<glossdef><para>The most advanced Microsoft journaled filesystem
 		providing faster file access and stability over previous
 		Microsoft filesystems. 
 		</para></glossdef></glossentry>
 
 	</glosslist>
-	</para>
 
 	<para>The choice of filesystem to use depends on the situation.  If
 	compatibility or other reasons make one of the non-native
 	filesystems necessary, then that one must be used.  If one can
 	choose freely, then it is probably wisest to use ext3, since it has
 	all the features of ext2, and is a journaled filesystem.  For more 
-	information on filesystems, see <xref linkend="fs-compare">.  You 
+	information on filesystems, see <xref linkend="fs-compare"/>.  You 
 	can also read the Filesystems HOWTO located at
-	<ulink url="http://www.tldp.org/HOWTO/Filesystems-HOWTO.html">
-	http://www.tldp.org/HOWTO/Filesystems-HOWTO.html</ulink></para>
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/Filesystems-HOWTO.html">
+	http://www.tldp.org/HOWTO/Filesystems-HOWTO.html</link></para>
 
 	<para>There is also the proc filesystem, usually accessible as
-	the <filename>/proc</filename><indexterm id="ch05-proc">
+	the <filename>/proc</filename><indexterm xml:id="ch05-proc">
 	<primary>filesystem</primary><secondary>/proc</secondary>
 	</indexterm> directory, which is not really a
 	filesystem at all, even though it looks like one.  The proc
@@ -1359,12 +1358,12 @@ version</computeroutput>
 	kernel's imagination.  Whenever anyone tries to look at any part of
 	the proc filesystem, the kernel makes it look as if the part existed
 	somewhere, even though it doesn't.  So, even though there is a
-	multi-megabyte <filename>/proc/kcore</filename><indexterm id="ch05-kcore">
+	multi-megabyte <filename>/proc/kcore</filename><indexterm xml:id="ch05-kcore">
 	<primary>filesystem</primary><secondary>/proc</secondary>
 	<tertiary>/proc/kcore</tertiary></indexterm> file, it doesn't
-	take any disk space. </sect2>
+	take any disk space.</para> </section>
 <!-- INDEX -->
-<sect2 id="use-which-fs">
+<section xml:id="use-which-fs">
 <title>Which filesystem should be used?</title>
 
 	<para>There is usually little point in using many different
@@ -1388,12 +1387,12 @@ version</computeroutput>
 	event of an emergency.
 	</para>
 
-	<para>See <xref linkend="fs-compare"> for more details about the 
+	<para>See <xref linkend="fs-compare"/> for more details about the 
 	features of the different filesystem types.</para>
 	
-</sect2>
+</section>
 
-<sect2 id="create-fs">
+<section xml:id="create-fs">
 <title>Creating a filesystem</title>
 
 	<para>Filesystems are created, i.e., initialized, with the 
@@ -1409,13 +1408,13 @@ version</computeroutput>
 
 	<glosslist>
 	<glossentry>
-	<glossterm><option>-t fstype</option></glossterm>
+	<glossterm>-t fstype</glossterm>
 		<glossdef><para>
 		Select the type of the filesystem.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><option>-c</option></glossterm>
+	<glossterm>-c</glossterm>
 		<glossdef><para>
 		 Search for bad blocks and initialize the bad
 		block list accordingly.
@@ -1436,7 +1435,7 @@ version</computeroutput>
 	Be sure to find out if there is a specific program available for the 
 	filesystem type you want to use.  For more information on determining
 	what block size to use please see
-	<xref linkend="fs-block-size">.</para>
+	<xref linkend="fs-block-size"/>.</para>
 
 	<para>To create an ext2 filesystem on a floppy, one would give the
 	following commands:
@@ -1446,7 +1445,7 @@ version</computeroutput>
 <computeroutput>Double-sided, 80 tracks, 18 sec/track. Total capacity 
 1440 KB.
 Formatting ... done</computeroutput>
-<prompt>$</prompt> <userinput>badblocks /dev/fd0H1440 1440 $>$ 
+<prompt>$</prompt> <userinput>badblocks /dev/fd0H1440 1440 $&gt;$ 
 bad-blocks</userinput>
 <prompt>$</prompt> <userinput>mkfs.ext2 -l bad-blocks 
 /dev/fd0H1440</userinput>
@@ -1506,9 +1505,9 @@ done</computeroutput>
 	partitions is the same as for floppies, except that the formatting
 	isn't needed.</para>
 
-</sect2>
+</section>
 
-<sect2 id="fs-block-size">
+<section xml:id="fs-block-size">
 <title>Filesystem block size</title>
         <para>The block size specifies size that the filesystem will use
         to read and write data.  Larger block sizes will help improve disk 
@@ -1532,20 +1531,20 @@ done</computeroutput>
 	Therefore you would be using a 
 	"block size * max # of blocks = max block size" formula.</para>
 	
-</sect2>
+</section>
 
-<sect2 id="fs-compare">
+<section xml:id="fs-compare">
 <title>Filesystem comparison</title>
 	<para>
 	<table>
 	<title>Comparing Filesystem Features</title>
 	<tgroup cols="6">
-	<colspec colname="FS Name">
-	<colspec colname="Year">
-	<colspec colname="Origional OS">
-	<colspec colname="Max File Size">
-	<colspec colname="Max FS Size">
-	<colspec colname="Journaling"> 
+	<colspec colname="FS Name"/>
+	<colspec colname="Year"/>
+	<colspec colname="Origional OS"/>
+	<colspec colname="Max File Size"/>
+	<colspec colname="Max FS Size"/>
+	<colspec colname="Journaling"/> 
 	<thead>
 	<row> 
 		<entry>FS Name</entry> 
@@ -1558,7 +1557,7 @@ done</computeroutput>
 	</thead>
 	<tbody>
 	<row> 
-		<entry>FAT16<indexterm id="ch05-fst1">
+		<entry>FAT16<indexterm xml:id="ch05-fst1">
 		<primary>filesystem types</primary>
 		<secondary>fat16</secondary></indexterm></entry> 
 		<entry>1983</entry> 
@@ -1568,7 +1567,7 @@ done</computeroutput>
 		<entry>N</entry> 
 	</row>
 	<row> 
-		<entry>FAT32<indexterm id="ch05-fst2">
+		<entry>FAT32<indexterm xml:id="ch05-fst2">
                 <primary>filesystem types</primary>
                 <secondary>fat32</secondary></indexterm></entry> 
 		<entry>1997</entry> 
@@ -1578,7 +1577,7 @@ done</computeroutput>
 		<entry>N</entry> 
 	</row>
 	<row> 
-		<entry>HPFS<indexterm id="ch05-fst3">
+		<entry>HPFS<indexterm xml:id="ch05-fst3">
                 <primary>filesystem types</primary>
                 <secondary>hpfs</secondary></indexterm></entry> 
 		<entry>1988</entry> 
@@ -1588,7 +1587,7 @@ done</computeroutput>
 		<entry>N</entry> 
 	</row>
 	<row> 
-		<entry>NTFS<indexterm id="ch05-fst4">
+		<entry>NTFS<indexterm xml:id="ch05-fst4">
                 <primary>filesystem types</primary>
                 <secondary>ntfs</secondary></indexterm></entry> 
 		<entry>1993</entry> 
@@ -1598,7 +1597,7 @@ done</computeroutput>
 		<entry>Y</entry> 
 	</row>
 	<row> 
-		<entry>HFS+<indexterm id="ch05-fst5">
+		<entry>HFS+<indexterm xml:id="ch05-fst5">
                 <primary>filesystem types</primary>
                 <secondary>hfs+</secondary></indexterm></entry> 
 		<entry>1998</entry> 
@@ -1608,9 +1607,9 @@ done</computeroutput>
 		<entry>N</entry> 
 	</row>
 	<row> 
-		<entry>UFS2<indexterm id="ch05-fst6">
+		<entry>UFS2<indexterm xml:id="ch05-fst6">
                 <primary>filesystem types</primary>
-                <secondary>ufs2</secondary></indexterm> 
+                <secondary>ufs2</secondary></indexterm> </entry>
 		<entry>2002</entry> 
 		<entry>FreeBSD</entry> 
 		<entry>512GB to 32PB</entry> 
@@ -1618,7 +1617,7 @@ done</computeroutput>
 		<entry>N</entry> 
 	</row>
 	<row> 
-		<entry>ext2<indexterm id="ch05-fst7">
+		<entry>ext2<indexterm xml:id="ch05-fst7">
                 <primary>filesystem types</primary>
                 <secondary>ext2</secondary></indexterm></entry> 
 		<entry>1993</entry> 
@@ -1628,7 +1627,7 @@ done</computeroutput>
 		<entry>N</entry> 
 	</row>
 	<row> 
-		<entry>ext3<indexterm id="ch05-fst8">
+		<entry>ext3<indexterm xml:id="ch05-fst8">
                 <primary>filesystem types</primary>
                 <secondary>ext3</secondary></indexterm></entry> 
 		<entry>1999</entry> 
@@ -1638,9 +1637,9 @@ done</computeroutput>
 		<entry>Y</entry> 
 	</row>
 	<row> 
-		<entry>ReiserFS3<indexterm id="ch05-fst9">
+		<entry>ReiserFS3<indexterm xml:id="ch05-fst9">
                 <primary>filesystem types</primary>
-                <secondary>reiserfs</secondary></indexterm> 
+                <secondary>reiserfs</secondary></indexterm> </entry>
 		<entry>2001</entry> 
 		<entry>Linux</entry> 
 		<entry>8TB8</entry> 
@@ -1648,7 +1647,7 @@ done</computeroutput>
 		<entry>Y</entry> 
 	</row>
 	<row> 
-		<entry>ReiserFS4<indexterm id="ch05-fst10">
+		<entry>ReiserFS4<indexterm xml:id="ch05-fst10">
                 <primary>filesystem types</primary>
                 <secondary>reiserfs</secondary></indexterm></entry> 
 		<entry>2005</entry> 
@@ -1658,7 +1657,7 @@ done</computeroutput>
 		<entry>Y</entry> 
 	</row>
 	<row> 
-		<entry>XFS<indexterm id="ch05-fst11">
+		<entry>XFS<indexterm xml:id="ch05-fst11">
                 <primary>filesystem types</primary>
                 <secondary>fat16</secondary></indexterm></entry> 
 		<entry>1994</entry> 
@@ -1668,7 +1667,7 @@ done</computeroutput>
 		<entry>Y</entry> 
 	</row>
 	<row> 
-		<entry>JFS<indexterm id="ch05-fst12">
+		<entry>JFS<indexterm xml:id="ch05-fst12">
                 <primary>filesystem types</primary>
                 <secondary>jfs</secondary></indexterm></entry> 
 		<entry>?</entry> 
@@ -1678,9 +1677,9 @@ done</computeroutput>
 		<entry>Y</entry> 
 	</row>
 	<row> 
-		<entry>VxFS<indexterm id="ch05-fst13">
+		<entry>VxFS<indexterm xml:id="ch05-fst13">
                 <primary>filesystem types</primary>
-                <secondary>vxfs</secondary></indexterm> 
+                <secondary>vxfs</secondary></indexterm></entry>
 		<entry>1991</entry> 
 		<entry>SVR4.0</entry> 
 		<entry>16EB</entry> 
@@ -1688,7 +1687,7 @@ done</computeroutput>
 		<entry>Y</entry> 
 	</row>
 	<row> 
-		<entry>ZFS<indexterm id="ch05-fst14">
+		<entry>ZFS<indexterm xml:id="ch05-fst14">
                 <primary>filesystem types</primary>
                 <secondary>zfs</secondary></indexterm></entry> 
 		<entry>2004</entry> 
@@ -1705,7 +1704,7 @@ done</computeroutput>
 	<para>Legend
         <table>
 	<title>Sizes</title>
-        <tgroup cols=2>
+        <tgroup cols="2">
         <tbody>
         <row> <entry>Kilobyte - KB</entry> <entry>1024 Bytes</entry> </row>
         <row> <entry>Megabyte - MB</entry> <entry>1024 KBs</entry> </row>
@@ -1728,13 +1727,13 @@ done</computeroutput>
 	with these capabilities.</para>
 
 	<para>For more detailed information you can visit
-	<ulink url="http://en.wikipedia.org/wiki/Comparison_of_file_systems">
-	http://en.wikipedia.org/wiki/Comparison_of_file_systems</ulink>.
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Comparison_of_file_systems">
+	http://en.wikipedia.org/wiki/Comparison_of_file_systems</link>.
 	</para>
 
-</sect2>
+</section>
 
-<sect2 id="mount-and-umount">
+<section xml:id="mount-and-umount">
 <title>Mounting and unmounting</title>
 
 	<para>Before one can use a filesystem, it has to be 
@@ -1745,23 +1744,23 @@ done</computeroutput>
 	are the contents of an existing subdirectory in some already mounted
 	filesystem.</para>
 
-	<para>For example, <xref linkend="hd-mount-root"> shows three
+	<para>For example, <xref linkend="hd-mount-root"/> shows three
 	separate filesystems, each with their own root directory. When the
 	last two filesystems are mounted below <filename>/home</filename>
 	and <filename>/usr</filename>, respectively, on the first 
 	filesystem, we can get a single directory tree, as in
-	<xref linkend="hd-mount-all">.</para>
+	<xref linkend="hd-mount-all"/>.</para>
 
-		<figure id="hd-mount-root" float="1">
+		<figure xml:id="hd-mount-root" floatstyle="normal">
 		<title>Three separate filesystems.</title>
-		<graphic fileref="hd-mount-separate.png">
+		<mediaobject><imageobject><imagedata fileref="hd-mount-separate.svg"/></imageobject></mediaobject>
 		</figure>
 
-		<figure id="hd-mount-all" float="1">
+		<figure xml:id="hd-mount-all" floatstyle="normal">
 		<title><filename>/home</filename> and <filename>/usr</filename> 
 		have been 
 		mounted.</title>
-		<graphic fileref="hd-mount-mounted.png">
+		<mediaobject><imageobject><imagedata fileref="hd-mount-mounted.svg"/></imageobject></mediaobject>
 		</figure>
 
 	<para>The mounts could be done as in the following example:
@@ -1863,7 +1862,7 @@ done</computeroutput>
 	page for details on the format.  The details of exactly when the
 	extra filesystems are mounted depend on many factors, and can be
 	configured by each administrator if need be; see
-        <xref linkend="boots-and-shutdowns">.</para>
+        <xref linkend="boots-and-shutdowns"/>.</para>
 	
 
 	<para>When a filesystem no longer needs to be mounted, it can be
@@ -1922,7 +1921,7 @@ done</computeroutput>
 
 	<listitem><para>List the floppy devices and their allowable mount 
 	points together with the suitable options in 
-	<filename>/etc/fstab</filename>.
+	<filename>/etc/fstab</filename>.</para></listitem>
 
 	</itemizedlist>
 
@@ -1986,9 +1985,9 @@ done</computeroutput>
 	least read access to the files in it, which
 	is not a good idea.</para>
 
-</sect2>
+</section>
 
-<sect2>
+<section>
 <title>Filesystem Security</title>
 
 	<para>TO BE ADDED</para>
@@ -1997,9 +1996,9 @@ done</computeroutput>
 	in <filename>/etc/fstab</filename> to provide additional system
 	security.</para>
 
-</sect2> 
+</section> 
 
-<sect2 id="fsck">
+<section xml:id="fsck">
 <title>Checking filesystem integrity with 
 <command>fsck</command></title>
 
@@ -2060,9 +2059,9 @@ done</computeroutput>
 	system realizing it.	There <emphasis>will</emphasis>
 	be trouble, if the operating system is confused.</para>
 	
-</sect2>
+</section>
 
-<sect2 id="badblocks"> 
+<section xml:id="badblocks"> 
 <title>Checking for disk errors with <command>badblocks</command></title>
 
 	<para>It can be a good idea to periodically check for bad blocks.
@@ -2096,9 +2095,9 @@ done</computeroutput>
 	place.	If the block was really bad, not just marginal, the
 	contents of the file may be corrupted.</para>
 
-</sect2>
+</section>
 
-<sect2 id="fragmentation">
+<section xml:id="fragmentation">
 <title>Fighting fragmentation?</title>
 
 	<para>When a file is written to disk, it can't always be written
@@ -2119,9 +2118,8 @@ done</computeroutput>
 	<para>In the earlier days of the ext2 filesystem, there was a concern 
 	over file fragmentation that lead to the development of a 
 	defragmentation program called, defrag.  A copy of it can still be 
-	downloaded at <ulink 
-	url="http://www.go.dlr.de/linux/src/defrag-0.73.tar.gz">
-	http://www.go.dlr.de/linux/src/defrag-0.73.tar.gz</ulink>.  However, 
+	downloaded at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.go.dlr.de/linux/src/defrag-0.73.tar.gz">
+	http://www.go.dlr.de/linux/src/defrag-0.73.tar.gz</link>.  However, 
 	it is HIGHLY recommended that you NOT use it.  It was designed for 
 	an older version of ext2, and has not bee updated since 1998!  I 
 	only mention it here for references purposes.</para>
@@ -2134,9 +2132,9 @@ done</computeroutput>
 	filesystems, since many things can go wrong during the 
 	defragmentation.</para>
 
-</sect2>
+</section>
 
-<sect2 id="fs-other-tools">
+<section xml:id="fs-other-tools">
 <title>Other tools for all filesystems</title>
 
 	<para>Some other tools are also useful for managing filesystems.
@@ -2147,7 +2145,7 @@ done</computeroutput>
 	the (many) options which can be used.</para>
 
 	<para><command>sync</command> forces all unwritten blocks
-	in the buffer cache (see <xref linkend="buffer-cache">) to be
+	in the buffer cache (see <xref linkend="buffer-cache"/>) to be
 	written to disk.  It is seldom necessary to do this by hand; the
 	daemon process <command>update</command> does this automatically.
 	It can be useful in catastrophes, for example if
@@ -2160,9 +2158,9 @@ done</computeroutput>
 	know what the name of the command you want
 	is.</para>
 
-</sect2>
+</section>
 
-<sect2 id="fs-ext3-tools">
+<section xml:id="fs-ext3-tools">
 <title>Other tools for the ext2/ext3 filesystem</title>
 
 	<para>In addition to the filesystem creator 
@@ -2272,14 +2270,14 @@ Group 0: (Blocks 0-32767)
 
 	<para><command>dump</command> and <command>restore</command> can be 
 	used to back up an ext2 filesystem.  They are ext2 specific versions
-	of the traditional UNIX backup tools.  See <xref linkend="backups">
+	of the traditional UNIX backup tools.  See <xref linkend="backups"/>
 	for more information on backups.</para>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
 
-<sect1 id="disk-no-fs">
+<section xml:id="disk-no-fs">
 <title>Disks without filesystems</title>
 
 	<para>Not all disks or partitions are used as filesystems.
@@ -2323,12 +2321,12 @@ Group 0: (Blocks 0-32767)
 	floppy before the second command.	Otherwise the
 	command pair is of doubtful usefulness.)</para>
 
-</sect1>
+</section>
 
-<sect1 id="alloc-disk">
+<section xml:id="alloc-disk">
 <title>Allocating disk space</title>
 
-<sect2 id="part-schemes">
+<section xml:id="part-schemes">
 <title>Partitioning schemes</title>
 
 	<para>When it comes to partitioning your machine, 
@@ -2339,11 +2337,11 @@ Group 0: (Blocks 0-32767)
 	<para>For a simple workstation with limited disk space, such 
 	as a laptop, you may have as few a 3 partitions.  A partition for
 	<filename>/</filename>, <filename>/boot</filename>, and swap.
-	However, for most users this is not a recommended solution.<para>
+	However, for most users this is not a recommended solution.</para>
 
 	<para>The traditional way is to have a (relatively) small
 	root filesystem, and separate partitions for filesystems such as 
-	<filename>/usr</filename> and <filename>/home></filename>.
+	<filename>/usr</filename> and <filename>/home&gt;</filename>.
 	Creating a separate root filesystem if the root filesystem is small and 
 	not heavily used, it is less likely to become corrupt when the system
 	crashes, and therefore make it easier to recover a crashed system.  The
@@ -2380,9 +2378,9 @@ Filesystem            Size  Used Avail Use% Mounted on
 	the total amount of free disk space into many small pieces.  One way
 	to avoid this problem is to use to create Logical Volumes.</para> 
 
-</sect2>
+</section>
 
-<sect2 id="lvm">
+<section xml:id="lvm">
 <title>Logical Volume Manager (LVM)</title>
 
 	<para>Using LVM allows administrators the flexibility to create 
@@ -2401,8 +2399,8 @@ Filesystem            Size  Used Avail Use% Mounted on
 
 	<para>Right now, a full discussion of LVM is beyond the scope of this 
 	guide.  However, and excellent resource for learning more about LVM
-	can be found at <ulink url="http://www.tldp.org/HOWTO/LVM-HOWTO.html">
-	http://www.tldp.org/HOWTO/LVM-HOWTO.html</ulink>.</para> 
+	can be found at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/LVM-HOWTO.html">
+	http://www.tldp.org/HOWTO/LVM-HOWTO.html</link>.</para> 
 <!--
 %	\meta more reasons for many partitions: users/temp files/spools
 %	can't fill up all disks, readonly partitions less likely to 
@@ -2415,9 +2413,9 @@ corrupt,
 %	also be used to backup root during upgrades
 -->
 
-</sect2>
+</section>
 
-<sect2 id="space-req">
+<section xml:id="space-req">
 <title>Space requirements</title>
 
 	<para>The Linux distribution you install will give some indication
@@ -2442,12 +2440,11 @@ corrupt,
 	world uses 1024 for both factors.  Therefore, a 345 MB hard disk
 	is really a 330 MB hard disk.</para>
 
-	<para>Swap space allocation is discussed in <xref
-	linkend="swap-allocation">.</para>
+	<para>Swap space allocation is discussed in <xref linkend="swap-allocation"/>.</para>
 
-</sect2>
+</section>
 
-<sect2 id="alloc-space-ex">
+<section xml:id="alloc-space-ex">
 <title>Examples of hard disk allocation</title>
 
 	<para>I used to have a 10 GB hard disk.  Now I am using a 30 GB
@@ -2478,7 +2475,7 @@ corrupt,
 
 		<table>
 		<title>My Partitions</title>
-		<tgroup cols=2>
+		<tgroup cols="2">
 		<tbody>
 		<row> <entry>9 GB</entry> <entry>root filesystem</entry> </row>
 	 	<row> <entry>1 GB</entry> <entry>swap partition</entry> </row>
@@ -2495,9 +2492,9 @@ corrupt,
 		</tgroup>
 		</table>
 	</para>
-</sect2>
+</section>
 
-<sect2 id="adding-disk">
+<section xml:id="adding-disk">
 <title>Adding more disk space for Linux</title>
 
 	<para>Adding more disk space for Linux is easy, at least after the
@@ -2505,17 +2502,17 @@ corrupt,
 	is outside the scope of this book).  You format it if necessary,
 	then create the partitions and filesystem as described above,
 	and add the proper lines to <filename>/etc/fstab</filename>
-	<indexterm id="ch05-fstab"><primary>filesystems</primary>
+	<indexterm xml:id="ch05-fstab"><primary>filesystems</primary>
         <secondary>/etc</secondary><tertiary>/etc/fstab</tertiary>
 	</indexterm>
 	so that it is mounted automatically.</para>
 
-</sect2>
+</section>
 
-<sect2 id="space-saving-tips">
+<section xml:id="space-saving-tips">
 <title>Tips for saving disk space</title>
 
-	<para>The best tip for saving disk space<indexterm id="ch05-savespc">
+	<para>The best tip for saving disk space<indexterm xml:id="ch05-savespc">
 	<primary>disks</primary>
         <secondary>saving space</secondary></indexterm> is to avoid installing
 	unnecessary programs.  Most Linux distributions have an
@@ -2530,13 +2527,13 @@ corrupt,
 
 	<para>If you cannot uninstall packages, you might look into
 	compression.  Compression programs such as <command>gzip</command>
-	<indexterm id="ch05-gzip"><primary>commands</primary>
+	<indexterm xml:id="ch05-gzip"><primary>commands</primary>
 	<secondary>gzip</secondary></indexterm>
-	or <command>zip</command><indexterm id="ch05-zip">
+	or <command>zip</command><indexterm xml:id="ch05-zip">
 	<primary>commands</primary><secondary>zip</secondary></indexterm>
 	 will compress (and uncompress)
 	individual files or groups of files.  The <command>gzexe</command>
-	<indexterm id="ch05-gzexe"><primary>commands</primary>
+	<indexterm xml:id="ch05-gzexe"><primary>commands</primary>
         <secondary>gzexe</secondary></indexterm>
 	system will compress and uncompress programs invisibly to the
 	user (unused programs are compressed, then uncompressed as they
@@ -2551,11 +2548,11 @@ corrupt,
 	the filesystem will use to read and write data.  Larger block sizes
 	will help disk I/O performance when using large files, such as databases.
 	This happens because the disk can read or write data for a longer 
-	period of time before having to search for the next block.  The  
+	period of time before having to search for the next block.  The  </para>
 		
 
-</sect2>
+</section>
 
-</sect1>
+</section>
 
 </chapter>

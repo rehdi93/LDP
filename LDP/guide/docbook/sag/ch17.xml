@@ -1,4 +1,5 @@
-<chapter id="kernel">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="kernel">
 <title>The Linux Kernel Source</title>
 
 	<blockquote><para><quote>Black holes are where God divided by zero.

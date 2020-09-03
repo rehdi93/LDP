@@ -1,4 +1,5 @@
-<chapter id="backups-intro">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="backups-intro">
 <title>Backups</title>
 
 	<blockquote><para><literallayout>
@@ -11,7 +12,7 @@ Nature is deterministically reliable.
 	<para> This chapter explains about why, how, and when to make
 	backups, and how to restore things from backups.</para>
 
-<sect1 id="backups">
+<section xml:id="backups">
 <title>On the importance of being backed up</title>
 
 	<para> Your data is valuable.  It will cost you time and effort
@@ -56,9 +57,9 @@ Nature is deterministically reliable.
 	<para> When it comes to backups, paranoia is in the job
 	description.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="backup-media">
+<section xml:id="backup-media">
 <title>Selecting the backup medium</title>
 
 	<para> The most important decision regarding backups is the choice
@@ -107,9 +108,9 @@ Nature is deterministically reliable.
 	making restoration of a single file quick) and tapes (contain
 	a lot of data).  </para>
 
-</sect1>
+</section>
 
-<sect1 id="backup-tools">
+<section xml:id="backup-tools">
 <title>Selecting the backup tool</title>
 
 	<para> There are many tools that can be used to make
@@ -158,9 +159,9 @@ Nature is deterministically reliable.
 	the scope of this book.  The Linux Software Map lists many of
 	the freeware ones.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="simple-backups">
+<section xml:id="simple-backups">
 <title>Simple backups</title>
 
 	<para> A simple backup scheme is to back up everything once,
@@ -196,7 +197,7 @@ Nature is deterministically reliable.
 	several previous weeks, which is good if you want to find an old,
 	now deleted file, or an old version of a file.	</para>
 
-<sect2 id="tar-backups">
+<section xml:id="tar-backups">
 <title>Making backups with <command>tar</command></title>
 
 	<para>
@@ -284,9 +285,9 @@ usr/src/patch-1.2.11.gz</computeroutput>
 	been previously backed up.  Scripts and programs for doing this
 	can be found on Linux ftp sites.  </para>
 	
-</sect2>
+</section>
 
-<sect2 id="tar-restore">
+<section xml:id="tar-restore">
 <title>Restoring files with <command>tar</command></title>
 
 	<para> The <option>--extract</option> (<option>-x</option>)
@@ -347,11 +348,11 @@ usr/src/linux-1.2.10-includes/include/linux/kernel.h
 	restore. This can be a big problem, if the file has sensitive
 	data that should no longer be available.  </para>
 
-</sect2>
+</section>
 
-</sect1>
+</section>
 
-<sect1 id="multi-level-backups">
+<section xml:id="multi-level-backups">
 <title>Multilevel backups</title>
 
 	<para> The simple backup method outlined in the previous section
@@ -386,13 +387,13 @@ usr/src/linux-1.2.10-includes/include/linux/kernel.h
 	of each file during those two months, but what we can restore
 	is often good enough.  </para>
 
-	<para><xref linkend="backup-history-timeline"> shows which backup
+	<para><xref linkend="backup-history-timeline"/> shows which backup
 	level is used each day, and which backups can be restored from
 	at the end of the month.  </para>
 
-		<figure id="backup-history-timeline" float="1">
+		<figure xml:id="backup-history-timeline" floatstyle="normal">
 		<title>A sample multilevel backup schedule.</title>
-		<graphic fileref="backup-timeline.png">
+		<mediaobject><imageobject><imagedata fileref="backup-timeline.svg"/></imageobject></mediaobject>
 		</figure>
 
 	<para> Backup levels can also be used to keep filesystem
@@ -414,9 +415,9 @@ usr/src/linux-1.2.10-includes/include/linux/kernel.h
 	for a restore depends on how long you keep between full backups,
 	but it is less than in the simple schemes.  </para>
 
-<table id="efficient-backup-levels">
+<table xml:id="efficient-backup-levels">
 <title>Efficient backup scheme using many backup levels</title>
-<tgroup cols=4>
+<tgroup cols="4">
 <thead>
 <row><entry>Tape</entry> <entry>Level</entry> <entry>Backup 
 (days)</entry> <entry>Restore 
@@ -461,9 +462,9 @@ tapes</entry></row>
 	levels.  For <command>tar</command> and <command>cpio</command>
 	it must be implemented with shell scripts.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="what-to-backup">
+<section xml:id="what-to-backup">
 <title>What to back up</title>
 
 	<para> You want to back up as much as possible.  The major
@@ -487,9 +488,9 @@ tapes</entry></row>
 	(<filename>/etc</filename>, but possibly other things scattered
 	all over the filesystem).  </para>
 
-</sect1>
+</section>
 
-<sect1 id="compressed-backups">
+<section xml:id="compressed-backups">
 <title>Compressed backups</title>
 
 	<para> Backups take a lot of space, which can cost quite
@@ -526,6 +527,6 @@ tapes</entry></row>
 	but even that might not work well enough.  This should only be
 	a problem on slow computers.  </para>
 
-</sect1>
+</section>
 
 </chapter>

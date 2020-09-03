@@ -1,4 +1,5 @@
-<glossary id="glossary">
+<!-- Converted by db4-upgrade version 1.1 -->
+<glossary xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="glossary">
 <title>Glossary (DRAFT, but not for long hopefully)</title>
 
 	<blockquote><para><quote>The Librarian of the Unseen University
@@ -417,7 +418,7 @@
 	<glossterm>print queue</glossterm>
 	<glossdef><para>
 	A file (or set of files) which the print <glossterm>daemon
-	<glossterm> uses so that applications which wish to use the 
+	</glossterm> uses so that applications which wish to use the 
 	printer do not have to wait until the print job they have sent 
 	is finished before they can continue.  It also allows multiple 
 	users to share a printer.
@@ -503,8 +504,8 @@ often
 	conjunction with printers, but might also be used for other 
 	things (mail for example).  The term is reported to be an acronym 
 	for ``Simultaneous Peripheral Operation On-Line'', but according 
-	to the <ulink url="http://www.tuxedo.org/~esr/jargon">Jargon File
-	</ulink> it may	have been a backronym (something made up later 
+	to the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tuxedo.org/~esr/jargon">Jargon File
+	</link> it may	have been a backronym (something made up later 
 	for effect).
 	</para></glossdef>
 	</glossentry>
@@ -564,5 +565,5 @@ often
 	A collection of physical volumes broken down into physical 
 	extents, and available for use in logical partitions.
         </para></glossdef>
-        </glossentry	
+			</glossentry>
 </glossary>

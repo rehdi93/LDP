@@ -1,4 +1,5 @@
-<chapter id="finding-help">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="finding-help">
 <title>Finding Help</title>
 
 <blockquote><para><quote>Help me if you can I'm feeling down. And I do
@@ -11,7 +12,7 @@ Beatles</para></blockquote>
 	other resources available.  This chapter will try to help you get the
 	most out of your quest for help.</para>
 
-<sect1 id="newsgroups-mailling-lists">
+<section xml:id="newsgroups-mailling-lists">
 <title>Newsgroups and Mailing Lists</title>
 	<para>
 	This guide cannot teach you everything about Linux.  There
@@ -28,7 +29,7 @@ Beatles</para></blockquote>
 	To receive the most from them, there are a few things you can do.
 	</para>
 
-<sect2 id="right-forum">
+<section xml:id="right-forum">
 <title>Finding The Right Forum</title>
 	<para>
 	The first thing to do is to find an appropriate forum.  There are many
@@ -41,13 +42,12 @@ Beatles</para></blockquote>
 	through the newsgroups available finds comp.mail.sendmail, which
 	looks like an appropriate place to ask a sendmail question.  Your news
 	client probably has a list of the newsgroups available to you, but if
-	not then a full list of newsgroups is available at <ulink
-	url="http://groups.google.com/groups?group=*">
-	http://groups.google.com/groups?group=*</ulink>.
+	not then a full list of newsgroups is available at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://groups.google.com/groups?group=*">
+	http://groups.google.com/groups?group=*</link>.
 	</para>
-</sect2>
+</section>
 
-<sect2 id="before-you-post">
+<section xml:id="before-you-post">
 <title>Before You Post</title>
 	<para>
 	Now that you have found your appropriate forum, you may think you are 
@@ -59,14 +59,13 @@ Beatles</para></blockquote>
 	better understanding of the subject area, and that understanding will 
 	allow you to ask a more informed and sensible question.  There are also archives
 	of newsgroups and mailing lists and it is entirely possible that your
-	question has been asked and answered previously.  <ulink
-	url="http://www.google.com">http://www.google.com</ulink> or a similar
+	question has been asked and answered previously.  <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.google.com">http://www.google.com</link> or a similar
 	search engine should be something you try <emphasis>before</emphasis>
 	posting a question.
 	</para>
-</sect2>
+</section>
 
-<sect2 id="writing-your-post">
+<section xml:id="writing-your-post">
 <title>Writing Your Post</title>
 	<para>Okay, you have found your appropriate forum, you have read the
 	relevant HOWTOs and FAQs, you have searched the web, but you still 
@@ -97,24 +96,24 @@ Beatles</para></blockquote>
 	precise as possible.  There are limits however.  Try not to include irrelevant
 	information either.  If you are having problems with your mail client 
 	it is unlikely that a dump of your kernel boot log
-	(<command>dmesg</command>) would be of help.<para>
+	(<command>dmesg</command>) would be of help.</para>
 	
 	<para>Don't ask for replies by private email.  The point of most Linux
 	forums is that everybody can learn something from each other.  Asking
 	for private replies simply removes value from the newsgroup or mailing
 	list.</para>
-</sect2>
+</section>
 
-<sect2 id="formatting-your-post">
+<section xml:id="formatting-your-post">
 <title>Formatting Your Post</title>
 	<para> Do not post in HTML.  Many Linux users have mail clients which
 	can't easily read HTML email.  Whilst with some effort, they
 	<emphasis>can</emphasis> read HTML email, they usually don't.  If you 
 	send them HTML mail it often gets deleted unread.  Send plain text
 	emails, they will reach a wider audience that way.</para>
-</sect2>
+</section>
 
-<sect2 id="follow-up">
+<section xml:id="follow-up">
 <title>Follow Up</title>
 	<para>After your problem has been solved, post a short followup
 	explaining what the problem was and how you solved it.  People will
@@ -123,22 +122,21 @@ Beatles</para></blockquote>
 	look at the archives of the newsgroup or mailing list, they will see 
 	you had the same problem, the discussion that followed your question and
 	your final solution.</para>
-</sect2>
+</section>
 
-<sect2 id="getting-help-more-info">
+<section xml:id="getting-help-more-info">
 <title>More Information</title>
 	<para>This short guide is simply a paraphrase
 	and summary of  the excellent (and more detailed) document ``How To 
-	Ask Questions The Smart Way'' by Eric S Raymond.  <ulink
-	url="http://www.catb.org/~esr/faqs/smart-questions.html">
-	http://www.catb.org/~esr/faqs/smart-questions.html</ulink>.  It is
+	Ask Questions The Smart Way'' by Eric S Raymond.  <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.catb.org/~esr/faqs/smart-questions.html">
+	http://www.catb.org/~esr/faqs/smart-questions.html</link>.  It is
 	recommend that you read it before you post anything.  It will help 
 	you formulate  your question to maximize your
 	chances of getting the answer you are looking for.</para>
-</sect2>
-</sect1>
+</section>
+</section>
 
-<sect1 id="irc">
+<section xml:id="irc">
 <title>IRC</title>
 	<para>IRC (Internet Relay Chat) is not covered in the Eric Raymond 
 	document, but IRC can also be an excellent way of finding the answers you need.  
@@ -151,15 +149,15 @@ Beatles</para></blockquote>
 	<para>Most of what has been said about newsgroups and mailing lists 
 	is still relevant for IRC, with a the following additions</para>
 
-<sect2 id="colours">
+<section xml:id="colours">
 <title>Colours</title>
 	<para>Do not use colours, bold, underline or strange (non ASCII)
 	characters.  This breaks some older terminals and is just plain ugly 
 	to look at.  If you arrive in a channel and start spewing colour or bold
 	then expect to be kicked out.</para>
-</sect2>
+</section>
 
-<sect2 id="be-polite">
+<section xml:id="be-polite">
 <title>Be Polite</title>
 	<para>Remember you are not entitled to an answer.  If you ask the
 	question in the right way then you will probably get one, but you have
@@ -174,9 +172,9 @@ Beatles</para></blockquote>
 	<para>Don't go slapping anyone with large trouts.  Would you believe 
 	this has been done before once or twice?  And that we it wasn't
 	funny the first time?</para>
-</sect2>
+</section>
 
-<sect2 id="type-properly">
+<section xml:id="type-properly">
 <title>Type Properly, in English</title>
 	<para>Most #linux channels are English channels.  Speak English whilst
 	in them.  Most of the larger IRC networks also have #linux channel in
@@ -190,9 +188,9 @@ Beatles</para></blockquote>
 	are.  It looks silly and thereby makes you look silly.  At best you 
 	will only look like an idiot, at worst you will be derided then kicked 
 	out.</para>
-</sect2>
+</section>
 
-<sect2 id="port-scanning">
+<section xml:id="port-scanning">
 <title>Port scanning</title>
 	<para>Never <emphasis>ever</emphasis> ask anyone to port scan you, or 
 	try to ``hack'' you.  This is inviolable.  There is no way of knowing that
@@ -208,24 +206,24 @@ Beatles</para></blockquote>
 	Most people log TCP connections, they will notice they are being
 	scanned.  Most people <emphasis>will</emphasis> report you to your ISP
 	for this (it is trivial to find out who that is).</para>
-</sect2>
+</section>
 
-<sect2 id="keep-in-channel">
+<section xml:id="keep-in-channel">
 <title>Keep it in the Channel</title>
 	<para>Don't /msg anyone unless they ask you to.  It diminishes the
 	usefulness of the channel and some people just prefer that
 	you not do it.</para>
-</sect2>
+</section>
 
-<sect2><title>Stay On Topic</title>
+<section><title>Stay On Topic</title>
 	<para>Stay on topic.  The channel is a ``Linux'' channel, not a ``What
 	Uncle Bob Got Up To Last Weekend'' channel.  Even if you see other
 	people being off topic, this does not mean that you should be.  They 
 	are probably channel regulars and different conventions apply to
 	them.</para>
-</sect2>
+</section>
 
-<sect2 id="mass-ctcp">
+<section xml:id="mass-ctcp">
 <title>CTCPs</title>
 	<para>If you are thinking of mass CTCP pinging the channel or CTCP
 	version or CTCP anything, then think again.  It is liable to get you
@@ -235,9 +233,9 @@ Beatles</para></blockquote>
 	Client Protocol.  It is a method whereby you can find out things 
 	about other peoples' clients.  See the documentation for your IRC 
 	for more details.</para>
-</sect2>
+</section>
 
-<sect2 id="hacking">
+<section xml:id="hacking">
 <title>Hacking, Cracking, Phreaking, Warezing</title>
 	<para>Don't ask about exploits, unless you are looking for a further 
 	way to be unceremoniously kicked out.</para>
@@ -246,9 +244,9 @@ Beatles</para></blockquote>
 	#linux channel.  For some reason the people in charge of #linux 
 	channels seem to hate people who like causing destruction to people's machines
 	or who like to steal software.  Can't imagine why.</para>
-</sect2>
+</section>
 
-<sect2 id="round-up">
+<section xml:id="round-up">
 <title>Round Up</title>
 	<para>Apologies if that seems like a lot of DON'Ts, and very few DOs. 
 	 The DOs were already pretty much covered in the section on newsgroups and
@@ -258,9 +256,9 @@ Beatles</para></blockquote>
 	channel, sit there and watch, getting the feel for a half hour before
 	you say anything.  This can help you to recognize the correct tone you
 	should be using.</para>
-</sect2>
+</section>
 
-<sect2 id="further-reading">
+<section xml:id="further-reading">
 <title>Further Reading</title>
 	<para>There are excellent FAQs about how to get the most of IRC #linux
 	channels.  Most #linux channels have an FAQ and/or set or channel 
@@ -268,8 +266,8 @@ Beatles</para></blockquote>
 	see at any time using the <command>/topic</command> command.  Make sure 
 	you read the rules if there are any and follow them.  One fairly generic 
 	set of rules and advice is the ``Undernet #linux FAQ'' which can be found 
-	at <ulink url="http://linuxfaq.quartz.net.nz">http://linuxfaq.quartz.net.nz
-	</ulink>.</para>
-</sect2>
-</sect1>
+	at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://linuxfaq.quartz.net.nz">http://linuxfaq.quartz.net.nz
+	</link>.</para>
+</section>
+</section>
 </chapter>

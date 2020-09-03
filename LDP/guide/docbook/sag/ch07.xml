@@ -1,4 +1,5 @@
-<chapter id="system-monitoring">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="system-monitoring">
 <title>System Monitoring</title>
 
 	<blockquote><para><quote>That's Hall Monitor to you!</quote>Spongebob
@@ -16,7 +17,7 @@
 	CPU, Memory, Disk I/O, and Network.  The ability to determine where the
 	bottleneck is can save you a lot of time.</para>
 
-<sect1 id="system-resources">
+<section xml:id="system-resources">
 <title>System Resources</title>
 	<para>Being able to monitor the performance of your system
         is essential.  If system resources become too low it can cause a lot of
@@ -25,7 +26,7 @@
 	know what is happening can help determine whether system upgrades are needed, 
 	or if some services need to be moved to another machine.</para>
 
-<sect2 id="top">
+<section xml:id="top">
 <title>The <command>top</command> command.</title>
 	<para>The most common of these commands is <command>top</command>.
 	The <command>top</command> will display a continually updating report
@@ -94,13 +95,13 @@ Swap: 1044216k av,  161672k used,  882544k free                  199388k cached
 
 	<para>YOU MUST TAKE EXTREME CAUTION TO NOT MODIFY THESE FILES, DOING 
 	SO MAY CAUSE SYSTEM PROBLEMS!</para>
-</sect2>
+</section>
 
-<sect2 id="iostat">
+<section xml:id="iostat">
 <title>The <command>iostat</command> command.</title>
 	<para>The <command>iostat</command> will display the current CPU load
 	average and disk I/O information.  This is a great command to monitor 
-	your disk I/O usage.
+	your disk I/O usage.</para>
 
 <screen>
 <prompt>#</prompt> <userinput>iostat</userinput>
@@ -136,9 +137,9 @@ Device:  rrqm/s wrqm/s r/s  w/s rsec/s wsec/s rkB/s wkB/s avgrq-sz avgqu-sz awai
 	<para>The <command>iostat</command> man page contains a detailed 
 	explanation of what each of these columns mean.</para>
 
-</sect2>
+</section>
 
-<sect2 id="ps">
+<section xml:id="ps">
 <title>The <command>ps</command> command</title>
 	<para>The <command>ps</command> will provide you a list of
 	processes currently running.  There is a wide variety of options 
@@ -201,16 +202,16 @@ weeksa   19121 18668  0 12:58 pts/2    00:00:00 ps -ef
 	<para>With this information you can see exacly what is running on 
 	your system and kill run-away processes, or those that are causing 
 	problems.</para>
-</sect2>
+</section>
 
-<sect2 id="vmstat">
+<section xml:id="vmstat">
 <title>The <command>vmstat</command> command</title>
 	<para>The <command>vmstat</command> command  will provide a report 
 	showing statistics for system processes, memory, swap, 
 	I/O, and the CPU.  These statistics are generated using data from the 
 	last time the command was run to the present.  In the case of the 
 	command never being run, the data will be from the last reboot until 
-	the present.<para>
+	the present.</para><para>
 
 <screen>
 <prompt>#</prompt> <userinput>vmstat</userinput>
@@ -255,9 +256,9 @@ CPU
     sy: system time
     id: idle time</literallayout>
 </para></blockquote>
-</sect2>
+</section>
 
-<sect2 id="lsof">
+<section xml:id="lsof">
 <title>The <command>lsof</command> command</title>
 	<para>The <command>lsof</command> command will print out a list of
 	every file that is in use.  Since Linux considers everythihng a file, 	
@@ -270,18 +271,17 @@ CPU
 	<para>Or suppose you want to see all files in use by a particular process.
 	To do this you would use <command>lsof -p -processid-</command>.</para>
 
-</sect2>
+</section>
 
-<sect2 id="more-utils">
+<section xml:id="more-utils">
 <title>Finding More Utilities</title>
 	<para>To learn more about what command line tools are available, Chris 
-	Karakas has wrote a reference guide titled <ulink 
-	url="http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/GNU-Linux-Tools-Summary.html"> GNU/Linux 
-	Command-Line Tools Summary</ulink>.  It's a good resource for learning
+	Karakas has wrote a reference guide titled <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/GNU-Linux-Tools-Summary.html"> GNU/Linux 
+	Command-Line Tools Summary</link>.  It's a good resource for learning
 	what tools are out there and how to do a number of tasks.</para>
-</sect2>
-
-<sect1 id="fs-usage">
+</section>
+</section>
+<section xml:id="fs-usage">
 <title>Filesystem Usage</title>
 
 	<para>Many reports are currently talking about how cheap storage has
@@ -290,14 +290,14 @@ CPU
 	and control how it's used.</para> 
 	
 	
-<sect2 id="df">
+<section xml:id="df">
 <title>The df command</title>
 	<para>The <command>df</command> is the simplest tool available to 
 	view disk usage.  Simply type in <command>df</command> and you'll 
 	be shown disk usage for all your mounted filesystems in 1K blocks
 
 <screen>
-<prompt>user@server:~> <prompt><userinput>df</userinput>
+<prompt>user@server:~&gt; </prompt><userinput>df</userinput>
 <computeroutput>
 Filesystem           1K-blocks      Used Available Use% Mounted on
 /dev/hda3              5242904    759692   4483212  15% /
@@ -321,7 +321,7 @@ tmpfs                   127876         8    127868   1% /dev/shm
 	inodes.
 
 <screen>
-<prompt>user@server:~> </prompt><userinput>df -i</userinput>
+<prompt>user@server:~&gt; </prompt><userinput>df -i</userinput>
 <computeroutput>
 Filesystem            Inodes   IUsed   IFree IUse% Mounted on
 /dev/hda3                  0       0       0    -  /
@@ -334,9 +334,9 @@ tmpfs                  31969       5   31964    1% /dev/shm
 /dev/hda6                  0       0       0    -  /var
 </computeroutput>
 </screen></para>
-</sect2>
+</section>
 
-<sect2 id="du">
+<section xml:id="du">
 <title>The du command</title>
 	<para>Now that you know how much space has been used on a filesystem 
 	how can you find out where that data is?  To view usage by a directory 
@@ -344,7 +344,7 @@ tmpfs                  31969       5   31964    1% /dev/shm
 	filename <command>du</command> will act recursively.  For example:
 
 <screen>
-<prompt>user@server:~> </prompt><userinput>du file.txt</userinput>
+<prompt>user@server:~&gt; </prompt><userinput>du file.txt</userinput>
 <computeroutput>
 1300    file.txt
 </computeroutput>
@@ -354,7 +354,7 @@ tmpfs                  31969       5   31964    1% /dev/shm
 	and get the same output in "human-readable" form.
 
 <screen>
-<prompt>user@server:~> </prompt><userinput>du -h file.txt</userinput>
+<prompt>user@server:~&gt; </prompt><userinput>du -h file.txt</userinput>
 <computeroutput>
 1.3M     file.txt
 </computeroutput>
@@ -365,7 +365,7 @@ tmpfs                  31969       5   31964    1% /dev/shm
 	recursively.
 
 <screen>
-<prompt>user@server:~> </prompt><userinput>du -h /usr/local</userinput>
+<prompt>user@server:~&gt; </prompt><userinput>du -h /usr/local</userinput>
 <computeroutput>
 4.0K    /usr/local/games
 16K     /usr/local/include/nessus/net
@@ -391,24 +391,24 @@ tmpfs                  31969       5   31964    1% /dev/shm
 	<command>-s</command> option.
 
 <screen>
-<prompt>user@server:~> </prompt><userinput>du -hs /usr/local</userinput>
+<prompt>user@server:~&gt; </prompt><userinput>du -hs /usr/local</userinput>
 <computeroutput>
 210M    /usr/local
 </computeroutput>
 </screen></para>
-</sect2>
+</section>
 
 
-<sect2 id="quotas">
+<section xml:id="quotas">
 <title>Quotas</title>
 	<para>For more information about quotas you can read 
-	<ulink url="http://www.tldp.org/HOWTO/Quota.html">The Quota HOWTO
-	</ulink>.
-</sect2>
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/Quota.html">The Quota HOWTO
+	</link>.</para>
+</section>
 		
-</sect1>
+</section>
 
-<sect1 id="monitoring-users">
+<section xml:id="monitoring-users">
 <title>Monitoring Users</title>
 
 	<blockquote><para>Just because you're paranoid doesn't mean they 
@@ -420,15 +420,15 @@ tmpfs                  31969       5   31964    1% /dev/shm
 	You are going to want to see who is on the system, what they are 
 	running, and what kind of resources they are using.</para>
 
-<sect2 id="who">
+<section xml:id="who">
 <title>The who command</title>
 	<para>The easiest way to see who is on the system is to do a 
-	<command>who</command> or <command>w</command>.  The -->
-	<command>who</command> is a simple tool that lists out who is logged -->
+	<command>who</command> or <command>w</command>.  The --&gt;
+	<command>who</command> is a simple tool that lists out who is logged --&gt;
 	on the system and what port or terminal they are logged on at.
 
 <screen>
-<prompt>user@server:~></prompt> <userinput> who</userinput>
+<prompt>user@server:~&gt;</prompt> <userinput> who</userinput>
 <computeroutput>
 bjones   pts/0        May 23 09:33
 wally    pts/3        May 20 11:35
@@ -436,9 +436,9 @@ aweeks   pts/1        May 22 11:03
 aweeks   pts/2        May 23 15:04
 </computeroutput>
 </screen></para>
-</sect2>
+</section>
 
-<sect2 id="ps-u">
+<section xml:id="ps-u">
 <title>The ps command -again!</title>
 
 	<para>In the previous section we can see that user aweeks is logged 
@@ -447,7 +447,7 @@ aweeks   pts/2        May 23 15:04
 	<command>ps -u aweeks</command> and get the following output
 
 <screen>
-<prompt>user@server:~> </prompt><userinput>ps -u aweeks</userinput>
+<prompt>user@server:~&gt; </prompt><userinput>ps -u aweeks</userinput>
 <computeroutput>	
 20876 pts/1    00:00:00 bash
 20904 pts/2    00:00:00 bash
@@ -460,10 +460,10 @@ aweeks   pts/2        May 23 15:04
 	<command>ssh</command>.</para>
 
 	<para>This is a much more consolidated use of the 
-	<command>ps</command> than discussed previously.<para>
-</sect2>
+	<command>ps</command> than discussed previously.</para>
+</section>
 
-<sect2 id="w">
+<section xml:id="w">
 <title>The w command</title>
 
 	<para>Even easier than using the <command>who</command> and 
@@ -472,7 +472,7 @@ aweeks   pts/2        May 23 15:04
 	but also the commands they are running.
 
 <screen>
-<prompt>user@server:~> </prompt><userinput>w</userinput>
+<prompt>user@server:~&gt; </prompt><userinput>w</userinput>
 <computeroutput>
 aweeks   :0        09:32   ?xdm?  30:09   0.02s -:0
 aweeks   pts/0     09:33    5:49m  0.00s  0.82s kdeinit: kded
@@ -484,22 +484,22 @@ aweeks   pts/1     15:03   59.00s  0.03s  0.03s /bin/bash
 	<para>From this we can see that I have a <command>kde</command> session
 	running, I'm working in this document :-), and have another terminal
 	open sitting idle at a bash prompt.</para>
-</sect2>
+</section>
 
-<sect2 id="skill">
+<section xml:id="skill">
 <title>The skill command</title>
 
 	<para> To Be Added</para>
 
-</sect2>
+</section>
 
-<sect2 id="nice">
+<section xml:id="nice">
 <title>nice and renice</title>
 
 	<para>To Be Added</para>
 
-</sect2>
+</section>
 
 
-</sect1>
+</section>
 </chapter>

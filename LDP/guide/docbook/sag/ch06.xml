@@ -1,9 +1,10 @@
-<chapter id="memory-management">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="memory-management">
 <title>Memory Management</title>
 
 	<blockquote><para><quote>Minnet, jag har tappat mitt minne,
-	&auml;r jag svensk eller finne, kommer inte ih&aring;g...</quote>
-	(Bosse &Ouml;sterberg)
+	är jag svensk eller finne, kommer inte ihåg...</quote>
+	(Bosse Österberg)
 	</para>
 	<para>A Swedish drinking song, (rough) translation: ``Memory, I
 	have lost my memory.  Am I Swedish or Finnish?  I can't
@@ -15,7 +16,7 @@
 	The purpose and workings and the things the system administrator
 	needs to take into consideration are described.</para>
 	
-<sect1 id="vm-intro">
+<section xml:id="vm-intro">
 <title>What is virtual memory?</title>
 
 	<para>Linux supports <glossterm>virtual memory</glossterm>, that
@@ -58,9 +59,9 @@
 	terminology talks about swapping anyway.
 	</para>
 
-</sect1>
+</section>
 
-<sect1 id="swap-space">
+<section xml:id="swap-space">
 <title>Creating a swap space</title>
 
 	<para>A swap file is an ordinary file; it is in no way special
@@ -133,9 +134,9 @@
 	8 swap spaces simultaneously, for a total of 16GB.
 	</para>
 
-</sect1>
+</section>
 
-<sect1 id="using-swap">
+<section xml:id="using-swap">
 <title>Using a swap space</title>
 
 	<para>An initialized swap space is taken into use with
@@ -221,9 +222,9 @@ Swap:        32452       6684      25768</computeroutput>
 	free for a long time.  There is no need to worry about this,
 	but it can be comforting to know what is happening.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="sharing-swap">
+<section xml:id="sharing-swap">
 <title>Sharing swap spaces with other operating systems</title>
 
 	<para>Virtual memory is built into many operating systems.
@@ -232,19 +233,19 @@ Swap:        32452       6684      25768</computeroutput>
 	one are being wasted.  It would be more efficient for them to
 	share a single swap space.  This is possible, but can require a
 	bit of hacking.  The  Tips-HOWTO at
-	<ulink url="http://www.tldp.org/HOWTO/Tips-HOWTO.html"> 
-	http://www.tldp.org/HOWTO/Tips-HOWTO.html</ulink>, which contains 
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/Tips-HOWTO.html"> 
+	http://www.tldp.org/HOWTO/Tips-HOWTO.html</link>, which contains 
 	some advice on how to
 	implement this.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="swap-allocation">
+<section xml:id="swap-allocation">
 <title>Allocating swap space</title>
 
 	<para>Some people will tell you that you should allocate twice as 
 	much swap space as you have physical memory, but this is a bogus
-	rule. Here's how to do it properly:
+	rule. Here's how to do it properly:</para>
 
 	<itemizedlist>
 
@@ -275,7 +276,7 @@ Swap:        32452       6684      25768</computeroutput>
 	libraries exist only once.</para>
 	
 	<para>The <command>free</command> and <command>ps</command>
-	commands are useful for estimating the memory needs.
+	commands are useful for estimating the memory needs.</para>
 	
 	</listitem>
 
@@ -314,6 +315,7 @@ Swap:        32452       6684      25768</computeroutput>
 	probably invest in more physical memory, otherwise performance
 	will be too low.</para>
 
+	</listitem>
 	</itemizedlist>
     
 	<para>It's a good idea to have at least some swap space, even if
@@ -335,9 +337,9 @@ Swap:        32452       6684      25768</computeroutput>
 	since it won't always be true.
 	</para>
 	
-</sect1>
+</section>
 
-<sect1 id="buffer-cache">
+<section xml:id="buffer-cache">
 <title>The buffer cache</title>
 
 	<para>Reading from a disk
@@ -432,5 +434,5 @@ Swap:        32452       6684      25768</computeroutput>
 	of the cache, it happens completely automatically.  Except for
 	following the proper procedures for shutdown and removing
 	floppies, you do not need to worry about it.  </para>
-</sect1>
+</section>
 </chapter>

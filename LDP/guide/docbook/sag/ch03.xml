@@ -1,4 +1,5 @@
-<chapter id="dir-tree-overview">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="dir-tree-overview">
 <title>Overview of the Directory Tree</title>
 
 	<blockquote><para><quote> Two days later, there was Pooh, sitting
@@ -7,7 +8,7 @@
 
 	<para>This chapter describes the important parts of a standard Linux
 	directory tree, based on the Filesystem Hierarchy Standard
-	<indexterm id="ch03-fhs"><primary>Filesystem Hierarchy Standard (FHS)
+	<indexterm xml:id="ch03-fhs"><primary>Filesystem Hierarchy Standard (FHS)
 	</primary></indexterm>. It
 	outlines the normal way of breaking the directory tree into separate
 	filesystems with different purposes and gives the motivation behind
@@ -15,11 +16,11 @@
 	standard slavishly, but it is generic enough to give you an
 	overview.</para>
 
-<sect1 id="fs-background">
+<section xml:id="fs-background">
 <title>Background</title>
 
 	<para>This chapter is loosely based on the <citetitle>Filesystems
-	Hierarchy Standard</citetitle> (FHS)<indexterm id="ch03-fhs2">
+	Hierarchy Standard</citetitle> (FHS)<indexterm xml:id="ch03-fhs2">
 	<primary>Filesystem Hierarchy Standard (FHS)</primary></indexterm>.
 	version 2.1, which attempts to
 	set a standard for how the directory tree in a Linux
@@ -48,27 +49,27 @@
 	to accommodate to disk size limits and to ease backup and other
 	system administration tasks.  The major parts are the root
 	(<filename>/</filename>
-        <indexterm id="ch03-filesystem1"><primary>filesystem</primary>
+        <indexterm xml:id="ch03-filesystem1"><primary>filesystem</primary>
         <secondary>/ (root)</secondary></indexterm>), 
 	<filename>/usr</filename>
-        <indexterm id="ch03-filesystem2"><primary>filesystem</primary>
+        <indexterm xml:id="ch03-filesystem2"><primary>filesystem</primary>
         <secondary>/usr</secondary></indexterm>,
         <filename>/var</filename>
-        <indexterm id="ch03-filesystem3"><primary>filesystem</primary>
+        <indexterm xml:id="ch03-filesystem3"><primary>filesystem</primary>
         <secondary>/var</secondary></indexterm>, and
         <filename>/home</filename>
-        <indexterm id="ch03-filesystem4"><primary>filesystem</primary>
+        <indexterm xml:id="ch03-filesystem4"><primary>filesystem</primary>
         <secondary>/home</secondary></indexterm> filesystems 
-	(see <xref linkend="fstree">).  Each part has a
+	(see <xref linkend="fstree"/>).  Each part has a
 	different purpose. The directory tree has been designed so that it
 	works well in a network of Linux machines which may share some parts
 	of the filesystems over a read-only device (e.g., a CD-ROM), or over
-	the network with NFS<indexterm id="ch03-nfs">
+	the network with NFS<indexterm xml:id="ch03-nfs">
         <primary>Network File System (NFS)</primary></indexterm>.</para>
 
-		<figure id="fstree" float="1"> <title>Parts of a Unix
+		<figure xml:id="fstree" floatstyle="normal"> <title>Parts of a Unix
 		directory tree. Dashed lines indicate partition 
-		limits.</title> <graphic fileref="fstree.png">
+		limits.</title> <mediaobject><imageobject><imagedata fileref="fstree.svg"/></imageobject></mediaobject>
 		</figure>
 	
 	<para>The roles of the different parts of the directory tree are
@@ -77,7 +78,7 @@
 	<itemizedlist>
 	
 		<listitem> <para>The root filesystem
-		<indexterm id="ch03-filesystem5">
+		<indexterm xml:id="ch03-filesystem5">
 		<primary>filesystem</primary><secondary>/ (root)</secondary>
         	</indexterm> is specific for
 		each machine (it is generally stored on a local disk,
@@ -91,7 +92,7 @@
 		from backups.</para> </listitem>
 
 		<listitem><para> The <filename>/usr</filename>
-		<indexterm id="ch03-filesystem6"><primary>filesystem</primary>
+		<indexterm xml:id="ch03-filesystem6"><primary>filesystem</primary>
         	<secondary>/usr</secondary></indexterm> filesystem
 		contains all commands, libraries, manual pages, and other
 		unchanging files needed during normal operation. No files in
@@ -109,20 +110,20 @@
 		during a crash.</para></listitem>
 
 		<listitem><para>The <filename>/var</filename>
-		<indexterm id="ch03-filesystem7"><primary>filesystem</primary>
+		<indexterm xml:id="ch03-filesystem7"><primary>filesystem</primary>
         	<secondary>/var</secondary></indexterm>
 		filesystem contains files that change, such as spool
 		directories (for mail, news, printers, etc), log files,
 		formatted manual pages, and temporary files. Traditionally
 		everything in <filename>/var</filename> has been somewhere
 		below <filename>/usr</filename>
-		<indexterm id="ch03-filesystem8"><primary>filesystem</primary>
+		<indexterm xml:id="ch03-filesystem8"><primary>filesystem</primary>
         	<secondary>/usr</secondary></indexterm>, but that made it 
 		impossible to mount <filename>/usr</filename> read-only.
-		<para></listitem>
+		</para></listitem>
 
 		<listitem><para> The <filename>/home</filename>
-		<indexterm id="ch03-filesystem9"><primary>filesystem</primary>
+		<indexterm xml:id="ch03-filesystem9"><primary>filesystem</primary>
                 <secondary>/home</secondary></indexterm>
 		filesystem contains the users' home directories, i.e., all
 		the real data on the system.  Separating home directories to
@@ -146,9 +147,9 @@
 	how space is allocated for various purposes.  The important part,
 	though, is that all the standard <emphasis>names</emphasis> work;
 	even if, say, <filename>/var</filename>
-	<indexterm id="ch03-filesystem10"><primary>filesystem</primary>
+	<indexterm xml:id="ch03-filesystem10"><primary>filesystem</primary>
         <secondary>/var</secondary></indexterm> and
-	<filename>/usr</filename><indexterm id="ch03-filesystem11">
+	<filename>/usr</filename><indexterm xml:id="ch03-filesystem11">
 	<primary>filesystem</primary><secondary>/usr</secondary></indexterm>
         are actually on the same partition, the names
 	<filename>/usr/lib/libc.a</filename> and
@@ -171,12 +172,12 @@
 	them is a maintenance
 	nightmare).</para>
 
-</sect1>
+</section>
 
-<sect1 id="root-fs">
+<section xml:id="root-fs">
 <title>The root filesystem</title>
 
-	<para>The root filesystem<indexterm id="ch03-filesystem12">
+	<para>The root filesystem<indexterm xml:id="ch03-filesystem12">
         <primary>filesystem</primary><secondary>/ (root)</secondary>
 	</indexterm> should generally be small, since
 	it contains very critical files and a small, infrequently
@@ -188,11 +189,11 @@
 	<para>The root directory generally doesn't contain any files, except
 	perhaps on older systems where the standard boot image for the system, 
 	usually called <filename>/vmlinuz</filename>
-	<indexterm id="ch03-filesystem13">
+	<indexterm xml:id="ch03-filesystem13">
         <primary>booting</primary><secondary>vmlinuz</secondary>
 	</indexterm> was kept there.  (Most 
 	distributions have moved those files into the 
-	<filename>/boot</filename><indexterm id="ch03-filesystem14">
+	<filename>/boot</filename><indexterm xml:id="ch03-filesystem14">
         <primary>filesystem</primary><secondary>/boot</secondary>
 	</indexterm> directory.  Otherwise, all files are kept
 	in subdirectories under the root filesystem:
@@ -200,18 +201,18 @@
 	<glosslist>
 
 	<glossentry>
-	<glossterm><filename>/bin<indexterm id="ch03-filesystem15">
-        <primary>filesystem</primary><secondary>/bin</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/bin
+        filesystem/bin
+        </glossterm>
 	
 		<glossdef><para>Commands needed during bootup
 		that might be used by normal users (probably after
 		bootup).</para></glossdef></glossentry>
 
 	<glossentry> 
-	<glossterm><filename>/sbin<indexterm id="ch03-filesystem16">
-        <primary>filesystem</primary><secondary>/sbin</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/sbin
+        filesystem/sbin
+        </glossterm>
 
 		<glossdef><para>Like <filename>/bin</filename>, but the
 		commands are not intended for normal users, although they
@@ -221,34 +222,34 @@
 		path.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/etc<indexterm id="ch03-filesystem17">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/etc
+        filesystem/etc
+        </glossterm>
 	
 		<glossdef><para>Configuration files specific to the
 		machine.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/root<indexterm id="ch03-filesystem18">
-        <primary>filesystem</primary><secondary>/root</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/root
+        filesystem/root
+        </glossterm>
 
 	        <glossdef><para>The home directory for user root.  This is
 		usually not accessible to other users on the
 		system</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/lib<indexterm id="ch03-filesystem19">
-        <primary>filesystem</primary><secondary>/lib</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/lib
+        filesystem/lib
+        </glossterm>
 
                 <glossdef><para>Shared libraries needed by the programs on
 		the root filesystem.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/lib/modules<indexterm id="ch03-filesystem20">
-        <primary>filesystem</primary><secondary>/lib/modules</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/lib/modules
+        filesystem/lib/modules
+        </glossterm>
 
 		<glossdef><para>Loadable kernel modules, especially those
 		that are needed to boot the system when recovering from
@@ -256,38 +257,38 @@
 		drivers).</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/dev<indexterm id="ch03-filesystem21">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/dev
+        filesystem/dev
+        </glossterm>
 
                 <glossdef><para>Device files.  These are special files that 
 		help the user interface with the various devices on the system.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/tmp<indexterm id="ch03-filesystem22">
-        <primary>filesystem</primary><secondary>/tmp</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/tmp
+        filesystem/tmp
+        </glossterm>
 
 		<glossdef><para>Temporary files.  As the name suggests,
 		programs running often store temporary files in here.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/boot<indexterm id="ch03-filesystem23">
-        <primary>filesystem</primary><secondary>/boot</secondary>
-        </indexterm></filename></glossterm>
+	<glossterm>/boot
+        filesystem/boot
+        </glossterm>
 		<glossdef><para>Files used by the bootstrap loader,
-		e.g., LILO<indexterm id="ch03-lilo"><primary>LILO</primary>
-		</indexterm> or GRUB<indexterm id="GRUB"><primary>GRUB
-		</primary>.  Kernel images are often kept here instead
+		e.g., LILO<indexterm xml:id="ch03-lilo"><primary>LILO</primary>
+		</indexterm> or GRUB<indexterm xml:id="GRUB"><primary>GRUB
+		</primary></indexterm>.  Kernel images are often kept here instead
 		of in the root directory.  If there are many kernel
 		images, the directory can easily grow rather big, and it
 		might be better to keep it in a separate filesystem.
 		Another reason would be to make sure the kernel
 		images are within the first 1024 cylinders of an IDE
 		disk. This 1024 cylinder limit is no longer true in 
-		most cases.  With modern BIOSes<indexterm id="ch03-bios">
+		most cases.  With modern BIOSes<indexterm xml:id="ch03-bios">
 		<primary>BIOS</primary></indexterm> and later versions of LILO
 		(the LInux LOader) the 1024 cylinder limit can be passed 
 		with logical block addressing (LBA).  See the 
@@ -295,9 +296,9 @@
 	       </para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/mnt</filename><indexterm id="ch03-filesystem24">
-        <primary>filesystem</primary><secondary>/mnt</secondary>
-        </indexterm></glossterm>
+	<glossterm>/mnt
+        filesystem/mnt
+        </glossterm>
 		<glossdef><para>Mount point for temporary mounts by
 		the system administrator.  Programs aren't supposed to mount
 		on <filename>/mnt</filename> automatically.
@@ -308,18 +309,18 @@
 		with an ext2 filesystem).</para></glossdef></glossentry>
 
 	<glossentry> 
-	<glossterm><filename>/proc</filename><indexterm id="ch03-filesystem25">
-        <primary>filesystem</primary><secondary>/proc</secondary>
-        </indexterm>,
-	<filename>/usr</filename><indexterm id="ch03-filesystem26">
-        <primary>filesystem</primary><secondary>/usr</secondary>
-        </indexterm>, 
-	<filename>/var</filename><indexterm id="ch03-filesystem27">
-        <primary>filesystem</primary><secondary>/var</secondary>
-        </indexterm>,
-	<filename>/home</filename><indexterm id="ch03-filesystem28">
-        <primary>filesystem</primary><secondary>/home</secondary>
-        </indexterm></glossterm>
+	<glossterm>/proc
+        filesystem/proc
+        ,
+	/usr
+        filesystem/usr
+        , 
+	/var
+        filesystem/var
+        ,
+	/home
+        filesystem/home
+        </glossterm>
 
 	<glossdef><para>Mount points for the other filesystems.  Although
 	<filename>/proc</filename> does not reside on any disk in reality
@@ -329,12 +330,12 @@
 
 	</glosslist>
 	</para>
-</sect1>
+</section>
 
-<sect1 id="etc-fs">
+<section xml:id="etc-fs">
 <title>The <filename>/etc</filename> directory</title>
 
-	<para>The <filename>/etc</filename><indexterm id="ch03-filesystem29">
+	<para>The <filename>/etc</filename><indexterm xml:id="ch03-filesystem29">
         <primary>filesystem</primary><secondary>/etc</secondary>
         </indexterm> maintains a lot
 	of files.  Some of them are described below.  For others, you
@@ -346,22 +347,22 @@
 	<glosslist>
 	
 	<glossentry>
-	<glossterm><filename>/etc/rc</filename> or 
-	<filename>/etc/rc.d</filename> or 
-	<filename>/etc/rc?.d</filename><indexterm id="ch03-etc1">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-	<tertiary>/etc/rc.d</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/rc or 
+	/etc/rc.d or 
+	/etc/rc?.d
+        filesystem/etc
+	/etc/rc.d
+        </glossterm>
 		<glossdef><para>Scripts or directories of scripts
 		to run at startup or when changing the run level.
-		See <xref linkend="init"> for further
+		See <xref linkend="init"/> for further
 		information.  </para></glossdef></glossentry>
 
 	<glossentry> 
-	<glossterm><filename>/etc/passwd</filename><indexterm id="ch03-etc2">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/passwd</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/passwd
+        filesystem/etc
+        /etc/passwd
+        </glossterm>
 
 		<glossdef><para>The user database, with fields giving the
 		username, real name, home directory, and other information
@@ -370,45 +371,44 @@
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/etc/shadow</filename><indexterm id="ch03-etc3">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/shadow</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/shadow
+        filesystem/etc
+        /etc/shadow
+        </glossterm>
 
 		<glossdef><para><filename>/etc/shadow</filename> is an
 		encrypted file the holds user passwords.</para></glossdef>
 		</glossentry>
 
 	<glossentry>
-	<glossterm><filename>/etc/fdprm</filename><indexterm id="ch03-etc4">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/fdprm</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/fdprm
+        filesystem/etc
+        /etc/fdprm
+        </glossterm>
 		<glossdef><para>Floppy disk parameter table.
 		Describes what different floppy disk formats look
 		like.  Used by <command>setfdprm</command>
-		<indexterm id="ch03-setfdprm">
+		<indexterm xml:id="ch03-setfdprm">
         	<primary>commands</primary><secondary>setfdprm</secondary>
         	</indexterm>.  See the
 		<command>setfdprm</command> manual page for more
 		information.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/etc/fstab</filename><indexterm id="ch03-etc5">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/fstab</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/fstab
+        filesystem/etc
+        /etc/fstab
+        </glossterm>
 
 		<glossdef><para>Lists the filesystems mounted automatically
 		at startup by the <command>mount -a</command> command (in
 		<filename>/etc/rc</filename> or equivalent startup file).
 		Under Linux, also contains information about swap areas used
 		automatically by <command>swapon -a</command>
-		<indexterm id="ch03-swapon">
+		<indexterm xml:id="ch03-swapon">
                 <primary>commands</primary><secondary>swapon</secondary>
-                </indexterm>.  See <xref
-		linkend="mount-and-umount"> and the <command>mount</command>
-		<indexterm id="ch03-mount">
+                </indexterm>.  See <xref linkend="mount-and-umount"/> and the <command>mount</command>
+		<indexterm xml:id="ch03-mount">
                 <primary>commands</primary><secondary>mount</secondary>
                 </indexterm>
 		manual page for more information.  Also
@@ -416,10 +416,10 @@
 		section 5. </para></glossdef></glossentry>
 
 	<glossentry> 
-	<glossterm><filename>/etc/group</filename><indexterm id="ch03-etc6">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/group</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/group
+        filesystem/etc
+        /etc/group
+        </glossterm>
 
 		<glossdef><para>Similar to <filename>/etc/passwd</filename>,
 		but describes groups instead of users.  See the
@@ -427,32 +427,32 @@
 		information. </para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/etc/inittab</filename><indexterm id="ch03-etc7">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/inittab</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/inittab
+        filesystem/etc
+        /etc/inittab
+        </glossterm>
 		<glossdef><para>Configuration file for
 		<command>init</command>.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/etc/issue</filename><indexterm id="ch03-etc8">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/issue</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/issue
+        filesystem/etc
+        /etc/issue
+        </glossterm>
 		<glossdef><para>Output by <command>getty</command>
-		<indexterm id="ch03-getty"><primary>commands</primary>
+		<indexterm xml:id="ch03-getty"><primary>commands</primary>
         	<secondary>getty</secondary></indexterm> before
 		the login prompt.  Usually contains a short description or
 		welcoming message to the system.  The contents are up to
 		the system administrator.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/etc/magic</filename><indexterm id="ch03-etc9">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/magic</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/magic
+        filesystem/etc
+        /etc/magic
+        </glossterm>
 		<glossdef><para>The configuration file
-		for <command>file</command><indexterm id="ch03-file">
+		for <command>file</command><indexterm xml:id="ch03-file">
 		<primary>commands</primary>
                 <secondary>file</secondary></indexterm>.  Contains the
 		descriptions of various file formats based on
@@ -462,10 +462,10 @@
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/etc/motd</filename><indexterm id="ch03-etc10">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/motd</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/motd
+        filesystem/etc
+        /etc/motd
+        </glossterm>
 		
 		<glossdef><para>The message of the day, automatically
 		output after a successful login.  Contents are up to the
@@ -474,69 +474,69 @@
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/etc/mtab</filename><indexterm id="ch03-etc11">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/mtab</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/mtab
+        filesystem/etc
+        /etc/mtab
+        </glossterm>
 		
 		<glossdef><para>List of currently mounted filesystems.
 		Initially set up by the bootup scripts, and updated
 		automatically by the <command>mount</command>
-		<indexterm id="ch03-mount2"><primary>commands</primary>
+		<indexterm xml:id="ch03-mount2"><primary>commands</primary>
                 <secondary>mount</secondary></indexterm>
 		command.  Used when a list of mounted filesystems is
 		needed, e.g., by the <command>df</command>
-		<indexterm id="ch03-df"><primary>commands</primary>
+		<indexterm xml:id="ch03-df"><primary>commands</primary>
                 <secondary>df</secondary></indexterm> command.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/etc/login.defs</filename><indexterm id="ch03-etc12">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/login.defs</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/login.defs
+        filesystem/etc
+        /etc/login.defs
+        </glossterm>
 
 		<glossdef><para>Configuration file for the
-		<command>login</command><indexterm id="ch03-login2">
+		<command>login</command><indexterm xml:id="ch03-login2">
 		<primary>commands</primary>
                 <secondary>login</secondary></indexterm> command.  The
 		<filename>login.defs</filename> file usually has a manual
 		page in section 5. </para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/etc/printcap</filename><indexterm id="ch03-etc13">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/printcap</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/printcap
+        filesystem/etc
+        /etc/printcap
+        </glossterm>
 
 		<glossdef><para>Like <filename>/etc/termcap</filename>
-        	<glossterm><filename>/etc/printcap</filename>
-		<indexterm id="ch03-etc14"><primary>filesystem</primary>
-        	<secondary>/etc</secondary><tertiary>/etc/termcap</tertiary>
-        	</indexterm>, but
+        	<glossterm>/etc/printcap
+		filesystem
+        	/etc/etc/termcap
+        	</glossterm>, but
 		intended for printers.  However it uses different syntax.
 		The <filename>printcap</filename> has a manual page in
 		section 5. </para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/etc/profile</filename><indexterm id="ch03-etc15">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/profile</tertiary>
-        </indexterm>, 
-	<filename>/etc/bash.rc</filename><indexterm id="ch03-etc16">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/bash.rc</tertiary>
-        </indexterm>, 
-	<filename>/etc/csh.cshrc</filename><indexterm id="ch03-etc17">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/csh.cshrc</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/profile
+        filesystem/etc
+        /etc/profile
+        , 
+	/etc/bash.rc
+        filesystem/etc
+        /etc/bash.rc
+        , 
+	/etc/csh.cshrc
+        filesystem/etc
+        /etc/csh.cshrc
+        </glossterm>
 		<glossdef><para>Files executed at login or startup time
-		by the Bourne<indexterm id="ch03-sh"><primary>shells</primary>
+		by the Bourne<indexterm xml:id="ch03-sh"><primary>shells</primary>
 		<secondary>sh - Bourne</secondary></indexterm>, BASH
-		<indexterm id="ch03-bash"><primary>shells</primary>
+		<indexterm xml:id="ch03-bash"><primary>shells</primary>
 		<secondary>bash - Bourne Again SHell</secondary></indexterm>,
-		or C<indexterm id="ch03-csh"><primary>shells
+		or C<indexterm xml:id="ch03-csh"><primary>shells
 		</primary><secondary>csh - C SHell</secondary></indexterm> 
 		shells.  These allow the system
 		administrator to set global defaults for all users.  Users
@@ -546,10 +546,10 @@
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/etc/securetty</filename><indexterm id="ch03-etc18">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/securetty</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/securetty
+        filesystem/etc
+        /etc/securetty
+        </glossterm>
 
 		<glossdef><para>Identifies secure terminals, i.e., the
 		terminals from which root is allowed to log in. Typically
@@ -558,24 +558,24 @@
 		by breaking into a system over a modem or a network.  Do not
 		allow root logins over a network.  Prefer to log in as an
 		unprivileged user and use <command>su</command>
-		<indexterm id="ch03-su"><primary>commands</primary>
+		<indexterm xml:id="ch03-su"><primary>commands</primary>
 		<secondary>su</secondary></indexterm> or
-		<command>sudo</command><indexterm id="ch03-sudo">
+		<command>sudo</command><indexterm xml:id="ch03-sudo">
 		<primary>commands</primary><secondary>sudo</secondary>
 		</indexterm> to gain root
 		privileges.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/etc/shells</filename><indexterm id="ch03-etc19">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/shells</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/shells
+        filesystem/etc
+        /etc/shells
+        </glossterm>
 		<glossdef><para>Lists trusted shells.  The
-		<command>chsh</command><indexterm id="ch03-chsh">
+		<command>chsh</command><indexterm xml:id="ch03-chsh">
 		<primary>commands</primary><secondary>chsh</secondary>
                 </indexterm> command allows users to change
 		their login shell only to shells listed in this file.
-		<command>ftpd</command><indexterm id="ch03-ftpd">
+		<command>ftpd</command><indexterm xml:id="ch03-ftpd">
                 <primary>commands</primary><secondary>ftpd</secondary>
                 </indexterm>, is the server process that provides
 		FTP services for a machine, will check that the user's
@@ -584,10 +584,10 @@
 		listed there.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/etc/termcap</filename><indexterm id="ch03-etc20">
-        <primary>filesystem</primary><secondary>/etc</secondary>
-        <tertiary>/etc/termcap</tertiary>
-        </indexterm></glossterm>
+	<glossterm>/etc/termcap
+        filesystem/etc
+        /etc/termcap
+        </glossterm>
 		<glossdef><para>The terminal capability database.
 		Describes by what ``escape sequences'' various terminals
 		can be controlled.  Programs are written so that instead
@@ -603,19 +603,19 @@
 	</glosslist>
 	</para>
 
-</sect1>
+</section>
 
-<sect1 id="dev-fs">
+<section xml:id="dev-fs">
 <title>The <filename>/dev</filename> directory</title>
 
-	<para>The <filename>/dev</filename><indexterm id="ch03-dev1">
+	<para>The <filename>/dev</filename><indexterm xml:id="ch03-dev1">
 	<primary>filesystem</primary>
 	<secondary>/dev</secondary></indexterm> directory contains
 	the special device files for all the devices. 
 	The device files are created during
 	installation, and later with the <command>/dev/MAKEDEV</command>
-	<indexterm id="ch03-makedev"><primary>commands</primary>
-	<secondary>MAKEDEV</secondary>
+	<indexterm xml:id="ch03-makedev"><primary>commands</primary>
+	<secondary>MAKEDEV</secondary></indexterm>
 	script. The <command>/dev/MAKEDEV.local</command> is a script
 	written by the system administrator that creates local-only device
 	files or links (i.e. those that are not part of the standard
@@ -633,9 +633,9 @@
 
         <glosslist>
         <glossentry>
-        <glossterm><filename>/dev/dsp</filename><indexterm id="ch03-dev2">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/dsp</tertiary></indexterm></glossterm>
+        <glossterm>/dev/dsp
+        filesystem/dev
+        /dev/dsp</glossterm>
 
             <glossdef><para>Digital Signal Processor.  Basically this forms
             the interface between software which produces sound and your
@@ -643,9 +643,9 @@
             3.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/fd0</filename><indexterm id="ch03-dev3">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/fd0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/fd0
+        filesystem/dev
+        /dev/fd0</glossterm>
 
             <glossdef><para>The first floppy drive.  If you are lucky enough
             to have several drives then they will be numbered sequentially.
@@ -653,9 +653,9 @@
             0.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/fb0</filename><indexterm id="ch03-dev4">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/fb0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/fb0
+        filesystem/dev
+        /dev/fb0</glossterm>
 
             <glossdef><para>The first framebuffer device. A framebuffer is
             an abstraction layer between software and graphics hardware.
@@ -667,20 +667,20 @@
             0.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/hda</filename><indexterm id="ch03-dev5">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/hda</tertiary></indexterm></glossterm>
+        <glossterm>/dev/hda
+        filesystem/dev
+        /dev/hda</glossterm>
 
             <glossdef><para><filename>/dev/hda</filename> is the master IDE
             drive on the primary IDE controller.
-            <filename>/dev/hdb</filename><indexterm id="ch03-dev6">
+            <filename>/dev/hdb</filename><indexterm xml:id="ch03-dev6">
             <primary>filesystem</primary><secondary>/dev</secondary>
             <tertiary>/dev/hdb</tertiary></indexterm> the slave drive on the 
             primary controller.  <filename>/dev/hdc</filename>
-	    <indexterm id="ch03-dev7"><primary>filesystem</primary>
+	    <indexterm xml:id="ch03-dev7"><primary>filesystem</primary>
 	    <secondary>/dev</secondary><tertiary>/dev/hdc</tertiary>
             </indexterm>, and <filename>/dev/hdd</filename>
-            <indexterm id="ch03-dev8"><primary>filesystem</primary>
+            <indexterm xml:id="ch03-dev8"><primary>filesystem</primary>
 	    <secondary>/dev</secondary><tertiary>/dev/hdd</tertiary>
             </indexterm> are the master and slave devices
             on the secondary controller respectively.  Each disk is divided
@@ -688,7 +688,7 @@
             partitions 5 and above are logical partitions inside extended
             partitions.  Therefore the device file which references each
             partition is made up of several parts.  For example
-            <filename>/dev/hdc9</filename><indexterm id="ch03-dev9">
+            <filename>/dev/hdc9</filename><indexterm xml:id="ch03-dev9">
 	    <primary>filesystem</primary><secondary>/dev</secondary>
             <tertiary>/dev/hdc9</tertiary>
             </indexterm> references partition 9 (a logical
@@ -696,10 +696,10 @@
             drive on the secondary IDE controller.  The major and minor node
             numbers are somewhat complex.  For the first IDE controller all
             partitions are block devices on major node 3.  The master drive
-            <filename>hda</filename><indexterm id="ch03-dev10">
+            <filename>hda</filename><indexterm xml:id="ch03-dev10">
             <primary>filesystem</primary><secondary>/dev</secondary>
             <tertiary>/dev/hda</tertiary></indexterm> is at minor 0 and the 
-            slave drive <filename>hdb</filename><indexterm id="ch03-dev11">
+            slave drive <filename>hdb</filename><indexterm xml:id="ch03-dev11">
             <primary>filesystem</primary><secondary>/dev</secondary>
             <tertiary>/dev/hdb</tertiary></indexterm> is at minor 64.  For 
             each partition inside the drive add the partition number to the minor 
@@ -709,9 +709,9 @@
             but with major node 22.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/ht0</filename><indexterm id="ch03-dev12">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/ht0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/ht0
+        filesystem/dev
+        /dev/ht0</glossterm>
 
             <glossdef><para>The first IDE tape drive.  Subsequent drives are
             numbered <filename>ht1</filename> etc.  They are character
@@ -720,9 +720,9 @@
             etc.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/js0</filename><indexterm id="ch03-dev13">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/js0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/js0
+        filesystem/dev
+        /dev/js0</glossterm>
 
             <glossdef><para>The first analogue joystick.  Subsequent joysticks
             are numbered <filename>js1</filename>, <filename>js2</filename>
@@ -734,9 +734,9 @@
             128.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/lp0</filename><indexterm id="ch03-dev14">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/lp0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/lp0
+        filesystem/dev
+        /dev/lp0</glossterm>
 
             <glossdef><para>The first parallel printer device.  Subsequent
             printers are numbered <filename>lp1</filename>,
@@ -745,9 +745,9 @@
             sequentially.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/loop0</filename><indexterm id="ch03-dev15">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/loop0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/loop0
+        filesystem/dev
+        /dev/loop0</glossterm>
 
             <glossdef><para>The first loopback device.  Loopback devices are
             used for mounting filesystems which are not located on other
@@ -755,46 +755,45 @@
             an iso9660 CD ROM image without burning it to CD then you need
             to use a loopback device to do so.  This is usually transparent
             to the user and is handled by the <command>mount</command>
-	    <indexterm id="ch03-dev16"><primary>commands</primary>
+	    <indexterm xml:id="ch03-dev16"><primary>commands</primary>
             <secondary>mount</secondary></indexterm>
             command.  Refer to the manual pages for <command>mount</command>
-            and <command>losetup</command><indexterm id="ch03-dev17">
+            and <command>losetup</command><indexterm xml:id="ch03-dev17">
 	    <primary>commands</primary><secondary>losetup</secondary></indexterm>.
             The loopback devices are block
             devices on major node 7 and with minor nodes starting at 0 and
             numbered sequentially.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/md0</filename><indexterm id="ch03-dev18">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/md0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/md0
+        filesystem/dev
+        /dev/md0</glossterm>
 
             <glossdef><para>First metadisk group.  Metadisks are related to
             RAID (Redundant Array of Independent Disks) devices.  Please
             refer to the most current RAID HOWTO at the LDP for more details.
             This can be found at
-            <ulink url="http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html">
-            http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html</ulink>.
+            <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html">
+            http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html</link>.
             Metadisk devices are block devices on major node 9 with minor
             nodes starting at 0 and numbered
             sequentially.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/mixer</filename><indexterm id="ch03-dev19">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/mixer</tertiary></indexterm></glossterm>
+        <glossterm>/dev/mixer
+        filesystem/dev
+        /dev/mixer</glossterm>
 
             <glossdef><para>This is part of the OSS (Open Sound System)
-	    <indexterm id="ch03-oss"><primary>Open Sound System (OSS)</primary>
-            </indexterm> driver. Refer to the OSS documentation at <ulink
-            url="http://www.opensound.com">http://www.opensound.com</ulink>
+	    <indexterm xml:id="ch03-oss"><primary>Open Sound System (OSS)</primary>
+            </indexterm> driver. Refer to the OSS documentation at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.opensound.com">http://www.opensound.com</link>
             for more details.  It is a character device on major node 14,
             minor node 0.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/null</filename><indexterm id="ch03-dev20">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/null</tertiary></indexterm></glossterm>
+        <glossterm>/dev/null
+        filesystem/dev
+        /dev/null</glossterm>
 
             <glossdef><para>The bit bucket.  A black hole where you can send
             data for it never to be seen again.  Anything sent to
@@ -804,17 +803,17 @@
             on major node 1 and minor node 3.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/psaux</filename><indexterm id="ch03-dev21">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/psaux</tertiary></indexterm></glossterm>
+        <glossterm>/dev/psaux
+        filesystem/dev
+        /dev/psaux</glossterm>
 
             <glossdef><para>The PS/2 mouse port.  This is a character device
             on major node 10, minor node 1.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/pda</filename><indexterm id="ch03-dev22">
-        <primary>filesystem</primary><secondary>/dev</secondary>
-        <tertiary>/dev/pda</tertiary></indexterm></glossterm>
+        <glossterm>/dev/pda
+        filesystem/dev
+        /dev/pda</glossterm>
 
             <glossdef><para>Parallel port IDE disks.  These are named
             similarly to disks on the internal IDE controllers
@@ -825,12 +824,12 @@
             partition number to the minor number for the device.  Each
             device is limited to 15 partitions each rather than 63 (the
             limit for internal IDE disks).  <filename>/dev/pdb</filename>
-            <indexterm id="ch03-dev23"><primary>filesystem</primary>
+            <indexterm xml:id="ch03-dev23"><primary>filesystem</primary>
             <secondary>/dev</secondary><tertiary>/dev/pdb</tertiary></indexterm>
             minor nodes start at 16, <filename>/dev/pdc</filename>
-	    <indexterm id="ch03-dev24"><primary>filesystem</primary>
+	    <indexterm xml:id="ch03-dev24"><primary>filesystem</primary>
             <secondary>/dev</secondary><tertiary>/dev/pdc</tertiary></indexterm> 
-            at 32 and <filename>/dev/pdd</filename><indexterm id="ch03-dev25">
+            at 32 and <filename>/dev/pdd</filename><indexterm xml:id="ch03-dev25">
 	    <primary>filesystem</primary><secondary>/dev</secondary>
             <tertiary>/dev/pdd</tertiary></indexterm> at 48.  So for example the 
             minor node number for <filename>/dev/pdc6</filename> would be 38 (32 +
@@ -838,9 +837,9 @@
             partitions each.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/pcd0</filename><indexterm id="ch03-dev26">
-            <primary>filesystem</primary><secondary>/dev</secondary>
-            <tertiary>/dev/pcd0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/pcd0
+            filesystem/dev
+            /dev/pcd0</glossterm>
 
             <glossdef><para>Parallel port CD ROM drives.  These are numbered
             from 0 onwards.  All are block devices on major node 46.
@@ -850,23 +849,23 @@
 
 
         <glossentry>
-        <glossterm><filename>/dev/pt0</filename><indexterm id="ch03-dev27">
-            <primary>filesystem</primary><secondary>/dev</secondary>
-            <tertiary>/dev/pt0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/pt0
+            filesystem/dev
+            /dev/pt0</glossterm>
 
             <glossdef><para>Parallel port tape devices.  Tapes do not have
             partitions so these are just numbered sequentially.  They are
             character devices on major node 96.  The minor node numbers
             start from 0 for <filename>/dev/pt0</filename>, 1 for
-            <filename>/dev/pt1</filename><indexterm id="ch03-dev28">
+            <filename>/dev/pt1</filename><indexterm xml:id="ch03-dev28">
             <primary>filesystem</primary><secondary>/dev</secondary>
             <tertiary>/dev/pt1</tertiary></indexterm>, and so on.
                 </para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/parport0</filename><indexterm id="ch03-dev29">
-            <primary>filesystem</primary><secondary>/dev</secondary>
-            <tertiary>/dev/parport0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/parport0
+            filesystem/dev
+            /dev/parport0</glossterm>
 
             <glossdef><para>The raw parallel ports.  Most devices which are
             attached to parallel ports have their own drivers.  This is a
@@ -876,12 +875,12 @@
             node.</para></glossdef></glossentry>
 
         <glossentry>
-        <glossterm><filename>/dev/random</filename><indexterm id="ch03-dev30">
-            <primary>filesystem</primary><secondary>/dev</secondary>
-            <tertiary>/dev/random</tertiary></indexterm> or
-            <filename>/dev/urandom</filename><indexterm id="ch03-dev31">
-            <primary>filesystem</primary><secondary>/dev</secondary>
-            <tertiary>/dev/urandom</tertiary></indexterm></glossterm>
+        <glossterm>/dev/random
+            filesystem/dev
+            /dev/random or
+            /dev/urandom
+            filesystem/dev
+            /dev/urandom</glossterm>
 
             <glossdef><para>These are kernel random number generators.
             <filename>/dev/random</filename> is a non-deterministic
@@ -903,33 +902,33 @@
             <filename>/dev/urandom</filename>.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/dev/sda</filename><indexterm id="ch03-dev32">
-            <primary>filesystem</primary><secondary>/dev</secondary>
-            <tertiary>/dev/sda</tertiary></indexterm></glossterm>
+	<glossterm>/dev/sda
+            filesystem/dev
+            /dev/sda</glossterm>
 
 	    <glossdef><para>The first SCSI drive on the first SCSI bus.  
 	    The following drives are named similar to IDE drives.  
-	    <filename>/dev/sdb</filename><indexterm id="ch03-dev33">
+	    <filename>/dev/sdb</filename><indexterm xml:id="ch03-dev33">
             <primary>filesystem</primary><secondary>/dev</secondary>
             <tertiary>/dev/sdb</tertiary></indexterm> is the second SCSI drive, 
-	    <filename>/dev/sdc</filename><indexterm id="ch03-dev34">
+	    <filename>/dev/sdc</filename><indexterm xml:id="ch03-dev34">
             <primary>filesystem</primary><secondary>/dev</secondary>
             <tertiary>/dev/sdd</tertiary></indexterm> is the third SCSI drive, and so 
-	    forth.</para></glossdef> 
+	    forth.</para></glossdef> </glossentry>
 	     
 	<glossentry>
-        <glossterm><filename>/dev/ttyS0</filename><indexterm id="ch03-dev35">
-            <primary>filesystem</primary><secondary>/dev</secondary>
-            <tertiary>/dev/ttyS0</tertiary></indexterm></glossterm>
+        <glossterm>/dev/ttyS0
+            filesystem/dev
+            /dev/ttyS0</glossterm>
 
 	    <glossdef><para>The first serial port.  Many times this it the port used
-	    to connect an external modem to your system.</para></glossdef>
+	    to connect an external modem to your system.</para></glossdef></glossentry>
 	   
 
         <glossentry>
-        <glossterm><filename>/dev/zero</filename><indexterm id="ch03-dev36">
-            <primary>filesystem</primary><secondary>/dev</secondary>
-            <tertiary>/dev/zero</tertiary></indexterm></glossterm>
+        <glossterm>/dev/zero
+            filesystem/dev
+            /dev/zero</glossterm>
 
             <glossdef><para>This is a simple way of getting many 0s.  Every
             time you read from this device it will return 0.  This can be
@@ -938,17 +937,17 @@
             character device on major node 1 and minor node
             5.</para></glossdef></glossentry>
 </glosslist>
-</sect1>
+</section>
 
-<sect1 id="usr-fs">
-<title>The <filename>/usr</filename><indexterm id="ch03-usr1">
+<section xml:id="usr-fs">
+<title>The <filename>/usr</filename><indexterm xml:id="ch03-usr1">
             <primary>filesystem</primary></indexterm> filesystem.</title>
 
 	<para>The <filename>/usr</filename> filesystem is often
 	large, since all programs are installed there.	All files
 	in <filename>/usr</filename> usually come from a Linux
 	distribution; locally installed programs and other stuff goes
-	below <filename>/usr/local</filename><indexterm id="ch03-usr2">
+	below <filename>/usr/local</filename><indexterm xml:id="ch03-usr2">
         <primary>filesystem</primary><secondary>/usr</secondary>
         <tertiary>/usr/local</tertiary></indexterm>.  This makes it possible
 	to update the system from a new version of the distribution,
@@ -961,9 +960,9 @@
 	<glosslist>
 	
 	<glossentry>
-	<glossterm><filename>/usr/X11R6</filename><indexterm id="ch03-usr3">
-        <primary>filesystem</primary><secondary>/usr</secondary>
-        <tertiary>/usr/X11R6</tertiary></indexterm>.</glossterm>
+	<glossterm>/usr/X11R6
+        filesystem/usr
+        /usr/X11R6.</glossterm>
 
 		<glossdef><para>The X Window System, all files. To simplify
 		the development and installation of X, the X files have not
@@ -973,9 +972,9 @@
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/usr/bin</filename><indexterm id="ch03-usr4">
-        <primary>filesystem</primary><secondary>/usr</secondary>
-        <tertiary>/usr/bin</tertiary></indexterm>.</glossterm>
+	<glossterm>/usr/bin
+        filesystem/usr
+        /usr/bin.</glossterm>
 
 		<glossdef><para>Almost all user commands. Some commands are
 		in <filename>/bin</filename> or in
@@ -983,45 +982,45 @@
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/usr/sbin</filename><indexterm id="ch03-usr5">
-        <primary>filesystem</primary><secondary>/usr</secondary>
-        <tertiary>/usr/sbin</tertiary></indexterm></glossterm>
+	<glossterm>/usr/sbin
+        filesystem/usr
+        /usr/sbin</glossterm>
 
 		<glossdef><para>System administration commands that are not
 		needed on the root filesystem, e.g., most server programs.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/usr/share/man</filename><indexterm id="ch03-usr6">
-        <primary>filesystem</primary><secondary>/usr</secondary>
-        <tertiary>/usr/share/man</tertiary></indexterm>, 
-	<filename>/usr/share/info</filename><indexterm id="ch03-usr7">
-        <primary>filesystem</primary><secondary>/usr</secondary>
-        <tertiary>/usr/share/info</tertiary></indexterm>, 
-	<filename>/usr/share/doc</filename><indexterm id="ch03-usr8">
-        <primary>filesystem</primary><secondary>/usr</secondary>
-        <tertiary>/usr/share/doc</tertiary></indexterm></glossterm>
+	<glossterm>/usr/share/man
+        filesystem/usr
+        /usr/share/man, 
+	/usr/share/info
+        filesystem/usr
+        /usr/share/info, 
+	/usr/share/doc
+        filesystem/usr
+        /usr/share/doc</glossterm>
 
 		<glossdef><para>Manual pages, GNU Info documents, and
 		miscellaneous other documentation files, respectively.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/usr/include</filename><indexterm id="ch03-usr9">
-        <primary>filesystem</primary><secondary>/usr</secondary>
-        <tertiary>/usr/include</tertiary></indexterm></glossterm>
+	<glossterm>/usr/include
+        filesystem/usr
+        /usr/include</glossterm>
 		<glossdef><para>Header files for the C
 		programming language.  This should actually be below
-		<filename>/usr/lib</filename><indexterm id="ch03-usr10">
+		<filename>/usr/lib</filename><indexterm xml:id="ch03-usr10">
         	<primary>filesystem</primary><secondary>/usr</secondary>
         	<tertiary>/usr/lib</tertiary></indexterm> for consistency, 
 		but the tradition is overwhelmingly in support for this name.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/usr/lib</filename><indexterm id="ch03-usr11">
-                <primary>filesystem</primary><secondary>/usr</secondary>
-                <tertiary>/usr/lib</tertiary></indexterm></glossterm>
+	<glossterm>/usr/lib
+                filesystem/usr
+                /usr/lib</glossterm>
 		<glossdef><para>Unchanging data files for programs and
 		subsystems, including some site-wide configuration
 		files.	The name <filename>lib</filename> comes from library;
@@ -1030,9 +1029,9 @@
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/usr/local</filename><indexterm id="ch03-usr12">
-                <primary>filesystem</primary><secondary>/usr</secondary>
-                <tertiary>/usr/local</tertiary></indexterm></glossterm>
+	<glossterm>/usr/local
+                filesystem/usr
+                /usr/local</glossterm>
 
 		<glossdef><para>The place for locally installed software and
 		other files.  Distributions may not install anything in
@@ -1044,12 +1043,12 @@
 
 	</glosslist></para>
 
-</sect1>
+</section>
 
-<sect1 id="var-fs">
+<section xml:id="var-fs">
 <title>The <filename>/var</filename> filesystem</title>
 
-	<para>The <filename>/var</filename><indexterm id="ch03-var1">
+	<para>The <filename>/var</filename><indexterm xml:id="ch03-var1">
         <primary>filesystem</primary><secondary>/var</secondary>
         </indexterm> contains data that is 
 	changed when the system is running normally.  It is specific for each
@@ -1058,23 +1057,23 @@
 	<glosslist>
 	
 	<glossentry>
-	<glossterm><filename>/var/cache/man</filename><indexterm id="ch03-var2">
-        <primary>filesystem</primary><secondary>/var</secondary>
-        <tertiary>/var/cache/man</tertiary></indexterm></glossterm>
+	<glossterm>/var/cache/man
+        filesystem/var
+        /var/cache/man</glossterm>
 
 		<glossdef><para>A cache for man pages that are formatted on
 		demand.  The source for manual pages is usually stored in
 		<filename>/usr/share/man/man?/</filename>
-		<indexterm id="ch03-usr14">
+		<indexterm xml:id="ch03-usr14">
         	<primary>filesystem</primary><secondary>/usr</secondary>
         	<tertiary>/usr/share/man/man</tertiary></indexterm> 
 		(where ? is the manual section.  See the manual page for
-		<command>man</command><indexterm id="ch03-man2">
+		<command>man</command><indexterm xml:id="ch03-man2">
 		<primary>commands</primary><secondary>man</secondary></indexterm>
 		 in section 7); some manual pages
 		might come with a pre-formatted version, which might be
 		stored in <filename>/usr/share/man/cat*</filename>
-		<indexterm id="ch03-usr15"><primary>filesystem</primary>
+		<indexterm xml:id="ch03-usr15"><primary>filesystem</primary>
                 <secondary>/usr</secondary>
                 <tertiary>/usr/share/man/cat</tertiary></indexterm>. Other
 		manual pages need to be formatted when they are first
@@ -1084,9 +1083,9 @@
 		formatted. </para></glossdef></glossentry>
 
         <glossentry>
-	<glossterm><filename>/var/games</filename><indexterm id="ch03-var3">
-        <primary>filesystem</primary><secondary>/var</secondary>
-        <tertiary>/var/games</tertiary></indexterm></glossterm>
+	<glossterm>/var/games
+        filesystem/var
+        /var/games</glossterm>
 
 	        <glossdef><para>Any variable data belonging to games in
 		<filename>/usr</filename> should be placed here.  This is in
@@ -1095,35 +1094,35 @@
 
 
 	<glossentry>
-	<glossterm><filename>/var/lib</filename><indexterm id="ch03-var4">
-        <primary>filesystem</primary><secondary>/var</secondary>
-        <tertiary>/var/lib</tertiary></indexterm></glossterm>
+	<glossterm>/var/lib
+        filesystem/var
+        /var/lib</glossterm>
 
 		<glossdef><para>Files that change while the system is
 		running normally.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/var/local</filename><indexterm id="ch03-var5">
-        <primary>filesystem</primary><secondary>/var</secondary>
-        <tertiary>/var/local</tertiary></indexterm></glossterm>
+	<glossterm>/var/local
+        filesystem/var
+        /var/local</glossterm>
 		<glossdef><para>Variable data for programs that are
 		installed in <filename>/usr/local</filename>
-		<indexterm id="ch03-usr16"><primary>filesystem</primary>
+		<indexterm xml:id="ch03-usr16"><primary>filesystem</primary>
 		<secondary>/usr</secondary><tertiary>/usr/local</tertiary>
         	</indexterm> (i.e.,
 		programs that have been installed by the system
 		administrator).  Note that even locally installed
 		programs should use the other <filename>/var</filename>
 		directories if they are appropriate, e.g.,
-		<filename>/var/lock</filename><indexterm id="ch03-var6">
+		<filename>/var/lock</filename><indexterm xml:id="ch03-var6">
 	        <primary>filesystem</primary><secondary>/var</secondary>
         	<tertiary>/var/local</tertiary></indexterm>.</para>
 		</glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/var/lock</filename><indexterm id="ch03-var7">
-                <primary>filesystem</primary><secondary>/var</secondary>
-                <tertiary>/var/lock</tertiary></indexterm></glossterm>
+	<glossterm>/var/lock
+                filesystem/var
+                /var/lock</glossterm>
 		<glossdef><para>Lock files.  Many programs
 		follow a convention to create a lock file in
 		<filename>/var/lock</filename> to indicate that they
@@ -1132,23 +1131,23 @@
 		device or file.</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/var/log</filename><indexterm id="ch03-var8">
-                <primary>filesystem</primary><secondary>/var</secondary>
-                <tertiary>/var/log</tertiary></indexterm></glossterm>
+	<glossterm>/var/log
+                filesystem/var
+                /var/log</glossterm>
 
 		<glossdef><para>Log files from various programs, especially
-		<command>login</command><indexterm id="ch03-login">
+		<command>login</command><indexterm xml:id="ch03-login">
 		<primary>commands</primary><secondary>login</secondary>
-		</indexterm>(<filename>/var/log/wtmp</filename><indexterm id="ch03-wtmp">
+		</indexterm>(<filename>/var/log/wtmp</filename><indexterm xml:id="ch03-wtmp">
 		<primary>filesystem</primary><secondary>/var</secondary>
-		<tertiary>/var/log/wtmp</tertiary></indexterm><indexterm id="ch03-wtmp2">
+		<tertiary>/var/log/wtmp</tertiary></indexterm><indexterm xml:id="ch03-wtmp2">
                 <primary>logs</primary><secondary>/var/log/wtmp</secondary> 
 		</indexterm>, which logs all logins and logouts into the system) and
-		<command>syslog</command><indexterm id="ch03-syslog">
+		<command>syslog</command><indexterm xml:id="ch03-syslog">
 		<primary>commands</primary><secondary>syslog</secondary>
-		</indexterm>(<filename>/var/log/messages</filename><indexterm id="ch03-messages">
+		</indexterm>(<filename>/var/log/messages</filename><indexterm xml:id="ch03-messages">
                 <primary>filesystem</primary><secondary>/var</secondary>
-                <tertiary>/var/log/messages</tertiary></indexterm><indexterm id="ch03-logs">
+                <tertiary>/var/log/messages</tertiary></indexterm><indexterm xml:id="ch03-logs">
                 <primary>logs</primary><secondary>/var/log/messages</secondary>
 		</indexterm>, where all kernel 
 		and system program message are usually stored). Files in
@@ -1157,58 +1156,58 @@
 		intervals.</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/var/mail</filename><indexterm id="ch03-var9">
-                <primary>filesystem</primary><secondary>/var</secondary>
-                <tertiary>/var/mail</tertiary></indexterm></glossterm>
+	<glossterm>/var/mail
+                filesystem/var
+                /var/mail</glossterm>
 
 	        <glossdef><para>This is the FHS approved location for user
 		mailbox files.  Depending on how far your distribution has
 		gone towards FHS compliance, these files may still be held
-		in <filename>/var/spool/mail</filename><indexterm id="ch03-var10">
+		in <filename>/var/spool/mail</filename><indexterm xml:id="ch03-var10">
                 <primary>filesystem</primary><secondary>/var</secondary>
                 <tertiary>/var/spool/mail</tertiary></indexterm>.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/var/run</filename><indexterm id="ch03-var11">
-                <primary>filesystem</primary><secondary>/var</secondary>
-                <tertiary>/var/run</tertiary></indexterm></glossterm>
+	<glossterm>/var/run
+                filesystem/var
+                /var/run</glossterm>
 		<glossdef><para>Files that contain information about the
 		system that is valid until the system is next booted.
 		For example, <filename>/var/run/utmp</filename>
-		<indexterm id="ch03-var12">
+		<indexterm xml:id="ch03-var12">
                 <primary>filesystem</primary><secondary>/var</secondary>
                 <tertiary>/var/utmp</tertiary></indexterm>
 		contains information about people currently logged
 		in.</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/var/spool</filename><indexterm id="ch03-var13">
-                <primary>filesystem</primary><secondary>/var</secondary>
-                <tertiary>/var/spool</tertiary></indexterm></glossterm>
+	<glossterm>/var/spool
+                filesystem/var
+                /var/spool</glossterm>
 
 		<glossdef><para>Directories for news, printer queues, and
 		other queued work. Each different spool has its own
 		subdirectory below <filename>/var/spool</filename>, e.g.,
 		the news spool is in <filename>/var/spool/news</filename>
-		<indexterm id="ch03-var14"><primary>filesystem</primary>
+		<indexterm xml:id="ch03-var14"><primary>filesystem</primary>
                 <secondary>/var</secondary><tertiary>/var/spool/news</tertiary>
                 </indexterm>.
 		Note that some installations which are not fully compliant
 		with the latest version of the FHS may have user mailboxes
-		under <filename>/var/spool/mail</filename><indexterm id="ch03-var15">
+		under <filename>/var/spool/mail</filename><indexterm xml:id="ch03-var15">
                 <primary>filesystem</primary><secondary>/var</secondary>
                 <tertiary>/var/spool/mail</tertiary></indexterm>.
 		</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/var/tmp</filename><indexterm id="ch03-var16">
-                <primary>filesystem</primary><secondary>/var</secondary>
-                <tertiary>/var/tmp</tertiary></indexterm></glossterm>
+	<glossterm>/var/tmp
+                filesystem/var
+                /var/tmp</glossterm>
 		<glossdef><para>Temporary files that are large
 		or that need to exist for a longer time than
 		what is allowed for <filename>/tmp</filename>
-		<indexterm id="ch03-var17"><primary>filesystem</primary>
+		<indexterm xml:id="ch03-var17"><primary>filesystem</primary>
                 <secondary>/tmp</secondary></indexterm>.
 		(Although the system administrator might not allow
 		very old files in <filename>/var/tmp</filename>
@@ -1216,12 +1215,12 @@
 
 	</glosslist></para>
 
-</sect1>
+</section>
 <!-- Indexed upto -->
-<sect1 id="proc-fs">
+<section xml:id="proc-fs">
 <title>The <filename>/proc</filename> filesystem</title>
 
-	<para>The <filename>/proc</filename><indexterm id="ch03-proc1">
+	<para>The <filename>/proc</filename><indexterm xml:id="ch03-proc1">
         <primary>filesystem</primary><secondary>/proc</secondary>
         </indexterm> filesystem contains a
 	illusionary filesystem.  It does not exist on a disk. Instead, the
@@ -1234,123 +1233,123 @@
 	<glosslist>
 	
 	<glossentry>
-	<glossterm><filename>/proc/1</filename><indexterm id="ch03-proc2">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/1</tertiary></indexterm></glossterm>
+	<glossterm>/proc/1
+                filesystem/proc
+                /proc/1</glossterm>
 		<glossdef><para>A directory with information about
 		process number 1.  Each process has a directory below
 		<filename>/proc</filename> with the name being its process
 		identification number.	</para></glossdef></glossentry>
 
 	<glossentry>
-	<glossterm><filename>/proc/cpuinfo</filename><indexterm id="ch03-proc3">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/cpuinfo</tertiary></indexterm></glossterm>
+	<glossterm>/proc/cpuinfo
+                filesystem/proc
+                /proc/cpuinfo</glossterm>
 		<glossdef><para>Information about the processor,
 		such as its type, make, model, and performance.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/devices</filename><indexterm id="ch03-proc4">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/devices</tertiary></indexterm></glossterm>
+	<glossterm>/proc/devices
+                filesystem/proc
+                /proc/devices</glossterm>
 		<glossdef><para>List of device drivers configured into the
 		currently running kernel.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/dma</filename><indexterm id="ch03-proc5">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/dma</tertiary></indexterm></glossterm>
+	<glossterm>/proc/dma
+                filesystem/proc
+                /proc/dma</glossterm>
 		<glossdef><para>Shows which DMA channels are being used
 		at the moment.	</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/filesystems</filename><indexterm id="ch03-proc6">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/filesystems</tertiary></indexterm></glossterm>
+	<glossterm>/proc/filesystems
+                filesystem/proc
+                /proc/filesystems</glossterm>
 		<glossdef><para>Filesystems configured into the kernel.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/interrupts</filename><indexterm id="ch03-proc7">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/interrupts</tertiary></indexterm></glossterm>
+	<glossterm>/proc/interrupts
+                filesystem/proc
+                /proc/interrupts</glossterm>
 		<glossdef><para>Shows which interrupts are
 		in use, and how many of each there have been.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/ioports</filename><indexterm id="ch03-proc8">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/ioports</tertiary></indexterm></glossterm>
+	<glossterm>/proc/ioports
+                filesystem/proc
+                /proc/ioports</glossterm>
 		<glossdef><para>Which I/O ports are in use at the moment.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/kcore</filename><indexterm id="ch03-proc9">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/kcore</tertiary></indexterm></glossterm>
+	<glossterm>/proc/kcore
+                filesystem/proc
+                /proc/kcore</glossterm>
 		<glossdef><para>An image of the physical memory of
 		the system.  This is exactly the same size as your
 		physical memory, but does not really take up that much
 		memory; it is generated on the fly as programs access it.
 		(Remember: unless you copy it elsewhere, nothing under
-		<filename>/proc</filename><indexterm id="ch03-proc10">
+		<filename>/proc</filename><indexterm xml:id="ch03-proc10">
        		 <primary>filesystem</primary><secondary>/proc</secondary>
         	</indexterm> takes up any disk space
 		at all.)  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/kmsg</filename><indexterm id="ch03-proc11">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/kmsg</tertiary></indexterm></glossterm>
+	<glossterm>/proc/kmsg
+                filesystem/proc
+                /proc/kmsg</glossterm>
 		<glossdef><para>Messages output by the kernel.
 		These are also routed to <command>syslog</command>.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/ksyms</filename><indexterm id="ch03-proc12">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/ksyms</tertiary></indexterm></glossterm>
+	<glossterm>/proc/ksyms
+                filesystem/proc
+                /proc/ksyms</glossterm>
 		<glossdef><para>Symbol table for the kernel.
 		</para></glossdef></glossentry>	
 	
 	<glossentry>
-	<glossterm><filename>/proc/loadavg</filename><indexterm id="ch03-proc13">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/loadavg</tertiary></indexterm></glossterm>
+	<glossterm>/proc/loadavg
+                filesystem/proc
+                /proc/loadavg</glossterm>
 		<glossdef><para>The `load average' of the system; three
 		meaningless indicators of how much work the system has
 		to do at the moment.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/meminfo</filename><indexterm id="ch03-proc14">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/meminfo</tertiary></indexterm></glossterm>
+	<glossterm>/proc/meminfo
+                filesystem/proc
+                /proc/meminfo</glossterm>
 		<glossdef><para>Information about memory usage, both
 		physical and swap.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/modules</filename><indexterm id="ch03-proc15">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/modules</tertiary></indexterm></glossterm>
+	<glossterm>/proc/modules
+                filesystem/proc
+                /proc/modules</glossterm>
 		<glossdef><para>Which kernel modules are loaded at
 		the moment.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/net</filename><indexterm id="ch03-proc16">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/net</tertiary></indexterm></glossterm>
+	<glossterm>/proc/net
+                filesystem/proc
+                /proc/net</glossterm>
 		<glossdef><para>Status information about network
 		protocols.  </para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/self</filename><indexterm id="ch03-proc17">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/self</tertiary></indexterm></glossterm>
+	<glossterm>/proc/self
+                filesystem/proc
+                /proc/self</glossterm>
 		<glossdef><para>A symbolic link to the process
 		directory of the program that is looking at
-		<filename>/proc</filename><indexterm id="ch03-proc18">
+		<filename>/proc</filename><indexterm xml:id="ch03-proc18">
         	<primary>filesystem</primary><secondary>/proc</secondary>
         	</indexterm>.  When two processes look at
 		<filename>/proc</filename>, they get different links.
@@ -1359,24 +1358,24 @@
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/stat</filename><indexterm id="ch03-proc19">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/stat</tertiary></indexterm></glossterm>
+	<glossterm>/proc/stat
+                filesystem/proc
+                /proc/stat</glossterm>
 		<glossdef><para>Various statistics about the system, such
 		as the number of page faults since the system was booted.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/uptime</filename><indexterm id="ch03-proc20">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/uptime</tertiary></indexterm></glossterm>
+	<glossterm>/proc/uptime
+                filesystem/proc
+                /proc/uptime</glossterm>
 		<glossdef><para>The time the system has been up.
 		</para></glossdef></glossentry>
 	
 	<glossentry>
-	<glossterm><filename>/proc/version</filename><indexterm id="ch03-proc21">
-                <primary>filesystem</primary><secondary>/proc</secondary>
-                <tertiary>/proc/version</tertiary></indexterm></glossterm>
+	<glossterm>/proc/version
+                filesystem/proc
+                /proc/version</glossterm>
 		<glossdef><para>The kernel version.
 		</para></glossdef></glossentry>
 	
@@ -1386,14 +1385,14 @@
 	text files, they can sometimes be formatted in a way that is not
 	easily digestible.  There are many commands that do little more than
 	read the above files and format them for easier understanding. For
-	example, the <command>free</command><indexterm id="ch03-free22">
-	<primary>commands</primary><secondary>free</secondary> program reads
-	<filename>/proc/meminfo</filename><indexterm id="ch03-proc23">
+	example, the <command>free</command><indexterm xml:id="ch03-free22">
+	<primary>commands</primary><secondary>free</secondary></indexterm> program reads
+	<filename>/proc/meminfo</filename><indexterm xml:id="ch03-proc23">
         <primary>filesystem</primary><secondary>/proc</secondary>
         <tertiary>/proc/meminfo</tertiary></indexterm> converts the amounts given in
 	bytes to kilobytes (and adds a little more information, as
 	well).</para>
 
-</sect1>
+</section>
 
 </chapter>

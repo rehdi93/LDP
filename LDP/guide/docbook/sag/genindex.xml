@@ -1,0 +1,1215 @@
+<!-- Converted by db4-upgrade version 1.1 -->
+<index xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="bookindex">
+
+<title>Index-Draft</title>
+
+<indexdiv><title>A</title>
+
+<indexentry>
+  <primaryie>at 	,
+    <link xlink:href="#cron" role="CH02-AT">Periodic command execution: cron and at</link>
+  </primaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>B</title>
+
+<indexentry>
+  <primaryie>BIOS,
+    <link xlink:href="#root-fs" role="CH03-BIOS">The root filesystem</link>,
+    <link xlink:href="#hard-disk" role="CH05-BIOS2">Hard disks</link>,
+    <link xlink:href="#part-hd" role="CH05-BIOS">Partitioning a hard disk</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>booting
+  </primaryie>
+  <secondaryie>vmlinuz,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM13">The root filesystem</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>C</title>
+
+<indexentry>
+  <primaryie>CMOS,
+    <link xlink:href="#hard-disk" role="CH05-TRACKS2">Hard disks</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>commands
+  </primaryie>
+  <secondaryie>badblocks,
+    <link xlink:href="#formatting" role="CH05-BADBLOCKCMD">Formatting</link>
+  </secondaryie>
+  <secondaryie>cfdisk,
+    <link xlink:href="#part-hd" role="CH05-CFDISK">Partitioning a hard disk</link>
+  </secondaryie>
+  <secondaryie>chsh,
+    <link xlink:href="#etc-fs" role="CH03-CHSH">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>depmod,
+    <link xlink:href="#ch04-depmod1">depmod</link>
+  </secondaryie>
+  <secondaryie>df,
+    <link xlink:href="#etc-fs" role="CH03-DF">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>fdformat,
+    <link xlink:href="#formatting" role="CH05-FDFORMAT">Formatting</link>
+  </secondaryie>
+  <secondaryie>fdisk,
+    <link xlink:href="#mbr" role="CH05-FDISK2">The MBR, boot sectors and partition table</link>,
+    <link xlink:href="#part-types" role="CH05-FDISK3">Partition types</link>,
+    <link xlink:href="#part-hd" role="CH05-FDISK4">Partitioning a hard disk</link>
+  </secondaryie>
+  <secondaryie>file,
+    <link xlink:href="#etc-fs" role="CH03-FILE">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>fips,
+    <link xlink:href="#part-hd" role="CH05-FIPS">Partitioning a hard disk</link>
+  </secondaryie>
+  <secondaryie>free,
+    <link xlink:href="#proc-fs" role="CH03-FREE22">The /proc filesystem</link>
+  </secondaryie>
+  <secondaryie>fsck,
+    <link xlink:href="#formatting" role="CH05-FSCK">Formatting</link>
+  </secondaryie>
+  <secondaryie>ftpd,
+    <link xlink:href="#etc-fs" role="CH03-FTPD">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>getty,
+    <link xlink:href="#init" role="CH02-GETTY">init</link>,
+    <link xlink:href="#etc-fs" role="CH03-GETTY">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>gzexe,
+    <link xlink:href="#space-saving-tips" role="CH05-GZEXE">Tips for saving disk space</link>
+  </secondaryie>
+  <secondaryie>gzip,
+    <link xlink:href="#space-saving-tips" role="CH05-GZIP">Tips for saving disk space</link>
+  </secondaryie>
+  <secondaryie>hdparm,
+    <link xlink:href="#hdparm" role="CH04-HDPARM">The hdparm  command</link>
+  </secondaryie>
+  <secondaryie>init,
+    <link xlink:href="#init" role="CH02-INIT2">init</link>
+  </secondaryie>
+  <secondaryie>insmod,
+    <link xlink:href="#ch04-insmod1" role="CH04-INSMOD1">insmod</link>
+  </secondaryie>
+  <secondaryie>login,
+    <link xlink:href="#etc-fs" role="CH03-LOGIN2">The /etc directory</link>,
+    <link xlink:href="#var-fs" role="CH03-LOGIN">The /var filesystem</link>
+  </secondaryie>
+  <secondaryie>losetup,
+    <link xlink:href="#dev-fs" role="CH03-DEV17">The /dev directory</link>
+  </secondaryie>
+  <secondaryie>lpr,
+    <link xlink:href="#block-char-dev" role="CH05-LPR">Two kinds of devices</link>
+  </secondaryie>
+  <secondaryie>ls,
+    <link xlink:href="#block-char-dev" role="CH05-LS">Two kinds of devices</link>
+  </secondaryie>
+  <secondaryie>lsdev,
+    <link xlink:href="#lsdev" role="CH04-LSDEV">The lsdev  command</link>
+  </secondaryie>
+  <secondaryie>lsmod,
+    <link xlink:href="#ch04-lsmod1" role="CH04-LSMOD1">lsmod</link>
+  </secondaryie>
+  <secondaryie>lspci,
+    <link xlink:href="#lspci" role="CH04-LSPCI">The lspci  command</link>
+  </secondaryie>
+  <secondaryie>lsraid,
+    <link xlink:href="#lsraid" role="CH04-LSRAID">The lsraid  command</link>
+  </secondaryie>
+  <secondaryie>lsusb,
+    <link xlink:href="#lsusb" role="CH04-LSUSB">The lsusb  command</link>
+  </secondaryie>
+  <secondaryie>MAKEDEV,
+    <link xlink:href="#dev-fs" role="CH03-MAKEDEV">The /dev directory</link>,
+    <link xlink:href="#makedev" role="CH04-MAKEDEV">The MAKEDEV Script</link>,
+    <link xlink:href="#mknod" role="CH04-MAKEDEV2">The mknod command</link>
+  </secondaryie>
+  <secondaryie>man,
+    <link xlink:href="#var-fs" role="CH03-MAN2">The /var filesystem</link>
+  </secondaryie>
+  <secondaryie>mkfs,
+    <link xlink:href="#formatting" role="CH05-MKFS">Formatting</link>
+  </secondaryie>
+  <secondaryie>mknod,
+    <link xlink:href="#mknod" role="CH04-MKNOD">The mknod command</link>
+  </secondaryie>
+  <secondaryie>modprobe,
+    <link xlink:href="#ch04-modprobe1" role="CH04-MODPROBE1">modprobe</link>
+  </secondaryie>
+  <secondaryie>mount,
+    <link xlink:href="#etc-fs" role="CH03-MOUNT">The /etc directory</link>,
+    <link xlink:href="#dev-fs" role="CH03-DEV16">The /dev directory</link>
+  </secondaryie>
+  <secondaryie>parted,
+    <link xlink:href="#part-hd" role="CH05-PARTED">Partitioning a hard disk</link>
+  </secondaryie>
+  <secondaryie>rmmod,
+    <link xlink:href="#ch04-rmmod1" role="CH04-RMMOD1">rmmod</link>
+  </secondaryie>
+  <secondaryie>setfdparm,
+    <link xlink:href="#floppies" role="CH05-SETFDPARM">Floppies</link>
+  </secondaryie>
+  <secondaryie>setfdprm,
+    <link xlink:href="#etc-fs" role="CH03-SETFDPRM">The /etc directory</link>,
+    <link xlink:href="#formatting" role="CH05-SETFDPRM">Formatting</link>
+  </secondaryie>
+  <secondaryie>su,
+    <link xlink:href="#etc-fs" role="CH03-SU">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>sudo,
+    <link xlink:href="#etc-fs" role="CH03-SUDO">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>swapon,
+    <link xlink:href="#etc-fs" role="CH03-SWAPON">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>syslog,
+    <link xlink:href="#var-fs" role="CH03-SYSLOG">The /var filesystem</link>,
+    <link xlink:href="#formatting" role="CH05-SYSLOG2">Formatting</link>
+  </secondaryie>
+  <secondaryie>zip,
+    <link xlink:href="#space-saving-tips" role="CH05-ZIP">Tips for saving disk space</link>
+  </secondaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>Common Internet File System (CIFS),
+    <link xlink:href="#nfs" role="CH02-CIFS">Network file systems</link>,
+    <link xlink:href="#net-attached" role="CH05-CIFS2">Network Attached Storage - Draft</link>,
+    <link xlink:href="#cifs" role="CH05-CIFS">CIFS</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>cron,
+    <link xlink:href="#cron" role="CH02-CRON">Periodic command execution: cron and at</link>
+  </primaryie>
+  <secondaryie>crontab 	,
+    <link xlink:href="#cron" role="CH02-CRONTAB">Periodic command execution: cron and at</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>D</title>
+
+<indexentry>
+  <primaryie>devices
+  </primaryie>
+  <secondaryie>block,
+    <link xlink:href="#block-char-dev" role="CH05-BLOCK">Two kinds of devices</link>
+  </secondaryie>
+  <secondaryie>character,
+    <link xlink:href="#block-char-dev" role="CH05-CHAR">Two kinds of devices</link>
+  </secondaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>disks,
+    <link xlink:href="#disk-usage" role="CH05-DISKS">Using Disks and Other Storage Media</link>
+  </primaryie>
+  <secondaryie>bad blocks,
+    <link xlink:href="#formatting" role="CH05-BBLOCKS">Formatting</link>
+  </secondaryie>
+  <secondaryie>bad sectors,
+    <link xlink:href="#formatting" role="CH05-BSECT">Formatting</link>
+  </secondaryie>
+  <secondaryie>boot sectors,
+    <link xlink:href="#mbr" role="CH05-BOOTSECT">The MBR, boot sectors and partition table</link>
+  </secondaryie>
+  <secondaryie>changing partition size,
+    <link xlink:href="#part-hd" role="CH05-PARTSIZE">Partitioning a hard disk</link>
+  </secondaryie>
+  <secondaryie>components,
+    <link xlink:href="#hard-disk" role="CH05-DISK-INTERNALS">Hard disks</link>
+  </secondaryie>
+  <secondaryie>cylinders,
+    <link xlink:href="#hard-disk" role="CH05-CYLINDERS">Hard disks</link>
+  </secondaryie>
+  <secondaryie>extended partition,
+    <link xlink:href="#extended-logical-part" role="CH05-EXTENDEDPART">Extended and logical partitions</link>,
+    <link xlink:href="#dev-files-parts" role="CH05-EXTENDEDPART3">Device files and partitions</link>
+  </secondaryie>
+  <secondaryie>filesystem,
+    <link xlink:href="#fs-intro" role="CH05-FS">What are filesystems?</link>
+  </secondaryie>
+  <tertiaryie>data block,
+    <link xlink:href="#fs-intro" role="CH05-DBLOCK">What are filesystems?</link>
+  </tertiaryie>
+  <tertiaryie>directory block,
+    <link xlink:href="#fs-intro" role="CH05-DIRBLOCK">What are filesystems?</link>
+  </tertiaryie>
+  <tertiaryie>indirection block,
+    <link xlink:href="#fs-intro" role="CH05-INDIRBLOCK">What are filesystems?</link>
+  </tertiaryie>
+  <tertiaryie>inode,
+    <link xlink:href="#fs-intro" role="CH05-INODE">What are filesystems?</link>
+  </tertiaryie>
+  <tertiaryie>superblock,
+    <link xlink:href="#fs-intro" role="CH05-SBLOCK">What are filesystems?</link>
+  </tertiaryie>
+  <secondaryie>formatting,
+    <link xlink:href="#formatting" role="CH05-FORMATTING">Formatting</link>
+  </secondaryie>
+  <tertiaryie>high-level,
+    <link xlink:href="#formatting" role="CH05-FORMATTING333">Formatting</link>
+  </tertiaryie>
+  <tertiaryie>low-level,
+    <link xlink:href="#formatting" role="CH05-FORMATTING2">Formatting</link>
+  </tertiaryie>
+  <secondaryie>geometry,
+    <link xlink:href="#hard-disk" role="CH05-GEOMETRY">Hard disks</link>
+  </secondaryie>
+  <secondaryie>IDE,
+    <link xlink:href="#part-hd" role="CH05-IDE">Partitioning a hard disk</link>
+  </secondaryie>
+  <secondaryie>Logical Block Addressing (LBA),
+    <link xlink:href="#part-hd" role="CH05-LBA">Partitioning a hard disk</link>
+  </secondaryie>
+  <secondaryie>MBR,
+    <link xlink:href="#mbr" role="CH05-MBR">The MBR, boot sectors and partition table</link>
+  </secondaryie>
+  <secondaryie>partition table,
+    <link xlink:href="#mbr" role="CH05-PARTTBL">The MBR, boot sectors and partition table</link>
+  </secondaryie>
+  <secondaryie>partition type,
+    <link xlink:href="#part-types" role="CH05-PARTTYPE">Partition types</link>
+  </secondaryie>
+  <secondaryie>partitions,
+    <link xlink:href="#partitions" role="CH05-DISKPART">Partitions</link>
+  </secondaryie>
+  <secondaryie>saving space,
+    <link xlink:href="#space-saving-tips" role="CH05-SAVESPC">Tips for saving disk space</link>
+  </secondaryie>
+  <secondaryie>sectors,
+    <link xlink:href="#hard-disk" role="CH05-SECTORS">Hard disks</link>
+  </secondaryie>
+  <secondaryie>tracks,
+    <link xlink:href="#hard-disk" role="CH05-TRACKS">Hard disks</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>E</title>
+
+<indexentry>
+  <primaryie>email,
+    <link xlink:href="#mail" role="CH02-EMAIL">Mail</link>
+  </primaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>F</title>
+
+<indexentry>
+  <primaryie>fibre channel,
+    <link xlink:href="#san" role="CH05-FC2">Storage Area Networks - Draft</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>filesystem,
+    <link xlink:href="#fs-layout" role="CH02-FILESYSTEM">The filesystem layout</link>,
+    <link xlink:href="#usr-fs" role="CH03-USR1">The /usr filesystem.</link>
+  </primaryie>
+  <secondaryie>/ (root),
+    <link xlink:href="#fs-background" role="CH03-FILESYSTEM1">Background</link>,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM12">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/bin,
+    <link xlink:href="#fs-layout" role="CH02-FILESYSTEM2">The filesystem layout</link>,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM15">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/boot,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM14">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/dev,
+    <link xlink:href="#fs-layout" role="CH02-FILESYSTEM5">The filesystem layout</link>,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM21">The root filesystem</link>,
+    <link xlink:href="#dev-fs" role="CH03-DEV1">The /dev directory</link>,
+    <link xlink:href="#block-char-dev" role="CH05-DEV">Two kinds of devices</link>
+  </secondaryie>
+  <tertiaryie>/dev/dsp,
+    <link xlink:href="#dev-fs" role="CH03-DEV2">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/fb0,
+    <link xlink:href="#dev-fs" role="CH03-DEV4">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/fd0,
+    <link xlink:href="#dev-fs" role="CH03-DEV3">The /dev directory</link>,
+    <link xlink:href="#floppies" role="CH05-FD0">Floppies</link>,
+    <link xlink:href="#formatting" role="CH05-FD02">Formatting</link>
+  </tertiaryie>
+  <tertiaryie>/dev/fd1,
+    <link xlink:href="#floppies" role="CH05-FD1">Floppies</link>
+  </tertiaryie>
+  <tertiaryie>/dev/hda,
+    <link xlink:href="#dev-fs" role="CH03-DEV5">The /dev directory</link>,
+    <link xlink:href="#hard-disk" role="CH05-HDA">Hard disks</link>
+  </tertiaryie>
+  <tertiaryie>/dev/hdb,
+    <link xlink:href="#dev-fs" role="CH03-DEV6">The /dev directory</link>,
+    <link xlink:href="#hard-disk" role="CH05-HDB">Hard disks</link>
+  </tertiaryie>
+  <tertiaryie>/dev/hdc,
+    <link xlink:href="#dev-fs" role="CH03-DEV7">The /dev directory</link>,
+    <link xlink:href="#hard-disk" role="CH05-HDC">Hard disks</link>
+  </tertiaryie>
+  <tertiaryie>/dev/hdc9,
+    <link xlink:href="#dev-fs" role="CH03-DEV9">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/hdd,
+    <link xlink:href="#dev-fs" role="CH03-DEV8">The /dev directory</link>,
+    <link xlink:href="#hard-disk" role="CH05-HDD">Hard disks</link>
+  </tertiaryie>
+  <tertiaryie>/dev/ht0,
+    <link xlink:href="#dev-fs" role="CH03-DEV12">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/js0,
+    <link xlink:href="#dev-fs" role="CH03-DEV13">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/loop0,
+    <link xlink:href="#dev-fs" role="CH03-DEV15">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/lp0,
+    <link xlink:href="#dev-fs" role="CH03-DEV14">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/md0,
+    <link xlink:href="#dev-fs" role="CH03-DEV18">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/mixer,
+    <link xlink:href="#dev-fs" role="CH03-DEV19">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/null,
+    <link xlink:href="#dev-fs" role="CH03-DEV20">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/parport0,
+    <link xlink:href="#dev-fs" role="CH03-DEV29">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/pcd0,
+    <link xlink:href="#dev-fs" role="CH03-DEV26">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/pda,
+    <link xlink:href="#dev-fs" role="CH03-DEV22">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/pdb,
+    <link xlink:href="#dev-fs" role="CH03-DEV23">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/pdc,
+    <link xlink:href="#dev-fs" role="CH03-DEV24">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/pdd,
+    <link xlink:href="#dev-fs" role="CH03-DEV25">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/psaux,
+    <link xlink:href="#dev-fs" role="CH03-DEV21">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/pt0,
+    <link xlink:href="#dev-fs" role="CH03-DEV27">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/pt1,
+    <link xlink:href="#dev-fs" role="CH03-DEV28">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/random,
+    <link xlink:href="#dev-fs" role="CH03-DEV30">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/sda,
+    <link xlink:href="#dev-fs" role="CH03-DEV32">The /dev directory</link>,
+    <link xlink:href="#block-char-dev" role="CH05-SDA">Two kinds of devices</link>,
+    <link xlink:href="#hard-disk" role="CH05-SDA22">Hard disks</link>
+  </tertiaryie>
+  <tertiaryie>/dev/sdb,
+    <link xlink:href="#dev-fs" role="CH03-DEV33">The /dev directory</link>,
+    <link xlink:href="#hard-disk" role="CH05-SDB">Hard disks</link>
+  </tertiaryie>
+  <tertiaryie>/dev/sdd,
+    <link xlink:href="#dev-fs" role="CH03-DEV34">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/ttyS0,
+    <link xlink:href="#dev-fs" role="CH03-DEV35">The /dev directory</link>,
+    <link xlink:href="#makedev" role="CH04-TTYS0">The MAKEDEV Script</link>,
+    <link xlink:href="#mknod" role="CH04-TTYS02">The mknod command</link>
+  </tertiaryie>
+  <tertiaryie>/dev/urandom,
+    <link xlink:href="#dev-fs" role="CH03-DEV31">The /dev directory</link>
+  </tertiaryie>
+  <tertiaryie>/dev/zero,
+    <link xlink:href="#dev-fs" role="CH03-DEV36">The /dev directory</link>
+  </tertiaryie>
+  <secondaryie>/etc,
+    <link xlink:href="#fs-layout" role="CH02-FILESYSTEM4">The filesystem layout</link>,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM17">The root filesystem</link>,
+    <link xlink:href="#etc-fs" role="CH03-FILESYSTEM29">The /etc directory</link>
+  </secondaryie>
+  <tertiaryie>/etc/bash.rc,
+    <link xlink:href="#etc-fs" role="CH03-ETC16">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/csh.cshrc,
+    <link xlink:href="#etc-fs" role="CH03-ETC17">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/fdprm,
+    <link xlink:href="#etc-fs" role="CH03-ETC4">The /etc directory</link>,
+    <link xlink:href="#floppies" role="CH05-FDPRM">Floppies</link>
+  </tertiaryie>
+  <tertiaryie>/etc/fstab,
+    <link xlink:href="#etc-fs" role="CH03-ETC5">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/group,
+    <link xlink:href="#etc-fs" role="CH03-ETC6">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/inittab,
+    <link xlink:href="#etc-fs" role="CH03-ETC7">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/issue,
+    <link xlink:href="#etc-fs" role="CH03-ETC8">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/login.defs,
+    <link xlink:href="#etc-fs" role="CH03-ETC12">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/magic,
+    <link xlink:href="#etc-fs" role="CH03-ETC9">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/motd,
+    <link xlink:href="#etc-fs" role="CH03-ETC10">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/mtab,
+    <link xlink:href="#etc-fs" role="CH03-ETC11">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/passwd,
+    <link xlink:href="#etc-fs" role="CH03-ETC2">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/printcap,
+    <link xlink:href="#etc-fs" role="CH03-ETC13">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/profile,
+    <link xlink:href="#etc-fs" role="CH03-ETC15">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/rc.d,
+    <link xlink:href="#etc-fs" role="CH03-ETC1">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/securetty,
+    <link xlink:href="#etc-fs" role="CH03-ETC18">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/shadow,
+    <link xlink:href="#etc-fs" role="CH03-ETC3">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/shells,
+    <link xlink:href="#etc-fs" role="CH03-ETC19">The /etc directory</link>
+  </tertiaryie>
+  <tertiaryie>/etc/termcap,
+    <link xlink:href="#etc-fs" role="CH03-ETC14">The /etc directory</link>
+  </tertiaryie>
+  <secondaryie>/home,
+    <link xlink:href="#fs-layout" role="CH02-FILESYSTEM8">The filesystem layout</link>,
+    <link xlink:href="#fs-background" role="CH03-FILESYSTEM4">Background</link>,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM28">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/lib,
+    <link xlink:href="#fs-layout" role="CH02-FILESYSTEM3">The filesystem layout</link>,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM19">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/lib/modules,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM20">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/mnt,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM24">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/proc,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM25">The root filesystem</link>,
+    <link xlink:href="#proc-fs" role="CH03-PROC1">The /proc filesystem</link>,
+    <link xlink:href="#fs-galore" role="CH05-PROC">Filesystems galore</link>
+  </secondaryie>
+  <tertiaryie>/proc/1,
+    <link xlink:href="#proc-fs" role="CH03-PROC2">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/cpuinfo,
+    <link xlink:href="#proc-fs" role="CH03-PROC3">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/devices,
+    <link xlink:href="#proc-fs" role="CH03-PROC4">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/dma,
+    <link xlink:href="#proc-fs" role="CH03-PROC5">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/filesystems,
+    <link xlink:href="#proc-fs" role="CH03-PROC6">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/interrupts,
+    <link xlink:href="#proc-fs" role="CH03-PROC7">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/ioports,
+    <link xlink:href="#proc-fs" role="CH03-PROC8">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/kcore,
+    <link xlink:href="#proc-fs" role="CH03-PROC9">The /proc filesystem</link>,
+    <link xlink:href="#fs-galore" role="CH05-KCORE">Filesystems galore</link>
+  </tertiaryie>
+  <tertiaryie>/proc/kmsg,
+    <link xlink:href="#proc-fs" role="CH03-PROC11">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/ksyms,
+    <link xlink:href="#proc-fs" role="CH03-PROC12">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/loadavg,
+    <link xlink:href="#proc-fs" role="CH03-PROC13">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/meminfo,
+    <link xlink:href="#proc-fs" role="CH03-PROC14">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/modules,
+    <link xlink:href="#proc-fs" role="CH03-PROC15">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/net,
+    <link xlink:href="#proc-fs" role="CH03-PROC16">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/self,
+    <link xlink:href="#proc-fs" role="CH03-PROC17">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/stat,
+    <link xlink:href="#proc-fs" role="CH03-PROC19">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/uptime,
+    <link xlink:href="#proc-fs" role="CH03-PROC20">The /proc filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/proc/version,
+    <link xlink:href="#proc-fs" role="CH03-PROC21">The /proc filesystem</link>
+  </tertiaryie>
+  <secondaryie>/root,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM18">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/sbin,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM16">The root filesystem</link>
+  </secondaryie>
+  <secondaryie>/tmp,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM22">The root filesystem</link>,
+    <link xlink:href="#var-fs" role="CH03-VAR17">The /var filesystem</link>
+  </secondaryie>
+  <secondaryie>/usr,
+    <link xlink:href="#fs-layout" role="CH02-FILESYSTEM6">The filesystem layout</link>,
+    <link xlink:href="#fs-background" role="CH03-FILESYSTEM2">Background</link>,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM26">The root filesystem</link>
+  </secondaryie>
+  <tertiaryie>/usr/bin,
+    <link xlink:href="#usr-fs" role="CH03-USR4">The /usr filesystem.</link>
+  </tertiaryie>
+  <tertiaryie>/usr/include,
+    <link xlink:href="#usr-fs" role="CH03-USR9">The /usr filesystem.</link>
+  </tertiaryie>
+  <tertiaryie>/usr/lib,
+    <link xlink:href="#usr-fs" role="CH03-USR10">The /usr filesystem.</link>
+  </tertiaryie>
+  <tertiaryie>/usr/local,
+    <link xlink:href="#usr-fs" role="CH03-USR2">The /usr filesystem.</link>,
+    <link xlink:href="#var-fs" role="CH03-USR16">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/usr/sbin,
+    <link xlink:href="#usr-fs" role="CH03-USR5">The /usr filesystem.</link>
+  </tertiaryie>
+  <tertiaryie>/usr/share/doc,
+    <link xlink:href="#usr-fs" role="CH03-USR8">The /usr filesystem.</link>
+  </tertiaryie>
+  <tertiaryie>/usr/share/info,
+    <link xlink:href="#usr-fs" role="CH03-USR7">The /usr filesystem.</link>
+  </tertiaryie>
+  <tertiaryie>/usr/share/man,
+    <link xlink:href="#usr-fs" role="CH03-USR6">The /usr filesystem.</link>
+  </tertiaryie>
+  <tertiaryie>/usr/share/man/cat,
+    <link xlink:href="#var-fs" role="CH03-USR15">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/usr/share/man/man,
+    <link xlink:href="#var-fs" role="CH03-USR14">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/usr/X11R6,
+    <link xlink:href="#usr-fs" role="CH03-USR3">The /usr filesystem.</link>
+  </tertiaryie>
+  <secondaryie>/var,
+    <link xlink:href="#fs-layout" role="CH02-FILESYSTEM7">The filesystem layout</link>,
+    <link xlink:href="#fs-background" role="CH03-FILESYSTEM3">Background</link>,
+    <link xlink:href="#root-fs" role="CH03-FILESYSTEM27">The root filesystem</link>,
+    <link xlink:href="#var-fs" role="CH03-VAR1">The /var filesystem</link>
+  </secondaryie>
+  <tertiaryie>/var/cache/man,
+    <link xlink:href="#var-fs" role="CH03-VAR2">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/games,
+    <link xlink:href="#var-fs" role="CH03-VAR3">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/lib,
+    <link xlink:href="#var-fs" role="CH03-VAR4">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/local,
+    <link xlink:href="#var-fs" role="CH03-VAR5">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/lock,
+    <link xlink:href="#var-fs" role="CH03-VAR7">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/log,
+    <link xlink:href="#var-fs" role="CH03-VAR8">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/log/messages,
+    <link xlink:href="#var-fs" role="CH03-MESSAGES">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/log/wtmp,
+    <link xlink:href="#var-fs" role="CH03-WTMP">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/mail,
+    <link xlink:href="#var-fs" role="CH03-VAR9">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/run,
+    <link xlink:href="#var-fs" role="CH03-VAR11">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/spool,
+    <link xlink:href="#var-fs" role="CH03-VAR13">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/spool/mail,
+    <link xlink:href="#var-fs" role="CH03-VAR10">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/spool/news,
+    <link xlink:href="#var-fs" role="CH03-VAR14">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/tmp,
+    <link xlink:href="#var-fs" role="CH03-VAR16">The /var filesystem</link>
+  </tertiaryie>
+  <tertiaryie>/var/utmp,
+    <link xlink:href="#var-fs" role="CH03-VAR12">The /var filesystem</link>
+  </tertiaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>Filesystem Hierarchy Standard (FHS)         ,
+    <link xlink:href="#fs-layout" role="CH02-FHS">The filesystem layout</link>,
+    <link xlink:href="#dir-tree-overview" role="CH03-FHS">Overview of the Directory Tree</link>,
+    <link xlink:href="#fs-background" role="CH03-FHS2">Background</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>filesystem types
+  </primaryie>
+  <secondaryie>ext,
+    <link xlink:href="#fs-galore" role="CH05-FS05">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>ext2,
+    <link xlink:href="#fs-galore" role="CH05-FS04">Filesystems galore</link>,
+    <link xlink:href="#fs-compare" role="CH05-FST7">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>ext3,
+    <link xlink:href="#fs-galore" role="CH05-FS03">Filesystems galore</link>,
+    <link xlink:href="#fs-compare" role="CH05-FST8">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>fat16,
+    <link xlink:href="#fs-compare" role="CH05-FST1">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>fat32,
+    <link xlink:href="#fs-compare" role="CH05-FST2">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>hfs+,
+    <link xlink:href="#fs-compare" role="CH05-FST5">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>hpfs,
+    <link xlink:href="#fs-galore" role="CH05-FS15">Filesystems galore</link>,
+    <link xlink:href="#fs-compare" role="CH05-FST3">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>iso9660,
+    <link xlink:href="#fs-galore" role="CH05-FS12">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>jfs,
+    <link xlink:href="#fs-galore" role="CH05-FS07">Filesystems galore</link>,
+    <link xlink:href="#fs-compare" role="CH05-FST12">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>minix,
+    <link xlink:href="#fs-galore" role="CH05-FS01">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>msdos,
+    <link xlink:href="#fs-galore" role="CH05-FS09">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>nfs,
+    <link xlink:href="#fs-galore" role="CH05-FS13">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>ntfs,
+    <link xlink:href="#fs-galore" role="CH05-FS17">Filesystems galore</link>,
+    <link xlink:href="#fs-compare" role="CH05-FST4">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>reiserfs,
+    <link xlink:href="#fs-galore" role="CH05-FS06">Filesystems galore</link>,
+    <link xlink:href="#fs-compare" role="CH05-FST9">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>smbfs,
+    <link xlink:href="#fs-galore" role="CH05-FS14">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>sysv,
+    <link xlink:href="#fs-galore" role="CH05-FS16">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>ufs2,
+    <link xlink:href="#fs-compare" role="CH05-FST6">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>umsdos,
+    <link xlink:href="#fs-galore" role="CH05-FS10">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>vfat,
+    <link xlink:href="#fs-galore" role="CH05-FS11">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>vxfs,
+    <link xlink:href="#fs-compare" role="CH05-FST13">Filesystem comparison</link>
+  </secondaryie>
+  <secondaryie>xfs,
+    <link xlink:href="#fs-galore" role="CH05-FS08">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>xia,
+    <link xlink:href="#fs-galore" role="CH05-FS02">Filesystems galore</link>
+  </secondaryie>
+  <secondaryie>zfs,
+    <link xlink:href="#fs-compare" role="CH05-FST14">Filesystem comparison</link>
+  </secondaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>filesystems
+  </primaryie>
+  <secondaryie>/etc
+  </secondaryie>
+  <tertiaryie>/etc/fstab,
+    <link xlink:href="#adding-disk" role="CH05-FSTAB">Adding more disk space for Linux</link>
+  </tertiaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>Free Software Foundation,
+    <link xlink:href="#GNU-or-not" role="FSF">Linux or GNU/Linux, that is the question.</link>
+  </primaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>G</title>
+
+<indexentry>
+  <primaryie>getty,
+    <link xlink:href="#terminal-logins" role="CH02-GETTY2">Logins from terminals</link>,
+    <link xlink:href="#network-logins" role="CH02-GETTY3">Network logins</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>GNOME,
+    <link xlink:href="#gui" role="CH02-GNOME">Graphical user interface</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>GRUB 		,
+    <link xlink:href="#root-fs" role="GRUB">The root filesystem</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>GUI,
+    <link xlink:href="#init" role="CH02-XWINDOWS">init</link>,
+    <link xlink:href="#gui" role="CH02-GUI2">Graphical user interface</link>
+  </primaryie>
+  <secondaryie>blackbox,
+    <link xlink:href="#gui" role="BLACKBOX">Graphical user interface</link>
+  </secondaryie>
+  <secondaryie>fvwm,
+    <link xlink:href="#gui" role="FVWM">Graphical user interface</link>
+  </secondaryie>
+  <secondaryie>icewm,
+    <link xlink:href="#gui" role="ICEWM">Graphical user interface</link>
+  </secondaryie>
+  <secondaryie>windowmaker 	,
+    <link xlink:href="#gui" role="WINDOWMAKER">Graphical user interface</link>
+  </secondaryie>
+  <secondaryie>X Windows,
+    <link xlink:href="#gui" role="CH02-XWIN">Graphical user interface</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>H</title>
+
+<indexentry>
+  <primaryie>hardware
+  </primaryie>
+  <secondaryie>CD-ROM,
+    <link xlink:href="#cdrom" role="CH05-CDROM">CD-ROMs</link>
+  </secondaryie>
+  <secondaryie>Central Processing Unit (CPU),
+    <link xlink:href="#hard-disk" role="CH05-CPU">Hard disks</link>
+  </secondaryie>
+  <secondaryie>disk controller,
+    <link xlink:href="#hard-disk" role="CH05-DISK-CONT">Hard disks</link>
+  </secondaryie>
+  <secondaryie>fibre channel,
+    <link xlink:href="#san" role="CH05-FC">Storage Area Networks - Draft</link>
+  </secondaryie>
+  <secondaryie>floppy disk,
+    <link xlink:href="#floppies" role="CH05-FLOPPY">Floppies</link>
+  </secondaryie>
+  <secondaryie>tape drive,
+    <link xlink:href="#tapes" role="CH05-TAPES">Tapes</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>I</title>
+
+<indexentry>
+  <primaryie>init,
+    <link xlink:href="#init" role="CH02-INIT">init</link>,
+    <link xlink:href="#terminal-logins" role="CH02-INIT3">Logins from terminals</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>inittab,
+    <link xlink:href="#init" role="CH02-INITTAB">init</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>iSCSI,
+    <link xlink:href="#san" role="CH05-ISCSI">Storage Area Networks - Draft</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>ISO 9660,
+    <link xlink:href="#cdrom" role="CH05-ISO9660">CD-ROMs</link>
+  </primaryie>
+  <secondaryie>Rock Ridge extensions,
+    <link xlink:href="#cdrom" role="CH05-ROCKRIDGE">CD-ROMs</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>K</title>
+
+<indexentry>
+  <primaryie>KDE,
+    <link xlink:href="#gui" role="CH02-KDE">Graphical user interface</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>kernel
+  </primaryie>
+  <secondaryie>devices,
+    <link xlink:href="#device-list" role="CH04-KERN-DEV">Hardware, Devices, and Tools</link>
+  </secondaryie>
+  <secondaryie>documentation
+  </secondaryie>
+  <tertiaryie>devices.txt,
+    <link xlink:href="#mknod" role="KERN-DOC">The mknod command</link>
+  </tertiaryie>
+  <secondaryie>driver,
+    <link xlink:href="#kernel-parts" role="HARDWARE-DRIVER">Important parts of the kernel</link>
+  </secondaryie>
+  <secondaryie>memory management,
+    <link xlink:href="#kernel-parts" role="KERN-MEM">Important parts of the kernel</link>
+  </secondaryie>
+  <secondaryie>modules,
+    <link xlink:href="#ch04-modules" role="CH04-MODULES">Kernel Modules</link>
+  </secondaryie>
+  <tertiaryie>depmod,
+    <link xlink:href="#ch04-depmod2" role="CH04-DEPMOD2">depmod</link>
+  </tertiaryie>
+  <tertiaryie>insmod,
+    <link xlink:href="#ch04-insmod2" role="CH04-INSMOD2">insmod</link>
+  </tertiaryie>
+  <tertiaryie>lsmod,
+    <link xlink:href="#ch04-lsmod2" role="CH04-LSMOD2">lsmod</link>
+  </tertiaryie>
+  <tertiaryie>modprobe,
+    <link xlink:href="#ch04-modprobe2" role="CH04-MODPROBE2">modprobe</link>
+  </tertiaryie>
+  <tertiaryie>rmmod,
+    <link xlink:href="#ch04-rmmod2" role="CH04-RMMOD2">rmmod</link>
+  </tertiaryie>
+  <secondaryie>NFS,
+    <link xlink:href="#nfs" role="CH02-KERN-NFS">Network file systems</link>
+  </secondaryie>
+  <secondaryie>overview,
+    <link xlink:href="#various-parts" role="CH02-KERN-OVER">Various parts of an operating system</link>,
+    <link xlink:href="#kernel-parts" role="CH02-KERN-OVER2">Important parts of the kernel</link>
+  </secondaryie>
+  <secondaryie>	process management,
+    <link xlink:href="#kernel-parts" role="KERN-PROC-MGT">Important parts of the kernel</link>
+  </secondaryie>
+  <secondaryie>virtual 	filesystem (VFS),
+    <link xlink:href="#kernel-parts" role="VFS">Important parts of the kernel</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>L</title>
+
+<indexentry>
+  <primaryie>LILO,
+    <link xlink:href="#root-fs" role="CH03-LILO">The root filesystem</link>,
+    <link xlink:href="#part-hd" role="CH05-LILO">Partitioning a hard disk</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>Linux
+  </primaryie>
+  <secondaryie>Distributions,
+    <link xlink:href="#intro" role="LINUX-DISTRO">Introduction</link>
+  </secondaryie>
+  <secondaryie>GNU 	,
+    <link xlink:href="#GNU-or-not" role="CH01-GNU-OR-NOT">Linux or GNU/Linux, that is the question.</link>
+  </secondaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>logging in,
+    <link xlink:href="#network-logins" role="LOGGING-IN">Network logins</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>login,
+    <link xlink:href="#terminal-logins" role="CH02-LOGIN">Logins from terminals</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>logs
+  </primaryie>
+  <secondaryie>/var/log/messages,
+    <link xlink:href="#var-fs" role="CH03-LOGS">The /var filesystem</link>,
+    <link xlink:href="#formatting" role="CH05-MESSAGES">Formatting</link>
+  </secondaryie>
+  <secondaryie>/var/log/wtmp,
+    <link xlink:href="#var-fs" role="CH03-WTMP2">The /var filesystem</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>M</title>
+
+<indexentry>
+  <primaryie>mail transfer agent (MTA) 	,
+    <link xlink:href="#mail" role="CH02-EMAIL2">Mail</link>
+  </primaryie>
+  <secondaryie>postfix,
+    <link xlink:href="#mail" role="CH02-EMAIL4">Mail</link>
+  </secondaryie>
+  <secondaryie>sendmail,
+    <link xlink:href="#mail" role="CH02-EMAIL3">Mail</link>
+  </secondaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>mail user agent,
+    <link xlink:href="#mail" role="CH02-EMAIL5">Mail</link>
+  </primaryie>
+  <secondaryie>evolution,
+    <link xlink:href="#mail" role="CH02-EMAIL7">Mail</link>
+  </secondaryie>
+  <secondaryie>pine,
+    <link xlink:href="#mail" role="CH02-EMAIL6">Mail</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>N</title>
+
+<indexentry>
+  <primaryie>Network Attached Storage (NAS),
+    <link xlink:href="#net-attached" role="CH05-NAS-CHAPT">Network Attached Storage - Draft</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>Network File System (NFS),
+    <link xlink:href="#nfs" role="CH02-NFS">Network file systems</link>,
+    <link xlink:href="#fs-background" role="CH03-NFS">Background</link>,
+    <link xlink:href="#net-attached" role="CH05-NFS2">Network Attached Storage - Draft</link>,
+    <link xlink:href="#net-file-sys" role="CH05-NFS">NFS</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>networking,
+    <link xlink:href="#networking" role="CH02-NET">Networking</link>
+  </primaryie>
+  <secondaryie>Network  	Admin Guide (NAG),
+    <link xlink:href="#networking" role="CH02-NAG">Networking</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>O</title>
+
+<indexentry>
+  <primaryie>Open Sound System (OSS),
+    <link xlink:href="#dev-fs" role="CH03-OSS">The /dev directory</link>
+  </primaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>P</title>
+
+<indexentry>
+  <primaryie>partition types
+  </primaryie>
+  <secondaryie>AIX,
+    <link xlink:href="#part-types" role="PT3">Partition types</link>
+  </secondaryie>
+  <secondaryie>FAT16,
+    <link xlink:href="#part-types" role="PT2">Partition types</link>
+  </secondaryie>
+  <secondaryie>FAT32,
+    <link xlink:href="#part-types" role="PT1">Partition types</link>
+  </secondaryie>
+  <secondaryie>FreeBSD,
+    <link xlink:href="#part-types" role="PT10">Partition types</link>
+  </secondaryie>
+  <secondaryie>HPFS,
+    <link xlink:href="#part-types" role="PT5">Partition types</link>
+  </secondaryie>
+  <secondaryie>Linux,
+    <link xlink:href="#part-types" role="PT8">Partition types</link>
+  </secondaryie>
+  <secondaryie>Linux LVM,
+    <link xlink:href="#part-types" role="PT9">Partition types</link>
+  </secondaryie>
+  <secondaryie>Linux Swap,
+    <link xlink:href="#part-types" role="PT7">Partition types</link>
+  </secondaryie>
+  <secondaryie>Minix,
+    <link xlink:href="#part-types" role="PT6">Partition types</link>
+  </secondaryie>
+  <secondaryie>NetBSD,
+    <link xlink:href="#part-types" role="PT11">Partition types</link>
+  </secondaryie>
+  <secondaryie>NTFS,
+    <link xlink:href="#part-types" role="PT4">Partition types</link>
+  </secondaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>printing,
+    <link xlink:href="#printing" role="CH02-PRINT">Printing</link>
+  </primaryie>
+  <secondaryie>queue,
+    <link xlink:href="#printing" role="CH02-PRINT2">Printing</link>
+  </secondaryie>
+  <secondaryie>spools,
+    <link xlink:href="#printing" role="CH02-PRINT3">Printing</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>R</title>
+
+<indexentry>
+  <primaryie>runlevels,
+    <link xlink:href="#init" role="RLEVELS">init</link>
+  </primaryie>
+  <secondaryie>0 - shutdown,
+    <link xlink:href="#init" role="RLEVEL0">init</link>
+  </secondaryie>
+  <secondaryie>1 - single user 	,
+    <link xlink:href="#init" role="CH02-SINGLE-USER">init</link>
+  </secondaryie>
+  <secondaryie>1 - single-user,
+    <link xlink:href="#init" role="RLEVEL1">init</link>
+  </secondaryie>
+  <secondaryie>3 - multi-user,
+    <link xlink:href="#init" role="MULTI-USER">init</link>
+  </secondaryie>
+  <secondaryie>5 - multi-user with GUI 	,
+    <link xlink:href="#init" role="RLEVEL5">init</link>
+  </secondaryie>
+  <secondaryie>6 - reboot,
+    <link xlink:href="#init" role="RLEVEL6">init</link>
+  </secondaryie>
+  <secondaryie>inittab,
+    <link xlink:href="#init" role="CH02-RLEVEL-INITTAB">init</link>
+  </secondaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>S</title>
+
+<indexentry>
+  <primaryie>Samba 	,
+    <link xlink:href="#nfs" role="CH02-SAMBA">Network file systems</link>,
+    <link xlink:href="#net-attached" role="CH05-SAMBA2">Network Attached Storage - Draft</link>,
+    <link xlink:href="#cifs" role="CH05-SAMBA">CIFS</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>shells
+  </primaryie>
+  <secondaryie>bash - Bourne Again SHell,
+    <link xlink:href="#etc-fs" role="CH03-BASH">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>csh - C SHell,
+    <link xlink:href="#etc-fs" role="CH03-CSH">The /etc directory</link>
+  </secondaryie>
+  <secondaryie>sh - Bourne,
+    <link xlink:href="#etc-fs" role="CH03-SH">The /etc directory</link>
+  </secondaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>ssh,
+    <link xlink:href="#network-logins" role="CH02-SSH">Network logins</link>
+  </primaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>Storage Area Network (SAN),
+    <link xlink:href="#san" role="CH05-SAN-CHAPT">Storage Area Networks - Draft</link>,
+    <link xlink:href="#net-attached" role="CH05-SAN3">Network Attached Storage - Draft</link>
+  </primaryie>
+  <secondaryie>LUN,
+    <link xlink:href="#san" role="CH05-SAN2">Storage Area Networks - Draft</link>
+  </secondaryie>
+</indexentry>
+
+<indexentry>
+  <primaryie>syslog 	,
+    <link xlink:href="#syslog" role="CH02-SYSLOG">Syslog</link>
+  </primaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>T</title>
+
+<indexentry>
+  <primaryie>telnet 	,
+    <link xlink:href="#network-logins" role="CH02-TELNET">Network logins</link>
+  </primaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>V</title>
+
+<indexentry>
+  <primaryie>VMWare,
+    <link xlink:href="#cdrom" role="CH05-VMWARE">CD-ROMs</link>
+  </primaryie>
+</indexentry>
+
+</indexdiv>
+<indexdiv><title>W</title>
+
+<indexentry>
+  <primaryie>WINE,
+    <link xlink:href="#cdrom" role="CH05-WINE">CD-ROMs</link>
+  </primaryie>
+</indexentry>
+
+</indexdiv>
+</index>

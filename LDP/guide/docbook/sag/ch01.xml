@@ -1,4 +1,5 @@
-<chapter id="intro">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="intro">
 <title>Introduction</title>
 	<blockquote><para><quote>In the beginning, the file was without
 	form, and void; and emptiness was upon the face of the bits.
@@ -53,11 +54,11 @@
 	have built up themselves.  This book is not targeted at any
 	one distribution.  Distributions can and do vary considerably.
 	When possible, differences have been noted and alternatives
-	given.  For a list of distributions <indexterm id="Linux-distro">
+	given.  For a list of distributions <indexterm xml:id="Linux-distro">
 	<primary>Linux</primary><secondary>Distributions</secondary></indexterm>
 	and some of their differences see
-	<ulink url="http://en.wikipedia.org/wiki/Comparison_of_Linux_distributions">
-	http://en.wikipedia.org/wiki/Comparison_of_Linux_distributions</ulink>.
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://en.wikipedia.org/wiki/Comparison_of_Linux_distributions">
+	http://en.wikipedia.org/wiki/Comparison_of_Linux_distributions</link>.
 	</para>
 	
 	<para>In trying to describe how things work, rather than just
@@ -94,11 +95,11 @@
 	part of the full Linux
 	documentation set.</para>
 
-<sect1 id="GNU-or-not">
+<section xml:id="GNU-or-not">
 <title>Linux or GNU/Linux, that is the question.</title>
 
 	<para>Many people feel that Linux should really be called GNU/Linux.  
-	<indexterm id="ch01-GNU-or-not"><primary>Linux</primary><secondary>GNU
+	<indexterm xml:id="ch01-GNU-or-not"><primary>Linux</primary><secondary>GNU
 	</secondary></indexterm>
 	This is because Linux is only the kernel, not the applications that run 
 	on it.  Most of the basic command line utilities were written by the
@@ -106,7 +107,7 @@
 	Among those utilities are some of the most basic commands like cp, mv,
 	lsof, and dd.</para>
 
-	<para>In a nutshell, what happened was, the FSF <indexterm id="fsf">
+	<para>In a nutshell, what happened was, the FSF <indexterm xml:id="fsf">
 	<primary>Free Software Foundation</primary></indexterm>started developing GNU
 	by writing things like compliers, C libraries, and basic command line
 	utilities before the kernel.  Linus Torvalds, started Linux by writing 
@@ -122,31 +123,29 @@
 	<para>GNU's side of the issue is discussed on their website:</para> 
 
 	<para>The relationship - 
-	<ulink url="http://www.gnu.org/gnu/linux-and-gnu.html">
-	http://www.gnu.org/gnu/linux-and-gnu.html</ulink></para>
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/gnu/linux-and-gnu.html">
+	http://www.gnu.org/gnu/linux-and-gnu.html</link></para>
 
-	<para>Why Linux should be GNU/Linux - <ulink
-	url="http://www.gnu.org/gnu/why-gnu-linux.html">
-	http://www.gnu.org/gnu/why-gnu-linux.html</ulink></para>
+	<para>Why Linux should be GNU/Linux - <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/gnu/why-gnu-linux.html">
+	http://www.gnu.org/gnu/why-gnu-linux.html</link></para>
 
-	<para>GNU/Linux FAQ's - <ulink
-	url="http://www.gnu.org/gnu/gnu-linux-faq.html">
-	http://www.gnu.org/gnu/gnu-linux-faq.html</ulink></para>
+	<para>GNU/Linux FAQ's - <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.gnu.org/gnu/gnu-linux-faq.html">
+	http://www.gnu.org/gnu/gnu-linux-faq.html</link></para>
 
 	<para>Here are some Alternate views:</para>
 
-	<para><ulink url="http://librenix.com/?inode=2312">
-	http://librenix.com/?inode=2312</ulink></para>
+	<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://librenix.com/?inode=2312">
+	http://librenix.com/?inode=2312</link></para>
 
-	<para><ulink url="http://www.topology.org/linux/lingl.html">
-	http://www.topology.org/linux/lingl.html</ulink></para>
+	<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.topology.org/linux/lingl.html">
+	http://www.topology.org/linux/lingl.html</link></para>
 
-	<para><ulink url="http://atulchitnis.net/writings/gnulinux.php">
-	http://atulchitnis.net/writings/gnulinux.php</ulink></para>
+	<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://atulchitnis.net/writings/gnulinux.php">
+	http://atulchitnis.net/writings/gnulinux.php</link></para>
 
-</sect1>
+</section>
 
-<sect1>
+<section>
 <title>Trademarks</title>
 
 	<para>Microsoft, Windows, Windows NT, Windows 2000, and Windows XP
@@ -168,5 +167,5 @@
 
 	<para>Other product names mentioned herein may be trademarks and/or 
 	registered trademarks of their respective companies. </para>
-
+</section>
 </chapter>

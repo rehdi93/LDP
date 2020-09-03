@@ -1,4 +1,5 @@
-<chapter id="log-in-and-out">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="log-in-and-out">
 <title>Logging In And Out</title>
 
 	<blockquote><para><quote>I don't care to belong to a club
@@ -12,10 +13,10 @@
 	some detail.
 	</para>
 
-<sect1 id="login-via-terminal">
+<section xml:id="login-via-terminal">
 <title>Logins via terminals</title>
 
-	<para><xref linkend="terminal-logins"> shows how logins happen via
+	<para><xref linkend="terminal-logins"/> shows how logins happen via
 	terminals.  First, <command>init</command> makes sure there is
 	a <command>getty</command> program for the terminal connection
 	(or console).  <command>getty</command> listens at the terminal
@@ -34,12 +35,12 @@
 	for the terminal.
 	</para>
 	
-		<figure id="terminal-logins-table" float="1">
+		<figure xml:id="terminal-logins-table" floatstyle="normal">
 		<title>Logins via terminals: the interaction of 
 <command>init</command>, 
 <command>getty</command>, <command>login</command>, and the 
 shell.</title>
-		<graphic fileref="logins-via-terminals.png">
+		<mediaobject><imageobject><imagedata fileref="logins-via-terminals.svg"/></imageobject></mediaobject>
 		</figure>
 
 	<para> Note that the only new process is the
@@ -65,9 +66,9 @@ shell.</title>
 	you probably don't have to worry about <command>getty</command>,
 	but <command>init</command> is still important.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="login-via-network">
+<section xml:id="login-via-network">
 <title>Logins via the network</title>
 
 	<para>Two computers in the same network are usually linked via a
@@ -117,9 +118,9 @@ shell.</title>
 	see the <citetitle>Linux Network Administrators' Guide</citetitle>
 	for more information.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="what-login-does">
+<section xml:id="what-login-does">
 <title>What <command>login</command> does</title>
 
 	<para>The <command>login</command> program takes care of
@@ -168,18 +169,18 @@ shell.</title>
 	<filename>utmp</filename> manual page); it is unfortunately not
 	convenient to examine them without special programs.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="X-xdm">
+<section xml:id="X-xdm">
 <title>X and xdm</title>
 
 	<para> XXX X implements logins via xdm; also: xterm -ls </para>
 
 	<para>TO BE ADDED</para>
 
-</sect1>
+</section>
 
-<sect1 id="access-control">
+<section xml:id="access-control">
 <title>Access control</title>
 
 	<para> The user database is traditionally contained in the
@@ -227,9 +228,9 @@ shell.</title>
 	possible to log in via any terminal as any other user, and use
 	the <command>su</command> command to become root.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="shell-startup">
+<section xml:id="shell-startup">
 <title>Shell startup</title>
 
 	<para> When an interactive login shell starts, it automatically
@@ -248,5 +249,5 @@ shell.</title>
 	hand, <filename>.profile</filename> allows the user to customize
 	the environment to his own tastes by overriding, if necessary,
 	the default environment.  </para>
-
+</section>
 </chapter>

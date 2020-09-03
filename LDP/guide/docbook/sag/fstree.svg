@@ -1,0 +1,178 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-09-02 10:22:44 -->
+<!-- Magnification: 1.05 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="276pt" height="139pt"
+	viewBox="67 126 4368 2206">
+<g fill="none">
+<!-- Line -->
+<polyline points=" 586,1263 361,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 586,1263 586,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 586,1263 901,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1756,1263 1351,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1756,1263 1621,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1756,1263 1891,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1756,1263 2206,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 3556,1263 2971,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 3556,1263 3241,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 3556,1263 3556,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 3556,1263 3826,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 3556,1263 4141,1758"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 631,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 3511,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 1036,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 1351,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 1756,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 2116,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 2431,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 2881,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2161,406 3151,946"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Spline -->
+<path style="stroke:#000000;stroke-width:8" d="M 2161,136
+ C2161,136
+3781,676
+4051,1171
+3691,1261
+3151,1261
+856,1216
+361,1216
+316,1081
+496,721
+2161,136
+"/>
+<!-- Spline -->
+<path style="stroke:#000000;stroke-width:8" d="M 541,2206
+ C541,2206
+226,2206
+91,2026
+136,1576
+316,1261
+406,1081
+631,1036
+811,1081
+991,1531
+1081,1891
+1081,2161
+721,2206
+541,2206
+"/>
+<!-- Spline -->
+<path style="stroke:#000000;stroke-width:8" d="M 2746,2161
+ C2746,2161
+2701,1846
+3016,1486
+3286,1306
+3556,1036
+3916,1351
+4411,1936
+4366,2206
+3916,2251
+2746,2161
+"/>
+<!-- Spline -->
+<path style="stroke:#000000;stroke-width:8" d="M 1756,2206
+ C1756,2206
+1306,2206
+1171,2071
+1171,1891
+1441,1396
+1621,1081
+1756,991
+1936,1306
+2431,1756
+2476,2071
+2251,2206
+1756,2206
+"/>
+<!-- Text -->
+<text xml:space="preserve" x="451" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">home</text>
+<!-- Text -->
+<text xml:space="preserve" x="2791" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">dev</text>
+<!-- Text -->
+<text xml:space="preserve" x="946" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">bin</text>
+<!-- Text -->
+<text xml:space="preserve" x="1261" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">proc</text>
+<!-- Text -->
+<text xml:space="preserve" x="2386" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">lib</text>
+<!-- Text -->
+<text xml:space="preserve" x="3106" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">etc</text>
+<!-- Text -->
+<text xml:space="preserve" x="3466" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">var</text>
+<!-- Text -->
+<text xml:space="preserve" x="1666" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">usr</text>
+<!-- Text -->
+<text xml:space="preserve" x="1981" y="1172" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">boot</text>
+<!-- Text -->
+<text xml:space="preserve" x="226" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">ftp</text>
+<!-- Text -->
+<text xml:space="preserve" x="496" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">liw</text>
+<!-- Text -->
+<text xml:space="preserve" x="766" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">linus</text>
+<!-- Text -->
+<text xml:space="preserve" x="3152" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">log</text>
+<!-- Text -->
+<text xml:space="preserve" x="4052" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">tmp</text>
+<!-- Text -->
+<text xml:space="preserve" x="3422" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">run</text>
+<!-- Text -->
+<text xml:space="preserve" x="2882" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">lib</text>
+<!-- Text -->
+<text xml:space="preserve" x="3692" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">spool</text>
+<!-- Text -->
+<text xml:space="preserve" x="1262" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">bin</text>
+<!-- Text -->
+<text xml:space="preserve" x="1532" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">lib</text>
+<!-- Text -->
+<text xml:space="preserve" x="1757" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">man</text>
+<!-- Text -->
+<text xml:space="preserve" x="2117" y="2073" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">tmp</text>
+<!-- Text -->
+<text xml:space="preserve" x="2161" y="361" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="120" text-anchor="start">/</text>
+</g>
+</svg>

@@ -1,0 +1,168 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-09-02 10:22:44 -->
+<!-- Magnification: 1 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="241pt" height="231pt"
+	viewBox="75 438 4008 3849">
+<g fill="none">
+<!-- Line -->
+<polyline points=" 1125,1575 2925,1575"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1125,675 2925,675"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1125,900 2925,900"
+	stroke="#000000" stroke-width="8px" stroke-dasharray="40 40"/>
+<!-- Line -->
+<polyline points=" 1125,1800 2925,1800"
+	stroke="#000000" stroke-width="8px" stroke-dasharray="40 40"/>
+<!-- Line -->
+<polyline points=" 1125,2025 2925,2025"
+	stroke="#000000" stroke-width="8px" stroke-dasharray="40 40"/>
+<!-- Line -->
+<polyline points=" 1125,2475 2925,2475"
+	stroke="#000000" stroke-width="8px" stroke-dasharray="40 40"/>
+<!-- Line -->
+<polyline points=" 1125,2700 2925,2700"
+	stroke="#000000" stroke-width="8px" stroke-dasharray="40 40"/>
+<!-- Line -->
+<polyline points=" 1125,3150 2925,3150"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1125,3600 2925,3600"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 1125,3825 2925,3825"
+	stroke="#000000" stroke-width="8px" stroke-dasharray="40 40"/>
+<!-- Line -->
+<rect x="1125" y="450" width="1800" height="3825"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M 75,438 H 4083 V 4287 H 75 z
+		M 938,2325 900,2460 863,2325 893,2482 907,2482z
+		M 863,1950 900,1815 938,1950 907,1793 893,1793z"/>
+</clipPath>
+</defs>
+<polyline points=" 900,1800 900,2475" clip-path="url(#cp0)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 900,2475 -->
+<polyline points=" 938,2325 900,2460 863,2325"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Backward arrow to point 900,1800 -->
+<polyline points=" 863,1950 900,1815 938,1950"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp1">
+	<path clip-rule="evenodd" d="M 75,438 H 4083 V 4287 H 75 z
+		M 938,3000 900,3135 863,3000 893,3157 907,3157z
+		M 863,2625 900,2490 938,2625 907,2468 893,2468z"/>
+</clipPath>
+</defs>
+<polyline points=" 900,2475 900,3150" clip-path="url(#cp1)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 900,3150 -->
+<polyline points=" 938,3000 900,3135 863,3000"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Backward arrow to point 900,2475 -->
+<polyline points=" 863,2625 900,2490 938,2625"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp2">
+	<path clip-rule="evenodd" d="M 75,438 H 4083 V 4287 H 75 z
+		M 3188,4125 3150,4260 3113,4125 3143,4282 3157,4282z
+		M 3113,3750 3150,3615 3188,3750 3157,3593 3143,3593z"/>
+</clipPath>
+</defs>
+<polyline points=" 3150,3600 3150,4275" clip-path="url(#cp2)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 3150,4275 -->
+<polyline points=" 3188,4125 3150,4260 3113,4125"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Backward arrow to point 3150,3600 -->
+<polyline points=" 3113,3750 3150,3615 3188,3750"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp3">
+	<path clip-rule="evenodd" d="M 75,438 H 4083 V 4287 H 75 z
+		M 3188,1425 3150,1560 3113,1425 3143,1582 3157,1582z
+		M 3113,825 3150,690 3188,825 3157,668 3143,668z"/>
+</clipPath>
+</defs>
+<polyline points=" 3150,675 3150,1575" clip-path="url(#cp3)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 3150,1575 -->
+<polyline points=" 3188,1425 3150,1560 3113,1425"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Backward arrow to point 3150,675 -->
+<polyline points=" 3113,825 3150,690 3188,825"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp4">
+	<path clip-rule="evenodd" d="M 75,438 H 4083 V 4287 H 75 z
+		M 3188,3000 3150,3135 3113,3000 3143,3157 3157,3157z
+		M 3113,1725 3150,1590 3188,1725 3157,1568 3143,1568z"/>
+</clipPath>
+</defs>
+<polyline points=" 3150,1575 3150,3150" clip-path="url(#cp4)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 3150,3150 -->
+<polyline points=" 3188,3000 3150,3135 3113,3000"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Backward arrow to point 3150,1575 -->
+<polyline points=" 3113,1725 3150,1590 3188,1725"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Text -->
+<text xml:space="preserve" x="90" y="2115" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Logical</text>
+<!-- Text -->
+<text xml:space="preserve" x="90" y="2385" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">partition</text>
+<!-- Text -->
+<text xml:space="preserve" x="90" y="2790" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Logical</text>
+<!-- Text -->
+<text xml:space="preserve" x="90" y="3060" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">partition</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="2340" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Extended</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="2610" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">partition</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="1035" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Primary</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="1305" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">partition</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="3870" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Primary</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="4140" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">partition</text>
+<!-- Text -->
+<text xml:space="preserve" x="1260" y="630" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">MBR</text>
+<!-- Text -->
+<text xml:space="preserve" x="1260" y="855" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Boot sector</text>
+<!-- Text -->
+<text xml:space="preserve" x="1260" y="1170" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Data area</text>
+<!-- Text -->
+<text xml:space="preserve" x="1260" y="1395" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">of partition</text>
+<!-- Text -->
+<text xml:space="preserve" x="1260" y="1755" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Boot sector</text>
+<!-- Text -->
+<text xml:space="preserve" x="1260" y="3780" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Boot sector</text>
+<!-- Text -->
+<text xml:space="preserve" x="1260" y="3420" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Unused disk space</text>
+<!-- Text -->
+<text xml:space="preserve" x="1260" y="4095" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Data area</text>
+<!-- Text -->
+<text xml:space="preserve" x="1395" y="2295" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Data area</text>
+<!-- Text -->
+<text xml:space="preserve" x="1395" y="2970" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Data area</text>
+<!-- Text -->
+<text xml:space="preserve" x="1395" y="1980" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Unused boot sector</text>
+<!-- Text -->
+<text xml:space="preserve" x="1395" y="2655" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Unused boot sector</text>
+</g>
+</svg>

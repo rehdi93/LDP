@@ -1,4 +1,5 @@
-<chapter id="keeping-time">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="keeping-time">
 <title>Keeping Time</title>
 
 	<blockquote><para><quote>Time is an illusion.  Lunchtime double
@@ -9,7 +10,7 @@
 	you don't need to do anything about time, but it is good to
 	understand it.</para>
 
-<sect1 id="localtime">
+<section xml:id="localtime">
 <title>The concept of localtime</title>
 
 	<para> Time measurement is based on mostly regular natural
@@ -69,9 +70,9 @@
 	zone data files, there is little need to bother about time.
 	</para>
 
-</sect1>
+</section>
 
-<sect1 id="hw-sw-clocks">
+<section xml:id="hw-sw-clocks">
 <title>The hardware and software clocks</title>
 
 	<para> A personal computer has a battery driven hardware clock.
@@ -103,9 +104,9 @@
 	time, then it must be modified when daylight savings time begins
 	or ends (otherwise it wouldn't show local time).  </para>
 
-</sect1>
+</section>
 
-<sect1 id="showing-setting-time">
+<section xml:id="showing-setting-time">
 <title>Showing and setting time</title>
 
 	<para> In Linux, the system time zone is determined
@@ -204,9 +205,9 @@
 	still be careful.  Big jumps or backward jumps are more dangerous
 	than smaller or forward ones.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="clock-wrong">
+<section xml:id="clock-wrong">
 <title>When the clock is wrong</title>
 
 	<para> The Linux software clock is not always accurate.  It is
@@ -246,9 +247,9 @@
 	as accurate time as the remote computer.  </para>
 
 	<para> XXX say something intelligent about NTP </para> -->
-</sect1>
+</section>
 
-<sect1 id="ntp">
+<section xml:id="ntp">
 <title>NTP - Network Time Protocol</title>
 
 	<para> A networked computer (even if just over a modem) can
@@ -258,8 +259,8 @@
 	and correcting your computer's time by synchronizing it with a 
 	another system. With NTP your system's time can be maintained 
 	to within milliseconds of Coordinated Universal Time.  Visit
-	<ulink url="http://www.time.gov/about.html/">
-	http://www.time.gov/about.html</ulink> for more info.
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.time.gov/about.html/">
+	http://www.time.gov/about.html</link> for more info.
 	</para>
 	
 	<para> For more casual Linux users, this is just a nice luxury.  
@@ -281,12 +282,12 @@
 
 	<para> Most Linux distributions come with a NTP package of some kind,
 	either a .deb or .rpm package.  You can use that to install NTP, or you 
-	can download the source files from <ulink url="http://www.ntp.org/downloads.html">
-	http://www.ntp.org/downloads.html</ulink> and compile it yourself.  Either way, 
+	can download the source files from <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ntp.org/downloads.html">
+	http://www.ntp.org/downloads.html</link> and compile it yourself.  Either way, 
 	the basic configuration is the same.</para>
-</sect1>	
+</section>	
 
-<sect1 id="basic-ntp-config">
+<section xml:id="basic-ntp-config">
 <title>Basic NTP configuration</title>
 	<para>The NTP program is configured using either the 
 	<filename>/etc/ntp.conf	</filename> or <filename>/etc/xntp.conf</filename> 
@@ -305,7 +306,7 @@ fudge   127.127.1.0 stratum 10
 # Drift file.
 
 driftfile /etc/ntp/drift
-</computeroutput>
+</computeroutput></screen>
 	</para>
 
 	<para>The most basic ntp.conf file will simply list 2 servers, one 
@@ -365,9 +366,9 @@ restrict 127.0.0.1
 	try to learn your systems <glossterm>time drift</glossterm> and 
 	then automatically adjust for it.</para> 
 
-</sect1>
+</section>
 
-<sect1 id="ntp-toolkit">
+<section xml:id="ntp-toolkit">
 <title>NTP Toolkit</title>
 	<para>There are a number of utilities available to check if
 	NTP is doing it's job. The <command>ntpq -p</command> command
@@ -393,7 +394,7 @@ restrict 127.0.0.1
 frequency:            133.625 ppm
 poll adjust:          30
 watchdog timer:       404 s
-</computeroutput>
+</computeroutput></screen>
 	</para>
 
 	<para><command>ntpdc -c kerninfo</command> will display 
@@ -417,7 +418,7 @@ calibration cycles:   0
 jitter exceeded:      0
 stability exceeded:   0
 calibration errors:   0
-</computeroutput>
+</computeroutput></screen>
 	</para>
 
 	<para> A slightly more different version of 
@@ -498,31 +499,31 @@ truetime.ntp.com: stratum 1, offset -0.014363, synch distance 0.00000, refid 'AC
 <screen>
 <prompt>#</prompt> <userinput>ntpdate 132.236.56.250</userinput>
 13 Nov 14:56:28 ntpdate[29676]: adjust time server 132.236.56.250 offset -0.003151 sec
-<computeroutput></computeroutput>
+<computeroutput/>
 </screen>
 </para>
 
-</sect1>
+</section>
 
-<sect1 id="ntp-servers">
+<section xml:id="ntp-servers">
 <title>Some known NTP servers</title>
 		<para>A list of public NTP servers can be obtained from:
-	<ulink url="http://www.eecis.udel.edu/~mills/ntp/servers.html/">
-	http://www.eecis.udel.edu/~mills/ntp/servers.html</ulink>.  Please read
+	<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.eecis.udel.edu/~mills/ntp/servers.html/">
+	http://www.eecis.udel.edu/~mills/ntp/servers.html</link>.  Please read
 	the usage information on the page prior so using a server.  Not all
 	servers have the available bandwidth to allow a large number of systems
 	synchronizing against them.  Therefore it is a good idea to contact
 	a system's administrator prior to using his/her server for NTP services.
 	</para>
-</sect1>
+</section>
 
-<sect1 id="ntp-links">
+<section xml:id="ntp-links">
 <title>NTP Links</title>
 	<para>More detailed information on NTP can be obtained from the
-	NTP homepage:<ulink url="http://www.ntp.org/">http://www.ntp.org</ulink>.
+	NTP homepage:<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ntp.org/">http://www.ntp.org</link>.
 	</para>
 	
-	<para>Or from <ulink url="http://www.ntp.org/ntpfaq/NTP-a-faq.htm">
-	http://www.ntp.org/ntpfaq/NTP-a-faq.htm</ulink></para>
-</sect1>
+	<para>Or from <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ntp.org/ntpfaq/NTP-a-faq.htm">
+	http://www.ntp.org/ntpfaq/NTP-a-faq.htm</link></para>
+</section>
 </chapter>

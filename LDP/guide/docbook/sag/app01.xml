@@ -1,11 +1,12 @@
-<appendix id="gfdl1.2">
-<appendixinfo>
+<!-- Converted by db4-upgrade version 1.1 -->
+<appendix xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="gfdl1.2">
+<info>
 <title>GNU Free Documentation License</title>
 
 	<pubdate>Version 1.2, November 2002</pubdate>
 	<copyright><year>2000,2001,2002</year>
 	<holder>Free Software Foundation, Inc.</holder></copyright>
-	<legalnotice id="gfdl-legalnotice">
+	<legalnotice xml:id="gfdl-legalnotice">
 		<para><address>Free Software Foundation, Inc.
 		<street>59 Temple Place, Suite 330</street>,
 		<city>Boston</city>,
@@ -18,10 +19,10 @@
 		allowed.</para>
 	</legalnotice>
 	<releaseinfo>Version 1.2, November 2002</releaseinfo>
-</appendixinfo>
+</info>
 
-<title>GNU Free Documentation License</title>
-<section id="gfdl-0"><title>PREAMBLE</title>
+
+<section xml:id="gfdl-0"><title>PREAMBLE</title>
 
 	<para>The purpose of this License is to make a manual, textbook, or
 	other functional and useful document "free" in the sense of freedom: to
@@ -45,9 +46,9 @@
 	principally for works whose purpose is instruction or reference.</para>
 	</section>
 	
-<section id="gfdl-1"><title>APPLICABILITY AND DEFINITIONS</title>
+<section xml:id="gfdl-1"><title>APPLICABILITY AND DEFINITIONS</title>
 	
-	<para id="gfdl-doc">This License applies to any manual or other work, in
+	<para xml:id="gfdl-doc">This License applies to any manual or other work, in
 	any medium, that contains a notice placed by the copyright holder saying
 	it can be distributed under the terms of this License.  Such a notice
 	grants a world-wide, royalty-free license, unlimited in duration, to use
@@ -57,11 +58,11 @@
 	copy, modify or distribute the work in a way requiring permission under
 	copyright law.</para>
 
-	<para id="gfdl-mod-ver">A "Modified Version" of the Document means any
+	<para xml:id="gfdl-mod-ver">A "Modified Version" of the Document means any
 	work containing the Document or a portion of it, either copied verbatim,
 	or with modifications and/or translated into another language.</para>
 	
-	<para id="gfdl-secnd-sect">A "Secondary Section" is a named appendix or
+	<para xml:id="gfdl-secnd-sect">A "Secondary Section" is a named appendix or
 	a front-matter section of the Document that deals exclusively with the
 	relationship of the publishers or authors of the Document to the
 	Document's overall subject (or to related matters) and contains nothing
@@ -72,7 +73,7 @@
 	legal, commercial, philosophical, ethical or political position
 	regarding them.</para>
 	
-	<para id="gfdl-inv-sect">The "Invariant Sections" are certain Secondary
+	<para xml:id="gfdl-inv-sect">The "Invariant Sections" are certain Secondary
 	Sections whose titles are designated, as being those of Invariant
 	Sections, in the notice that says that the Document is released under
 	this License.  If a section does not fit the above definition of
@@ -80,13 +81,13 @@
 	Document may contain zero Invariant Sections.  If the Document does not
 	identify any Invariant Sections then there are none.</para>
 	
-	<para id="gfdl-cov-text">The "Cover Texts" are certain short passages of
+	<para xml:id="gfdl-cov-text">The "Cover Texts" are certain short passages of
 	text that are listed, as Front-Cover Texts or Back-Cover Texts, in the
 	notice that says that the Document is released under this License.  A
 	Front-Cover Text may be at most 5 words, and a Back-Cover Text may be at
 	most 25 words.</para>
 	
-	<para id="gfdl-transparent">A "Transparent" copy of the Document means a
+	<para xml:id="gfdl-transparent">A "Transparent" copy of the Document means a
 	machine-readable copy, represented in a format whose specification is
 	available to the general public, that is suitable for revising the
 	document straightforwardly with generic text editors or (for images
@@ -111,14 +112,14 @@
 	HTML, PostScript or PDF produced by some word processors for output
 	purposes only.</para>
                             
-	<para id="gfdl-title-page">The "Title Page" means, for a printed book,
+	<para xml:id="gfdl-title-page">The "Title Page" means, for a printed book,
 	the title page itself, plus such following pages as are needed to hold,
 	legibly, the material this License requires to appear in the title page.
 	For works in formats which do not have any title page as such, "Title
 	Page" means the text near the most prominent appearance of the work's
 	title, preceding the beginning of the body of the text.</para>
 	
-	<para id="gfdl-entitled">A section "Entitled XYZ" means a named subunit
+	<para xml:id="gfdl-entitled">A section "Entitled XYZ" means a named subunit
 	of the Document whose title either is precisely XYZ or contains XYZ in
 	parentheses following text that translates XYZ in another language.
 	(Here XYZ stands for a specific section name mentioned below, such as
@@ -135,7 +136,7 @@
 	meaning of this License.</para>
 </section>
 
-<section id="gfdl-2"><title>VERBATIM COPYING</title>
+<section xml:id="gfdl-2"><title>VERBATIM COPYING</title>
 
 	<para>You may copy and distribute the Document in any medium, either
 	commercially or noncommercially, provided that this License, the
@@ -152,7 +153,7 @@
 	and you may publicly display copies.</para>
 	</section>
 	
-<section id="gfdl-3"><title>COPYING IN QUANTITY</title>
+<section xml:id="gfdl-3"><title>COPYING IN QUANTITY</title>
 
 	<para>If you publish printed copies (or copies in media that commonly
 	have printed covers) of the Document, numbering more than 100, and the
@@ -191,7 +192,7 @@
 	Document.</para>
 </section>
 
-<section id="gfdl-4"><title>MODIFICATIONS</title>
+<section xml:id="gfdl-4"><title>MODIFICATIONS</title>
 
 	<para>You may copy and distribute a Modified Version of the Document
 	under the conditions of sections 2 and 3 above, provided that you
@@ -201,7 +202,7 @@
 	possesses a copy of it.  In addition, you must do these things in the
 	Modified Version:</para>
 
-<orderedlist id="gfdl-modif-cond" numeration="upperalpha">
+<orderedlist xml:id="gfdl-modif-cond" numeration="upperalpha">
   <title>GNU FDL Modification Conditions</title>
 	<listitem><simpara>Use in the Title Page (and on the covers, if any) a
 	title distinct from that of the Document, and from those of previous
@@ -309,7 +310,7 @@
 	assert or imply endorsement of any Modified Version.</para>
 </section>
 
-<section id="gfdl-5"><title>COMBINING DOCUMENTS</title>
+<section xml:id="gfdl-5"><title>COMBINING DOCUMENTS</title>
 
 	<para>You may combine the Document with other documents released under
 	this License, under the terms defined in <link linkend="gfdl-4">section
@@ -335,7 +336,7 @@
 	delete all sections Entitled "Endorsements".</para>
 </section>
 
-<section id="gfdl-6"><title>COLLECTIONS OF DOCUMENTS</title>
+<section xml:id="gfdl-6"><title>COLLECTIONS OF DOCUMENTS</title>
 
 	<para>You may make a collection consisting of the Document and other
 	documents released under this License, and replace the individual copies
@@ -351,7 +352,7 @@
 	document.</para>
 </section>
 
-<section id="gfdl-7"><title>AGGREGATION WITH INDEPENDENT WORKS</title>
+<section xml:id="gfdl-7"><title>AGGREGATION WITH INDEPENDENT WORKS</title>
 
 	<para>A compilation of the Document or its derivatives with other
 	separate and independent documents or works, in or on a volume of a
@@ -371,7 +372,7 @@
 	aggregate.</para>
 </section>
 
-<section id="gfdl-8"><title>TRANSLATION</title>
+<section xml:id="gfdl-8"><title>TRANSLATION</title>
 
 	<para>Translation is considered a kind of modification, so you may
 	distribute translations of the Document under the terms of section 4.
@@ -392,7 +393,7 @@
 	title.</para>
 </section>
 
-<section id="gfdl-9"><title>TERMINATION</title>
+<section xml:id="gfdl-9"><title>TERMINATION</title>
 
 	<para>You may not copy, modify, sublicense, or distribute the Document
 	except as expressly provided for under this License.  Any other attempt
@@ -403,7 +404,7 @@
 	in full compliance.</para>
 </section>
 
-<section id="gfdl-10"><title>FUTURE REVISIONS OF THIS LICENSE</title>
+<section xml:id="gfdl-10"><title>FUTURE REVISIONS OF THIS LICENSE</title>
 
 	<para>The Free Software Foundation may publish new, revised versions of
 	the GNU Free Documentation License from time to time.  Such new versions
@@ -421,14 +422,14 @@
 	as a draft) by the Free Software Foundation.</para>
 </section>
 
-<section id="gfdl-addendum"><title>ADDENDUM: How to use this License for
+<section xml:id="gfdl-addendum"><title>ADDENDUM: How to use this License for
   your documents</title>
 
 	<para>To use this License in a document you have written, include a copy
 	of the License in the document and put the following copyright and
 	license notices just after the title page:</para>
 
-	<blockquote id="copyright-sample">
+	<blockquote xml:id="copyright-sample">
   	<title>Sample Invariant Sections list</title>
     	<para>Copyright (c)  YEAR  YOUR NAME.
     	Permission is granted to copy, distribute and/or modify this document
@@ -442,7 +443,7 @@
 	<para>If you have Invariant Sections, Front-Cover Texts and Back-Cover
 	Texts, replace the "with...Texts." line with this:</para>
 
-	<blockquote id="inv-cover-sample">
+	<blockquote xml:id="inv-cover-sample">
   	<title>Sample Invariant Sections list</title>
 	<para>
     	with the Invariant Sections being LIST THEIR TITLES, with the
@@ -458,4 +459,4 @@
 	software license, such as the GNU General Public License, to permit
 	their use in free software.</para>
 </section>
-</appendix>                                                    
+</appendix>

@@ -1,4 +1,5 @@
-<chapter id="init-intro">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="init-intro">
 <title><command>init</command></title>
 
 	<blockquote><para><quote>Uuno on numero yksi</quote>
@@ -12,7 +13,7 @@
 	This chapter explains how <command>init</command> is configured
 	and how you can make use of the different run levels.</para>
 	
-<sect1 id="init-process">
+<section xml:id="init-process">
 <title><command>init</command> comes first</title>
 
 	<para><command>init</command> is one of those programs that
@@ -45,7 +46,7 @@
 	as checking filesystems, cleaning up <filename>/tmp</filename>,
 	starting various services, and starting a <command>getty</command>
 	for each terminal and virtual console where users should be able
-	to log in (see <xref linkend="log-in-and-out">).</para>
+	to log in (see <xref linkend="log-in-and-out"/>).</para>
 	
 	<para>After the system is properly up, <command>init</command>
 	restarts <command>getty</command> for each terminal
@@ -66,9 +67,9 @@
 	traditionally). This difference is not essential.  We'll look
 	at <command>sysvinit</command> only.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="config-init">
+<section xml:id="config-init">
 <title>Configuring <command>init</command> to start 
 <command>getty</command>: the 
 <filename>/etc/inittab</filename> file</title>
@@ -167,9 +168,9 @@ id:runlevels:action:process
 	grows to high, it will delay for five minutes before restarting
 	again.	</para>
 
-</sect1>
+</section>
 
-<sect1 id="run-levels-intro">
+<section xml:id="run-levels-intro">
 <title>Run levels</title>
 
 	<para>A <glossterm>run level</glossterm> is a state of
@@ -188,9 +189,9 @@ id:runlevels:action:process
 	define the different run levels.  However, run-levels 2 through 5 
 	can be modified to suit your own tastes.</para>
 	
-		<table id="run-levels-table">
+		<table xml:id="run-levels-table">
 		<title>Run level numbers</title>
-		<tgroup cols=2>
+		<tgroup cols="2">
 		<tbody>
 		<row> <entry>0</entry> <entry>Halt the system.</entry> </row>
 		<row> <entry>1</entry> <entry>Single-user mode (for special 
@@ -213,7 +214,7 @@ id:runlevels:action:process
 	Most distributions locate these directories either at
 	<filename>/etc/init.d/rcN.d</filename> or 
 	<filename>/etc/rcN.d</filename>. (Replace the N with the run-level
-	number.)<para>
+	number.)</para>
 		
 	<para>In each run-level you will find a series of if links pointing 
 	to start-up scripts located in <filename>/etc/init.d</filename>.  
@@ -225,36 +226,36 @@ id:runlevels:action:process
 
 	<para>The number following the K or S indicates the order the scripts
 	will be run.  Here is a sample of what an 
-	<filename>/etc/init.d/rc3.d</filename> may look like.
+	<filename>/etc/init.d/rc3.d</filename> may look like.</para>
 
 <screen>
 <prompt>#</prompt> <userinput>ls -l /etc/init.d/rc3.d</userinput>
 <computeroutput>
-lrwxrwxrwx  1 root root 10 2004-11-29 22:09 K12nfsboot -> ../nfsboot
-lrwxrwxrwx  1 root root  6 2005-03-29 13:42 K15xdm -> ../xdm
-lrwxrwxrwx  1 root root  9 2004-11-29 22:08 S01pcmcia -> ../pcmcia
-lrwxrwxrwx  1 root root  9 2004-11-29 22:06 S01random -> ../random
-lrwxrwxrwx  1 root root 11 2005-03-01 11:56 S02firewall -> ../firewall
-lrwxrwxrwx  1 root root 10 2004-11-29 22:34 S05network -> ../network
-lrwxrwxrwx  1 root root  9 2004-11-29 22:07 S06syslog -> ../syslog
-lrwxrwxrwx  1 root root 10 2004-11-29 22:09 S08portmap -> ../portmap
-lrwxrwxrwx  1 root root  9 2004-11-29 22:07 S08resmgr -> ../resmgr
-lrwxrwxrwx  1 root root  6 2004-11-29 22:09 S10nfs -> ../nfs
-lrwxrwxrwx  1 root root 12 2004-11-29 22:40 S12alsasound -> ../alsasound
-lrwxrwxrwx  1 root root  8 2004-11-29 22:09 S12fbset -> ../fbset
-lrwxrwxrwx  1 root root  7 2004-11-29 22:10 S12sshd -> ../sshd
-lrwxrwxrwx  1 root root  8 2005-02-01 09:24 S12xntpd -> ../xntpd
-lrwxrwxrwx  1 root root  7 2004-12-02 20:34 S13cups -> ../cups
-lrwxrwxrwx  1 root root  6 2004-11-29 22:09 S13kbd -> ../kbd
-lrwxrwxrwx  1 root root 13 2004-11-29 22:10 S13powersaved -> ../powersaved
-lrwxrwxrwx  1 root root  9 2004-11-29 22:09 S14hwscan -> ../hwscan
-lrwxrwxrwx  1 root root  7 2004-11-29 22:10 S14nscd -> ../nscd
-lrwxrwxrwx  1 root root 10 2004-11-29 22:10 S14postfix -> ../postfix
-lrwxrwxrwx  1 root root  6 2005-02-04 13:27 S14smb -> ../smb
-lrwxrwxrwx  1 root root  7 2004-11-29 22:10 S15cron -> ../cron
-lrwxrwxrwx  1 root root  8 2004-12-22 20:35 S15smbfs -> ../smbfs
+lrwxrwxrwx  1 root root 10 2004-11-29 22:09 K12nfsboot -&gt; ../nfsboot
+lrwxrwxrwx  1 root root  6 2005-03-29 13:42 K15xdm -&gt; ../xdm
+lrwxrwxrwx  1 root root  9 2004-11-29 22:08 S01pcmcia -&gt; ../pcmcia
+lrwxrwxrwx  1 root root  9 2004-11-29 22:06 S01random -&gt; ../random
+lrwxrwxrwx  1 root root 11 2005-03-01 11:56 S02firewall -&gt; ../firewall
+lrwxrwxrwx  1 root root 10 2004-11-29 22:34 S05network -&gt; ../network
+lrwxrwxrwx  1 root root  9 2004-11-29 22:07 S06syslog -&gt; ../syslog
+lrwxrwxrwx  1 root root 10 2004-11-29 22:09 S08portmap -&gt; ../portmap
+lrwxrwxrwx  1 root root  9 2004-11-29 22:07 S08resmgr -&gt; ../resmgr
+lrwxrwxrwx  1 root root  6 2004-11-29 22:09 S10nfs -&gt; ../nfs
+lrwxrwxrwx  1 root root 12 2004-11-29 22:40 S12alsasound -&gt; ../alsasound
+lrwxrwxrwx  1 root root  8 2004-11-29 22:09 S12fbset -&gt; ../fbset
+lrwxrwxrwx  1 root root  7 2004-11-29 22:10 S12sshd -&gt; ../sshd
+lrwxrwxrwx  1 root root  8 2005-02-01 09:24 S12xntpd -&gt; ../xntpd
+lrwxrwxrwx  1 root root  7 2004-12-02 20:34 S13cups -&gt; ../cups
+lrwxrwxrwx  1 root root  6 2004-11-29 22:09 S13kbd -&gt; ../kbd
+lrwxrwxrwx  1 root root 13 2004-11-29 22:10 S13powersaved -&gt; ../powersaved
+lrwxrwxrwx  1 root root  9 2004-11-29 22:09 S14hwscan -&gt; ../hwscan
+lrwxrwxrwx  1 root root  7 2004-11-29 22:10 S14nscd -&gt; ../nscd
+lrwxrwxrwx  1 root root 10 2004-11-29 22:10 S14postfix -&gt; ../postfix
+lrwxrwxrwx  1 root root  6 2005-02-04 13:27 S14smb -&gt; ../smb
+lrwxrwxrwx  1 root root  7 2004-11-29 22:10 S15cron -&gt; ../cron
+lrwxrwxrwx  1 root root  8 2004-12-22 20:35 S15smbfs -&gt; ../smbfs
 </computeroutput>
-<prompt>
+<!-- <prompt> -->
 </screen>
 
 	<para>How run levels start are configured in 
@@ -298,9 +299,9 @@ id:2:initdefault:
 	changed, <command>init</command> runs the relevant command from
 	<filename>/etc/inittab</filename>.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="inittab">
+<section xml:id="inittab">
 <title>Special configuration in 
 <filename>/etc/inittab</filename></title>
 
@@ -311,7 +312,7 @@ id:2:initdefault:
 	
 	<glosslist>
 
-	<glossentry><glossterm><literal>powerwait</literal></glossterm>
+	<glossentry><glossterm>powerwait</glossterm>
 		<glossdef><para>
 		Allows <command>init</command> to shut the system
 		down, when the power fails. This assumes the use of
@@ -319,7 +320,7 @@ id:2:initdefault:
 		<command>init</command> that the power is off.
 		</para></glossdef></glossentry>
 
-	<glossentry><glossterm><literal>ctrlaltdel</literal></glossterm>
+	<glossentry><glossterm>ctrlaltdel</glossterm>
 		<glossdef><para>
 		Allows <command>init</command> to reboot the system, when
 		the user presses ctrl-alt-del on the console keyboard.
@@ -329,7 +330,7 @@ id:2:initdefault:
 		location. (Or to start <command>nethack</command>.)
 		</para></glossdef></glossentry>
 
-	<glossentry><glossterm><literal>sysinit</literal></glossterm>
+	<glossentry><glossterm>sysinit</glossterm>
 		<glossdef><para>
 		Command to be run when the system is booted. This command
 		usually cleans up <filename>/tmp</filename>, for example.
@@ -341,9 +342,9 @@ id:2:initdefault:
 	<filename>inittab</filename> manual page for all possibilities,
 	and for details on how to use the above ones.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="boot-single-user">
+<section xml:id="boot-single-user">
 <title>Booting in single user mode</title>
 
 	<para>An important run level is <glossterm>single user 
@@ -387,5 +388,5 @@ id:2:initdefault:
 	<filename>/etc/passwd</filename> has been broken by filesystem
 	problems, of course, and in that case you'd better have a boot
 	floppy handy.)</para>
-
+</section>
 </chapter>

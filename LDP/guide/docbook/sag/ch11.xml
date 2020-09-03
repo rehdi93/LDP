@@ -1,4 +1,5 @@
-<chapter id="managing-users">
+<!-- Converted by db4-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="managing-users">
 <title>Managing user accounts</title>
 
 	<blockquote><para><quote>The similarities of sysadmins and drug
@@ -10,7 +11,7 @@
 	the accounts.  Different Linux systems have different tools for
 	doing this.</para>
 		
-<sect1 id="account">
+<section xml:id="account">
 <title>What's an account?</title>
 
 	<para> When a computer is used by many people it is usually
@@ -29,9 +30,9 @@
 	disk space might have a price per megabyte and day, and processing
 	time might have a price per second.  </para>
 	
-</sect1>
+</section>
 
-<sect1 id="adduser">
+<section xml:id="adduser">
 <title>Creating a user</title>
 
 	<para> The Linux kernel itself treats users are mere numbers.
@@ -54,10 +55,10 @@
 	Whatever the program, the result is that there is little if
 	any manual work to be done. Even if the details are many and
 	intricate, these programs make everything seem trivial.  However,
-	<xref linkend="manual-adduser"> describes how to do it by hand.
+	<xref linkend="manual-adduser"/> describes how to do it by hand.
 	</para>
 	
-<sect2 id="etc-passwd">
+<section xml:id="etc-passwd">
 <title><filename>/etc/passwd</filename> and other informative 
 files</title>
 
@@ -100,9 +101,9 @@ files</title>
 	file, can't get at the password.
 	</para>
 	
-</sect2>
+</section>
 
-<sect2 id="uid-gid">
+<section xml:id="uid-gid">
 <title>Picking numeric user and group ids</title>
 
 	<para> On most systems it doesn't matter what the numeric user
@@ -121,7 +122,7 @@ files</title>
 	username) may get access to the old owner's files (or mail,
 	or whatever).  </para>
 
-</sect2>
+</section>
 
 <!--
 %\subsection{Managing groups}
@@ -131,7 +132,7 @@ this;
 %	give reasons against.
 -->
 	
-<sect2 id="etc-skel">
+<section xml:id="etc-skel">
 <title>Initial environment: <filename>/etc/skel</filename></title>
 
 	<para> When the home directory for a new user is created, it is
@@ -157,9 +158,9 @@ this;
 	way it is possible to update it without breaking users'
 	own setups.  </para>
 
-</sect2>
+</section>
 
-<sect2 id="manual-adduser">
+<section xml:id="manual-adduser">
 <title>Creating a user by hand</title>
 
 	<para> To create a new account manually, follow these steps:
@@ -223,9 +224,9 @@ chmod go= .</userinput>
 	that no-one can use the account, unless they first become root,
 	since root can become any user.  </para>
 	
-</sect2>
+</section>
 
-</sect1>
+</section>
 
 <!--
 %\section{Educating a new user}
@@ -238,7 +239,7 @@ chmod go= .</userinput>
 %		how to use mail, list of people that answer questions
 -->
 
-<sect1 id="user-properties">
+<section xml:id="user-properties">
 <title>Changing user properties</title>
 
 	<para>
@@ -247,13 +248,13 @@ chmod go= .</userinput>
 	in <filename>/etc/passwd</filename>):
 
 	<glosslist>
-	<glossentry><glossterm><command>chfn</command></glossterm>
+	<glossentry><glossterm>chfn</glossterm>
 		<glossdef><para> Change the full name field.
 		</para></glossdef></glossentry>
-	<glossentry><glossterm><command>chsh</command></glossterm>
+	<glossentry><glossterm>chsh</glossterm>
 		<glossdef><para> Change the login shell.
 		</para></glossdef></glossentry>
-	<glossentry><glossterm><command>passwd</command></glossterm>
+	<glossentry><glossterm>passwd</glossterm>
 		<glossdef><para>Change the password.
 		</para></glossdef></glossentry>
 	</glosslist>
@@ -278,9 +279,9 @@ chmod go= .</userinput>
 	user, unless you also create a mail alias.
 	</para>
 	
-</sect1>
+</section>
 
-<sect1 id="deluser">
+<section xml:id="deluser">
 <title>Removing a user</title>
 
 	<para> To remove a user, you first remove all
@@ -312,9 +313,9 @@ find / -user username
 	<command>userdel</command>.  However, it is easy to do it by
 	hand as well, and the commands might not do everything.  </para>
 
-</sect1>
+</section>
 
-<sect1 id="disable-user">
+<section xml:id="disable-user">
 <title>Disabling a user temporarily</title>
 
 	<para> It is sometimes necessary to temporarily disable an
@@ -370,7 +371,7 @@ Please call 555-1234 and wait for the men in black to arrive.
 	so that their names don't interfere with normal user commands.
 	</para>
 
-</sect1>
+</section>
 
 <!--
 %\section{Accounting}
